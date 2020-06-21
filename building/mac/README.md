@@ -1,14 +1,14 @@
-### Building Spider OS X Qt Wallet
+### Building RWTaler OS X Qt Wallet
 
 1. Ensure you have git installed
     
     ```shell
     brew install git
     ```
-2. Clone spdr repository
+2. Clone rwtaler repository
     
     ```shell
-    git clone https://github.com/SPDR-Core/spdr
+    git clone https://github.com/SPDR-Core/rwtaler
     ```
 
 3. Ensure mysql and boost installed.

@@ -1,8 +1,8 @@
-![SPDR Logo](src/qt/res/images/spdr_logo_horizontal.png)
+![SPDR Logo](src/qt/res/images/rwtaler_logo_horizontal.png)
 
-"SpiderVPS - is the future of vps hosting"
+"RWTalerVPS - is the future of vps hosting"
 
-[![HitCount](http://hits.dwyl.io/216k155/spdr.svg)](http://hits.dwyl.io/216k155/spdr)
+[![HitCount](http://hits.dwyl.io/216k155/rwtaler.svg)](http://hits.dwyl.io/216k155/rwtaler)
 <a href="https://discord.gg/vqzqWJg"><img src="https://discordapp.com/api/guilds/518071066678263815/widget.png" alt="Discord server" /></a> <a href="https://twitter.com/intent/follow?screen_name=SPDRVPS"><img src="https://img.shields.io/twitter/follow/SPDRVPS.svg?style=social&logo=twitter" alt="follow on Twitter"></a>
                                                                                                                                                      
 [Website](https://spidervps.net) — [Block Explorer](http://explorer.spidervps.net/) — [Forum](https://bitcointalk.org/index.php?topic=5116197) — [Twitter](https://twitter.com/SPDRVPS)
@@ -16,7 +16,7 @@
 * Smart contract (soon)
 * PHI2 PoW/PoS hybrid algorithm
 
-Spider VPS is the first social vps hosting platform based on blockchain technology aimed at creating a strong community around it and offering high-tech services  
+RWTaler VPS is the first social vps hosting platform based on blockchain technology aimed at creating a strong community around it and offering high-tech services  
 
 ## Coin Specifications
 
@@ -34,7 +34,7 @@ Spider VPS is the first social vps hosting platform based on blockchain technolo
 | Port | `53617` |
 | RPC Port | `53616` |
 | Masternode Port | `53617` |
-| Spider legacy address start with | `S` |
+| RWTaler legacy address start with | `S` |
 | p2sh-segwit address start with | `D` |
 | Bech32 address start with | `bc` |
 
@@ -42,7 +42,7 @@ Spider VPS is the first social vps hosting platform based on blockchain technolo
 
 Instructions
 
-Build Spider wallet
+Build RWTaler wallet
 ----------
 
 ### Building for 32-bit Windows
@@ -51,9 +51,9 @@ The next three steps are an example of how to acquire the source and build in an
         
 Acquire the source and install dependencies.
 
-    git clone https://github.com/SPDR-Core/spdr
-    sudo chmod -R a+rw spdr
-    cd spdr/depends
+    git clone https://github.com/SPDR-Core/rwtaler
+    sudo chmod -R a+rw rwtaler
+    cd rwtaler/depends
     ./install-dependencies.sh
     
 Set the default mingw-w32 g++ compiler option to auto (option 0) by default.
@@ -70,9 +70,9 @@ The next three steps are an example of how to acquire the source and build in an
         
 Acquire the source and install dependencies.
 
-    git clone https://github.com/SPDR-Core/spdr
-    sudo chmod -R a+rw spdr
-    cd spdr/depends
+    git clone https://github.com/SPDR-Core/rwtaler
+    sudo chmod -R a+rw rwtaler
+    cd rwtaler/depends
     ./install-dependencies.sh
     
 Set the default mingw-w64 g++ compiler option to posix (option 1).
@@ -87,13 +87,13 @@ Build in the usual way.
 
 Use
 
-    sudo add-apt-repository ppa:bitcoin/bitcoin; git clone https://github.com/SPDR-Core/spdr; cd spdr; depends/install-dependencies.sh; ./autogen.sh; ./configure --disable-tests --with-boost-libdir=/usr/local/lib; make clean; make -j$(nproc)
+    sudo add-apt-repository ppa:bitcoin/bitcoin; git clone https://github.com/SPDR-Core/rwtaler; cd rwtaler; depends/install-dependencies.sh; ./autogen.sh; ./configure --disable-tests --with-boost-libdir=/usr/local/lib; make clean; make -j$(nproc)
 
 
 
-Build spdr 
+Build rwtaler 
 
-    cd spdr
+    cd rwtaler
     ./depends/install-dependencies.sh
     ./autogen.sh
     ./configure --disable-tests
@@ -128,12 +128,12 @@ Link boost 1.64
 
     brew link boost@1.64 --force
 
-#### Build Spidercore
+#### Build RWTalercore
 
-Clone the Spider source code and cd into spdr
+Clone the RWTaler source code and cd into rwtaler
 
-        git clone https://github.com/SPDR-Core/spdr
-        cd spdr
+        git clone https://github.com/SPDR-Core/rwtaler
+        cd rwtaler
         ./building/mac/requirements.sh
         ./building/mac/build.sh
 
@@ -142,8 +142,8 @@ Setup and Build: Arch Linux
 This example lists the steps necessary to setup and build a command line only, non-wallet distribution of the latest changes on Arch Linux:
 
     pacman -S git base-devel boost libevent python
-    git clone https://github.com/SPDR-Core/spdr
-    cd spdr/
+    git clone https://github.com/SPDR-Core/rwtaler
+    cd rwtaler/
     ./autogen.sh
     ./configure --without-miniupnpc --disable-tests
     make -j$(nproc)

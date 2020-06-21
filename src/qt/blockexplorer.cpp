@@ -222,7 +222,7 @@ static std::string TxToRow(const CTransaction& tx, CBlock * const ptrBlock= null
         }
         if(bHasOpCreate && Out.nValue == 0)
         {
-            uint160 contract = uint160(SpiderState::createSpiderAddress(uintToh256(tx.GetHash()), j).asBytes());
+            uint160 contract = uint160(RWTalerState::createRWTalerAddress(uintToh256(tx.GetHash()), j).asBytes());
             strAddress = _("Create SC") + " " + contract.ToStringReverseEndian();
             bSC_Amount = true;
         }
@@ -667,8 +667,8 @@ void BlockExplorer::showEvent(QShowEvent* ev)
         m_NeverShown = false;
         home();
         if (!GetBoolArg("-txindex", DEFAULT_TXINDEX)) {
-            QString Warning = tr("Not all transactions will be shown and block explorer is not available while running in pruned mode. To view all transactions you need to set txindex=1 in the configuration file (spdr.conf).");
-            QMessageBox::warning(this, tr("Spidercore Blockchain Explorer"), Warning, QMessageBox::Ok);
+            QString Warning = tr("Not all transactions will be shown and block explorer is not available while running in pruned mode. To view all transactions you need to set txindex=1 in the configuration file (rwtaler.conf).");
+            QMessageBox::warning(this, tr("RWTalercore Blockchain Explorer"), Warning, QMessageBox::Ok);
         }
     }
     QMainWindow::showEvent(ev);

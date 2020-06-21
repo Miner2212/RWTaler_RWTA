@@ -40,7 +40,7 @@ public:
 public slots:
     void updateNodeList();
     void updateMYNodeList();
-    void updateSpiderNode(QString alias, QString addr, QString privkey, QString collateral);
+    void updateRWTalerNode(QString alias, QString addr, QString privkey, QString collateral);
         
 Q_SIGNALS:
 

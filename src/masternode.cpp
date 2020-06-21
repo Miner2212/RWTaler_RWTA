@@ -1,7 +1,7 @@
 // Copyright (c) 2012-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2019 The RWTalercore developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -58,7 +58,7 @@ void ProcessMasternode(CNode* pfrom, const std::string& strCommand, CDataStream&
     int nHeight = chainActive.Height() + 1;
 
     // Do not accept the peers having older versions when the fork happens
-    if (nHeight >= nSpiderProtocolSwitchHeight)
+    if (nHeight >= nRWTalerProtocolSwitchHeight)
     {
         SCVersion = WORKING_VERSION;
     }

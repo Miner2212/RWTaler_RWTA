@@ -1,7 +1,7 @@
 // Copyright (c) 2012-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2019 The RWTalercore developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -358,16 +358,16 @@ static const CRPCCommand vRPCCommands[] =
         {"hidden", "reconsiderblock", &reconsiderblock, true, true, false},
         {"hidden", "setmocktime", &setmocktime, true, false, false},
 
-        /* Spider features */
-        {"spdr", "masternode", &masternode, true, true, false},
-        //{"spdr", "masternodelist", &masternodelist, true, true, false},
-        //{"spdr", "mnbudget", &mnbudget, true, true, false},
-        //{"spdr", "mnbudgetvoteraw", &mnbudgetvoteraw, true, true, false},
-        //{"spdr", "mnfinalbudget", &mnfinalbudget, true, true, false},
-        //{"spdr", "mnsync", &mnsync, true, true, false},
-        {"spdr", "spork", &spork, true, true, false},
+        /* RWTaler features */
+        {"rwtaler", "masternode", &masternode, true, true, false},
+        //{"rwtaler", "masternodelist", &masternodelist, true, true, false},
+        //{"rwtaler", "mnbudget", &mnbudget, true, true, false},
+        //{"rwtaler", "mnbudgetvoteraw", &mnbudgetvoteraw, true, true, false},
+        //{"rwtaler", "mnfinalbudget", &mnfinalbudget, true, true, false},
+        //{"rwtaler", "mnsync", &mnsync, true, true, false},
+        {"rwtaler", "spork", &spork, true, true, false},
 #ifdef ENABLE_WALLET
-        //{"spdr", "darksend", &darksend, false, false, true}, /* not threadSafe because of SendMoney */
+        //{"rwtaler", "darksend", &darksend, false, false, true}, /* not threadSafe because of SendMoney */
 
         /* Wallet */
         {"wallet", "addmultisigaddress", &addmultisigaddress, true, false, true},
@@ -644,7 +644,7 @@ vector<string> CRPCTable::listCommands() const
 
 std::string HelpExampleCli(string methodname, string args)
 {
-    return "> spdr-cli " + methodname + " " + args + "\n";
+    return "> rwtaler-cli " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleRpc(string methodname, string args)

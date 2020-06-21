@@ -1,7 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2019 The RWTalercore developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -217,9 +217,9 @@ void ClientModel::getGasInfo(uint64_t& blockGasLimit, uint64_t& minGasPrice, uin
 {
     LOCK(cs_main);
 
-    SpiderDGP spdrDGP(globalState.get(), fGettingValuesDGP);
-    blockGasLimit = spdrDGP.getBlockGasLimit(chainActive.Height());
-    minGasPrice = CAmount(spdrDGP.getMinGasPrice(chainActive.Height()));
+    RWTalerDGP rwtalerDGP(globalState.get(), fGettingValuesDGP);
+    blockGasLimit = rwtalerDGP.getBlockGasLimit(chainActive.Height());
+    minGasPrice = CAmount(rwtalerDGP.getMinGasPrice(chainActive.Height()));
     nGasPrice = (minGasPrice>DEFAULT_GAS_PRICE) ? minGasPrice : DEFAULT_GAS_PRICE;
 }
 

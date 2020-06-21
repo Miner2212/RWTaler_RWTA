@@ -1,5 +1,5 @@
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2019 The RWTalercore developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -57,16 +57,16 @@ Eula::Eula(QWidget* parent) : QDialog(parent),
                    both the singular and plural forms of the terms defined: </p>");
 
     eulaInfo += tr("<p style=\"line-height:30\"></p>");
-    eulaInfo += tr("<p style=\"line-height:130\"><b>\"Licensor\"</b> means Spidercore, with its main address \
+    eulaInfo += tr("<p style=\"line-height:130\"><b>\"Licensor\"</b> means RWTalercore, with its main address \
                    located at Suite 3 Level 27, Governor Macquarie Tower, 1 Farrer Place, Sydney, NSW, 2000.</p>");
     eulaInfo += tr("<p style=\"line-height:30\"></p>");
     eulaInfo += tr("<p style=\"line-height:130\"><b>\"Software\"</b> means (a) all of the contents of the files, \
                    disk(s), CD-ROM(s) or other media with which this Agreement is provided, including but not \
-                   limited to (i) Spidercore or third party computer information or software; (ii) digital images, \
+                   limited to (i) RWTalercore or third party computer information or software; (ii) digital images, \
                    stock photographs, clip art, sounds or other artistic works (\"Stock Files\"); (iii) related \
                    explanatory written materials or files (\"Documentation\"); and (iv) fonts; and (b) upgrades, \
                    modified versions, updates, additions, and copies of the Software, if any, licensed to you by \
-                   Spidercore (collectively, \"Updates\"). </p>");
+                   RWTalercore (collectively, \"Updates\"). </p>");
     eulaInfo += tr("<p style=\"line-height:30\"></p>");
     eulaInfo += tr("<p style=\"line-height:130\"><b>\"Use\"</b> or <b>\"Using\"</b> means to access, install, download, \
                    copy or otherwise benefit from using the functionality of the Software in accordance with the \
@@ -75,7 +75,7 @@ Eula::Eula(QWidget* parent) : QDialog(parent),
     eulaInfo += tr("<p style=\"line-height:130\"><b>\"Licensee\"</b> means You or Your Company, unless otherwise indicated.</p>");
     eulaInfo += tr("<p style=\"line-height:30\"></p>");
     eulaInfo += tr("<p style=\"line-height:130\"><b>\"Permitted Number\"</b> means one (1) unless otherwise indicated under \
-                   a valid license (e.g. volume license) granted by Spidercore.</p>");
+                   a valid license (e.g. volume license) granted by RWTalercore.</p>");
     eulaInfo += tr("<p style=\"line-height:30\"></p>");
     eulaInfo += tr("<p style=\"line-height:130\"><b>\"Computer\"</b> means an electronic device that accepts information in \
                    digital or similar form and manipulates it for a specific result based on a sequence of instructions.</p>");
@@ -83,7 +83,7 @@ Eula::Eula(QWidget* parent) : QDialog(parent),
     eulaInfo += tr("<p style=\"line-height:130\"><br><b>2.	Software License</b></p>");
     eulaInfo += tr("<p style=\"line-height:30\"></p>");
     eulaInfo += tr("<p style=\"line-height:130\">As long as you comply with the terms of this End User License Agreement (the \
-                   \"Agreement\"), Spidercore grants to you a non-exclusive license to Use the Software for the purposes described \
+                   \"Agreement\"), RWTalercore grants to you a non-exclusive license to Use the Software for the purposes described \
                     in the Documentation. Some third party materials included in the Software may be subject to other terms and \
                     conditions, which are typically found in a \"Read Me\" file located near such materials.</p>");
     eulaInfo += tr("<p style=\"line-height:30\"></p>");
@@ -101,7 +101,7 @@ Eula::Eula(QWidget* parent) : QDialog(parent),
                    scripts) from an unlimited number of computers on your internal network. No other network use is permitted, \
                    including but not limited to, using the Software either directly or through commands, data or instructions from \
                    or to a computer not part of your internal network, for internet or web hosting services or by any user not licensed \
-                   to use this copy of the Software through a valid license from Spidercore; and</p>");
+                   to use this copy of the Software through a valid license from RWTalercore; and</p>");
     eulaInfo += tr("<p style=\"line-height:30\"></p>");
     eulaInfo += tr("<p style=\"line-height:130\"><br><b>2.3	Backup Copy</b></p>");
     eulaInfo += tr("<p style=\"line-height:30\"></p>");
@@ -127,20 +127,20 @@ Eula::Eula(QWidget* parent) : QDialog(parent),
     eulaInfo += tr("<p style=\"line-height:30\"></p>");
     eulaInfo += tr("<p style=\"line-height:130\"><br><b>2.6	Limitations</b></p>");
     eulaInfo += tr("<p style=\"line-height:30\"></p>");
-    eulaInfo += tr("<p style=\"line-height:130\">To the extent that the Software includes Spidercore Spidergate software, (i) you may customize the \
+    eulaInfo += tr("<p style=\"line-height:130\">To the extent that the Software includes RWTalercore RWTalergate software, (i) you may customize the \
                    installer for such software in accordance with the restrictions found at <a href=\"https://spidervps.net\">https://spidervps.net</a> \
                    (e.g., installation of additional plug-in and help files); however, you may not otherwise alter or modify the installer program \
-                   or create a new installer for any of such software, (ii) such software is licensed and distributed by Spidercore, and (iii) you are \
+                   or create a new installer for any of such software, (ii) such software is licensed and distributed by RWTalercore, and (iii) you are \
                    not authorized to use any plug-in or enhancement that permits you to save modifications to a any format file with such software; \
-                   however, such use is authorized with Spidercore, Spidercore Spidergate, and other current and future Spidercore products. For information on \
-                   how to distribute Spidergate please refer to the sections entitled \"How to Distribute Spidergate\" at \
+                   however, such use is authorized with RWTalercore, RWTalercore RWTalergate, and other current and future RWTalercore products. For information on \
+                   how to distribute RWTalergate please refer to the sections entitled \"How to Distribute RWTalergate\" at \
                    <a href=\"https://spidervps.net\">https://spidervps.net</a>.</p>");
     eulaInfo += tr("<p style=\"line-height:30\"></p>");
     eulaInfo += tr("<p style=\"line-height:130\"><br><b>3.	Intellectual Property Rights</b></p>");
     eulaInfo += tr("<p style=\"line-height:30\"></p>");
-    eulaInfo += tr("<p style=\"line-height:130\">The Software and any copies that you are authorized by Spidercore to make are the intellectual property \
-                    of and are owned by Spidercore and its suppliers. The structure, organization and code of the Software are the valuable trade secrets \
-                    and confidential information of Spidercore and its suppliers. The Software is protected by copyright, including without limitation by \
+    eulaInfo += tr("<p style=\"line-height:130\">The Software and any copies that you are authorized by RWTalercore to make are the intellectual property \
+                    of and are owned by RWTalercore and its suppliers. The structure, organization and code of the Software are the valuable trade secrets \
+                    and confidential information of RWTalercore and its suppliers. The Software is protected by copyright, including without limitation by \
                     Australia Copyright Law, international treaty provisions and applicable laws in the country in which it is being used. You may not \
                     copy the Software, except as set forth in Section 2 (\"Software License\").</p>");
     eulaInfo += tr("<p style=\"line-height:30\"></p>");
@@ -148,13 +148,13 @@ Eula::Eula(QWidget* parent) : QDialog(parent),
                    and other proprietary notices that appear on or in the Software. You also agree not to reverse engineer, decompile, disassemble or \
                    otherwise attempt to discover the source code of the Software except to the extent you may be expressly permitted to decompile under \
                    applicable law, it is essential to do so in order to achieve operability of the Software with another software program, and you have \
-                   first requested Spidercore to provide the information necessary to achieve such operability and Spidercore has not made such information \
+                   first requested RWTalercore to provide the information necessary to achieve such operability and RWTalercore has not made such information \
                    available.</p>");
     eulaInfo += tr("<p style=\"line-height:30\"></p>");
-    eulaInfo += tr("<p style=\"line-height:130\">Spidercore has the right to impose reasonable conditions and to request a reasonable fee before providing \
-                    such information. Any information supplied by Spidercore or obtained by you, as permitted hereunder, may only be used by you for the \
+    eulaInfo += tr("<p style=\"line-height:130\">RWTalercore has the right to impose reasonable conditions and to request a reasonable fee before providing \
+                    such information. Any information supplied by RWTalercore or obtained by you, as permitted hereunder, may only be used by you for the \
                     purpose described herein and may not be disclosed to any third party or used to create any software which is substantially similar \
-                    to the expression of the Software. Requests for information should be directed to the Spidercore Customer Support Department. Trademarks \
+                    to the expression of the Software. Requests for information should be directed to the RWTalercore Customer Support Department. Trademarks \
                     shall be used in accordance with accepted trademark practice, including identification of trademarks owners' names. Trademarks can only \
                     be used to identify printed output produced by the Software and such use of any trademark does not give you any rights of ownership in \
                     that trademark. Except as expressly stated above, this Agreement does not grant you any intellectual property rights in the Software.</p>");
@@ -182,15 +182,15 @@ Eula::Eula(QWidget* parent) : QDialog(parent),
                     you must possess a valid license to such previous version in order to Use the Update. You may continue to Use the previous version of the Software \
                     on your computer after you receive the Update to assist you in the transition to the Update, provided that: the Update and the previous version \
                     are installed on the same computer; the previous version or copies thereof are not transferred to another party or computer unless all copies of \
-                    the Update are also transferred to such party or computer; and you acknowledge that any obligation Spidercore may have to support the previous version \
+                    the Update are also transferred to such party or computer; and you acknowledge that any obligation RWTalercore may have to support the previous version \
                     of the Software may be ended upon availability of the Update.</p>");
 
     eulaInfo += tr("<p style=\"line-height:30\"></p>");
     eulaInfo += tr("<p style=\"line-height:130\"><br><b>6.	NO WARRANTY</b></p>");
     eulaInfo += tr("<p style=\"line-height:30\"></p>");
-    eulaInfo += tr("<p style=\"line-height:130\">The Software is being delivered to you \"AS IS\" and Spidercore makes no warranty as to its use or performance. Spidercore AND \
+    eulaInfo += tr("<p style=\"line-height:130\">The Software is being delivered to you \"AS IS\" and RWTalercore makes no warranty as to its use or performance. RWTalercore AND \
                     ITS SUPPLIERS DO NOT AND CANNOT WARRANT THE PERFORMANCE OR RESULTS YOU MAY OBTAIN BY USING THE SOFTWARE. EXCEPT FOR ANY WARRANTY, CONDITION, \
-                    REPRESENTATION OR TERM TO THE EXTENT TO WHICH THE SAME CANNOT OR MAY NOT BE EXCLUDED OR LIMITED BY LAW APPLICABLE TO YOU IN YOUR JURISDICTION, Spidercore \
+                    REPRESENTATION OR TERM TO THE EXTENT TO WHICH THE SAME CANNOT OR MAY NOT BE EXCLUDED OR LIMITED BY LAW APPLICABLE TO YOU IN YOUR JURISDICTION, RWTalercore \
                     AND ITS SUPPLIERS MAKE NO WARRANTIES CONDITIONS, REPRESENTATIONS, OR TERMS (EXPRESS OR IMPLIED WHETHER BY STATUTE, COMMON LAW, CUSTOM, USAGE OR OTHERWISE) \
                     AS TO ANY MATTER INCLUDING WITHOUT LIMITATION NONINFRINGEMENT OF THIRD PARTY RIGHTS, MERCHANTABILITY, INTEGRATION, SATISFACTORY QUALITY, OR FITNESS FOR ANY \
                     PARTICULAR PURPOSE.</p>");
@@ -201,22 +201,22 @@ Eula::Eula(QWidget* parent) : QDialog(parent),
     eulaInfo += tr("<p style=\"line-height:130\">If the product you have received with this license is pre-commercial release or beta Software (\"Pre-release Software\"), then \
                     the following Section applies. To the extent that any provision in this Section is in conflict with any other term or condition in this Agreement, this \
                     Section shall supercede such other term(s) and condition(s) with respect to the Pre-release Software, but only to the extent necessary to resolve the conflict. \
-                    You acknowledge that the Software is a pre-release version, does not represent final product from Spidercore, and may contain bugs, errors and other problems that \
-                    could cause system or other failures and data loss. Consequently, the Pre-release Software is provided to you \"AS-IS\", and Spidercore disclaims any warranty or \
+                    You acknowledge that the Software is a pre-release version, does not represent final product from RWTalercore, and may contain bugs, errors and other problems that \
+                    could cause system or other failures and data loss. Consequently, the Pre-release Software is provided to you \"AS-IS\", and RWTalercore disclaims any warranty or \
                     liability obligations to you of any kind. WHERE LEGALLY LIABILITY CANNOT BE EXCLUDED FOR PRE-RELEASE SOFTWARE, BUT IT MAY BE LIMITED, SPDRCORE'S LIABILITY AND \
-                    THAT OF ITS SUPPLIERS SHALL BE LIMITED TO THE SUM OF FIFTY DOLLARS (U.S. $50) IN TOTAL. You acknowledge that Spidercore has not promised or guaranteed to you that \
-                    Pre-release Software will be announced or made available to anyone in the future, that Spidercore has no express or implied obligation to you to announce or \
-                    introduce the Pre-release Software and that Spidercore may not introduce a product similar to or compatible with the Pre-release Software. Accordingly, you \
+                    THAT OF ITS SUPPLIERS SHALL BE LIMITED TO THE SUM OF FIFTY DOLLARS (U.S. $50) IN TOTAL. You acknowledge that RWTalercore has not promised or guaranteed to you that \
+                    Pre-release Software will be announced or made available to anyone in the future, that RWTalercore has no express or implied obligation to you to announce or \
+                    introduce the Pre-release Software and that RWTalercore may not introduce a product similar to or compatible with the Pre-release Software. Accordingly, you \
                     acknowledge that any research or development that you perform regarding the Pre-release Software or any product associated with the Pre-release Software is \
-                    done entirely at your own risk. During the term of this Agreement, if requested by Spidercore, you will provide feedback to Spidercore regarding testing and use of \
+                    done entirely at your own risk. During the term of this Agreement, if requested by RWTalercore, you will provide feedback to RWTalercore regarding testing and use of \
                     the Pre-release Software, including error or bug reports. If you have been provided the Pre-release Software pursuant to a separate written agreement, such as \
-                    the Spidercore Serial Agreement for Unreleased Products, your use of the Software is also governed by such agreement. You agree that you may not and certify that \
+                    the RWTalercore Serial Agreement for Unreleased Products, your use of the Software is also governed by such agreement. You agree that you may not and certify that \
                     you will not sublicense, lease, loan, rent, or transfer the Pre-release Software. Upon receipt of a later unreleased version of the Pre-release Software or \
-                    release by Spidercore of a publicly released commercial version of the Software, whether as a stand-alone product or as part of a larger product, you agree to \
-                    return or destroy all earlier Pre-release Software received from Spidercore and to abide by the terms of the End User License Agreement for any such later versions \
+                    release by RWTalercore of a publicly released commercial version of the Software, whether as a stand-alone product or as part of a larger product, you agree to \
+                    return or destroy all earlier Pre-release Software received from RWTalercore and to abide by the terms of the End User License Agreement for any such later versions \
                     of the Pre-release Software. Notwithstanding anything in this Section to the contrary, if you are located outside the United States of America or Canada, you agree \
                     that you will return or destroy all unreleased versions of the Pre-release Software within thirty (30) days of the completion of your testing of the Software \
-                    when such date is earlier than the date for Spidercore's first commercial shipment of the publicly released (commercial) Software.</p>");
+                    when such date is earlier than the date for RWTalercore's first commercial shipment of the publicly released (commercial) Software.</p>");
 
 
     eulaInfo += tr("<p style=\"line-height:30\"></p>");
@@ -226,10 +226,10 @@ Eula::Eula(QWidget* parent) : QDialog(parent),
                    INCIDENTAL DAMAGES, OR ANY LOST PROFITS OR LOST SAVINGS, EVEN IF AN SPDRCORE REPRESENTATIVE HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH LOSS, DAMAGES, CLAIMS OR \
                    COSTS OR FOR ANY CLAIM BY ANY THIRD PARTY. THE FOREGOING LIMITATIONS AND EXCLUSIONS APPLY TO THE EXTENT PERMITTED BY APPLICABLE LAW IN YOUR JURISDICTION. SPDRCORE'S \
                    AGGREGATE LIABILITY AND THAT OF ITS SUPPLIERS UNDER OR IN CONNECTION WITH THIS AGREEMENT SHALL BE LIMITED TO THE AMOUNT PAID FOR THE SOFTWARE, IF ANY. Nothing \
-                   contained in this Agreement limits Spidercore's liability to you in the event of death or personal injury resulting from Spidercore's negligence or for the tort of \
-                   deceit (fraud). Spidercore is acting on behalf of its suppliers for the purpose of disclaiming, excluding and/or limiting obligations, warranties and liability as \
+                   contained in this Agreement limits RWTalercore's liability to you in the event of death or personal injury resulting from RWTalercore's negligence or for the tort of \
+                   deceit (fraud). RWTalercore is acting on behalf of its suppliers for the purpose of disclaiming, excluding and/or limiting obligations, warranties and liability as \
                    provided in this Agreement, but in no other respects and for no other purpose. For further information, please see the jurisdiction specific information at the \
-                   end of this Agreement, if any, or contact Spidercore's Customer Support Department.</p>");
+                   end of this Agreement, if any, or contact RWTalercore's Customer Support Department.</p>");
 
     eulaInfo += tr("<p style=\"line-height:30\"></p>");
     eulaInfo += tr("<p style=\"line-height:130\"><br><b>9.	Export Rules (OPTIONAL - FOR AMERICAN COMPANIES)</b></p>");
@@ -251,8 +251,8 @@ Eula::Eula(QWidget* parent) : QDialog(parent),
     eulaInfo += tr("<p style=\"line-height:30\"></p>");
     eulaInfo += tr("<p style=\"line-height:130\">If any part of this Agreement is found void and unenforceable, it will not affect the validity of the balance of the Agreement, \
                    which shall remain valid and enforceable according to its terms. This Agreement shall not prejudice the statutory rights of any party dealing as a consumer. \
-                   This Agreement may only be modified by a writing signed by an authorized officer of Spidercore. Updates may be licensed to you by Spidercore with additional or \
-                   different terms. This is the entire agreement between Spidercore and you relating to the Software and it supersedes any prior representations, discussions, \
+                   This Agreement may only be modified by a writing signed by an authorized officer of RWTalercore. Updates may be licensed to you by RWTalercore with additional or \
+                   different terms. This is the entire agreement between RWTalercore and you relating to the Software and it supersedes any prior representations, discussions, \
                    undertakings, communications or advertising relating to the Software.</p>");
 
     eulaInfo += tr("<p style=\"line-height:30\"></p>");
@@ -264,7 +264,7 @@ Eula::Eula(QWidget* parent) : QDialog(parent),
                 QString::fromUtf8("§") + tr("12.212 or 48 C.F.R. ") + QString::fromUtf8("§") + QString::fromUtf8("§") + tr("227.7202-1 through 227.7202-4, as applicable, the \
                 Commercial Computer Software and Commercial Computer Software Documentation are being licensed to U.S. Government end users (a) only as Commercial Items and \
                 (b) with only those rights as are granted to all other end users pursuant to the terms and conditions herein. Unpublished-rights reserved under the copyright \
-                laws of the United States. For U.S. Government End Users, Spidercore agrees to comply with all applicable equal opportunity laws including, if appropriate, the \
+                laws of the United States. For U.S. Government End Users, RWTalercore agrees to comply with all applicable equal opportunity laws including, if appropriate, the \
                 provisions of Executive Order 11246, as amended, Section 402 of the Vietnam Era Veterans Readjustment Assistance Act of 1974 (38 USC 4212), and Section 503 \
                 of the Rehabilitation Act of 1973, as amended, and the regulations at 41 CFR Parts 60-1 through 60-60, 60-250, and 60-741. The affirmative action clause and \
                 regulations contained in the preceding sentence shall be incorporated by reference in this Agreement.</p>");
@@ -272,14 +272,14 @@ Eula::Eula(QWidget* parent) : QDialog(parent),
     eulaInfo += tr("<p style=\"line-height:30\"></p>");
     eulaInfo += tr("<p style=\"line-height:130\"><br><b>13.	Compliance with Licenses</b></p>");
     eulaInfo += tr("<p style=\"line-height:30\"></p>");
-    eulaInfo += tr("<p style=\"line-height:130\">If you are a business or organization, you agree that upon request from Spidercore or Spidercore 's authorized representative, you will \
-                   within thirty (30) days fully document and certify that use of any and all Spidercore Software at the time of the request is in conformity with your valid licenses \
-                   from Spidercore.</p>");
+    eulaInfo += tr("<p style=\"line-height:130\">If you are a business or organization, you agree that upon request from RWTalercore or RWTalercore 's authorized representative, you will \
+                   within thirty (30) days fully document and certify that use of any and all RWTalercore Software at the time of the request is in conformity with your valid licenses \
+                   from RWTalercore.</p>");
     eulaInfo += tr("<p style=\"line-height:30\"></p>");
-    eulaInfo += tr("<p style=\"line-height:130\">If you have any questions regarding this Agreement or if you wish to request any information from Spidercore please use the address \
-                    and contact information included with this product to contact the Spidercore office serving your jurisdiction.</p>");
+    eulaInfo += tr("<p style=\"line-height:130\">If you have any questions regarding this Agreement or if you wish to request any information from RWTalercore please use the address \
+                    and contact information included with this product to contact the RWTalercore office serving your jurisdiction.</p>");
     eulaInfo += tr("<p style=\"line-height:30\"></p>");
-    eulaInfo += tr("<p style=\"line-height:130\">Spidercore, Spidergate, and all other Spidercore's products are either registered trademarks or trademarks of Spidercore in the United States, \
+    eulaInfo += tr("<p style=\"line-height:130\">RWTalercore, RWTalergate, and all other RWTalercore's products are either registered trademarks or trademarks of RWTalercore in the United States, \
                     Europe and/or other countries.</p><br><br>");
 
 
@@ -312,16 +312,16 @@ void Eula::showDialog()
     bool isDialogHiding = false;
     QSettings settings;
 
-    QString currentVersion = QString("spdr_") + QString::fromStdString(strprintf("%d%d%d%d",
+    QString currentVersion = QString("rwtaler_") + QString::fromStdString(strprintf("%d%d%d%d",
                              CLIENT_VERSION_MAJOR,
                              CLIENT_VERSION_MINOR,
                              CLIENT_VERSION_REVISION,
                              CLIENT_VERSION_BUILD
                              ));
 
-    if (settings.contains(QString("spdrVersion")))
+    if (settings.contains(QString("rwtalerVersion")))
     {
-        QString storeVersion = settings.value(QString("spdrVersion")).toString();
+        QString storeVersion = settings.value(QString("rwtalerVersion")).toString();
         if (QString::compare(storeVersion, currentVersion, Qt::CaseInsensitive) == 0)
         {
             isDialogHiding = settings.value(storeVersion).toBool();
@@ -329,12 +329,12 @@ void Eula::showDialog()
         else
         {
             settings.remove(storeVersion);
-            settings.setValue(QString("spdrVersion"), currentVersion);
+            settings.setValue(QString("rwtalerVersion"), currentVersion);
         }
     }
     else
     {
-        settings.setValue(QString("spdrVersion"), currentVersion);
+        settings.setValue(QString("rwtalerVersion"), currentVersion);
     }
 	
     if(isDialogHiding)

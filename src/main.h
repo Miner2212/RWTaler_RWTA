@@ -1,7 +1,7 @@
 // Copyright (c) 2012-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2019 The RWTalercore developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -11,7 +11,7 @@
 #define ENABLE_CPUMINER 1
 
 #if defined(HAVE_CONFIG_H)
-#include "config/spdr-config.h"
+#include "config/rwtaler-config.h"
 #endif
 
 #include "amount.h"
@@ -45,20 +45,20 @@
 #include <boost/unordered_map.hpp>
 
 /**
- * Global SpiderState
+ * Global RWTalerState
  */
 
-/////////////////////////////////////////// spdr
-#include <spdr/spdrstate.h>
-#include <spdr/spdrDGP.h>
+/////////////////////////////////////////// rwtaler
+#include <rwtaler/rwtalerstate.h>
+#include <rwtaler/rwtalerDGP.h>
 #include <libethereum/ChainParams.h>
 #include <libethashseal/Ethash.h>
 #include <libethashseal/GenesisInfo.h>
 #include <script/standard.h>
-#include <spdr/storageresults.h>
+#include <rwtaler/storageresults.h>
 ///////////////////////////////////////////
 
-extern std::unique_ptr<SpiderState> globalState;
+extern std::unique_ptr<RWTalerState> globalState;
 extern std::shared_ptr<dev::eth::SealEngineFace> globalSealEngine;
 extern bool fRecordLogOpcodes;
 extern bool fIsVMlogFile;
@@ -66,7 +66,7 @@ extern bool fGettingValuesDGP;
 
 struct EthTransactionParams;
 using valtype = std::vector<unsigned char>;
-using ExtractSpiderTX = std::pair<std::vector<SpiderTransaction>, std::vector<EthTransactionParams>>;
+using ExtractRWTalerTX = std::pair<std::vector<RWTalerTransaction>, std::vector<EthTransactionParams>>;
 ///////////////////////////////////////////
 
 class CBlockIndex;
@@ -94,15 +94,15 @@ struct CNodeStateStats;
 #endif
 
 #ifndef WORKING_VERSION
-#define WORKING_VERSION "/Spidercore:1.2.0/"
+#define WORKING_VERSION "/RWTalercore:1.2.0/"
 #endif
 
 static const int64_t DARKSEND_COLLATERAL = (7000*COIN); //7000 SPDR
 static const int64_t DARKSEND_FEE = (0.002*COIN); // reward masternode
 static const int64_t DARKSEND_POOL_MAX = (1999999.99*COIN);
 
-static const int nSpiderProtocolSwitchHeight = 145000;
-static const int nSpiderStakeProtocolSwitchHeight = 45000;
+static const int nRWTalerProtocolSwitchHeight = 145000;
+static const int nRWTalerStakeProtocolSwitchHeight = 45000;
 
 static const std::set<std::string> BadAddr = {
     "STKDpb8E8onLEYi3S9kF3YqMgBA5NRqPRK",
@@ -193,7 +193,7 @@ static const int64_t DEFAULT_MAX_TIP_AGE = 6 * 60 * 60; // ~144 blocks behind ->
 
 static const bool DEFAULT_LOGEVENTS = false;
 
-////////////////////////////////////////////////////// spdr
+////////////////////////////////////////////////////// rwtaler
 static const uint64_t DEFAULT_GAS_LIMIT_OP_CREATE=2500000;
 static const uint64_t DEFAULT_GAS_LIMIT_OP_SEND=250000;
 static const CAmount DEFAULT_GAS_PRICE=0.00000040*COIN;
@@ -213,7 +213,7 @@ extern unsigned int dgpMaxBlockWeight;
 /** The maximum allowed size for a block excluding witness data, in bytes (network rule) */
 extern unsigned int dgpMaxBlockBaseSize;
 
-extern unsigned int dgpMaxBlockSize; // spdr
+extern unsigned int dgpMaxBlockSize; // rwtaler
 
 /** The maximum allowed number of signature check operations in a block (network rule) */
 extern int64_t dgpMaxBlockSigOps;
@@ -419,7 +419,7 @@ bool AcceptToMemoryPool(CTxMemPool& pool, CValidationState& state, const CTransa
 bool AcceptableInputs(CTxMemPool& pool, CValidationState& state, const CTransaction& tx, bool fLimitFree, bool* pfMissingInputs, bool fRejectInsaneFee = false, bool isDSTX = false);
 
 
-//////////////////////////////////////////////////////////// // spdr
+//////////////////////////////////////////////////////////// // rwtaler
 struct CHeightTxIndexIteratorKey {
     unsigned int height;
 
@@ -878,7 +878,7 @@ static const unsigned int REJECT_CONFLICT = 0x102;
 
 int GetSpendHeight(const CCoinsViewCache& inputs);
 
-//////////////////////////////////////////////////////// spdr
+//////////////////////////////////////////////////////// rwtaler
 std::vector<ResultExecute> CallContract(const dev::Address& addrContract, std::vector<unsigned char> opcode, const dev::Address& sender = dev::Address(), uint64_t gasLimit=0);
 
 bool CheckSenderScript(const CCoinsViewCache& view, const CTransaction& tx);
@@ -914,13 +914,13 @@ struct ByteCodeExecResult{
     std::vector<CTransaction> valueTransfers;
 };
 
-class SpiderTxConverter{
+class RWTalerTxConverter{
 
 public:
 
-    SpiderTxConverter(CTransaction tx, CCoinsViewCache* v = NULL, const std::vector<CTransaction>* blockTxs = NULL) : txBit(tx), view(v), blockTransactions(blockTxs){}
+    RWTalerTxConverter(CTransaction tx, CCoinsViewCache* v = NULL, const std::vector<CTransaction>* blockTxs = NULL) : txBit(tx), view(v), blockTransactions(blockTxs){}
 
-    bool extractionSpiderTransactions(ExtractSpiderTX& spdrTx);
+    bool extractionRWTalerTransactions(ExtractRWTalerTX& rwtalerTx);
 
 private:
 
@@ -928,7 +928,7 @@ private:
 
     bool parseEthTXParams(EthTransactionParams& params);
 
-    SpiderTransaction createEthTX(const EthTransactionParams& etp, const uint32_t nOut);
+    RWTalerTransaction createEthTX(const EthTransactionParams& etp, const uint32_t nOut);
 
     const CTransaction txBit;
     const CCoinsViewCache* view;
@@ -942,7 +942,7 @@ class ByteCodeExec {
 
 public:
 
-    ByteCodeExec(const CBlock& _block, std::vector<SpiderTransaction> _txs, const uint64_t _blockGasLimit) : txs(_txs), block(_block), blockGasLimit(_blockGasLimit) {}
+    ByteCodeExec(const CBlock& _block, std::vector<RWTalerTransaction> _txs, const uint64_t _blockGasLimit) : txs(_txs), block(_block), blockGasLimit(_blockGasLimit) {}
 
     bool performByteCode(dev::eth::Permanence type = dev::eth::Permanence::Committed);
 
@@ -956,7 +956,7 @@ private:
 
     dev::Address EthAddrFromScript(const CScript& scriptIn);
 
-    std::vector<SpiderTransaction> txs;
+    std::vector<RWTalerTransaction> txs;
 
     std::vector<ResultExecute> result;
 

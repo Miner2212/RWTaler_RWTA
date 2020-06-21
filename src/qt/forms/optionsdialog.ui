@@ -247,7 +247,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="anonymizeSpider">
+          <widget class="QSpinBox" name="anonymizeRWTaler">
            <property name="minimum">
             <number>100</number>
            </property>
@@ -300,10 +300,10 @@
           <item>
            <widget class="QCheckBox" name="showAdvancedUI">
             <property name="toolTip">
-             <string>Show additional information and buttons for Spidersend on overview screen.</string>
+             <string>Show additional information and buttons for RWTalersend on overview screen.</string>
             </property>
             <property name="text">
-             <string>Enable advanced Spidersend interface</string>
+             <string>Enable advanced RWTalersend interface</string>
             </property>
            </widget>
           </item>
@@ -618,7 +618,7 @@
          </property>
          <property name="text">
           <string>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/spdrcore/spdrcore</string>
+https://www.transifex.com/rwtalercore/rwtalercore</string>
          </property>
          <property name="wordWrap">
           <bool>true</bool>

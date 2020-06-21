@@ -22,7 +22,7 @@
 #endif
 
 #if defined(HAVE_CONFIG_H)
-#include "config/spdr-config.h" /* for USE_QRCODE */
+#include "config/rwtaler-config.h" /* for USE_QRCODE */
 #endif
 
 #ifdef USE_QRCODE

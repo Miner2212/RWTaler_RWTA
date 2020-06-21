@@ -1,7 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2019 The RWTalercore developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -275,7 +275,7 @@ WalletModel::SendCoinsReturn WalletModel::prepareTransaction(WalletModelTransact
                 return InvalidAmount;
             }
             total += subtotal;
-        } else { // User-entered spdr address / amount:
+        } else { // User-entered rwtaler address / amount:
             if (!validateAddress(rcp.address)) {
                 return InvalidAddress;
             }
@@ -373,7 +373,7 @@ WalletModel::SendCoinsReturn WalletModel::sendCoins(WalletModelTransaction& tran
                 std::string value;
                 rcp.paymentRequest.SerializeToString(&value);
                 newTx->vOrderForm.push_back(make_pair(key, value));
-            } else if (!rcp.message.isEmpty()) // Message from normal spdr:URI (spdr:XyZ...?message=example)
+            } else if (!rcp.message.isEmpty()) // Message from normal rwtaler:URI (rwtaler:XyZ...?message=example)
             {
                 newTx->vOrderForm.push_back(make_pair("Message", rcp.message.toStdString()));
             }
@@ -711,7 +711,7 @@ bool WalletModel::isSpent(const COutPoint& outpoint) const
     return wallet->IsSpent(outpoint.hash, outpoint.n);
 }
 
-bool WalletModel::isUnspentAddress(const std::string &spdrAddress) const
+bool WalletModel::isUnspentAddress(const std::string &rwtalerAddress) const
 {
     LOCK2(cs_main, wallet->cs_wallet);
 
@@ -723,7 +723,7 @@ bool WalletModel::isUnspentAddress(const std::string &spdrAddress) const
         const CScript& scriptPubKey = out.tx->vout[out.i].scriptPubKey;
         bool fValidAddress = ExtractDestination(scriptPubKey, address);
 
-        if(fValidAddress && EncodeDestination(address) == spdrAddress && out.tx->vout[out.i].nValue)
+        if(fValidAddress && EncodeDestination(address) == rwtalerAddress && out.tx->vout[out.i].nValue)
         {
             return true;
         }

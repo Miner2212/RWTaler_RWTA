@@ -1,12 +1,12 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2019 The RWTalercore developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/spdr-config.h"
+#include "config/rwtaler-config.h"
 #endif
 
 #include "bitcoingui.h"
@@ -99,7 +99,7 @@ static void InitMessage(const std::string& message)
  */
 static std::string Translate(const char* psz)
 {
-    return QCoreApplication::translate("spdr-core", psz).toStdString();
+    return QCoreApplication::translate("rwtaler-core", psz).toStdString();
 }
 
 static QString GetLangTerritory()
@@ -146,11 +146,11 @@ static void initTranslations(QTranslator& qtTranslatorBase, QTranslator& qtTrans
     if (qtTranslator.load("qt_" + lang_territory, QLibraryInfo::location(QLibraryInfo::TranslationsPath)))
         QApplication::installTranslator(&qtTranslator);
 
-    // Load e.g. bitcoin_de.qm (shortcut "de" needs to be defined in spdr.qrc)
+    // Load e.g. bitcoin_de.qm (shortcut "de" needs to be defined in rwtaler.qrc)
     if (translatorBase.load(lang, ":/translations/"))
         QApplication::installTranslator(&translatorBase);
 
-    // Load e.g. bitcoin_de_DE.qm (shortcut "de_DE" needs to be defined in spdr.qrc)
+    // Load e.g. bitcoin_de_DE.qm (shortcut "de_DE" needs to be defined in rwtaler.qrc)
     if (translator.load(lang_territory, ":/translations/"))
         QApplication::installTranslator(&translator);
 }
@@ -182,7 +182,7 @@ void DebugMessageHandler(QtMsgType type, const QMessageLogContext& context, cons
 }
 #endif
 
-/** Class encapsulating Spidercore startup and shutdown.
+/** Class encapsulating RWTalercore startup and shutdown.
  * Allows running startup and shutdown in a different thread from the UI thread.
  */
 class BitcoinCore : public QObject
@@ -272,7 +272,7 @@ private:
     QString restoreParam;
 };
 
-#include "spdr.moc"
+#include "rwtaler.moc"
 #include "eula.h"
 
 BitcoinCore::BitcoinCore() : QObject()
@@ -618,8 +618,8 @@ int main(int argc, char* argv[])
     QTextCodec::setCodecForCStrings(QTextCodec::codecForTr());
 #endif
 
-    Q_INIT_RESOURCE(spdr_locale);
-    Q_INIT_RESOURCE(spdr);
+    Q_INIT_RESOURCE(rwtaler_locale);
+    Q_INIT_RESOURCE(rwtaler);
 
     BitcoinApplication app(argc, argv);
 #if QT_VERSION > 0x050100
@@ -666,17 +666,17 @@ int main(int argc, char* argv[])
     if (!Intro::pickDataDirectory())
         return 0;
 
-    /// 6. Determine availability of data directory and parse spdr.conf
+    /// 6. Determine availability of data directory and parse rwtaler.conf
     /// - Do not call GetDataDir(true) before this step finishes
     if (!boost::filesystem::is_directory(GetDataDir(false))) {
-        QMessageBox::critical(0, QObject::tr("Spidercore"),
+        QMessageBox::critical(0, QObject::tr("RWTalercore"),
             QObject::tr("Error: Specified data directory \"%1\" does not exist.").arg(QString::fromStdString(mapArgs["-datadir"])));
         return 1;
     }
     try {
         ReadConfigFile(mapArgs, mapMultiArgs);
     } catch (std::exception& e) {
-        QMessageBox::critical(0, QObject::tr("Spidercore"),
+        QMessageBox::critical(0, QObject::tr("RWTalercore"),
             QObject::tr("Error: Cannot parse configuration file: %1. Only use key=value syntax.").arg(e.what()));
         return 1;
     }
@@ -689,7 +689,7 @@ int main(int argc, char* argv[])
 
     // Check for -testnet or -regtest parameter (Params() calls are only valid after this clause)
     if (!SelectParamsFromCommandLine()) {
-        QMessageBox::critical(0, QObject::tr("Spidercore"), QObject::tr("Error: Invalid combination of -regtest and -testnet."));
+        QMessageBox::critical(0, QObject::tr("RWTalercore"), QObject::tr("Error: Invalid combination of -regtest and -testnet."));
         return 1;
     }
 #ifdef ENABLE_WALLET
@@ -708,7 +708,7 @@ int main(int argc, char* argv[])
     /// 7a. parse masternode.conf
     string strErr;
     if (!masternodeConfig.read(strErr)) {
-        QMessageBox::critical(0, QObject::tr("Spidercore"),
+        QMessageBox::critical(0, QObject::tr("RWTalercore"),
             QObject::tr("Error reading masternode configuration file: %1").arg(strErr.c_str()));
 #if defined(REQUIRE_MASTERNODE_CONFIG)
         return 1;
@@ -725,7 +725,7 @@ int main(int argc, char* argv[])
         exit(0);
 
     // Start up the payment server early, too, so impatient users that click on
-    // spdr: links repeatedly have their payment requests routed to this process:
+    // rwtaler: links repeatedly have their payment requests routed to this process:
     app.createPaymentServer();
 #endif
 
@@ -756,7 +756,7 @@ int main(int argc, char* argv[])
         app.createWindow(networkStyle.data());
         app.requestInitialize();
 #if defined(Q_OS_WIN) && QT_VERSION >= 0x050000
-        WinShutdownMonitor::registerShutdownBlockReason(QObject::tr("Spidercore didn't yet exit safely..."), (HWND)app.getMainWinId());
+        WinShutdownMonitor::registerShutdownBlockReason(QObject::tr("RWTalercore didn't yet exit safely..."), (HWND)app.getMainWinId());
 #endif
         app.exec();
         app.requestShutdown();

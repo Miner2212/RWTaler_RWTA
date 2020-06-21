@@ -60,15 +60,15 @@ bin_PROGRAMS =
 TESTS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += spdrd
+  bin_PROGRAMS += rwtalerd
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += spdr-cli spdr-tx
+  bin_PROGRAMS += rwtaler-cli rwtaler-tx
 endif
 
 .PHONY: FORCE
-# Spidercore #
+# RWTalercore #
 BITCOIN_CORE_H = \
   activemasternode.h \
   addrman.h \
@@ -139,7 +139,7 @@ BITCOIN_CORE_H = \
   rpcprotocol.h \
   httprpc.h \
   httpserver.h \
-  spdrcontrol.h \
+  rwtalercontrol.h \
   rpcserver.h \
   rpcutil.h \
   scheduler.h \
@@ -180,10 +180,10 @@ BITCOIN_CORE_H = \
   zmq/zmqconfig.h \
   zmq/zmqnotificationinterface.h \
   zmq/zmqpublishnotifier.h \
-  spdr/spdrstate.h \
-  spdr/spdrtransaction.h \
-  spdr/spdrDGP.h \
-  spdr/storageresults.h
+  rwtaler/rwtalerstate.h \
+  rwtaler/rwtalertransaction.h \
+  rwtaler/rwtalerDGP.h \
+  rwtaler/storageresults.h
 
 obj/build.h: FORCE
 	@$(MKDIR_P) $(builddir)/obj
@@ -191,7 +191,7 @@ obj/build.h: FORCE
 	  $(abs_top_srcdir)
 libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between spdrd and spdr-qt
+# server: shared between rwtalerd and rwtaler-qt
 libbitcoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
 libbitcoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_server_a_SOURCES = \
@@ -220,7 +220,7 @@ libbitcoin_server_a_SOURCES = \
   rpcrawtransaction.cpp \
   httprpc.cpp \
   httpserver.cpp \
-  spdrcontrol.cpp \
+  rwtalercontrol.cpp \
   rpcserver.cpp \
   script/sigcache.cpp \
   timedata.cpp \
@@ -228,9 +228,9 @@ libbitcoin_server_a_SOURCES = \
   txmempool.cpp \
   validationinterface.cpp \
   versionbits.cpp \
-  spdr/spdrstate.cpp \
-  spdr/spdrDGP.cpp \
-  spdr/storageresults.cpp \
+  rwtaler/rwtalerstate.cpp \
+  rwtaler/rwtalerDGP.cpp \
+  rwtaler/storageresults.cpp \
   $(BITCOIN_CORE_H)
 
 if ENABLE_ZMQ
@@ -242,7 +242,7 @@ libbitcoin_zmq_a_SOURCES = \
   zmq/zmqpublishnotifier.cpp
 endif
 
-# wallet: shared between spdrd and spdr-qt, but only linked
+# wallet: shared between rwtalerd and rwtaler-qt, but only linked
 # when wallet enabled
 
 libbitcoin_wallet_a_CFLAGS = $(PIE_FLAGS)
@@ -387,7 +387,7 @@ libbitcoin_consensus_a_SOURCES = \
   utiltime.cpp \
   version.h
 
-# common: shared between spdrd, and spdr-qt and non-server tools
+# common: shared between rwtalerd, and rwtaler-qt and non-server tools
 libbitcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) -DSPDR_BUILD
 libbitcoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_common_a_CFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) -std=c99
@@ -565,8 +565,8 @@ libbitcoin_common_a_SOURCES = \
   cpp-ethereum/libethashseal/genesis/homesteadTest.cpp \
   cpp-ethereum/libethashseal/genesis/mainNetworkTest.cpp \
   cpp-ethereum/libethashseal/genesis/metropolisTest.cpp \
-  cpp-ethereum/libethashseal/genesis/spdrMainNetwork.cpp \
-  cpp-ethereum/libethashseal/genesis/spdrTestNetwork.cpp \
+  cpp-ethereum/libethashseal/genesis/rwtalerMainNetwork.cpp \
+  cpp-ethereum/libethashseal/genesis/rwtalerTestNetwork.cpp \
   cpp-ethereum/libethashseal/genesis/ropsten.cpp \
   cpp-ethereum/libethashseal/genesis/transitionnetTest.cpp \
   cpp-ethereum/libethash/ethash.h \
@@ -627,7 +627,7 @@ libbitcoin_util_a_SOURCES += compat/glibc_compat.cpp
 libbitcoin_util_a_SOURCES += compat/glibcxx_compat.cpp
 endif
 
-# cli: shared between spdr-cli and spdr-qt
+# cli: shared between rwtaler-cli and rwtaler-qt
 libbitcoin_cli_a_CPPFLAGS = $(BITCOIN_INCLUDES)
 libbitcoin_cli_a_SOURCES = \
   rpcclient.cpp \
@@ -637,15 +637,15 @@ nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
 # bitcoind binary #
-spdrd_SOURCES = spdrd.cpp
-spdrd_CPPFLAGS = $(BITCOIN_INCLUDES)
-spdrd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+rwtalerd_SOURCES = rwtalerd.cpp
+rwtalerd_CPPFLAGS = $(BITCOIN_INCLUDES)
+rwtalerd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-spdrd_SOURCES += spdrd-res.rc config/spdr-config.h
+rwtalerd_SOURCES += rwtalerd-res.rc config/rwtaler-config.h
 endif
 
-spdrd_LDADD = \
+rwtalerd_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UNIVALUE) \
@@ -659,36 +659,36 @@ spdrd_LDADD = \
   $(LIBCRYPTOPP) \
   $(LIBSECP256K1)
 
-spdrd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(ZMQ_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
+rwtalerd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(ZMQ_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
 
 
-# spdr-cli binary #
-spdr_cli_SOURCES = spdr-cli.cpp
-spdr_cli_CPPFLAGS = $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+# rwtaler-cli binary #
+rwtaler_cli_SOURCES = rwtaler-cli.cpp
+rwtaler_cli_CPPFLAGS = $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
 
 if TARGET_WINDOWS
-spdr_cli_SOURCES += spdr-cli-res.rc config/spdr-config.h
+rwtaler_cli_SOURCES += rwtaler-cli-res.rc config/rwtaler-config.h
 endif
 
-spdr_cli_LDADD = \
+rwtaler_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBBITCOIN_UNIVALUE) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-spdr_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+rwtaler_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
-# spdr-tx binary #
-spdr_tx_CPPFLAGS = $(BITCOIN_INCLUDES)
-spdr_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-spdr_tx_SOURCES =  \
-  spdr-tx.cpp \
+# rwtaler-tx binary #
+rwtaler_tx_CPPFLAGS = $(BITCOIN_INCLUDES)
+rwtaler_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+rwtaler_tx_SOURCES =  \
+  rwtaler-tx.cpp \
   $(libbitcoin_common_a_SOURCES) \
   $(libbitcoin_server_a_SOURCES)
 
-spdr_tx_LDADD = \
+rwtaler_tx_LDADD = \
   $(LIBBITCOIN_UNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_SERVER) \
@@ -702,7 +702,7 @@ spdr_tx_LDADD = \
   $(LIBSECP256K1) \
   $(LIBCRYPTOPP)
 
-spdr_tx_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(MINIUPNPC_LIBS) $(ZMQ_LIBS)
+rwtaler_tx_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(MINIUPNPC_LIBS) $(ZMQ_LIBS)
 #
 
 # bitcoinconsensus library #

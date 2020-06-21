@@ -39,7 +39,7 @@
   </layout>
  </widget>
  <resources>
-  <include location="../spdr.qrc"/>
+  <include location="../rwtaler.qrc"/>
  </resources>
  <connections/>
 </ui>

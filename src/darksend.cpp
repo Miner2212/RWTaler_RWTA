@@ -1,7 +1,7 @@
 // Copyright (c) 2012-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2019 The RWTalercore developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -1420,7 +1420,7 @@ bool CDarkSendPool::DoAutomaticDenominating(bool fDryRun, bool ready) {
         // should have some additional amount for them
         nLowestDenom += (DARKSEND_COLLATERAL * 4) + DARKSEND_FEE * 2;
 
-    int64_t nBalanceNeedsAnonymized = nAnonymizeSpiderAmount * COIN - pwalletMain->GetAnonymizedBalance();
+    int64_t nBalanceNeedsAnonymized = nAnonymizeRWTalerAmount * COIN - pwalletMain->GetAnonymizedBalance();
 
     // if balanceNeedsAnonymized is more than pool max, take the pool max
     if (nBalanceNeedsAnonymized > DARKSEND_POOL_MAX) nBalanceNeedsAnonymized = DARKSEND_POOL_MAX;
@@ -2175,7 +2175,7 @@ void ThreadCheckDarkSendPool() {
                     darkSendPool.SendRandomPaymentToSelf();
                     int nLeftToAnon = ((pwalletMain->GetBalance() - pwalletMain->GetAnonymizedBalance()) / COIN) - 3;
                     if (nLeftToAnon > 999) nLeftToAnon = 999;
-                    nAnonymizeSpiderAmount = (rand() % nLeftToAnon) + 3;
+                    nAnonymizeRWTalerAmount = (rand() % nLeftToAnon) + 3;
                 } else {
                     darkSendPool.DoAutomaticDenominating();
                 }

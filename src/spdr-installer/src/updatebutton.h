@@ -6,7 +6,7 @@
 #include <qscopedpointer.h>
 #include <qwidget.h>
 
-namespace QtSpiderUpdater
+namespace QtRWTalerUpdater
 {
 
 class UpdateButtonPrivate;

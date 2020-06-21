@@ -9,7 +9,7 @@ from test_framework.comptool import TestManager, TestInstance, RejectResult
 from test_framework.blocktools import *
 from test_framework.mininode import *
 from test_framework.address import *
-from test_framework.spdr import *
+from test_framework.rwtaler import *
 import time
 from test_framework.key import CECKey
 from test_framework.script import *
@@ -24,7 +24,7 @@ def find_unspent(node, amount):
     assert(False)
 
 
-class SpiderBlockHeaderTest(ComparisonTestFramework):
+class RWTalerBlockHeaderTest(ComparisonTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
         self.tip = None
@@ -167,4 +167,4 @@ class SpiderBlockHeaderTest(ComparisonTestFramework):
 
 
 if __name__ == '__main__':
-    SpiderBlockHeaderTest().main()
+    RWTalerBlockHeaderTest().main()

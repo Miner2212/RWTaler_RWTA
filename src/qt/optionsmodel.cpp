@@ -1,12 +1,12 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2019 The RWTalercore developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/spdr-config.h"
+#include "config/rwtaler-config.h"
 #endif
 
 #include "optionsmodel.h"
@@ -81,11 +81,11 @@ void OptionsModel::Init()
     if (!settings.contains("nDarksendRounds"))
         settings.setValue("nDarksendRounds", 2);
 
-    if (!settings.contains("nAnonymizeSpiderAmount"))
-        settings.setValue("nAnonymizeSpiderAmount", 1000);
+    if (!settings.contains("nAnonymizeRWTalerAmount"))
+        settings.setValue("nAnonymizeRWTalerAmount", 1000);
 
     nDarksendRounds = settings.value("nDarksendRounds").toLongLong();
-    nAnonymizeSpiderAmount = settings.value("nAnonymizeSpiderAmount").toLongLong();
+    nAnonymizeRWTalerAmount = settings.value("nAnonymizeRWTalerAmount").toLongLong();
 
     if (!settings.contains("fShowAdvancedUI"))
         settings.setValue("fShowAdvancedUI", fEnableDarksend);
@@ -197,8 +197,8 @@ void OptionsModel::Init()
 
     if (settings.contains("nDarksendRounds"))
         SoftSetArg("-darksendrounds", settings.value("nDarksendRounds").toString().toStdString());
-    if (settings.contains("nAnonymizeSpiderAmount"))
-        SoftSetArg("-anonymizespdramount", settings.value("nAnonymizeSpiderAmount").toString().toStdString());
+    if (settings.contains("nAnonymizeRWTalerAmount"))
+        SoftSetArg("-anonymizerwtaleramount", settings.value("nAnonymizeRWTalerAmount").toString().toStdString());
 
     // Old/bad keys to clean
     settings.remove("fparallelMasterNode");
@@ -210,7 +210,7 @@ void OptionsModel::Reset()
 
     // Remove all entries from our QSettings object
     settings.clear();
-    resetSettings = true; // Needed in spdr.cpp during shotdown to also remove the window positions
+    resetSettings = true; // Needed in rwtaler.cpp during shotdown to also remove the window positions
 
     // default setting for OptionsModel::StartAtStartup - disabled
     if (GUIUtil::GetStartOnSystemStartup())
@@ -295,8 +295,8 @@ QVariant OptionsModel::data(const QModelIndex& index, int role) const
             return settings.value("nThreadsScriptVerif");
         case DarkSendRounds:
             return QVariant(nDarksendRounds);
-        case AnonymizeSpiderAmount:
-            return QVariant(nAnonymizeSpiderAmount);
+        case AnonymizeRWTalerAmount:
+            return QVariant(nAnonymizeRWTalerAmount);
         case Listen:
             return settings.value("fListen");
         case CheckUpdates:
@@ -426,10 +426,10 @@ bool OptionsModel::setData(const QModelIndex& index, const QVariant& value, int 
             settings.setValue("nDarksendRounds", nDarksendRounds);
             Q_EMIT darksendRoundsChanged(nDarksendRounds);
             break;
-        case AnonymizeSpiderAmount:
-            nAnonymizeSpiderAmount = value.toInt();
-            settings.setValue("nAnonymizeSpiderAmount", nAnonymizeSpiderAmount);
-            Q_EMIT anonymizeSpiderAmountChanged(nAnonymizeSpiderAmount);
+        case AnonymizeRWTalerAmount:
+            nAnonymizeRWTalerAmount = value.toInt();
+            settings.setValue("nAnonymizeRWTalerAmount", nAnonymizeRWTalerAmount);
+            Q_EMIT anonymizeRWTalerAmountChanged(nAnonymizeRWTalerAmount);
             break;
         case CoinControlFeatures:
             fCoinControlFeatures = value.toBool();

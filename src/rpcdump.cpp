@@ -1,7 +1,7 @@
 // Copyright (c) 2012-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2019 The RWTalercore developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -88,10 +88,10 @@ UniValue importprivkey(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() < 1 || params.size() > 3)
         throw runtime_error(
-            "importprivkey \"spdrprivkey\" ( \"label\" rescan )\n"
+            "importprivkey \"rwtalerprivkey\" ( \"label\" rescan )\n"
             "\nAdds a private key (as returned by dumpprivkey) to your wallet.\n"
             "\nArguments:\n"
-            "1. \"spdrprivkey\"   (string, required) The private key (see dumpprivkey)\n"
+            "1. \"rwtalerprivkey\"   (string, required) The private key (see dumpprivkey)\n"
             "2. \"label\"            (string, optional, default=\"\") An optional label\n"
             "3. rescan               (boolean, optional, default=true) Rescan the wallet for transactions\n"
             "\nNote: This call can take minutes to complete if rescan is true.\n"
@@ -158,20 +158,20 @@ UniValue importprivkey(const UniValue& params, bool fHelp)
         pwalletMain->ScanForWalletTransactions(chainActive.Genesis(), true);
 
         if (pwalletMain->IsAbortingRescan()) {
-            msg =  _("Rescan aborted by user. Please restart your Spidercore wallet with '-rescan' option. Otherwise, transaction data");
+            msg =  _("Rescan aborted by user. Please restart your RWTalercore wallet with '-rescan' option. Otherwise, transaction data");
             msg += _(" or address book entries might be missing or incorrect");
             LogPrintf("%s: %s\n", __func__, msg);
             throw JSONRPCError(RPC_MISC_ERROR, msg);
         }
         else
         {
-            msg =  _("'importprivkey' with 'Rescan' option finished successfully. Please restart your Spidercore wallet. Otherwise, transaction data");
+            msg =  _("'importprivkey' with 'Rescan' option finished successfully. Please restart your RWTalercore wallet. Otherwise, transaction data");
             msg += _(" or address book entries might be missing or incorrect");
         }
     }
     else
     {
-        msg =  _("'importprivkey' finished successfully. Please restart Spidercore wallet with '-rescan' option. Otherwise, transaction data");
+        msg =  _("'importprivkey' finished successfully. Please restart RWTalercore wallet with '-rescan' option. Otherwise, transaction data");
         msg += _(" or address book entries might be missing or incorrect");
     }
 
@@ -533,11 +533,11 @@ UniValue dumpprivkey(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 1)
         throw runtime_error(
-            "dumpprivkey \"spdraddress\"\n"
-            "\nReveals the private key corresponding to 'spdraddress'.\n"
+            "dumpprivkey \"rwtaleraddress\"\n"
+            "\nReveals the private key corresponding to 'rwtaleraddress'.\n"
             "Then the importprivkey can be used with this output\n"
             "\nArguments:\n"
-            "1. \"spdraddress\"   (string, required) The spdr address for the private key\n"
+            "1. \"rwtaleraddress\"   (string, required) The rwtaler address for the private key\n"
             "\nResult:\n"
             "\"key\"                (string) The private key\n"
             "\nExamples:\n" +
@@ -729,10 +729,10 @@ UniValue bip38encrypt(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 2)
         throw runtime_error(
-            "bip38encrypt \"spdraddress\"\n"
-            "\nEncrypts a private key corresponding to 'spdraddress'.\n"
+            "bip38encrypt \"rwtaleraddress\"\n"
+            "\nEncrypts a private key corresponding to 'rwtaleraddress'.\n"
             "\nArguments:\n"
-            "1. \"spdraddress\"   (string, required) The spdr address for the private key (you must hold the key already)\n"
+            "1. \"rwtaleraddress\"   (string, required) The rwtaler address for the private key (you must hold the key already)\n"
             "2. \"passphrase\"   (string, required) The passphrase you want the private key to be encrypted with - Valid special chars: !#$%&'()*+,-./:;<=>?`{|}~ \n"
             "\nResult:\n"
             "\"key\"                (string) The encrypted private key\n"
@@ -769,7 +769,7 @@ UniValue bip38decrypt(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 2)
         throw runtime_error(
-            "bip38decrypt \"spdraddress\"\n"
+            "bip38decrypt \"rwtaleraddress\"\n"
             "\nDecrypts and then imports password protected private key.\n"
             "\nArguments:\n"
             "1. \"passphrase\"   (string, required) The passphrase you want the private key to be encrypted with\n"

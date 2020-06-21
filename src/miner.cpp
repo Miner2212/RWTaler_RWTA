@@ -1,7 +1,7 @@
 // Copyright (c) 2012-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2019 The RWTalercore developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -347,18 +347,18 @@ std::unique_ptr<CBlockTemplate> BlockAssembler::CreateNewBlock(const CScript& sc
     if (fProofOfStake)
         originalRewardTx = CMutableTransaction(pblock->vtx[1]);
 
-    //////////////////////////////////////////////////////// spdr
-    SpiderDGP spdrDGP(globalState.get(), fGettingValuesDGP);
-    globalSealEngine->setSpiderSchedule(spdrDGP.getGasSchedule(nHeight));
-    uint32_t blockSizeDGP = spdrDGP.getBlockSize(nHeight);
-    minGasPrice = spdrDGP.getMinGasPrice(nHeight);
+    //////////////////////////////////////////////////////// rwtaler
+    RWTalerDGP rwtalerDGP(globalState.get(), fGettingValuesDGP);
+    globalSealEngine->setRWTalerSchedule(rwtalerDGP.getGasSchedule(nHeight));
+    uint32_t blockSizeDGP = rwtalerDGP.getBlockSize(nHeight);
+    minGasPrice = rwtalerDGP.getMinGasPrice(nHeight);
     if(IsArgSet("-staker-min-tx-gas-price")) {
         CAmount stakerMinGasPrice;
         if(ParseMoney(GetArg("-staker-min-tx-gas-price", ""), stakerMinGasPrice)) {
             minGasPrice = std::max(minGasPrice, (uint64_t)stakerMinGasPrice);
         }
     }
-    hardBlockGasLimit = spdrDGP.getBlockGasLimit(nHeight);
+    hardBlockGasLimit = rwtalerDGP.getBlockGasLimit(nHeight);
     softBlockGasLimit = GetArg("-staker-soft-block-gas-limit", hardBlockGasLimit);
     softBlockGasLimit = std::min(softBlockGasLimit, hardBlockGasLimit);
     txGasLimit = GetArg("-staker-max-tx-gas-limit", softBlockGasLimit);
@@ -556,34 +556,34 @@ bool BlockAssembler::AttemptToAddContractToBlock(CTxMemPool::txiter iter, uint64
     uint64_t nBlockSize = this->nBlockSize;
     uint64_t nBlockSigOpsCost = this->nBlockSigOpsCost;
 
-    SpiderTxConverter convert(iter->GetTx(), NULL, &pblock->vtx);
+    RWTalerTxConverter convert(iter->GetTx(), NULL, &pblock->vtx);
 
-    ExtractSpiderTX resultConverter;
-    if(!convert.extractionSpiderTransactions(resultConverter)){
+    ExtractRWTalerTX resultConverter;
+    if(!convert.extractionRWTalerTransactions(resultConverter)){
         //this check already happens when accepting txs into mempool
         //therefore, this can only be triggered by using raw transactions on the staker itself
         return false;
     }
-    std::vector<SpiderTransaction> spdrTransactions = resultConverter.first;
+    std::vector<RWTalerTransaction> rwtalerTransactions = resultConverter.first;
     dev::u256 txGas = 0;
-    for(SpiderTransaction spdrTransaction : spdrTransactions){
-        txGas += spdrTransaction.gas();
+    for(RWTalerTransaction rwtalerTransaction : rwtalerTransactions){
+        txGas += rwtalerTransaction.gas();
         if(txGas > txGasLimit) {
             // Limit the tx gas limit by the soft limit if such a limit has been specified.
             return false;
         }
 
-        if(bceResult.usedGas + spdrTransaction.gas() > softBlockGasLimit){
+        if(bceResult.usedGas + rwtalerTransaction.gas() > softBlockGasLimit){
             //if this transaction's gasLimit could cause block gas limit to be exceeded, then don't add it
             return false;
         }
-        if(spdrTransaction.gasPrice() < minGasPrice){
+        if(rwtalerTransaction.gasPrice() < minGasPrice){
             //if this transaction's gasPrice is less than the current DGP minGasPrice don't add it
             return false;
         }
     }
     // We need to pass the DGP's block gas limit (not the soft limit) since it is consensus critical.
-    ByteCodeExec exec(*pblock, spdrTransactions, hardBlockGasLimit);
+    ByteCodeExec exec(*pblock, rwtalerTransactions, hardBlockGasLimit);
     if(!exec.performByteCode()){
         //error, don't add contract
         setGlobalStateRoot(oldHashStateRoot);

@@ -1,4 +1,4 @@
-Source: spdr
+Source: rwtaler
 Section: utils
 Priority: optional
 Maintainer: Jonas Smedegaard <dr@jones.dk> ***TODO***
@@ -23,14 +23,14 @@ Build-Depends: debhelper,
  libprotobuf-dev, protobuf-compiler
 Standards-Version: 3.9.2
 Homepage: https://spidervps.net/
-Vcs-Git: git://github.com/216k155/spdr.git
-Vcs-Browser: http://github.com/216k155/spdr
+Vcs-Git: git://github.com/216k155/rwtaler.git
+Vcs-Browser: http://github.com/216k155/rwtaler
 
-Package: spdrd
+Package: rwtalerd
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - daemon
- Spider is a free open source peer-to-peer electronic cash system that
+ RWTaler is a free open source peer-to-peer electronic cash system that
  is completely decentralized, without the need for a central server or
  trusted parties.  Users hold the crypto keys to their own money and
  transact directly with each other, with the help of a P2P network to
@@ -39,14 +39,14 @@ Description: peer-to-peer network based digital currency - daemon
  Full transaction history is stored locally at each client.  This
  requires 1+ GB of space, slowly growing.
  .
- This package provides the daemon, spdrd, and the CLI tool
- spdr-cli to interact with the daemon.
+ This package provides the daemon, rwtalerd, and the CLI tool
+ rwtaler-cli to interact with the daemon.
 
-Package: spdr-qt
+Package: rwtaler-qt
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - Qt GUI
- Spider is a free open source peer-to-peer electronic cash system that
+ RWTaler is a free open source peer-to-peer electronic cash system that
  is completely decentralized, without the need for a central server or
  trusted parties.  Users hold the crypto keys to their own money and
  transact directly with each other, with the help of a P2P network to
@@ -55,4 +55,4 @@ Description: peer-to-peer network based digital currency - Qt GUI
  Full transaction history is stored locally at each client.  This
  requires 1+ GB of space, slowly growing.
  .
- This package provides Spider-Qt, a GUI for Spider based on Qt.
+ This package provides RWTaler-Qt, a GUI for RWTaler based on Qt.

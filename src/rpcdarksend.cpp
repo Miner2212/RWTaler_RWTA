@@ -1,7 +1,7 @@
 // Copyright (c) 2012-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2019 The RWTalercore developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -39,7 +39,7 @@ void SendMoney(const CTxDestination& address, CAmount nValue, CWalletTx& wtxNew,
         throw JSONRPCError(RPC_WALLET_ERROR, strError);
     }
 
-    // Parse Spider address
+    // Parse RWTaler address
     CScript scriptPubKey = GetScriptForDestination(address);
 
     // Create and send the transaction
@@ -64,8 +64,8 @@ void SendMoney(const CTxDestination& address, CAmount nValue, CWalletTx& wtxNew,
 UniValue darksend(const UniValue& params, bool fHelp) {
     if (fHelp || params.size() == 0)
         throw runtime_error(
-            "darksend <Spideraddress> <amount>\n"
-            "Spideraddress, reset, or auto (AutoDenominate)"
+            "darksend <RWTaleraddress> <amount>\n"
+            "RWTaleraddress, reset, or auto (AutoDenominate)"
             "<amount> is a real and is rounded to the nearest 0.00000001"
             + HelpRequiringPassphrase());
 
@@ -88,14 +88,14 @@ UniValue darksend(const UniValue& params, bool fHelp) {
 
     if (params.size() != 2)
         throw runtime_error(
-            "darksend <Spideraddress> <amount>\n"
-            "Spideraddress, denominate, or auto (AutoDenominate)"
+            "darksend <RWTaleraddress> <amount>\n"
+            "RWTaleraddress, denominate, or auto (AutoDenominate)"
             "<amount> is a real and is rounded to the nearest 0.00000001"
             + HelpRequiringPassphrase());
 
     CTxDestination dest = DecodeDestination(params[0].get_str());
     if (!IsValidDestination(dest))
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Spider address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid RWTaler address");
 
     // Amount
     int64_t nAmount = AmountFromValue(params[1]);
@@ -297,7 +297,7 @@ UniValue masternode(const UniValue& params, bool fHelp) {
             {
                 UniValue obj(UniValue::VOBJ);
                 obj.push_back(Pair("rank",  (int) (GetMasternodeRank(mn.vin, chainActive.Height()))));
-                obj.push_back(Pair("network", "ipv4")); // SpiderCore support ipv4 only
+                obj.push_back(Pair("network", "ipv4")); // RWTalerCore support ipv4 only
                 obj.push_back(Pair("txhash",  mn.vin.prevout.hash.ToString()));
                 obj.push_back(Pair("outidx", (uint64_t) mn.vin.prevout.n));
                 obj.push_back(Pair("status", mn.IsEnabled() == true ? "ENABLED" : "MISSING"));

@@ -1,7 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2019 The RWTalercore developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -35,7 +35,7 @@ HelpMessageDialog::HelpMessageDialog(QWidget* parent, HelpMode helpMode) : QDial
 {
     ui->setupUi(this);
 
-    QString version = tr("Spidercore") + " " + tr("version") + " " + QString::fromStdString(FormatFullVersion());
+    QString version = tr("RWTalercore") + " " + tr("version") + " " + QString::fromStdString(FormatFullVersion());
 /* On x86 add a bit specifier to the version so that users can distinguish between
      * 32 and 64 bit builds. On other architectures, 32/64 bit may be more ambigious.
      */
@@ -46,7 +46,7 @@ HelpMessageDialog::HelpMessageDialog(QWidget* parent, HelpMode helpMode) : QDial
 #endif
 
     if (helpMode == about) {
-        setWindowTitle(tr("About Spidercore"));
+        setWindowTitle(tr("About RWTalercore"));
 
         /// HTML-format the license message from the core
         QString licenseInfo = QString::fromStdString(LicenseInfo());
@@ -68,7 +68,7 @@ HelpMessageDialog::HelpMessageDialog(QWidget* parent, HelpMode helpMode) : QDial
     } else if (helpMode == cmdline) {
         setWindowTitle(tr("Command-line options"));
         QString header = tr("Usage:") + "\n" +
-                         "  spdr-qt [" + tr("command-line options") + "]                     " + "\n";
+                         "  rwtaler-qt [" + tr("command-line options") + "]                     " + "\n";
         QTextCursor cursor(ui->helpMessage->document());
         cursor.insertText(version);
         cursor.insertBlock();
@@ -163,7 +163,7 @@ ShutdownWindow::ShutdownWindow(QWidget* parent, Qt::WindowFlags f) : QWidget(par
 {
     QVBoxLayout* layout = new QVBoxLayout();
     layout->addWidget(new QLabel(
-        tr("Spidercore is shutting down...") + "<br /><br />" +
+        tr("RWTalercore is shutting down...") + "<br /><br />" +
         tr("Do not shut down the computer until this window disappears.")));
     setLayout(layout);
 }

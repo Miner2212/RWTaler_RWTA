@@ -80,8 +80,8 @@ void DarksendConfig::configure(bool enabled, int coins, int rounds)
     QSettings settings;
 
     settings.setValue("nDarksendRounds", rounds);
-    settings.setValue("nAnonymizeSpiderAmount", coins);
+    settings.setValue("nAnonymizeRWTalerAmount", coins);
 
     nDarksendRounds = rounds;
-    nAnonymizeSpiderAmount = coins;
+    nAnonymizeRWTalerAmount = coins;
 }

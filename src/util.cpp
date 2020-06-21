@@ -1,12 +1,12 @@
 // Copyright (c) 2012-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2019 The RWTalercore developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/spdr-config.h"
+#include "config/rwtaler-config.h"
 #endif
 
 #include "util.h"
@@ -111,7 +111,7 @@ bool fEnableInstanTX = true;
 int nInstanTXDepth = 5;
 int nDarksendRounds = 2;
 int nWalletBackups = 10;
-int nAnonymizeSpiderAmount = 1000;
+int nAnonymizeRWTalerAmount = 1000;
 int nLiquidityProvider = 0;
 /** Spork enforcement enabled time */
 int64_t enforceMasternodePaymentsTime = 4085657524;
@@ -206,22 +206,22 @@ static FILE* fileout = NULL;
 
 static boost::mutex* mutexDebugLog = NULL;
 
-/////////////////////////////////////////////////////////////////////// // spdr
+/////////////////////////////////////////////////////////////////////// // rwtaler
 static FILE* fileoutVM = NULL;
 ///////////////////////////////////////////////////////////////////////
 
 static void DebugPrintInit()
 {
     assert(fileout == NULL);
-    assert(fileoutVM == NULL); // spdr
+    assert(fileoutVM == NULL); // rwtaler
     assert(mutexDebugLog == NULL);
 
     boost::filesystem::path pathDebug = GetDataDir() / "debug.log";
-    boost::filesystem::path pathDebugVM = GetDataDir() / "vm.log"; // spdr
+    boost::filesystem::path pathDebugVM = GetDataDir() / "vm.log"; // rwtaler
     fileout = fopen(pathDebug.string().c_str(), "a");
-    fileoutVM = fopen(pathDebugVM.string().c_str(), "a"); // spdr
+    fileoutVM = fopen(pathDebugVM.string().c_str(), "a"); // rwtaler
     if (fileout) setbuf(fileout, NULL); // unbuffered
-    if (fileoutVM) setbuf(fileoutVM, NULL); // unbuffered // spdr
+    if (fileoutVM) setbuf(fileoutVM, NULL); // unbuffered // rwtaler
 
     mutexDebugLog = new boost::mutex();
 }
@@ -241,8 +241,8 @@ bool LogAcceptCategory(const char* category)
             const vector<string>& categories = mapMultiArgs["-debug"];
             ptrCategory.reset(new set<string>(categories.begin(), categories.end()));
             // thread_specific_ptr automatically deletes the set when the thread ends.
-            // "spdr" is a composite category enabling all SPDR-related debug output
-            if (ptrCategory->count(string("spdr"))) {
+            // "rwtaler" is a composite category enabling all SPDR-related debug output
+            if (ptrCategory->count(string("rwtaler"))) {
                 ptrCategory->insert(string("darksend"));
                 ptrCategory->insert(string("instantx"));
                 ptrCategory->insert(string("masternode"));
@@ -281,7 +281,7 @@ void pushDebugLog(std::string pathDebugStr, int debugNum)
 
 int LogPrintStr(const std::string& str, bool useVMLog)
 {
-//////////////////////////////// // spdr
+//////////////////////////////// // rwtaler
     if (fileout) {
         int size = ftell(fileout);
         if (size >= MAX_FILE_SIZE && nLogFile > 1) {
@@ -493,7 +493,7 @@ static std::string FormatException(std::exception* pex, const char* pszThread)
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "spdr";
+    const char* pszModule = "rwtaler";
 #endif
     if (pex)
         return strprintf(
@@ -517,7 +517,7 @@ boost::filesystem::path GetDefaultDataDir()
 // Windows < Vista: C:\Documents and Settings\Username\Application Data\SPDR
 // Windows >= Vista: C:\Users\Username\AppData\Roaming\SPDR
 // Mac: ~/Library/Application Support/SPDR
-// Unix: ~/.spdr
+// Unix: ~/.rwtaler
 #ifdef WIN32
     // Windows
     return GetSpecialFolderPath(CSIDL_APPDATA) / "SPDR";
@@ -535,7 +535,7 @@ boost::filesystem::path GetDefaultDataDir()
     return pathRet / "SPDR";
 #else
     // Unix
-    return pathRet / ".spdr";
+    return pathRet / ".rwtaler";
 #endif
 #endif
 }
@@ -582,7 +582,7 @@ void ClearDatadirCache()
 
 boost::filesystem::path GetConfigFile()
 {
-    boost::filesystem::path pathConfigFile(GetArg("-conf", "spdr.conf"));
+    boost::filesystem::path pathConfigFile(GetArg("-conf", "rwtaler.conf"));
     if (!pathConfigFile.is_complete())
         pathConfigFile = GetDataDir(false) / pathConfigFile;
 
@@ -601,11 +601,11 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 {
     boost::filesystem::ifstream streamConfig(GetConfigFile());
     if (!streamConfig.good()) {
-        // Create empty spdr.conf if it does not exist
+        // Create empty rwtaler.conf if it does not exist
         FILE* configFile = fopen(GetConfigFile().string().c_str(), "a");
         if (configFile != NULL)
         {
-            std::string strHeader = "# Spider Core config file\n"
+            std::string strHeader = "# RWTaler Core config file\n"
                                     "addnode=185.195.26.9\n"
                                     "addnode=157.230.107.178\n"
                                     "addnode=185.195.27.167\n"
@@ -630,7 +630,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
     setOptions.insert("*");
 
     for (boost::program_options::detail::config_file_iterator it(streamConfig, setOptions), end; it != end; ++it) {
-        // Don't overwrite existing settings so command line settings override spdr.conf
+        // Don't overwrite existing settings so command line settings override rwtaler.conf
         string strKey = string("-") + it->string_key;
         if (mapSettingsRet.count(strKey) == 0) {
             mapSettingsRet[strKey] = it->value[0];
@@ -663,7 +663,7 @@ void WriteConfigToFile(std::string strKey, std::string strValue)
 #ifndef WIN32
 boost::filesystem::path GetPidFile()
 {
-    boost::filesystem::path pathPidFile(GetArg("-pid", "spdrd.pid"));
+    boost::filesystem::path pathPidFile(GetArg("-pid", "rwtalerd.pid"));
     if (!pathPidFile.is_complete()) pathPidFile = GetDataDir() / pathPidFile;
     return pathPidFile;
 }

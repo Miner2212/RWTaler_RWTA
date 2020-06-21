@@ -1,7 +1,7 @@
 // Copyright (c) 2012-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2019 The RWTalercore developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -247,7 +247,7 @@ private:
     int lastFewTxs;
     bool blockFinished;
 
-///////////////////////////////////////////// // spdr
+///////////////////////////////////////////// // rwtaler
     ByteCodeExecResult bceResult;
     uint64_t minGasPrice = 1;
     uint64_t hardBlockGasLimit;
@@ -256,7 +256,7 @@ private:
 /////////////////////////////////////////////
 
     // The original constructed reward tx (either coinbase or coinstake) without gas refund adjustments
-    CMutableTransaction originalRewardTx; // spdr
+    CMutableTransaction originalRewardTx; // rwtaler
 
     //When GetAdjustedTime() exceeds this, no more transactions will attempt to be added
     int32_t nTimeLimit;

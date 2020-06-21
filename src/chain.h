@@ -1,7 +1,7 @@
 // Copyright (c) 2012-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2019 The RWTalercore developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -189,8 +189,8 @@ public:
     unsigned int nTime;
     unsigned int nBits;
     unsigned int nNonce;
-    uint256 hashStateRoot; // spdr
-    uint256 hashUTXORoot; // spdr
+    uint256 hashStateRoot; // rwtaler
+    uint256 hashUTXORoot; // rwtaler
 
     //! (memory only) Sequential id assigned to distinguish order in which blocks are received.
     uint32_t nSequenceId;
@@ -228,8 +228,8 @@ public:
         nTime = 0;
         nBits = 0;
         nNonce = 0;
-        hashStateRoot  = uint256(); // spdr
-        hashUTXORoot   = uint256(); // spdr
+        hashStateRoot  = uint256(); // rwtaler
+        hashUTXORoot   = uint256(); // rwtaler
     }
 
     CBlockIndex()
@@ -246,8 +246,8 @@ public:
         nTime = block.nTime;
         nBits = block.nBits;
         nNonce = block.nNonce;
-        hashStateRoot  = block.hashStateRoot; // spdr
-        hashUTXORoot   = block.hashUTXORoot; // spdr
+        hashStateRoot  = block.hashStateRoot; // rwtaler
+        hashUTXORoot   = block.hashUTXORoot; // rwtaler
 
         //Proof of Stake
         bnChainTrust = 0;
@@ -298,8 +298,8 @@ public:
         block.nTime = nTime;
         block.nBits = nBits;
         block.nNonce = nNonce;
-        block.hashStateRoot  = hashStateRoot; // spdr
-        block.hashUTXORoot   = hashUTXORoot; // spdr
+        block.hashStateRoot  = hashStateRoot; // rwtaler
+        block.hashUTXORoot   = hashUTXORoot; // rwtaler
         return block;
     }
 
@@ -485,8 +485,8 @@ public:
         //When it is fixed, this check should look like this
         //if(this->nVersion & VersionBitsMask(Params().GetConsensus(), Consensus::SMART_CONTRACTS_HARDFORK))
         if ((this->nVersion & (1 << 30)) != 0) {
-            READWRITE(hashStateRoot);       // spdr
-            READWRITE(hashUTXORoot);        // spdr
+            READWRITE(hashStateRoot);       // rwtaler
+            READWRITE(hashUTXORoot);        // rwtaler
         }
     }
 
@@ -499,8 +499,8 @@ public:
         block.nTime = nTime;
         block.nBits = nBits;
         block.nNonce = nNonce;
-        block.hashStateRoot   = hashStateRoot; // spdr
-        block.hashUTXORoot    = hashUTXORoot; // spdr
+        block.hashStateRoot   = hashStateRoot; // rwtaler
+        block.hashUTXORoot    = hashUTXORoot; // rwtaler
         return block.GetHash(nHeight >= Params().SwitchPhi2Block());
     }
 

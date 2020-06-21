@@ -60,7 +60,7 @@
 #include <QStandardPaths>
 #include <errno.h>
 
-using namespace QtSpiderUpdater;
+using namespace QtRWTalerUpdater;
 
 #define SU_COMMAND "/usr/bin/sudo"
 

@@ -1,9 +1,9 @@
 
-cp src/spdrd .
-cp src/qt/spdr-qt .
-strip spdrd
-strip spdr-qt
-zip release_${SPDR_PLATFORM}.zip spdrd spdr-qt
+cp src/rwtalerd .
+cp src/qt/rwtaler-qt .
+strip rwtalerd
+strip rwtaler-qt
+zip release_${SPDR_PLATFORM}.zip rwtalerd rwtaler-qt
 
 sudo easy_install appscript
 

@@ -4,7 +4,7 @@
 WARNING: This module does not mlock() secrets; your private keys may end up on
 disk in swap! Use with caution!
 
-This file is modified from python-spdrlib.
+This file is modified from python-rwtalerlib.
 """
 
 import ctypes

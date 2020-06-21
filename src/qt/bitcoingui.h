@@ -6,7 +6,7 @@
 #define BITCOIN_QT_BITCOINGUI_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/spdr-config.h"
+#include "config/rwtaler-config.h"
 #endif
 
 #include "amount.h"
@@ -20,7 +20,7 @@
 #include <QSystemTrayIcon>
 
 #ifdef ENABLE_UPDATER
-#include "spdr-installer/src/updatecontroller.h"
+#include "rwtaler-installer/src/updatecontroller.h"
 #endif
 
 class ClientModel;
@@ -96,7 +96,7 @@ private:
     WalletFrame* walletFrame;
 
 #ifdef ENABLE_UPDATER
-    QtSpiderUpdater::UpdateController *controller;
+    QtRWTalerUpdater::UpdateController *controller;
 #endif
 
     UnitDisplayStatusBarControl* unitDisplayControl;

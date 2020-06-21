@@ -1,7 +1,7 @@
 // Copyright (c) 2012-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2019 The RWTalercore developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -90,7 +90,7 @@ public:
     }
 };
 
-class CSpiderNodeConfig
+class CRWTalerNodeConfig
 {
 public:
     int nVersion;
@@ -99,7 +99,7 @@ public:
     std::string sCollateralAddress;
     std::string sMasternodePrivKey;
 
-    CSpiderNodeConfig()
+    CRWTalerNodeConfig()
     {
 	nVersion = 0;
     }
@@ -141,9 +141,9 @@ public:
     bool WriteTokenTx(const CTokenTx& wTokenTx);
     bool EraseTokenTx(uint256 hash);
 
-    bool WriteSpiderNodeConfig(std::string sAlias, const CSpiderNodeConfig& nodeConfig);
-    bool ReadSpiderNodeConfig(std::string sAlias, CSpiderNodeConfig& nodeConfig);
-    bool EraseSpiderNodeConfig(std::string sAlias);
+    bool WriteRWTalerNodeConfig(std::string sAlias, const CRWTalerNodeConfig& nodeConfig);
+    bool ReadRWTalerNodeConfig(std::string sAlias, CRWTalerNodeConfig& nodeConfig);
+    bool EraseRWTalerNodeConfig(std::string sAlias);
 
     bool WriteKey(const CPubKey& vchPubKey, const CPrivKey& vchPrivKey, const CKeyMetadata& keyMeta);
     bool WriteCryptedKey(const CPubKey& vchPubKey, const std::vector<unsigned char>& vchCryptedSecret, const CKeyMetadata& keyMeta);

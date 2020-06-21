@@ -1,6 +1,6 @@
 [Protocol]
-exec=spdr-qt '%u'
-protocol=spdr
+exec=rwtaler-qt '%u'
+protocol=rwtaler
 input=none
 output=none
 helper=true

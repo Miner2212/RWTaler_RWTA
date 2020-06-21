@@ -1,7 +1,7 @@
 // Copyright (c) 2012-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2019 The RWTalercore developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -12,8 +12,8 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between spdr-cli and spdrd)
- * of a given instance of the Spider system.
+ * CBaseChainParams defines the base parameters (shared between rwtaler-cli and rwtalerd)
+ * of a given instance of the RWTaler system.
  */
 class CBaseChainParams
 {

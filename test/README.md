@@ -1,4 +1,4 @@
-This directory contains integration tests that test spdrd and its
+This directory contains integration tests that test rwtalerd and its
 utilities in their entirety. It does not contain unit tests, which
 can be found in [/src/test](/src/test).
 etc.
@@ -6,10 +6,10 @@ etc.
 There are currently two sets of tests in this directory:
 
 - [functional](/test/functional) which test the functionality of 
-spdrd and spdr-qt by interacting with them through the RPC and P2P
+rwtalerd and rwtaler-qt by interacting with them through the RPC and P2P
 interfaces.
-- [util](test/util) which tests the spdr utilities, currently only
-spdr-tx.
+- [util](test/util) which tests the rwtaler utilities, currently only
+rwtaler-tx.
 
 The util tests are run as part of `make check` target. The functional
 tests are run by the travis continuous build process whenever a pull
@@ -70,29 +70,29 @@ options. Run `test_runner.py -h` to see them all.
 
 ##### Resource contention
 
-The P2P and RPC ports used by the spdrd nodes-under-test are chosen to make
-conflicts with other processes unlikely. However, if there is another spdrd
+The P2P and RPC ports used by the rwtalerd nodes-under-test are chosen to make
+conflicts with other processes unlikely. However, if there is another rwtalerd
 process running on the system (perhaps from a previous test which hasn't successfully
-killed all its spdrd nodes), then there may be a port conflict which will
+killed all its rwtalerd nodes), then there may be a port conflict which will
 cause the test to fail. It is recommended that you run the tests on a system
-where no other spdrd processes are running.
+where no other rwtalerd processes are running.
 
 On linux, the test_framework will warn if there is another
-spdrd process running when the tests are started.
+rwtalerd process running when the tests are started.
 
-If there are zombie spdrd processes after test failure, you can kill them
+If there are zombie rwtalerd processes after test failure, you can kill them
 by running the following commands. **Note that these commands will kill all
-spdrd processes running on the system, so should not be used if any non-test
-spdrd processes are being run.**
+rwtalerd processes running on the system, so should not be used if any non-test
+rwtalerd processes are being run.**
 
 ```bash
-killall spdrd
+killall rwtalerd
 ```
 
 or
 
 ```bash
-pkill -9 spdrd
+pkill -9 rwtalerd
 ```
 
 
@@ -103,11 +103,11 @@ functional test is run and is stored in test/cache. This speeds up
 test startup times since new blockchains don't need to be generated for
 each test. However, the cache may get into a bad state, in which case
 tests will fail. If this happens, remove the cache directory (and make
-sure spdrd processes are stopped as above):
+sure rwtalerd processes are stopped as above):
 
 ```bash
 rm -rf cache
-killall spdrd
+killall rwtalerd
 ```
 
 ##### Test logging
@@ -120,13 +120,13 @@ default:
 - when run directly, *all* logs are written to `test_framework.log` and INFO
   level and above are output to the console.
 - when run on Travis, no logs are output to the console. However, if a test
-  fails, the `test_framework.log` and spdrd `debug.log`s will all be dumped
+  fails, the `test_framework.log` and rwtalerd `debug.log`s will all be dumped
   to the console to help troubleshooting.
 
 To change the level of logs output to the console, use the `-l` command line
 argument.
 
-`test_framework.log` and spdrd `debug.log`s can be combined into a single
+`test_framework.log` and rwtalerd `debug.log`s can be combined into a single
 aggregate log by running the `combine_logs.py` script. The output can be plain
 text, colorized text or html. For example:
 
@@ -153,9 +153,9 @@ import pdb; pdb.set_trace()
 ```
 
 anywhere in the test. You will then be able to inspect variables, as well as
-call methods that interact with the spdrd nodes-under-test.
+call methods that interact with the rwtalerd nodes-under-test.
 
-If further introspection of the spdrd instances themselves becomes
+If further introspection of the rwtalerd instances themselves becomes
 necessary, this can be accomplished by first setting a pdb breakpoint
 at an appropriate location, running the test to that point, then using
 `gdb` to attach to the process and debug.
@@ -169,15 +169,15 @@ For instance, to attach to `self.node[1]` during a run:
 use the directory path to get the pid from the pid file:
 
 ```bash
-cat /tmp/user/1000/testo9vsdjo3/node1/regtest/spdrd.pid
-gdb /home/example/spdrd <pid>
+cat /tmp/user/1000/testo9vsdjo3/node1/regtest/rwtalerd.pid
+gdb /home/example/rwtalerd <pid>
 ```
 
 Note: gdb attach step may require `sudo`
 
 ### Util tests
 
-Util tests can be run locally by running `test/util/spdr-util-test.py`. 
+Util tests can be run locally by running `test/util/rwtaler-util-test.py`. 
 Use the `-v` option for verbose output.
 
 # Writing functional tests

@@ -4,17 +4,17 @@
 #include <QDialog>
 
 namespace Ui {
-class AddEditSpiderNode;
+class AddEditRWTalerNode;
 }
 
 
-class AddEditSpiderNode : public QDialog
+class AddEditRWTalerNode : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit AddEditSpiderNode(QWidget *parent = 0);
-    ~AddEditSpiderNode();
+    explicit AddEditRWTalerNode(QWidget *parent = 0);
+    ~AddEditRWTalerNode();
 
 protected:
 
@@ -25,7 +25,7 @@ private Q_SLOTS:
 signals:
 
 private:
-    Ui::AddEditSpiderNode *ui;
+    Ui::AddEditRWTalerNode *ui;
 };
 
 #endif // ADDEDITSPDRNODE_H

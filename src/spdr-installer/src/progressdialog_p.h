@@ -16,7 +16,7 @@ namespace Ui {
 class ProgressDialog;
 }
 
-namespace QtSpiderUpdater
+namespace QtRWTalerUpdater
 {
 
 class ProgressDialog : public QDialog

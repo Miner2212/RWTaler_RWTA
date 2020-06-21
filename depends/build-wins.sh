@@ -1,6 +1,6 @@
 #!/bin/sh
 #-###############################################-#
-# C++ Cross-Compiler - The SpiderVPS Developer-2018 #
+# C++ Cross-Compiler - The RWTalerVPS Developer-2018 #
 #-###############################################-#
 
 # Set platform variables
@@ -80,9 +80,9 @@ RELEASE="$OLD_PATH/Release"
 mkdir -p "$RELEASE"
 
 # Remove the symbols for release
-[ -f "./src/qt/spdr-qt.exe" ] && cp "./src/qt/spdr-qt.exe" "$RELEASE"
-[ -f "./src/spdrd.exe" ] && cp "./src/spdrd.exe" "$RELEASE"
-[ -f "./src/spdr-cli.exe" ] && cp "./src/spdr-cli.exe" "$RELEASE"
+[ -f "./src/qt/rwtaler-qt.exe" ] && cp "./src/qt/rwtaler-qt.exe" "$RELEASE"
+[ -f "./src/rwtalerd.exe" ] && cp "./src/rwtalerd.exe" "$RELEASE"
+[ -f "./src/rwtaler-cli.exe" ] && cp "./src/rwtaler-cli.exe" "$RELEASE"
 
 
 cd "$RELEASE"

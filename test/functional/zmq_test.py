@@ -7,7 +7,7 @@ import configparser
 import os
 import struct
 
-from test_framework.test_framework import SpiderTestFramework, SkipTest
+from test_framework.test_framework import RWTalerTestFramework, SkipTest
 from test_framework.util import (assert_equal,
                                  bytes_to_hex_str,
                                  hash256,
@@ -15,7 +15,7 @@ from test_framework.util import (assert_equal,
 from test_framework.mininode import CTransaction, CBlockHeader
 import io
 
-class ZMQTest (SpiderTestFramework):
+class ZMQTest (RWTalerTestFramework):
     def set_test_params(self):
         self.num_nodes = 2
 
@@ -26,14 +26,14 @@ class ZMQTest (SpiderTestFramework):
         except ImportError:
             raise SkipTest("python3-zmq module not available.")
 
-        # Check that spdr has been built with ZMQ enabled
+        # Check that rwtaler has been built with ZMQ enabled
         config = configparser.ConfigParser()
         if not self.options.configfile:
             self.options.configfile = os.path.dirname(__file__) + "/../config.ini"
         config.read_file(open(self.options.configfile))
 
         if not config["components"].getboolean("ENABLE_ZMQ"):
-            raise SkipTest("spdrd has not been built with zmq enabled.")
+            raise SkipTest("rwtalerd has not been built with zmq enabled.")
 
         self.zmqContext = zmq.Context()
         self.zmqSubSocket = self.zmqContext.socket(zmq.SUB)

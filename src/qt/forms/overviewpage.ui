@@ -464,7 +464,7 @@
            <item row="2" column="0">
             <widget class="QLabel" name="labelAnonymizedText">
              <property name="text">
-              <string>Spidersend Balance:</string>
+              <string>RWTalersend Balance:</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1033,7 +1033,7 @@
            </sizepolicy>
           </property>
           <property name="toolTip">
-           <string>Try to manually submit a Spidersend request.</string>
+           <string>Try to manually submit a RWTalersend request.</string>
           </property>
           <property name="text">
            <string>Try Mix</string>
@@ -1055,7 +1055,7 @@
            </sizepolicy>
           </property>
           <property name="toolTip">
-           <string>Reset the current status of Spidersend (can interrupt Spidersend if it's in the process of Mixing, which can cost you money!)</string>
+           <string>Reset the current status of RWTalersend (can interrupt RWTalersend if it's in the process of Mixing, which can cost you money!)</string>
           </property>
           <property name="autoFillBackground">
            <bool>false</bool>
@@ -1083,7 +1083,7 @@
               </font>
              </property>
              <property name="text">
-              <string>Spidersend</string>
+              <string>RWTalersend</string>
              </property>
             </widget>
            </item>

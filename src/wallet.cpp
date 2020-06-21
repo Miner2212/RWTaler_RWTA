@@ -1,7 +1,7 @@
 // Copyright (c) 2012-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2019 The RWTalercore developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -2168,7 +2168,7 @@ void CWallet::AvailableCoinsMN(vector<COutput>& vCoins, bool fOnlyConfirmed, con
                 continue;
 
             const int nDepth = pcoin->GetDepthInMainChain();
-            if (nDepth <= 0) // SpiderNOTE: coincontrol fix / ignore 0 confirm
+            if (nDepth <= 0) // RWTalerNOTE: coincontrol fix / ignore 0 confirm
                 continue;
 
             // do not use IX for inputs that have less then 6 blockchain confirmations
@@ -2953,7 +2953,7 @@ bool CWallet::CreateTransaction(const std::vector<CRecipient>& vecSend, CWalletT
                 if (nChange > 0) {
                     // Fill a vout to ourself
                     // TODO: pass in scriptChange instead of reservekey so
-                    // change transaction isn't always pay-to-spdr-address
+                    // change transaction isn't always pay-to-rwtaler-address
                     CScript scriptChange;
 
                     bool combineChange = false;
@@ -4610,11 +4610,11 @@ bool CMerkleTx::IsTransactionLockTimedOut() const
     return false;
 }
 
-bool CWallet::AddSpiderNodeConfig(CSpiderNodeConfig nodeConfig)
+bool CWallet::AddRWTalerNodeConfig(CRWTalerNodeConfig nodeConfig)
 {
-    bool rv = CWalletDB(strWalletFile).WriteSpiderNodeConfig(nodeConfig.sAlias, nodeConfig);
+    bool rv = CWalletDB(strWalletFile).WriteRWTalerNodeConfig(nodeConfig.sAlias, nodeConfig);
     if(rv)
-	uiInterface.NotifySpiderNodeChanged(nodeConfig);
+	uiInterface.NotifyRWTalerNodeChanged(nodeConfig);
 
     return rv;
 }

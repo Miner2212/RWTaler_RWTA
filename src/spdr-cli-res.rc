@@ -16,14 +16,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Spider"
-            VALUE "FileDescription",    "Spider-cli (OSS RPC client for Spider)"
+            VALUE "CompanyName",        "RWTaler"
+            VALUE "FileDescription",    "RWTaler-cli (OSS RPC client for RWTaler)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "spdr-cli"
+            VALUE "InternalName",       "rwtaler-cli"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "spdr-cli.exe"
-            VALUE "ProductName",        "Spider-cli"
+            VALUE "OriginalFilename",   "rwtaler-cli.exe"
+            VALUE "ProductName",        "RWTaler-cli"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

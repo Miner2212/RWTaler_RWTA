@@ -8,6 +8,6 @@ Use the autogen script to prepare the build environment.
 
 Always verify the signatures and checksums.
 
-See doc/build-*.md for instructions on building spdrd,
+See doc/build-*.md for instructions on building rwtalerd,
 the intended-for-services, no-graphical-interface, reference
 implementation of SPDR.

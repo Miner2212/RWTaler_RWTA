@@ -1,7 +1,7 @@
 // Copyright (c) 2012-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2019 The RWTalercore developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -204,7 +204,7 @@ UniValue getrawmempool(const UniValue& params, bool fHelp)
             "    \"txid\", \"...\",          (string)  the transaction id\n"
             "    \"hash\", \"...\",          (string)  the transaction hash\n"
             "    \"size\" : n,             (numeric) transaction size in bytes\n"
-            "    \"fee\" : n,              (numeric) transaction fee in spdr\n"
+            "    \"fee\" : n,              (numeric) transaction fee in rwtaler\n"
             "    \"time\" : n,             (numeric) unix timestamp when transaction entered the mempool\n"
             "    \"height\" : n,           (numeric) block height when transaction entered pool\n"
             "    \"startingpriority\" : n, (numeric) priority when transaction entered pool\n"
@@ -1132,8 +1132,8 @@ UniValue gettxout(const UniValue& params, bool fHelp)
             "     \"hex\" : \"hex\",        (string) \n"
             "     \"reqSigs\" : n,          (numeric) Number of required signatures\n"
             "     \"type\" : \"pubkeyhash\", (string) The type, eg pubkeyhash\n"
-            "     \"addresses\" : [          (array of string) array of spdr addresses\n"
-            "     \"spdraddress\"   	 	(string) spdr address\n"
+            "     \"addresses\" : [          (array of string) array of rwtaler addresses\n"
+            "     \"rwtaleraddress\"   	 	(string) rwtaler address\n"
             "        ,...\n"
             "     ]\n"
             "  },\n"

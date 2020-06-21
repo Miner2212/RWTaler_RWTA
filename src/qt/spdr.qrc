@@ -1,14 +1,14 @@
 <RCC>
     <qresource prefix="/icons">
         <file alias="bitcoin">res/icons/bitcoin.png</file>
-        <file alias="spdrcoin_black">res/icons/spdrcoin_black.png</file>
+        <file alias="rwtalercoin_black">res/icons/rwtalercoin_black.png</file>
         <file alias="warning">res/icons/warning.png</file>
         <file alias="address-book">res/icons/address-book.png</file>
         <file alias="quit">res/icons/quit.png</file>
         <file alias="update">res/icons/update.ico</file>
         <file alias="update_black">res/icons/update_black.png</file>
         <file alias="network_monitor">res/icons/network_monitor.png</file>
-        <file alias="spdrupdate-loader">res/icons/spdrupdate-loader.gif</file>
+        <file alias="rwtalerupdate-loader">res/icons/rwtalerupdate-loader.gif</file>
         <file alias="send">res/icons/send.png</file>
         <file alias="conf">res/icons/conf.png</file>
         <file alias="auto_backup">res/icons/auto_backup.png</file>
@@ -56,12 +56,12 @@
         <file alias="tx_input">res/icons/tx_input.png</file>
         <file alias="tx_output">res/icons/tx_output.png</file>
         <file alias="tx_inout">res/icons/tx_inout.png</file>
-        <file alias="unit_spdr">res/icons/unit_spdr.png</file>
-        <file alias="unit_mspdr">res/icons/unit_mspdr.png</file>
-        <file alias="unit_uspdr">res/icons/unit_uspdr.png</file>
-        <file alias="unit_tspdr">res/icons/unit_tspdr.png</file>
-        <file alias="unit_tmspdr">res/icons/unit_tmspdr.png</file>
-        <file alias="unit_tuspdr">res/icons/unit_tuspdr.png</file>
+        <file alias="unit_rwtaler">res/icons/unit_rwtaler.png</file>
+        <file alias="unit_mrwtaler">res/icons/unit_mrwtaler.png</file>
+        <file alias="unit_urwtaler">res/icons/unit_urwtaler.png</file>
+        <file alias="unit_trwtaler">res/icons/unit_trwtaler.png</file>
+        <file alias="unit_tmrwtaler">res/icons/unit_tmrwtaler.png</file>
+        <file alias="unit_turwtaler">res/icons/unit_turwtaler.png</file>
         <file alias="lock_closed">res/icons/lock_closed.png</file>
         <file alias="lock_closed_black">res/icons/lock_closed_black.png</file>
         <file alias="lock_open">res/icons/lock_open.png</file>
@@ -89,7 +89,7 @@
     </qresource>
     <qresource prefix="/images">
         <file alias="about">res/images/about.png</file>
-        <file alias="spdr_logo_horizontal">res/images/spdr_logo_horizontal.png</file>
+        <file alias="rwtaler_logo_horizontal">res/images/rwtaler_logo_horizontal.png</file>
         <file alias="downArrow">res/images/downArrow.png</file>
         <file alias="downArrow_small">res/images/downArrow_small.png</file>
         <file alias="upArrow_small">res/images/upArrow_small.png</file>

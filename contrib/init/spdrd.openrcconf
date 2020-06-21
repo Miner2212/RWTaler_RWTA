@@ -1,25 +1,25 @@
-# /etc/conf.d/spdrd: config file for /etc/init.d/spdrd
+# /etc/conf.d/rwtalerd: config file for /etc/init.d/rwtalerd
 
 # Config file location
-#BITCOIND_CONFIGFILE="/etc/spdr/spdr.conf"
+#BITCOIND_CONFIGFILE="/etc/rwtaler/rwtaler.conf"
 
 # What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
-#BITCOIND_PIDDIR="/var/run/spdrd"
+#BITCOIND_PIDDIR="/var/run/rwtalerd"
 
 # What filename to give the pidfile
-#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/spdrd.pid"
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/rwtalerd.pid"
 
-# Where to write spdrd data (be mindful that the blockchain is large)
-#BITCOIND_DATADIR="/var/lib/spdrd"
+# Where to write rwtalerd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/rwtalerd"
 
-# User and group to own spdrd process
-#BITCOIND_USER="spdr"
-#BITCOIND_GROUP="spdr"
+# User and group to own rwtalerd process
+#BITCOIND_USER="rwtaler"
+#BITCOIND_GROUP="rwtaler"
 
-# Path to spdrd executable
-#BITCOIND_BIN="/usr/bin/spdrd"
+# Path to rwtalerd executable
+#BITCOIND_BIN="/usr/bin/rwtalerd"
 
-# Nice value to run spdrd under
+# Nice value to run rwtalerd under
 #BITCOIND_NICE=0
 
 # Additional options (avoid -conf and -datadir, use flags above)

@@ -2,24 +2,24 @@
 
 # backward compatibility for existing gentoo layout
 #
-if [ -d "/var/lib/spdr/.spdr" ]; then
-	BITCOIND_DEFAULT_DATADIR="/var/lib/spdr/.spdr"
+if [ -d "/var/lib/rwtaler/.rwtaler" ]; then
+	BITCOIND_DEFAULT_DATADIR="/var/lib/rwtaler/.rwtaler"
 else
-	BITCOIND_DEFAULT_DATADIR="/var/lib/spdrd"
+	BITCOIND_DEFAULT_DATADIR="/var/lib/rwtalerd"
 fi
 
-BITCOIND_CONFIGFILE=${BITCOIND_CONFIGFILE:-/etc/spdr/spdr.conf}
-BITCOIND_PIDDIR=${BITCOIND_PIDDIR:-/var/run/spdrd}
-BITCOIND_PIDFILE=${BITCOIND_PIDFILE:-${BITCOIND_PIDDIR}/spdrd.pid}
+BITCOIND_CONFIGFILE=${BITCOIND_CONFIGFILE:-/etc/rwtaler/rwtaler.conf}
+BITCOIND_PIDDIR=${BITCOIND_PIDDIR:-/var/run/rwtalerd}
+BITCOIND_PIDFILE=${BITCOIND_PIDFILE:-${BITCOIND_PIDDIR}/rwtalerd.pid}
 BITCOIND_DATADIR=${BITCOIND_DATADIR:-${BITCOIND_DEFAULT_DATADIR}}
-BITCOIND_USER=${BITCOIND_USER:-spdr}
-BITCOIND_GROUP=${BITCOIND_GROUP:-spdr}
-BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/spdrd}
+BITCOIND_USER=${BITCOIND_USER:-rwtaler}
+BITCOIND_GROUP=${BITCOIND_GROUP:-rwtaler}
+BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/rwtalerd}
 
-name="Spidercore Daemon"
+name="RWTalercore Daemon"
 description="SPDR crypto-currency p2p network daemon"
 
-command="/usr/bin/spdrd"
+command="/usr/bin/rwtalerd"
 command_args="-pid=\"${BITCOIND_PIDFILE}\" \
 		-conf=\"${BITCOIND_CONFIGFILE}\" \
 		-datadir=\"${BITCOIND_DATADIR}\" \
@@ -65,7 +65,7 @@ checkconfig()
 {
 	if ! grep -qs '^rpcpassword=' "${BITCOIND_CONFIGFILE}" ; then
 		eerror ""
-		eerror "ERROR: You must set a secure rpcpassword to run spdrd."
+		eerror "ERROR: You must set a secure rpcpassword to run rwtalerd."
 		eerror "The setting must appear in ${BITCOIND_CONFIGFILE}"
 		eerror ""
 		eerror "This password is security critical to securing wallets "
@@ -78,7 +78,7 @@ checkconfig()
 		eerror "It is also recommended that you also set alertnotify so you are "
 		eerror "notified of problems:"
 		eerror ""
-		eerror "ie: alertnotify=echo %%s | mail -s \"Spider Alert\"" \
+		eerror "ie: alertnotify=echo %%s | mail -s \"RWTaler Alert\"" \
 			"admin@foo.com"
 		eerror ""
 		return 1

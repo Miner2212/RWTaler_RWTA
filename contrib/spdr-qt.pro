@@ -78,7 +78,7 @@ HEADERS += src/activemasternode.h \
            src/crypter.h \
            src/darksend-relay.h \
            src/darksend.h \
-           src/spdr-config.h \
+           src/rwtaler-config.h \
            src/db.h \
            src/eccryptoverify.h \
            src/ecwrapper.h \
@@ -131,7 +131,7 @@ HEADERS += src/activemasternode.h \
            src/wallet_ismine.h \
            src/walletdb.h \
            src/compat/sanity.h \
-           src/config/spdr-config.h \
+           src/config/rwtaler-config.h \
            src/crypto/common.h \
            src/crypto/hmac_sha256.h \
            src/crypto/hmac_sha512.h \
@@ -333,7 +333,7 @@ HEADERS += src/activemasternode.h \
            src/secp256k1/src/java/org_bitcoin_NativeSecp256k1.h \
            src/crypto/aes_helper.c \
            src/qt/bitcoinamountfield.moc \
-           src/qt/spdr.moc \
+           src/qt/rwtaler.moc \
            src/qt/intro.moc \
            src/qt/overviewpage.moc \
            src/qt/rpcconsole.moc \
@@ -374,9 +374,9 @@ SOURCES += src/activemasternode.cpp \
            src/crypter.cpp \
            src/darksend-relay.cpp \
            src/darksend.cpp \
-           src/spdr-cli.cpp \
-           src/spdr-tx.cpp \
-           src/spdr.cpp \
+           src/rwtaler-cli.cpp \
+           src/rwtaler-tx.cpp \
+           src/rwtaler.cpp \
            src/db.cpp \
            src/eccryptoverify.cpp \
            src/ecwrapper.cpp \
@@ -471,8 +471,8 @@ SOURCES += src/activemasternode.cpp \
            src/qt/coincontroltreewidget.cpp \
            src/qt/csvmodelwriter.cpp \
            src/qt/darksendconfig.cpp \
-           src/qt/spdr.cpp \
-           src/qt/spdrstrings.cpp \
+           src/qt/rwtaler.cpp \
+           src/qt/rwtalerstrings.cpp \
            src/qt/editaddressdialog.cpp \
            src/qt/guiutil.cpp \
            src/qt/intro.cpp \
@@ -551,7 +551,7 @@ SOURCES += src/activemasternode.cpp \
            src/test/sighash_tests.cpp \
            src/test/sigopcount_tests.cpp \
            src/test/skiplist_tests.cpp \
-           src/test/test_spdr.cpp \
+           src/test/test_rwtaler.cpp \
            src/test/timedata_tests.cpp \
            src/test/transaction_tests.cpp \
            src/test/uint256_tests.cpp \
@@ -642,21 +642,21 @@ SOURCES += src/activemasternode.cpp \
            src/leveldb/helpers/memenv/memenv.cc \
            src/leveldb/helpers/memenv/memenv_test.cc \
            src/secp256k1/src/java/org_bitcoin_NativeSecp256k1.c
-RESOURCES += src/qt/spdr.qrc src/qt/spdr_locale.qrc
+RESOURCES += src/qt/rwtaler.qrc src/qt/rwtaler_locale.qrc
 
-TRANSLATIONS += src/qt/locale/spdr_bg.ts \
-                src/qt/locale/spdr_de.ts \
-                src/qt/locale/spdr_en.ts \
-                src/qt/locale/spdr_es.ts \
-                src/qt/locale/spdr_fi.ts \
-                src/qt/locale/spdr_fr.ts \
-                src/qt/locale/spdr_it.ts \
-                src/qt/locale/spdr_ja.ts \
-                src/qt/locale/spdr_pl.ts \
-                src/qt/locale/spdr_pt.ts \
-                src/qt/locale/spdr_ru.ts \
-                src/qt/locale/spdr_sk.ts \
-                src/qt/locale/spdr_sv.ts \
-                src/qt/locale/spdr_vi.ts \
-                src/qt/locale/spdr_zh_CN.ts \
-                src/qt/locale/spdr_zh_TW.ts
+TRANSLATIONS += src/qt/locale/rwtaler_bg.ts \
+                src/qt/locale/rwtaler_de.ts \
+                src/qt/locale/rwtaler_en.ts \
+                src/qt/locale/rwtaler_es.ts \
+                src/qt/locale/rwtaler_fi.ts \
+                src/qt/locale/rwtaler_fr.ts \
+                src/qt/locale/rwtaler_it.ts \
+                src/qt/locale/rwtaler_ja.ts \
+                src/qt/locale/rwtaler_pl.ts \
+                src/qt/locale/rwtaler_pt.ts \
+                src/qt/locale/rwtaler_ru.ts \
+                src/qt/locale/rwtaler_sk.ts \
+                src/qt/locale/rwtaler_sv.ts \
+                src/qt/locale/rwtaler_vi.ts \
+                src/qt/locale/rwtaler_zh_CN.ts \
+                src/qt/locale/rwtaler_zh_TW.ts

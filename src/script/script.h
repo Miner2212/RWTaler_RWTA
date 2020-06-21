@@ -21,7 +21,7 @@
 
 typedef std::vector<unsigned char> valtype;
 
-static const unsigned int MAX_SCRIPT_ELEMENT_SIZE = 128000; // spdr
+static const unsigned int MAX_SCRIPT_ELEMENT_SIZE = 128000; // rwtaler
 
 // Maximum number of non-push operations per script
 static const int MAX_OPS_PER_SCRIPT = 201;
@@ -30,7 +30,7 @@ static const int MAX_OPS_PER_SCRIPT = 201;
 static const int MAX_PUBKEYS_PER_MULTISIG = 20;
 
 // Maximum script length in bytes
-static const int MAX_SCRIPT_SIZE = 129000; // (129 kb) // spdr
+static const int MAX_SCRIPT_SIZE = 129000; // (129 kb) // rwtaler
 
 /** Threshold for nLockTime: below this value it is interpreted as block number, otherwise as UNIX timestamp. */
 static const unsigned int LOCKTIME_THRESHOLD = 500000000; // Tue Nov  5 00:53:20 1985 UTC
@@ -328,7 +328,7 @@ public:
         return serialize(m_value);
     }
 
-    ///////////////////////////////// spdr
+    ///////////////////////////////// rwtaler
     static uint64_t vch_to_uint64(const std::vector<unsigned char>& vch)
     {
         if (vch.size() > 8) {
@@ -681,7 +681,7 @@ public:
     bool IsPayToScriptHash() const;
     bool IsPayToWitnessScriptHash() const;
     bool IsWitnessProgram(int& version, std::vector<unsigned char>& program) const;
-    ///////////////////////////////////////////////// // spdr
+    ///////////////////////////////////////////////// // rwtaler
     bool IsPayToPubkey() const;
     bool IsPayToPubkeyHash() const;
     bool IsPayToWitnessPubkeyHash() const;
@@ -704,7 +704,7 @@ public:
         return (size() > 0 && *begin() == OP_RETURN) || (size() > MAX_SCRIPT_SIZE);
     }
 
-    ///////////////////////////////////////// spdr
+    ///////////////////////////////////////// rwtaler
     bool HasOpCreate() const
     {
         return Find(OP_CREATE) == 1;

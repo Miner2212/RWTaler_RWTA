@@ -17,7 +17,7 @@
   <string>APPL</string>
 
   <key>CFBundleGetInfoString</key>
-  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@, Copyright © 2009-@COPYRIGHT_YEAR@ The Bitcoin Core developers, 2014-@COPYRIGHT_YEAR@ The Dash Core developers, 2017-@COPYRIGHT_YEAR@ The Spidercore developers</string>
+  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@, Copyright © 2009-@COPYRIGHT_YEAR@ The Bitcoin Core developers, 2014-@COPYRIGHT_YEAR@ The Dash Core developers, 2017-@COPYRIGHT_YEAR@ The RWTalercore developers</string>
 
   <key>CFBundleShortVersionString</key>
   <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@</string>
@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>Spider-Qt</string>
+  <string>RWTaler-Qt</string>
 
   <key>CFBundleName</key>
-  <string>Spider-Qt</string>
+  <string>RWTaler-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>io.spdrcore.Spider-Qt</string>
+  <string>io.rwtalercore.RWTaler-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,10 +46,10 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>io.spdrcore.SpiderPayment</string>
+      <string>io.rwtalercore.RWTalerPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>spdr</string>
+        <string>rwtaler</string>
       </array>
     </dict>
   </array>
@@ -58,9 +58,9 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>io.spdr.paymentrequest</string>
+      <string>io.rwtaler.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>Spider payment request</string>
+      <string>RWTaler payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>
@@ -68,10 +68,10 @@
       <key>UTTypeTagSpecification</key>
       <dict>
         <key>public.mime-type</key>
-        <string>application/x-spdr-payment-request</string>
+        <string>application/x-rwtaler-payment-request</string>
         <key>public.filename-extension</key>
         <array>
-          <string>spdrpaymentrequest</string>
+          <string>rwtalerpaymentrequest</string>
         </array>
       </dict>
     </dict>
@@ -84,7 +84,7 @@
       <string>Editor</string>
       <key>LSItemContentTypes</key>
       <array>
-        <string>io.spdrcore.paymentrequest</string>
+        <string>io.rwtalercore.paymentrequest</string>
       </array>
       <key>LSHandlerRank</key>
       <string>Owner</string>

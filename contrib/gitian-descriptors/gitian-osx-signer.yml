@@ -1,5 +1,5 @@
 ---
-name: "spdr-dmg-signer"
+name: "rwtaler-dmg-signer"
 suites:
 - "bionic"
 architectures:
@@ -7,10 +7,10 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/Spdr-Core/Spiderdetached-sigs.git"
+- "url": "https://github.com/Spdr-Core/RWTalerdetached-sigs.git"
   "dir": "signature"
 files:
-- "spdr-osx-unsigned.tar.gz"
+- "rwtaler-osx-unsigned.tar.gz"
 script: |
   WRAP_DIR=$HOME/wrapped
   mkdir -p ${WRAP_DIR}
@@ -27,8 +27,8 @@ script: |
     chmod +x ${WRAP_DIR}/${prog}
   done
 
-  UNSIGNED=spdr-osx-unsigned.tar.gz
-  SIGNED=spdr-osx-signed.dmg
+  UNSIGNED=rwtaler-osx-unsigned.tar.gz
+  SIGNED=rwtaler-osx-signed.dmg
 
   tar -xf ${UNSIGNED}
   OSX_VOLNAME="$(cat osx_volname)"

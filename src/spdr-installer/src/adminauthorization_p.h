@@ -1,9 +1,9 @@
 #ifndef QTSPDRUPDATER_ADMINAUTHORIZATION_P_H
 #define QTSPDRUPDATER_ADMINAUTHORIZATION_P_H
 
-#include "spdrupdater/adminauthoriser.h"
+#include "rwtalerupdater/adminauthoriser.h"
 
-namespace QtSpiderUpdater
+namespace QtRWTalerUpdater
 {
 
 class AdminAuthorization : public AdminAuthoriser

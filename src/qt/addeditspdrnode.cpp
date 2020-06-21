@@ -1,5 +1,5 @@
-#include "addeditspdrnode.h"
-#include "ui_addeditspdrnode.h"
+#include "addeditrwtalernode.h"
+#include "ui_addeditrwtalernode.h"
 
 #include "walletdb.h"
 #include "wallet.h"
@@ -11,21 +11,21 @@
 #include "base58.h"
 #include <QMessageBox>
 
-AddEditSpiderNode::AddEditSpiderNode(QWidget *parent) :
+AddEditRWTalerNode::AddEditRWTalerNode(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::AddEditSpiderNode)
+    ui(new Ui::AddEditRWTalerNode)
 {
     ui->setupUi(this);
 
 }
 
-AddEditSpiderNode::~AddEditSpiderNode()
+AddEditRWTalerNode::~AddEditRWTalerNode()
 {
     delete ui;
 }
 
 
-void AddEditSpiderNode::on_okButton_clicked()
+void AddEditRWTalerNode::on_okButton_clicked()
 {
     if(ui->aliasLineEdit->text() == "")
     {
@@ -43,7 +43,7 @@ void AddEditSpiderNode::on_okButton_clicked()
     }
     else
     {
-	CSpiderNodeConfig c;
+	CRWTalerNodeConfig c;
         c.sAlias = ui->aliasLineEdit->text().toStdString();
 	c.sAddress = ui->addressLineEdit->text().toStdString();
         CKey secret;
@@ -87,15 +87,15 @@ void AddEditSpiderNode::on_okButton_clicked()
 
         c.sCollateralAddress = EncodeDestination(account.vchPubKey.GetID());
 
-        pwalletMain->mapMySpiderNodes.insert(make_pair(c.sAddress, c));
-	walletdb.WriteSpiderNodeConfig(c.sAddress, c);
-        uiInterface.NotifySpiderNodeChanged(c);
+        pwalletMain->mapMyRWTalerNodes.insert(make_pair(c.sAddress, c));
+	walletdb.WriteRWTalerNodeConfig(c.sAddress, c);
+        uiInterface.NotifyRWTalerNodeChanged(c);
 
         accept();
     }
 }
 
-void AddEditSpiderNode::on_cancelButton_clicked()
+void AddEditRWTalerNode::on_cancelButton_clicked()
 {
     reject();
 }

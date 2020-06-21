@@ -1,7 +1,7 @@
 // Copyright (c) 2012-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2019 The RWTalercore developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -387,8 +387,8 @@ public:
     bool fCombineDust;
     CAmount nAutoCombineThreshold;
 
-    std::map<std::string, CSpiderNodeConfig> mapMySpiderNodes;
-    bool AddSpiderNodeConfig(CSpiderNodeConfig nodeConfig);
+    std::map<std::string, CRWTalerNodeConfig> mapMyRWTalerNodes;
+    bool AddRWTalerNodeConfig(CRWTalerNodeConfig nodeConfig);
 
     CWallet()
     {

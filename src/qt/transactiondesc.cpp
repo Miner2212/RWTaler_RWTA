@@ -1,7 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2019 The RWTalercore developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -206,7 +206,7 @@ QString TransactionDesc::toHTML(CWallet* wallet, CWalletTx& wtx, TransactionReco
                         }
                         strHTML += "<br/>";
                     } else if (txout.scriptPubKey.HasOpCreate()) {
-                        uint160 contract = uint160(SpiderState::createSpiderAddress(uintToh256(wtx.GetHash()), nOut).asBytes());
+                        uint160 contract = uint160(RWTalerState::createRWTalerAddress(uintToh256(wtx.GetHash()), nOut).asBytes());
                         strHTML += "<b>" + tr("SC Address (Hash160)") + ":</b> ";
                         strHTML += QString::fromStdString(contract.ToStringReverseEndian()) + "<br/>";
                     }
@@ -258,7 +258,7 @@ QString TransactionDesc::toHTML(CWallet* wallet, CWalletTx& wtx, TransactionReco
     strHTML += "<b>" + tr("Transaction ID") + ":</b> " + rec->getTxID() + "<br>";
     strHTML += "<b>" + tr("Output index") + ":</b> " + QString::number(rec->getOutputIndex()) + "<br>";
 
-    // Message from normal spdr:URI (spdr:XyZ...?message=example)
+    // Message from normal rwtaler:URI (rwtaler:XyZ...?message=example)
     Q_FOREACH (const PAIRTYPE(string, string) & r, wtx.vOrderForm)
         if (r.first == "Message")
             strHTML += "<br><b>" + tr("Message") + ":</b><br>" + GUIUtil::HtmlEscape(r.second, true) + "<br>";

@@ -31,8 +31,8 @@ using namespace dev;
 #include "genesis/eip158Test.cpp"
 #include "genesis/metropolisTest.cpp"
 #include "genesis/transitionnetTest.cpp"
-#include "genesis/spdrMainNetwork.cpp"
-#include "genesis/spdrTestNetwork.cpp"
+#include "genesis/rwtalerMainNetwork.cpp"
+#include "genesis/rwtalerTestNetwork.cpp"
 
 std::string const& dev::eth::genesisInfo(Network _n)
 {
@@ -47,8 +47,8 @@ std::string const& dev::eth::genesisInfo(Network _n)
 	case Network::EIP150Test: return c_genesisInfoEIP150Test;
 	case Network::EIP158Test: return c_genesisInfoEIP158Test;
 	case Network::MetropolisTest: return c_genesisInfoMetropolisTest;
-	case Network::spdrMainNetwork: return c_genesisInfoSpiderMainNetwork;
-	case Network::spdrTestNetwork: return c_genesisInfoSpiderTestNetwork;
+	case Network::rwtalerMainNetwork: return c_genesisInfoRWTalerMainNetwork;
+	case Network::rwtalerTestNetwork: return c_genesisInfoRWTalerTestNetwork;
 	default:
 		throw std::invalid_argument("Invalid network value");
 	}
@@ -67,8 +67,8 @@ h256 const& dev::eth::genesisStateRoot(Network _n)
 	case Network::EIP150Test: return c_genesisStateRootEIP150Test;
 	case Network::EIP158Test: return c_genesisStateRootEIP158Test;
 	case Network::MetropolisTest: return c_genesisStateRootMetropolisTest;
-	case Network::spdrMainNetwork: return c_genesisStateRootSpiderMainNetwork;
-	case Network::spdrTestNetwork: return c_genesisStateRootSpiderTestNetwork;
+	case Network::rwtalerMainNetwork: return c_genesisStateRootRWTalerMainNetwork;
+	case Network::rwtalerTestNetwork: return c_genesisStateRootRWTalerTestNetwork;
 	default:
 		throw std::invalid_argument("Invalid network value");
 	}

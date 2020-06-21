@@ -1,7 +1,7 @@
 // Copyright (c) 2012-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2019 The RWTalercore developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -14,7 +14,7 @@
 #include <boost/signals2/last_value.hpp>
 #include <boost/signals2/signal.hpp>
 
-class CSpiderNodeConfig;
+class CRWTalerNodeConfig;
 class CBasicKeyStore;
 class CWallet;
 class uint256;
@@ -103,7 +103,7 @@ public:
      */
     boost::signals2::signal<void(const uint256& hash, ChangeType status)> NotifyAlertChanged;
 
-    boost::signals2::signal<void (const CSpiderNodeConfig &nodeConfig)> NotifySpiderNodeChanged;
+    boost::signals2::signal<void (const CRWTalerNodeConfig &nodeConfig)> NotifyRWTalerNodeChanged;
 
     /** A wallet has been loaded. */
     boost::signals2::signal<void(CWallet* wallet)> LoadWallet;

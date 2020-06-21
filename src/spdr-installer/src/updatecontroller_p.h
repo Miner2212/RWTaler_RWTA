@@ -5,22 +5,22 @@
 #include "updateinfodialog_p.h"
 #include "progressdialog_p.h"
 
-#include "spdrupdater/spdrupdater.h"
+#include "rwtalerupdater/rwtalerupdater.h"
 #include "updatecontroller.h"
-#include "spdrupdater/simplescheduler_p.h"
+#include "rwtalerupdater/simplescheduler_p.h"
 
 #include <QtCore/QPointer>
 #include <atomic>
 
-extern QtSpiderUpdater::ProgressDialog *gUpdatesProgress;
+extern QtRWTalerUpdater::ProgressDialog *gUpdatesProgress;
 extern std::atomic<bool> running;
 extern std::atomic<bool> wasCanceled;
 extern QPointer<QWidget> win;
-extern QtSpiderUpdater::UpdateController::DisplayLevel gDisplayLevel;
+extern QtRWTalerUpdater::UpdateController::DisplayLevel gDisplayLevel;
 extern std::atomic<bool> isUpdaterRunning;
 
 
-namespace QtSpiderUpdater
+namespace QtRWTalerUpdater
 {
 
 class UpdateControllerPrivate
@@ -34,7 +34,7 @@ public:
 
 	QPointer<QWidget> window;
 
-	SpiderUpdater *mainUpdater;
+	RWTalerUpdater *mainUpdater;
 	bool runAdmin;
 	bool adminUserEdit;
 	QStringList runArgs;

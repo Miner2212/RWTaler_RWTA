@@ -17,7 +17,7 @@
 #include "util.h"
 #include <utilstrencodings.h>
 
-#include "test/test_spdr.cpp"
+#include "test/test_rwtaler.cpp"
 #include "../miner.h"
 
 #include <boost/test/unit_test.hpp>

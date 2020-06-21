@@ -39,7 +39,7 @@
 #include <QtCore/QDir>
 #include <QtCore/qt_windows.h>
 
-using namespace QtSpiderUpdater;
+using namespace QtRWTalerUpdater;
 
 static QString qt_create_commandline(const QStringList &arguments);
 

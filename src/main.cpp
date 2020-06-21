@@ -1,7 +1,7 @@
 // Copyright (c) 2012-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2019 The RWTalercore developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -72,17 +72,17 @@ using namespace std;
 
 
 /**
- * Global SpiderState
+ * Global RWTalerState
  */
 
-////////////////////////////// spdr
+////////////////////////////// rwtaler
 #include <iostream>
 #include <bitset>
 #include "pubkey.h"
 
 extern std::atomic<bool> fRequestShutdown;
 
-std::unique_ptr<SpiderState> globalState = nullptr;
+std::unique_ptr<RWTalerState> globalState = nullptr;
 std::shared_ptr<dev::eth::SealEngineFace> globalSealEngine = nullptr;
 bool fRecordLogOpcodes = false;
 bool fIsVMlogFile = false;
@@ -90,7 +90,7 @@ bool fGettingValuesDGP = false;
 
 int64_t nMaxTipAge = DEFAULT_MAX_TIP_AGE;
 
-std::string SCVersion ("/Spidercore:1.1.0/");
+std::string SCVersion ("/RWTalercore:1.1.0/");
 
 
 /** The maximum allowed size for a serialized block, in bytes (only for buffer size limits) */
@@ -100,7 +100,7 @@ unsigned int dgpMaxBlockWeight = 8000000;
 /** The maximum allowed size for a block excluding witness data, in bytes (network rule) */
 unsigned int dgpMaxBlockBaseSize = 2000000;
 
-unsigned int dgpMaxBlockSize = 2000000; // spdr
+unsigned int dgpMaxBlockSize = 2000000; // rwtaler
 
 ///** The maximum allowed number of signature check operations in a block (network rule) */
 int64_t dgpMaxBlockSigOps = 80000;
@@ -175,7 +175,7 @@ static void CheckBlockIndex(const Consensus::Params& consensusParams);
 /** Constant stuff for coinbase transactions we create: */
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "Spider Signed Message:\n";
+const string strMessageMagic = "RWTaler Signed Message:\n";
 
 // Internal stuff
 namespace
@@ -889,7 +889,7 @@ bool CheckTransaction(const CTransaction& tx, CValidationState& state)
         if (!MoneyRange(nValueOut))
             return state.DoS(100, false, REJECT_INVALID, "bad-txns-txouttotal-toolarge");
 
-        /////////////////////////////////////////////////////////// // spdr
+        /////////////////////////////////////////////////////////// // rwtaler
         if (txout.scriptPubKey.HasOpCall() || txout.scriptPubKey.HasOpCreate()) {
             std::vector<valtype> vSolutions;
             txnouttype whichType;
@@ -1122,31 +1122,31 @@ bool AcceptToMemoryPool(CTxMemPool& pool, CValidationState& state, const CTransa
 
         dev::u256 txMinGasPrice = 0;
 
-        //////////////////////////////////////////////////////////// // spdr
+        //////////////////////////////////////////////////////////// // rwtaler
         if(chainActive.Height() >= chainparams.FirstSCBlock() && tx.HasCreateOrCall()) {
 
             if(!CheckSenderScript(view, tx)){
                 return state.DoS(1, false, REJECT_INVALID, "bad-txns-invalid-sender-script");
             }
 
-            SpiderDGP spdrDGP(globalState.get(), fGettingValuesDGP);
-            uint64_t minGasPrice = spdrDGP.getMinGasPrice(chainActive.Height() + 1);
-            uint64_t blockGasLimit = spdrDGP.getBlockGasLimit(chainActive.Height() + 1);
+            RWTalerDGP rwtalerDGP(globalState.get(), fGettingValuesDGP);
+            uint64_t minGasPrice = rwtalerDGP.getMinGasPrice(chainActive.Height() + 1);
+            uint64_t blockGasLimit = rwtalerDGP.getBlockGasLimit(chainActive.Height() + 1);
             size_t count = 0;
             for(const CTxOut& o : tx.vout)
                 count += o.scriptPubKey.HasOpCreate() || o.scriptPubKey.HasOpCall() ? 1 : 0;
-            SpiderTxConverter converter(tx, NULL);
-            ExtractSpiderTX resultConverter;
-            if(!converter.extractionSpiderTransactions(resultConverter)){
+            RWTalerTxConverter converter(tx, NULL);
+            ExtractRWTalerTX resultConverter;
+            if(!converter.extractionRWTalerTransactions(resultConverter)){
                 return state.DoS(100, error("AcceptToMempool(): Contract transaction of the wrong format"), REJECT_INVALID, "bad-tx-bad-contract-format");
             }
-            std::vector<SpiderTransaction> spdrTransactions = resultConverter.first;
-            std::vector<EthTransactionParams> spdrETP = resultConverter.second;
+            std::vector<RWTalerTransaction> rwtalerTransactions = resultConverter.first;
+            std::vector<EthTransactionParams> rwtalerETP = resultConverter.second;
 
             dev::u256 sumGas = dev::u256(0);
             dev::u256 gasAllTxs = dev::u256(0);
-            for(SpiderTransaction spdrTransaction : spdrTransactions){
-                sumGas += spdrTransaction.gas() * spdrTransaction.gasPrice();
+            for(RWTalerTransaction rwtalerTransaction : rwtalerTransactions){
+                sumGas += rwtalerTransaction.gas() * rwtalerTransaction.gasPrice();
 
                 if(sumGas > dev::u256(INT64_MAX)) {
                     return state.DoS(100, error("AcceptToMempool(): Transaction's gas stipend overflows"), REJECT_INVALID, "bad-tx-gas-stipend-overflow");
@@ -1157,11 +1157,11 @@ bool AcceptToMemoryPool(CTxMemPool& pool, CValidationState& state, const CTransa
                 }
 
                 if(txMinGasPrice != 0) {
-                    txMinGasPrice = std::min(txMinGasPrice, spdrTransaction.gasPrice());
+                    txMinGasPrice = std::min(txMinGasPrice, rwtalerTransaction.gasPrice());
                 } else {
-                    txMinGasPrice = spdrTransaction.gasPrice();
+                    txMinGasPrice = rwtalerTransaction.gasPrice();
                 }
-                VersionVM v = spdrTransaction.getVersion();
+                VersionVM v = rwtalerTransaction.getVersion();
                 if(v.format!=0)
                     return state.DoS(100, error("AcceptToMempool(): Contract execution uses unknown version format"), REJECT_INVALID, "bad-tx-version-format");
                 if(v.rootVM != 1)
@@ -1172,29 +1172,29 @@ bool AcceptToMemoryPool(CTxMemPool& pool, CValidationState& state, const CTransa
                     return state.DoS(100, error("AcceptToMempool(): Contract execution uses unknown flag options"), REJECT_INVALID, "bad-tx-version-flags");
 
                 //check gas limit is not less than minimum mempool gas limit
-                if(spdrTransaction.gas() < GetArg("-minmempoolgaslimit", MEMPOOL_MIN_GAS_LIMIT))
+                if(rwtalerTransaction.gas() < GetArg("-minmempoolgaslimit", MEMPOOL_MIN_GAS_LIMIT))
                     return state.DoS(100, error("AcceptToMempool(): Contract execution has lower gas limit than allowed to accept into mempool"), REJECT_INVALID, "bad-tx-too-little-mempool-gas");
 
                 //check gas limit is not less than minimum gas limit (unless it is a no-exec tx)
-                if(spdrTransaction.gas() < MINIMUM_GAS_LIMIT && v.rootVM != 0)
+                if(rwtalerTransaction.gas() < MINIMUM_GAS_LIMIT && v.rootVM != 0)
                     return state.DoS(100, error("AcceptToMempool(): Contract execution has lower gas limit than allowed"), REJECT_INVALID, "bad-tx-too-little-gas");
 
-                if(spdrTransaction.gas() > UINT32_MAX)
+                if(rwtalerTransaction.gas() > UINT32_MAX)
                     return state.DoS(100, error("AcceptToMempool(): Contract execution can not specify greater gas limit than can fit in 32-bits"), REJECT_INVALID, "bad-tx-too-much-gas");
 
-                gasAllTxs += spdrTransaction.gas();
+                gasAllTxs += rwtalerTransaction.gas();
                 if(gasAllTxs > dev::u256(blockGasLimit))
                     return state.DoS(1, false, REJECT_INVALID, "bad-txns-gas-exceeds-blockgaslimit");
 
                 //don't allow less than DGP set minimum gas price to prevent MPoS greedy mining/spammers
-                if(v.rootVM!=0 && (uint64_t)spdrTransaction.gasPrice() < minGasPrice)
+                if(v.rootVM!=0 && (uint64_t)rwtalerTransaction.gasPrice() < minGasPrice)
                 return state.DoS(100, error("AcceptToMempool(): Contract execution has lower gas price than allowed"), REJECT_INVALID, "bad-tx-low-gas-price");
             }
 
-            if(!CheckMinGasPrice(spdrETP, minGasPrice))
+            if(!CheckMinGasPrice(rwtalerETP, minGasPrice))
                 return state.DoS(100, false, REJECT_INVALID, "bad-txns-small-gasprice");
 
-            if(count > spdrTransactions.size())
+            if(count > rwtalerTransactions.size())
                 return state.DoS(100, false, REJECT_INVALID, "bad-txns-incorrect-format");
         }
         ////////////////////////////////////////////////////////////
@@ -1547,31 +1547,31 @@ bool AcceptableInputs(CTxMemPool& pool, CValidationState& state, const CTransact
 
         dev::u256 txMinGasPrice = 0;
 
-        //////////////////////////////////////////////////////////// // spdr
+        //////////////////////////////////////////////////////////// // rwtaler
         if(chainActive.Height() >= Params().FirstSCBlock() && tx.HasCreateOrCall()) {
 
             if(!CheckSenderScript(view, tx)){
                 return state.DoS(1, false, REJECT_INVALID, "bad-txns-invalid-sender-script");
             }
 
-            SpiderDGP spdrDGP(globalState.get(), fGettingValuesDGP);
-            uint64_t minGasPrice = spdrDGP.getMinGasPrice(chainActive.Height() + 1);
-            uint64_t blockGasLimit = spdrDGP.getBlockGasLimit(chainActive.Height() + 1);
+            RWTalerDGP rwtalerDGP(globalState.get(), fGettingValuesDGP);
+            uint64_t minGasPrice = rwtalerDGP.getMinGasPrice(chainActive.Height() + 1);
+            uint64_t blockGasLimit = rwtalerDGP.getBlockGasLimit(chainActive.Height() + 1);
             size_t count = 0;
             for(const CTxOut& o : tx.vout)
                 count += o.scriptPubKey.HasOpCreate() || o.scriptPubKey.HasOpCall() ? 1 : 0;
-            SpiderTxConverter converter(tx, NULL);
-            ExtractSpiderTX resultConverter;
-            if(!converter.extractionSpiderTransactions(resultConverter)){
+            RWTalerTxConverter converter(tx, NULL);
+            ExtractRWTalerTX resultConverter;
+            if(!converter.extractionRWTalerTransactions(resultConverter)){
                 return state.DoS(100, error("AcceptToMempool(): Contract transaction of the wrong format"), REJECT_INVALID, "bad-tx-bad-contract-format");
             }
-            std::vector<SpiderTransaction> spdrTransactions = resultConverter.first;
-            std::vector<EthTransactionParams> spdrETP = resultConverter.second;
+            std::vector<RWTalerTransaction> rwtalerTransactions = resultConverter.first;
+            std::vector<EthTransactionParams> rwtalerETP = resultConverter.second;
 
             dev::u256 sumGas = dev::u256(0);
             dev::u256 gasAllTxs = dev::u256(0);
-            for(SpiderTransaction spdrTransaction : spdrTransactions){
-                sumGas += spdrTransaction.gas() * spdrTransaction.gasPrice();
+            for(RWTalerTransaction rwtalerTransaction : rwtalerTransactions){
+                sumGas += rwtalerTransaction.gas() * rwtalerTransaction.gasPrice();
 
                 if(sumGas > dev::u256(INT64_MAX)) {
                     return state.DoS(100, error("AcceptToMempool(): Transaction's gas stipend overflows"), REJECT_INVALID, "bad-tx-gas-stipend-overflow");
@@ -1582,11 +1582,11 @@ bool AcceptableInputs(CTxMemPool& pool, CValidationState& state, const CTransact
                 }
 
                 if(txMinGasPrice != 0) {
-                    txMinGasPrice = std::min(txMinGasPrice, spdrTransaction.gasPrice());
+                    txMinGasPrice = std::min(txMinGasPrice, rwtalerTransaction.gasPrice());
                 } else {
-                    txMinGasPrice = spdrTransaction.gasPrice();
+                    txMinGasPrice = rwtalerTransaction.gasPrice();
                 }
-                VersionVM v = spdrTransaction.getVersion();
+                VersionVM v = rwtalerTransaction.getVersion();
                 if(v.format!=0)
                     return state.DoS(100, error("AcceptToMempool(): Contract execution uses unknown version format"), REJECT_INVALID, "bad-tx-version-format");
                 if(v.rootVM != 1)
@@ -1597,29 +1597,29 @@ bool AcceptableInputs(CTxMemPool& pool, CValidationState& state, const CTransact
                     return state.DoS(100, error("AcceptToMempool(): Contract execution uses unknown flag options"), REJECT_INVALID, "bad-tx-version-flags");
 
                 //check gas limit is not less than minimum mempool gas limit
-                if(spdrTransaction.gas() < GetArg("-minmempoolgaslimit", MEMPOOL_MIN_GAS_LIMIT))
+                if(rwtalerTransaction.gas() < GetArg("-minmempoolgaslimit", MEMPOOL_MIN_GAS_LIMIT))
                     return state.DoS(100, error("AcceptToMempool(): Contract execution has lower gas limit than allowed to accept into mempool"), REJECT_INVALID, "bad-tx-too-little-mempool-gas");
 
                 //check gas limit is not less than minimum gas limit (unless it is a no-exec tx)
-                if(spdrTransaction.gas() < MINIMUM_GAS_LIMIT && v.rootVM != 0)
+                if(rwtalerTransaction.gas() < MINIMUM_GAS_LIMIT && v.rootVM != 0)
                     return state.DoS(100, error("AcceptToMempool(): Contract execution has lower gas limit than allowed"), REJECT_INVALID, "bad-tx-too-little-gas");
 
-                if(spdrTransaction.gas() > UINT32_MAX)
+                if(rwtalerTransaction.gas() > UINT32_MAX)
                     return state.DoS(100, error("AcceptToMempool(): Contract execution can not specify greater gas limit than can fit in 32-bits"), REJECT_INVALID, "bad-tx-too-much-gas");
 
-                gasAllTxs += spdrTransaction.gas();
+                gasAllTxs += rwtalerTransaction.gas();
                 if(gasAllTxs > dev::u256(blockGasLimit))
                     return state.DoS(1, false, REJECT_INVALID, "bad-txns-gas-exceeds-blockgaslimit");
 
                 //don't allow less than DGP set minimum gas price to prevent MPoS greedy mining/spammers
-                if(v.rootVM!=0 && (uint64_t)spdrTransaction.gasPrice() < minGasPrice)
+                if(v.rootVM!=0 && (uint64_t)rwtalerTransaction.gasPrice() < minGasPrice)
                     return state.DoS(100, error("AcceptToMempool(): Contract execution has lower gas price than allowed"), REJECT_INVALID, "bad-tx-low-gas-price");
             }
 
-            if(!CheckMinGasPrice(spdrETP, minGasPrice))
+            if(!CheckMinGasPrice(rwtalerETP, minGasPrice))
                 return state.DoS(100, false, REJECT_INVALID, "bad-txns-small-gasprice");
 
-            if(count > spdrTransactions.size())
+            if(count > rwtalerTransactions.size())
                 return state.DoS(100, false, REJECT_INVALID, "bad-txns-incorrect-format");
         }
         ////////////////////////////////////////////////////////////
@@ -2251,7 +2251,7 @@ bool CheckInputs(const CTransaction& tx, CValidationState& state, const CCoinsVi
             nValueIn += coins->vout[prevout.n].nValue;
             if (!MoneyRange(coins->vout[prevout.n].nValue) || !MoneyRange(nValueIn))
                 return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputvalues-outofrange");
-            if(pindexC->nHeight > (nSpiderProtocolSwitchHeight - 1000))
+            if(pindexC->nHeight > (nRWTalerProtocolSwitchHeight - 1000))
             {
                 for (CTxOut prevOut : coins->vout) {
                     if (prevOut.IsNull()) continue;
@@ -2574,7 +2574,7 @@ static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck()
 {
-    RenameThread("spdr-scriptch");
+    RenameThread("rwtaler-scriptch");
     scriptcheckqueue.Thread();
 }
 
@@ -2667,16 +2667,16 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
 {
     AssertLockHeld(cs_main);
 
-    ///////////////////////////////////////////////// // spdr
+    ///////////////////////////////////////////////// // rwtaler
 #if 0
-    SpiderDGP spdrDGP(globalState.get(), fGettingValuesDGP);
-    globalSealEngine->setSpiderSchedule(spdrDGP.getGasSchedule(pindex->nHeight + 1));
+    RWTalerDGP rwtalerDGP(globalState.get(), fGettingValuesDGP);
+    globalSealEngine->setRWTalerSchedule(rwtalerDGP.getGasSchedule(pindex->nHeight + 1));
 #endif
-    uint64_t minGasPrice = 0;//spdrDGP.getMinGasPrice(pindex->nHeight + 1);
-    uint64_t blockGasLimit = DEFAULT_BLOCK_GAS_LIMIT_DGP;//spdrDGP.getBlockGasLimit(pindex->nHeight + 1);
+    uint64_t minGasPrice = 0;//rwtalerDGP.getMinGasPrice(pindex->nHeight + 1);
+    uint64_t blockGasLimit = DEFAULT_BLOCK_GAS_LIMIT_DGP;//rwtalerDGP.getBlockGasLimit(pindex->nHeight + 1);
 
 #if 0
-    uint32_t sizeBlockDGP = 0;//spdrDGP.getBlockSize(pindex->nHeight + 1);
+    uint32_t sizeBlockDGP = 0;//rwtalerDGP.getBlockSize(pindex->nHeight + 1);
     dgpMaxBlockSize = sizeBlockDGP ? sizeBlockDGP : dgpMaxBlockSize;
     updateBlockSizeParams(dgpMaxBlockSize);
 #endif
@@ -2770,7 +2770,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
 
     CCheckQueueControl<CScriptCheck> control(fScriptChecks && nScriptCheckThreads ? &scriptcheckqueue : NULL);
 
-    ///////////////////////////////////////////////////////// // spdr
+    ///////////////////////////////////////////////////////// // rwtaler
     std::map<dev::Address, std::pair<CHeightTxIndexKey, std::vector<uint256>>> heightIndexes;
     /////////////////////////////////////////////////////////
 
@@ -2945,7 +2945,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
             }
         }
 
-///////////////////////////////////////////////////////////////////////////////////////// spdr
+///////////////////////////////////////////////////////////////////////////////////////// rwtaler
 
         if (pindex->nHeight >= Params().FirstSCBlock()) {
             bool hasOpSpend = tx.HasOpSpend();
@@ -2958,24 +2958,24 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
                     return state.DoS(100, false, REJECT_INVALID, "bad-txns-invalid-sender-script");
                 }
 
-                SpiderTxConverter convert(tx, &view, &block.vtx);
+                RWTalerTxConverter convert(tx, &view, &block.vtx);
 
-                ExtractSpiderTX resultConvertSpiderTX;
-                if(!convert.extractionSpiderTransactions(resultConvertSpiderTX)) {
+                ExtractRWTalerTX resultConvertRWTalerTX;
+                if(!convert.extractionRWTalerTransactions(resultConvertRWTalerTX)) {
                     return state.DoS(100, error("ConnectBlock(): Contract transaction of the wrong format"), REJECT_INVALID, "bad-tx-bad-contract-format");
                 }
-                if(!CheckMinGasPrice(resultConvertSpiderTX.second, minGasPrice))
+                if(!CheckMinGasPrice(resultConvertRWTalerTX.second, minGasPrice))
                     return state.DoS(100, error("ConnectBlock(): Contract execution has lower gas price than allowed"), REJECT_INVALID, "bad-tx-low-gas-price");
 
                 dev::u256 gasAllTxs = dev::u256(0);
-                ByteCodeExec exec(block, resultConvertSpiderTX.first, blockGasLimit);
+                ByteCodeExec exec(block, resultConvertRWTalerTX.first, blockGasLimit);
                 //validate VM version and other ETH params before execution
                 //Reject anything unknown (could be changed later by DGP)
                 //TODO evaluate if this should be relaxed for soft-fork purposes
                 bool nonZeroVersion = false;
                 dev::u256 sumGas = dev::u256(0);
                 CAmount nTxFee = view.GetValueIn(tx) - tx.GetValueOut();
-                for(SpiderTransaction& ltx : resultConvertSpiderTX.first) {
+                for(RWTalerTransaction& ltx : resultConvertRWTalerTX.first) {
                     sumGas += ltx.gas() * ltx.gasPrice();
 
                     if(sumGas > dev::u256(INT64_MAX)) {
@@ -3041,13 +3041,13 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
                 std::vector<TransactionReceiptInfo> tri;
                 if (fLogEvents && !fJustCheck)
                 {
-                    for(size_t k = 0; k < resultConvertSpiderTX.first.size(); k ++){
+                    for(size_t k = 0; k < resultConvertRWTalerTX.first.size(); k ++){
                         dev::Address key = resultExec[k].execRes.newAddress;
                         if(!heightIndexes.count(key)){
                             heightIndexes[key].first = CHeightTxIndexKey(pindex->nHeight, resultExec[k].execRes.newAddress);
                         }
                         heightIndexes[key].second.push_back(tx.GetHash());
-                        tri.push_back(TransactionReceiptInfo{block.GetHash(pindex->nHeight >= Params().SwitchPhi2Block()), uint32_t(pindex->nHeight), tx.GetHash(), uint32_t(i), resultConvertSpiderTX.first[k].from(), resultConvertSpiderTX.first[k].to(),
+                        tri.push_back(TransactionReceiptInfo{block.GetHash(pindex->nHeight >= Params().SwitchPhi2Block()), uint32_t(pindex->nHeight), tx.GetHash(), uint32_t(i), resultConvertRWTalerTX.first[k].from(), resultConvertRWTalerTX.first[k].to(),
                                                              countCumulativeGasUsed, uint64_t(resultExec[k].execRes.gasUsed), resultExec[k].execRes.newAddress, resultExec[k].txRec.log(), resultExec[k].execRes.excepted});
                     }
 
@@ -3145,7 +3145,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     nTimeVerify += nTime2 - nTimeStart;
     LogPrint("bench", "    - Verify %u txins: %.2fms (%.3fms/txin) [%.2fs]\n", nInputs - 1, 0.001 * (nTime2 - nTimeStart), nInputs <= 1 ? 0 : 0.001 * (nTime2 - nTimeStart) / (nInputs - 1), nTimeVerify * 0.000001);
 
-    ////////////////////////////////////////////////////////////////// // spdr
+    ////////////////////////////////////////////////////////////////// // rwtaler
     if (pindex->nHeight >= Params().FirstSCBlock()) {
 
         dev::h256 oldHashStateRoot = getGlobalStateRoot(pindex);
@@ -4890,7 +4890,7 @@ bool ProcessNewBlock(CValidationState& state, const CChainParams& chainparams, C
     bool alreadyAccepted = false;
 
     // Do not accept the peers having older versions when the fork happens
-    if (nHeight >= nSpiderProtocolSwitchHeight)
+    if (nHeight >= nRWTalerProtocolSwitchHeight)
     {
         SCVersion = WORKING_VERSION;
     }
@@ -6240,11 +6240,11 @@ uint32_t GetFetchFlags(CNode* pfrom, CBlockIndex* pprev, const Consensus::Params
  * Parses major version from version string.
  *
  * Version string is expected to be [any text]:X.X[.X[any text]].
- * As an example, Spidercore uses /Spidercore:X.X.X/ version string. So, this function will
- * return 5 for /Spidercore:5.0.0/ or 0 if it couldn't find ":" or "." delimeters, or if no digits are between
+ * As an example, RWTalercore uses /RWTalercore:X.X.X/ version string. So, this function will
+ * return 5 for /RWTalercore:5.0.0/ or 0 if it couldn't find ":" or "." delimeters, or if no digits are between
  * those delimeters, or if string verison is empty
- * @param cleanVersion Spidercore wallet version as a string
- * @return Major Spidercore major version or 0
+ * @param cleanVersion RWTalercore wallet version as a string
+ * @return Major RWTalercore major version or 0
  */
 int GetMajorVersionFromVersion(const string& cleanVersion) {
     size_t delimPos = cleanVersion.find(":");
@@ -7518,7 +7518,7 @@ public:
 } instance_of_cmaincleanup;
 
 
-/////////////////////////////////////////////////////////////////////// spdr
+/////////////////////////////////////////////////////////////////////// rwtaler
 bool CheckSenderScript(const CCoinsViewCache& view, const CTransaction& tx) {
     CScript script = view.AccessCoins(tx.vin[0].prevout.hash)->vout[tx.vin[0].prevout.n].scriptPubKey;
     if(!script.IsPayToPubkeyHash() && !script.IsPayToPubkey()){
@@ -7541,8 +7541,8 @@ std::vector<ResultExecute> CallContract(const dev::Address& addrContract, std::v
         block.vtx.erase(block.vtx.begin()+1,block.vtx.end());
 
 
-    SpiderDGP spdrDGP(globalState.get(), fGettingValuesDGP);
-    uint64_t blockGasLimit = spdrDGP.getBlockGasLimit(chainActive.Height() + 1);
+    RWTalerDGP rwtalerDGP(globalState.get(), fGettingValuesDGP);
+    uint64_t blockGasLimit = rwtalerDGP.getBlockGasLimit(chainActive.Height() + 1);
 
     if(gasLimit == 0){
         gasLimit = blockGasLimit - 1;
@@ -7551,12 +7551,12 @@ std::vector<ResultExecute> CallContract(const dev::Address& addrContract, std::v
     tx.vout.push_back(CTxOut(0, CScript() << OP_DUP << OP_HASH160 << senderAddress.asBytes() << OP_EQUALVERIFY << OP_CHECKSIG));
     block.vtx.push_back(CTransaction(tx));
 
-    SpiderTransaction callTransaction(0, 1, dev::u256(gasLimit), addrContract, opcode, dev::u256(0));
+    RWTalerTransaction callTransaction(0, 1, dev::u256(gasLimit), addrContract, opcode, dev::u256(0));
     callTransaction.forceSender(senderAddress);
     callTransaction.setVersion(VersionVM::GetEVMDefault());
 
 
-    ByteCodeExec exec(block, std::vector<SpiderTransaction>(1, callTransaction), blockGasLimit);
+    ByteCodeExec exec(block, std::vector<RWTalerTransaction>(1, callTransaction), blockGasLimit);
     exec.performByteCode(dev::eth::Permanence::Reverted);
     return exec.getResult();
 }
@@ -7685,12 +7685,12 @@ UniValue vmLogToJSON(const ResultExecute& execRes, const CTransaction& tx, const
 }
 
 void writeVMlog(const std::vector<ResultExecute>& res, const CTransaction& tx, const CBlock& block){
-    boost::filesystem::path spdrDir = GetDataDir() / "vmExecLogs.json";
+    boost::filesystem::path rwtalerDir = GetDataDir() / "vmExecLogs.json";
     std::stringstream ss;
     if(fIsVMlogFile){
         ss << ",";
     } else {
-        std::ofstream file(spdrDir.string(), std::ios::out | std::ios::app);
+        std::ofstream file(rwtalerDir.string(), std::ios::out | std::ios::app);
         file << "{\"logs\":[]}";
         file.close();
     }
@@ -7704,7 +7704,7 @@ void writeVMlog(const std::vector<ResultExecute>& res, const CTransaction& tx, c
         }
     }
 
-    std::ofstream file(spdrDir.string(), std::ios::in | std::ios::out);
+    std::ofstream file(rwtalerDir.string(), std::ios::in | std::ios::out);
     file.seekp(-2, std::ios::end);
     file << ss.str();
     file.close();
@@ -7712,7 +7712,7 @@ void writeVMlog(const std::vector<ResultExecute>& res, const CTransaction& tx, c
 }
 
 bool ByteCodeExec::performByteCode(dev::eth::Permanence type){
-    for(SpiderTransaction& tx : txs){
+    for(RWTalerTransaction& tx : txs){
         //validate VM version
         if(tx.getVersion().toRaw() != VersionVM::GetEVMDefault().toRaw()){
             return false;
@@ -7811,8 +7811,8 @@ dev::Address ByteCodeExec::EthAddrFromScript(const CScript& script){
     return dev::Address();
 }
 
-bool SpiderTxConverter::extractionSpiderTransactions(ExtractSpiderTX& spdrtx){
-    std::vector<SpiderTransaction> resultTX;
+bool RWTalerTxConverter::extractionRWTalerTransactions(ExtractRWTalerTX& rwtalertx){
+    std::vector<RWTalerTransaction> resultTX;
     std::vector<EthTransactionParams> resultETP;
     for(size_t i = 0; i < txBit.vout.size(); i++){
         if(txBit.vout[i].scriptPubKey.HasOpCreate() || txBit.vout[i].scriptPubKey.HasOpCall()){
@@ -7829,11 +7829,11 @@ bool SpiderTxConverter::extractionSpiderTransactions(ExtractSpiderTX& spdrtx){
             }
         }
     }
-    spdrtx = std::make_pair(resultTX, resultETP);
+    rwtalertx = std::make_pair(resultTX, resultETP);
     return true;
 }
 
-bool SpiderTxConverter::receiveStack(const CScript& scriptPubKey){
+bool RWTalerTxConverter::receiveStack(const CScript& scriptPubKey){
     EvalScript(stack, scriptPubKey, SCRIPT_EXEC_BYTE_CODE, BaseSignatureChecker(), SIGVERSION_BASE, nullptr);
     if (stack.empty())
         return false;
@@ -7850,7 +7850,7 @@ bool SpiderTxConverter::receiveStack(const CScript& scriptPubKey){
     return true;
 }
 
-bool SpiderTxConverter::parseEthTXParams(EthTransactionParams& params){
+bool RWTalerTxConverter::parseEthTXParams(EthTransactionParams& params){
     try{
         dev::Address receiveAddress;
         valtype vecAddr;
@@ -7898,13 +7898,13 @@ bool SpiderTxConverter::parseEthTXParams(EthTransactionParams& params){
     }
 }
 
-SpiderTransaction SpiderTxConverter::createEthTX(const EthTransactionParams& etp, uint32_t nOut){
-    SpiderTransaction txEth;
+RWTalerTransaction RWTalerTxConverter::createEthTX(const EthTransactionParams& etp, uint32_t nOut){
+    RWTalerTransaction txEth;
     if (etp.receiveAddress == dev::Address() && opcode != OP_CALL){
-        txEth = SpiderTransaction(txBit.vout[nOut].nValue, etp.gasPrice, etp.gasLimit, etp.code, dev::u256(0));
+        txEth = RWTalerTransaction(txBit.vout[nOut].nValue, etp.gasPrice, etp.gasLimit, etp.code, dev::u256(0));
     }
     else{
-        txEth = SpiderTransaction(txBit.vout[nOut].nValue, etp.gasPrice, etp.gasLimit, etp.receiveAddress, etp.code, dev::u256(0));
+        txEth = RWTalerTransaction(txBit.vout[nOut].nValue, etp.gasPrice, etp.gasLimit, etp.receiveAddress, etp.code, dev::u256(0));
     }
     dev::Address sender(GetSenderAddress(txBit, view, blockTransactions));
     txEth.forceSender(sender);

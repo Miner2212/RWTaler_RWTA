@@ -1,7 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2019 The RWTalercore developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -698,7 +698,7 @@ void CoinControlDialog::viewItemChanged(QTreeWidgetItem* item, int column)
         int rounds = pwalletMain->GetInputDarkSendRounds(in);
         if (coinControl->useDarksend && rounds < nDarksendRounds)
             QMessageBox::warning(this, windowTitle(),
-                                 tr("Non-anonymized input selected. <b>Spidersend will be disabled.</b><br><br>If you still want to use Spidersend, please deselect all non-nonymized inputs first and then check Spidersend checkbox again."),
+                                 tr("Non-anonymized input selected. <b>RWTalersend will be disabled.</b><br><br>If you still want to use RWTalersend, please deselect all non-nonymized inputs first and then check RWTalersend checkbox again."),
                                  QMessageBox::Ok, QMessageBox::Ok);
         coinControl->useDarksend = false;
 

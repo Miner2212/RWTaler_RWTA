@@ -1,6 +1,6 @@
 # -*- makefile-gmake -*-
 
-bin_PROGRAMS += qt/spdr-qt
+bin_PROGRAMS += qt/rwtaler-qt
 EXTRA_LIBRARIES += qt/libbitcoinqt.a
 
 if ENABLE_UPDATER
@@ -12,22 +12,22 @@ endif
 endif
 
 
-# spdr qt core #
+# rwtaler qt core #
 QT_TS = \
-  qt/locale/spdr_ca.ts \
-  qt/locale/spdr_da.ts \
-  qt/locale/spdr_de.ts \
-  qt/locale/spdr_en.ts \
-  qt/locale/spdr_en_US.ts \
-  qt/locale/spdr_es.ts \
-  qt/locale/spdr_fr.ts \
-  qt/locale/spdr_it.ts \
-  qt/locale/spdr_ja.ts \
-  qt/locale/spdr_pt.ts \
-  qt/locale/spdr_ro_RO.ts \
-  qt/locale/spdr_ru.ts \
-  qt/locale/spdr_vn.ts \
-  qt/locale/spdr_zh_TW.ts
+  qt/locale/rwtaler_ca.ts \
+  qt/locale/rwtaler_da.ts \
+  qt/locale/rwtaler_de.ts \
+  qt/locale/rwtaler_en.ts \
+  qt/locale/rwtaler_en_US.ts \
+  qt/locale/rwtaler_es.ts \
+  qt/locale/rwtaler_fr.ts \
+  qt/locale/rwtaler_it.ts \
+  qt/locale/rwtaler_ja.ts \
+  qt/locale/rwtaler_pt.ts \
+  qt/locale/rwtaler_ro_RO.ts \
+  qt/locale/rwtaler_ru.ts \
+  qt/locale/rwtaler_vn.ts \
+  qt/locale/rwtaler_zh_TW.ts
 
 QT_FORMS_UI = \
   qt/forms/addressbookpage.ui \
@@ -48,9 +48,9 @@ QT_FORMS_UI = \
   qt/forms/modaloverlay.ui \
   qt/forms/eula.ui \
   qt/forms/masternodemanager.ui \
-  qt/forms/addeditspdrnode.ui \
+  qt/forms/addeditrwtalernode.ui \
   qt/forms/lsrtoken.ui \
-  qt/forms/spdrnodeconfigdialog.ui \
+  qt/forms/rwtalernodeconfigdialog.ui \
   qt/forms/multisenddialog.ui \
   qt/forms/openuridialog.ui \
   qt/forms/optionsdialog.ui \
@@ -71,8 +71,8 @@ QT_FORMS_UI = \
   qt/forms/hexaddressconverter.ui
 
 if ENABLE_UPDATER
- QT_FORMS_UI += spdr-installer/src/forms/updateinfodialog.ui \
-                spdr-installer/src/forms/progressdialog.ui 
+ QT_FORMS_UI += rwtaler-installer/src/forms/updateinfodialog.ui \
+                rwtaler-installer/src/forms/progressdialog.ui 
 endif
 
 QT_MOC_CPP = \
@@ -114,8 +114,8 @@ QT_MOC_CPP = \
   qt/moc_macnotificationhandler.cpp \
   qt/moc_modaloverlay.cpp \
   qt/moc_masternodemanager.cpp \
-  qt/moc_addeditspdrnode.cpp \
-  qt/moc_spdrnodeconfigdialog.cpp \
+  qt/moc_addeditrwtalernode.cpp \
+  qt/moc_rwtalernodeconfigdialog.cpp \
   qt/moc_multisenddialog.cpp \
   qt/moc_notificator.cpp \
   qt/moc_openuridialog.cpp \
@@ -165,13 +165,13 @@ QT_MOC_CPP = \
   qt/moc_hexaddressconverter.cpp
 
 if ENABLE_UPDATER
-  QT_MOC_CPP += spdr-installer/src/spdrupdater/moc_spdrupdater.cpp \
-                spdr-installer/src/spdrupdater/moc_simplescheduler_p.cpp \
-                spdr-installer/src/spdrupdater/moc_atomfeeder.cpp \
-                spdr-installer/src/spdrupdater/moc_downloadmanager.cpp \
-                spdr-installer/src/moc_progressdialog_p.cpp \
-                spdr-installer/src/moc_updatecontroller.cpp \
-                spdr-installer/src/moc_updateinfodialog_p.cpp
+  QT_MOC_CPP += rwtaler-installer/src/rwtalerupdater/moc_rwtalerupdater.cpp \
+                rwtaler-installer/src/rwtalerupdater/moc_simplescheduler_p.cpp \
+                rwtaler-installer/src/rwtalerupdater/moc_atomfeeder.cpp \
+                rwtaler-installer/src/rwtalerupdater/moc_downloadmanager.cpp \
+                rwtaler-installer/src/moc_progressdialog_p.cpp \
+                rwtaler-installer/src/moc_updatecontroller.cpp \
+                rwtaler-installer/src/moc_updateinfodialog_p.cpp
 endif
 
 BITCOIN_MM = \
@@ -179,7 +179,7 @@ BITCOIN_MM = \
   qt/macnotificationhandler.mm
 
 QT_MOC = \
-  qt/spdr.moc \
+  qt/rwtaler.moc \
   qt/bitcoinamountfield.moc \
   qt/intro.moc \
   qt/eula.moc \
@@ -188,10 +188,10 @@ QT_MOC = \
   qt/overviewpage.moc \
   qt/rpcconsole.moc
 
-QT_QRC_CPP = qt/qrc_spdr.cpp
-QT_QRC = qt/spdr.qrc
-QT_QRC_LOCALE_CPP = qt/qrc_spdr_locale.cpp
-QT_QRC_LOCALE = qt/spdr_locale.qrc
+QT_QRC_CPP = qt/qrc_rwtaler.cpp
+QT_QRC = qt/rwtaler.qrc
+QT_QRC_LOCALE_CPP = qt/qrc_rwtaler_locale.cpp
+QT_QRC_LOCALE = qt/rwtaler_locale.qrc
 
 PROTOBUF_CC = qt/paymentrequest.pb.cc
 PROTOBUF_H = qt/paymentrequest.pb.h
@@ -241,8 +241,8 @@ BITCOIN_QT_H = \
   qt/macnotificationhandler.h \
   qt/modaloverlay.h \
   qt/masternodemanager.h \
-  qt/addeditspdrnode.h \
-  qt/spdrnodeconfigdialog.h \
+  qt/addeditrwtalernode.h \
+  qt/rwtalernodeconfigdialog.h \
   qt/multisenddialog.h \
   qt/networkstyle.h \
   qt/notificator.h \
@@ -300,13 +300,13 @@ BITCOIN_QT_H = \
   qt/hexaddressconverter.h \
   qt/tokenslistview.h
 if ENABLE_UPDATER
-  BITCOIN_QT_H += spdr-installer/src/spdrupdater/spdrupdater.h \
-                  spdr-installer/src/spdrupdater/simplescheduler_p.h \
-                  spdr-installer/src/spdrupdater/atomfeeder.h \
-                  spdr-installer/src/spdrupdater/downloadmanager.h \
-                  spdr-installer/src/progressdialog_p.h \
-                  spdr-installer/src/updatecontroller.h \
-                  spdr-installer/src/updateinfodialog_p.h
+  BITCOIN_QT_H += rwtaler-installer/src/rwtalerupdater/rwtalerupdater.h \
+                  rwtaler-installer/src/rwtalerupdater/simplescheduler_p.h \
+                  rwtaler-installer/src/rwtalerupdater/atomfeeder.h \
+                  rwtaler-installer/src/rwtalerupdater/downloadmanager.h \
+                  rwtaler-installer/src/progressdialog_p.h \
+                  rwtaler-installer/src/updatecontroller.h \
+                  rwtaler-installer/src/updateinfodialog_p.h
 endif
 
 
@@ -352,10 +352,10 @@ RES_ICONS = \
   qt/res/icons/key.png \
   qt/res/icons/lock_closed.png \
   qt/res/icons/lock_closed_black.png \
-  qt/res/icons/spdrcoin_black.png \
+  qt/res/icons/rwtalercoin_black.png \
   qt/res/icons/lsrtoken.png \
   qt/res/icons/lock_open.png \
-  qt/res/icons/spdrupdate-loader.gif \
+  qt/res/icons/rwtalerupdate-loader.gif \
   qt/res/icons/masternodes.png \
   qt/res/icons/network_monitor.png \
   qt/res/icons/options.png \
@@ -381,12 +381,12 @@ RES_ICONS = \
   qt/res/icons/tx_input.png \
   qt/res/icons/tx_output.png \
   qt/res/icons/tx_mined.png \
-  qt/res/icons/unit_spdr.png \
-  qt/res/icons/unit_mspdr.png \
-  qt/res/icons/unit_uspdr.png \
-  qt/res/icons/unit_tspdr.png \
-  qt/res/icons/unit_tmspdr.png \
-  qt/res/icons/unit_tuspdr.png \
+  qt/res/icons/unit_rwtaler.png \
+  qt/res/icons/unit_mrwtaler.png \
+  qt/res/icons/unit_urwtaler.png \
+  qt/res/icons/unit_trwtaler.png \
+  qt/res/icons/unit_tmrwtaler.png \
+  qt/res/icons/unit_turwtaler.png \
   qt/res/icons/update.ico \
   qt/res/icons/update_black.png \
   qt/res/icons/verified.png \
@@ -407,8 +407,8 @@ BITCOIN_QT_CPP = \
   qt/modaloverlay.cpp \
   qt/eula.cpp \
   qt/masternodemanager.cpp \
-  qt/addeditspdrnode.cpp \
-  qt/spdrnodeconfigdialog.cpp \
+  qt/addeditrwtalernode.cpp \
+  qt/rwtalernodeconfigdialog.cpp \
   qt/networkstyle.cpp \
   qt/token.cpp \
   qt/notificator.cpp \
@@ -462,8 +462,8 @@ BITCOIN_QT_CPP += \
   qt/editcontractinfodialog.cpp \
   qt/eventlog.cpp \
   qt/masternodemanager.cpp \
-  qt/addeditspdrnode.cpp \
-  qt/spdrnodeconfigdialog.cpp \
+  qt/addeditrwtalernode.cpp \
+  qt/rwtalernodeconfigdialog.cpp \
   qt/multisenddialog.cpp \
   qt/openuridialog.cpp \
   qt/overviewpage.cpp \
@@ -500,19 +500,19 @@ BITCOIN_QT_CPP += \
   qt/walletview.cpp
 
 if ENABLE_UPDATER
-  BITCOIN_QT_CPP += spdr-installer/src/spdrupdater/simplescheduler.cpp \
-                    spdr-installer/src/spdrupdater/spdrupdater_p.cpp \
-                    spdr-installer/src/spdrupdater/spdrupdater.cpp \
-                    spdr-installer/src/spdrupdater/atomfeeder.cpp \
-                    spdr-installer/src/spdrupdater/downloadmanager.cpp \
-                    spdr-installer/src/dialogmaster.cpp \
-                    spdr-installer/src/progressdialog.cpp \
-                    spdr-installer/src/updatecontroller.cpp \
-                    spdr-installer/src/updateinfodialog.cpp
+  BITCOIN_QT_CPP += rwtaler-installer/src/rwtalerupdater/simplescheduler.cpp \
+                    rwtaler-installer/src/rwtalerupdater/rwtalerupdater_p.cpp \
+                    rwtaler-installer/src/rwtalerupdater/rwtalerupdater.cpp \
+                    rwtaler-installer/src/rwtalerupdater/atomfeeder.cpp \
+                    rwtaler-installer/src/rwtalerupdater/downloadmanager.cpp \
+                    rwtaler-installer/src/dialogmaster.cpp \
+                    rwtaler-installer/src/progressdialog.cpp \
+                    rwtaler-installer/src/updatecontroller.cpp \
+                    rwtaler-installer/src/updateinfodialog.cpp
 if TARGET_WINDOWS
-  BITCOIN_QT_CPP += spdr-installer/src/adminauthorization_win.cpp
+  BITCOIN_QT_CPP += rwtaler-installer/src/adminauthorization_win.cpp
 else
-  BITCOIN_QT_CPP += spdr-installer/src/adminauthorization_x11.cpp
+  BITCOIN_QT_CPP += rwtaler-installer/src/adminauthorization_x11.cpp
 endif
 
 endif
@@ -523,7 +523,7 @@ RES_IMAGES = \
   qt/res/images/about.png \
   qt/res/images/splash.png \
   qt/res/images/splash_testnet.png \
-  qt/res/images/spdr_logo_horizontal.png \
+  qt/res/images/rwtaler_logo_horizontal.png \
   qt/res/images/downArrow.png \
   qt/res/images/downArrow_small.png \
   qt/res/images/upArrow_small.png \
@@ -540,7 +540,7 @@ RES_CSS = \
 RES_MOVIES = $(wildcard $(srcdir)/qt/res/movies/spinner-*.png)
 
 if TARGET_WINDOWS
-BITCOIN_RC = qt/res/spdr-qt-res.rc
+BITCOIN_RC = qt/res/rwtaler-qt-res.rc
 endif
 
 BITCOIN_QT_INCLUDES = -I$(builddir)/qt -I$(srcdir)/qt -I$(srcdir)/qt/forms \
@@ -561,70 +561,70 @@ QT_FORMS_H=$(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:
 # Most files will depend on the forms and moc files as includes. Generate them
 # before anything else.
 $(QT_MOC): $(QT_FORMS_H)
-$(qt_libbitcoinqt_a_OBJECTS) $(qt_spdr_qt_OBJECTS) : | $(QT_MOC)
+$(qt_libbitcoinqt_a_OBJECTS) $(qt_rwtaler_qt_OBJECTS) : | $(QT_MOC)
 
 #Generating these with a half-written protobuf header leads to wacky results.
 #This makes sure it's done.
 $(QT_MOC): $(PROTOBUF_H)
 $(QT_MOC_CPP): $(PROTOBUF_H)
 
-# spdr-qt binary #
-qt_spdr_qt_CPPFLAGS = $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
+# rwtaler-qt binary #
+qt_rwtaler_qt_CPPFLAGS = $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
   $(QT_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS)
 
-qt_spdr_qt_SOURCES = qt/spdr.cpp
+qt_rwtaler_qt_SOURCES = qt/rwtaler.cpp
 if TARGET_DARWIN
-  qt_spdr_qt_SOURCES += $(BITCOIN_MM)
+  qt_rwtaler_qt_SOURCES += $(BITCOIN_MM)
 endif
 if TARGET_WINDOWS
-  qt_spdr_qt_SOURCES += $(BITCOIN_RC)
+  qt_rwtaler_qt_SOURCES += $(BITCOIN_RC)
 endif
-qt_spdr_qt_LDADD = qt/libbitcoinqt.a $(LIBBITCOIN_SERVER)
+qt_rwtaler_qt_LDADD = qt/libbitcoinqt.a $(LIBBITCOIN_SERVER)
 if ENABLE_WALLET
-qt_spdr_qt_LDADD += $(LIBBITCOIN_WALLET)
+qt_rwtaler_qt_LDADD += $(LIBBITCOIN_WALLET)
 endif
 if ENABLE_ZMQ
-qt_spdr_qt_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+qt_rwtaler_qt_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 endif
-qt_spdr_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_CONSENSUS) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) $(LIBBITCOIN_UNIVALUE) $(LIBLEVELDB) $(LIBMEMENV) \
+qt_rwtaler_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_CONSENSUS) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) $(LIBBITCOIN_UNIVALUE) $(LIBLEVELDB) $(LIBMEMENV) \
   $(BOOST_LIBS) $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(LIBSECP256K1) \
   $(LIBCRYPTOPP) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
 
-qt_spdr_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-qt_spdr_qt_LIBTOOLFLAGS = --tag CXX
+qt_rwtaler_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+qt_rwtaler_qt_LIBTOOLFLAGS = --tag CXX
 
 #locale/foo.ts -> locale/foo.qm
 QT_QM=$(QT_TS:.ts=.qm)
 
 .SECONDARY: $(QT_QM)
 
-qt/spdrstrings.cpp: $(libbitcoin_server_a_SOURCES) $(libbitcoin_wallet_a_SOURCES) $(libbitcoin_common_a_SOURCES)
+qt/rwtalerstrings.cpp: $(libbitcoin_server_a_SOURCES) $(libbitcoin_wallet_a_SOURCES) $(libbitcoin_common_a_SOURCES)
 	@test -n $(XGETTEXT) || echo "xgettext is required for updating translations"
 	$(AM_V_GEN) cd $(srcdir); XGETTEXT=$(XGETTEXT) $(PYTHON) ../share/qt/extract_strings_qt.py $^
 
-translate: qt/spdrstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
+translate: qt/rwtalerstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
 	@test -n $(LUPDATE) || echo "lupdate is required for updating translations"
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts qt/locale/spdr_en.ts
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts qt/locale/rwtaler_en.ts
 
 $(QT_QRC_LOCALE_CPP): $(QT_QRC_LOCALE) $(QT_QM)
 	@test -f $(RCC)
 	@test -f $(@D)/$(<F) || cp -f $< $(@D)
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name spdr_locale $(@D)/$(<F) | \
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name rwtaler_locale $(@D)/$(<F) | \
 	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 
 $(QT_QRC_CPP): $(QT_QRC) $(QT_FORMS_H) $(RES_ICONS) $(RES_IMAGES) $(RES_CSS) $(RES_MOVIES) $(PROTOBUF_H)
 	@test -f $(RCC)
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name spdr $< | \
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name rwtaler $< | \
 	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 
 CLEAN_QT = $(nodist_qt_libbitcoinqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda qt/*.gcno
 
 CLEANFILES += $(CLEAN_QT)
 
-spdr_qt_clean: FORCE
-	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_spdr_qt_OBJECTS) qt/spdr-qt$(EXEEXT) $(LIBBITCOINQT)
+rwtaler_qt_clean: FORCE
+	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_rwtaler_qt_OBJECTS) qt/rwtaler-qt$(EXEEXT) $(LIBBITCOINQT)
 
-spdr_qt : qt/spdr-qt$(EXEEXT)
+rwtaler_qt : qt/rwtaler-qt$(EXEEXT)
 
 ui_%.h: %.ui
 	@test -f $(UIC)

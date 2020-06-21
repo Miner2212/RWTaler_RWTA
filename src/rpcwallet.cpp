@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2019 The RWTalercore developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -106,7 +106,7 @@ string AccountFromValue(const UniValue& value)
     return strAccount;
 }
 
-//////////////////////////////////////////////////////////////////////////// // spdr
+//////////////////////////////////////////////////////////////////////////// // rwtaler
 UniValue executionResultToJSON(const dev::eth::ExecutionResult& exRes)
 {
     UniValue result(UniValue::VOBJ);
@@ -322,7 +322,7 @@ UniValue getnewaddress(const UniValue& params, bool fHelp)
             "1. \"account\"        (string, optional) The account name for the address to be linked to. If not provided, the default account \"\" is used. It can also be set to the empty string \"\" to represent the default account. The account does not need to exist, it will be created if there is no account by the given name.\n"
             "2. \"address_type\"   (string, optional) The address type to use. Options are \"legacy\", \"p2sh-segwit\", and \"bech32\". Default is set by -addresstype.\n"
             "\nResult:\n"
-            "\"spdraddress\"    (string) The new spdr address\n"
+            "\"rwtaleraddress\"    (string) The new rwtaler address\n"
             "\nExamples:\n" +
             HelpExampleCli("getnewaddress", "") + HelpExampleCli("getnewaddress", "\"\"") + HelpExampleCli("getnewaddress", "\"myaccount\"") + HelpExampleRpc("getnewaddress", "\"myaccount\""));
 
@@ -380,7 +380,7 @@ UniValue getaccountaddress(const UniValue& params, bool fHelp)
             "\nArguments:\n"
             "1. \"account\"       (string, required) The account name for the address. It can also be set to the empty string \"\" to represent the default account. The account does not need to exist, it will be created and a new address created  if there is no account by the given name.\n"
             "\nResult:\n"
-            "\"spdraddress\"   (string) The account spdr address\n"
+            "\"rwtaleraddress\"   (string) The account rwtaler address\n"
             "\nExamples:\n" +
             HelpExampleCli("getaccountaddress", "") + HelpExampleCli("getaccountaddress", "\"\"") + HelpExampleCli("getaccountaddress", "\"myaccount\"") + HelpExampleRpc("getaccountaddress", "\"myaccount\""));
 
@@ -442,10 +442,10 @@ UniValue setaccount(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() < 1 || params.size() > 2)
         throw runtime_error(
-            "setaccount \"spdraddress\" \"account\"\n"
+            "setaccount \"rwtaleraddress\" \"account\"\n"
             "\nSets the account associated with the given address.\n"
             "\nArguments:\n"
-            "1. \"spdraddress\"  (string, required) The spdr address to be associated with an account.\n"
+            "1. \"rwtaleraddress\"  (string, required) The rwtaler address to be associated with an account.\n"
             "2. \"account\"         (string, required) The account to assign the address to.\n"
             "\nExamples:\n" +
             HelpExampleCli("setaccount", "\"LgAskSorXfCYUweZcCTpGNtpcFotS2rqDF\" \"tabby\"") + HelpExampleRpc("setaccount", "\"LgAskSorXfCYUweZcCTpGNtpcFotS2rqDF\", \"tabby\""));
@@ -481,10 +481,10 @@ UniValue getaccount(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 1)
         throw runtime_error(
-            "getaccount \"spdraddress\"\n"
+            "getaccount \"rwtaleraddress\"\n"
             "\nReturns the account associated with the given address.\n"
             "\nArguments:\n"
-            "1. \"spdraddress\"  (string, required) The spdr address for account lookup.\n"
+            "1. \"rwtaleraddress\"  (string, required) The rwtaler address for account lookup.\n"
             "\nResult:\n"
             "\"accountname\"        (string) the account address\n"
             "\nExamples:\n" +
@@ -514,7 +514,7 @@ UniValue getaddressesbyaccount(const UniValue& params, bool fHelp)
             "1. \"account\"  (string, required) The account name.\n"
             "\nResult:\n"
             "[                     (json array of string)\n"
-            "  \"spdraddress\"  (string) a spdr address associated with the given account\n"
+            "  \"rwtaleraddress\"  (string) a rwtaler address associated with the given account\n"
             "  ,...\n"
             "]\n"
             "\nExamples:\n" +
@@ -580,11 +580,11 @@ UniValue sendtoaddress(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() < 2 || params.size() > 5)
         throw runtime_error(
-            "sendtoaddress \"spdraddress\" amount ( \"comment\" \"comment-to\" \"subtractfeefromamount\" )\n"
+            "sendtoaddress \"rwtaleraddress\" amount ( \"comment\" \"comment-to\" \"subtractfeefromamount\" )\n"
             "\nSend an amount to a given address. The amount is a real and is rounded to the nearest 0.00000001\n" +
             HelpRequiringPassphrase() +
             "\nArguments:\n"
-            "1. \"spdraddress\"  (string, required) The spdr address to send to.\n"
+            "1. \"rwtaleraddress\"  (string, required) The rwtaler address to send to.\n"
             "2. \"amount\"      (numeric, required) The amount in btc to send. eg 0.1\n"
             "3. \"comment\"     (string, optional) A comment used to store what the transaction is for. \n"
             "                             This is not part of the transaction, just kept in your wallet.\n"
@@ -629,11 +629,11 @@ UniValue sendtoaddressix(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() < 2 || params.size() > 4)
         throw runtime_error(
-            "sendtoaddressix \"spdraddress\" amount ( \"comment\" \"comment-to\" )\n"
+            "sendtoaddressix \"rwtaleraddress\" amount ( \"comment\" \"comment-to\" )\n"
             "\nSend an amount to a given address. The amount is a real and is rounded to the nearest 0.00000001\n" +
             HelpRequiringPassphrase() +
             "\nArguments:\n"
-            "1. \"spdraddress\"  (string, required) The spdr address to send to.\n"
+            "1. \"rwtaleraddress\"  (string, required) The rwtaler address to send to.\n"
             "2. \"amount\"      (numeric, required) The amount in btc to send. eg 0.1\n"
             "3. \"comment\"     (string, optional) A comment used to store what the transaction is for. \n"
             "                             This is not part of the transaction, just kept in your wallet.\n"
@@ -678,7 +678,7 @@ UniValue listaddressgroupings(const UniValue& params, bool fHelp)
             "[\n"
             "  [\n"
             "    [\n"
-            "      \"spdraddress\",     (string) The spdr address\n"
+            "      \"rwtaleraddress\",     (string) The rwtaler address\n"
             "      amount,                 (numeric) The amount in btc\n"
             "      \"account\"             (string, optional) The account\n"
             "    ]\n"
@@ -753,11 +753,11 @@ UniValue signmessage(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 2)
         throw runtime_error(
-            "signmessage \"spdraddress\" \"message\"\n"
+            "signmessage \"rwtaleraddress\" \"message\"\n"
             "\nSign a message with the private key of an address" +
             HelpRequiringPassphrase() + "\n"
             "\nArguments:\n"
-            "1. \"spdraddress\"  (string, required) The spdr address to use for the private key.\n"
+            "1. \"rwtaleraddress\"  (string, required) The rwtaler address to use for the private key.\n"
             "2. \"message\"         (string, required) The message to create a signature of.\n"
             "\nResult:\n"
             "\"signature\"          (string) The signature of the message encoded in base 64\n"
@@ -802,10 +802,10 @@ UniValue getreceivedbyaddress(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() < 1 || params.size() > 2)
         throw runtime_error(
-            "getreceivedbyaddress \"spdraddress\" ( minconf )\n"
-            "\nReturns the total amount received by the given spdraddress in transactions with at least minconf confirmations.\n"
+            "getreceivedbyaddress \"rwtaleraddress\" ( minconf )\n"
+            "\nReturns the total amount received by the given rwtaleraddress in transactions with at least minconf confirmations.\n"
             "\nArguments:\n"
-            "1. \"spdraddress\"  (string, required) The spdr address for transactions.\n"
+            "1. \"rwtaleraddress\"  (string, required) The rwtaler address for transactions.\n"
             "2. minconf             (numeric, optional, default=1) Only include transactions confirmed at least this many times.\n"
             "\nResult:\n"
             "amount   (numeric) The total amount in btc received at this address.\n"
@@ -818,7 +818,7 @@ UniValue getreceivedbyaddress(const UniValue& params, bool fHelp)
 
     LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    // spdr address
+    // rwtaler address
     CTxDestination dest = DecodeDestination(params[0].get_str());
     if (!IsValidDestination(dest))
         throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid SPDR address");
@@ -1078,13 +1078,13 @@ UniValue sendfrom(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() < 3 || params.size() > 6)
         throw runtime_error(
-            "sendfrom \"fromaccount\" \"tospdraddress\" amount ( minconf \"comment\" \"comment-to\" )\n"
-            "\nSent an amount from an account to a spdr address.\n"
+            "sendfrom \"fromaccount\" \"torwtaleraddress\" amount ( minconf \"comment\" \"comment-to\" )\n"
+            "\nSent an amount from an account to a rwtaler address.\n"
             "The amount is a real and is rounded to the nearest 0.00000001." +
             HelpRequiringPassphrase() + "\n"
             "\nArguments:\n"
             "1. \"fromaccount\"       (string, required) The name of the account to send funds from. May be the default account using \"\".\n"
-            "2. \"tospdraddress\"  (string, required) The spdr address to send funds to.\n"
+            "2. \"torwtaleraddress\"  (string, required) The rwtaler address to send funds to.\n"
             "3. amount                (numeric, required) The amount in btc. (transaction fee is added on top).\n"
             "4. minconf               (numeric, optional, default=1) Only use funds with at least this many confirmations.\n"
             "5. \"comment\"           (string, optional) A comment used to store what the transaction is for. \n"
@@ -1144,7 +1144,7 @@ UniValue sendmany(const UniValue& params, bool fHelp)
             "1. \"fromaccount\"         (string, required) The account to send the funds from, can be \"\" for the default account\n"
             "2. \"amounts\"             (string, required) A json object with addresses and amounts\n"
             "    {\n"
-            "      \"address\":amount   (numeric) The spdr address is the key, the numeric amount in spdr is the value\n"
+            "      \"address\":amount   (numeric) The rwtaler address is the key, the numeric amount in rwtaler is the value\n"
             "      ,...\n"
             "    }\n"
             "3. minconf                 (numeric, optional, default=1) Only use the balance confirmed at least this many times.\n"
@@ -1248,9 +1248,9 @@ UniValue addmultisigaddress(const UniValue& params, bool fHelp)
 
             "\nArguments:\n"
             "1. nrequired        (numeric, required) The number of required signatures out of the n keys or addresses.\n"
-            "2. \"keysobject\"   (string, required) A json array of spdr addresses or hex-encoded public keys\n"
+            "2. \"keysobject\"   (string, required) A json array of rwtaler addresses or hex-encoded public keys\n"
             "     [\n"
-            "       \"address\"  (string) spdr address or hex-encoded public key\n"
+            "       \"address\"  (string) rwtaler address or hex-encoded public key\n"
             "       ...,\n"
             "     ]\n"
             "3. \"account\"      (string, optional) An account to assign the addresses to.\n"
@@ -1599,7 +1599,7 @@ UniValue listtransactions(const UniValue& params, bool fHelp)
             "  {\n"
             "    \"account\":\"accountname\",       (string) The account name associated with the transaction. \n"
             "                                                It will be \"\" for the default account.\n"
-            "    \"address\":\"spdraddress\",    (string) The spdr address of the transaction. Not present for \n"
+            "    \"address\":\"rwtaleraddress\",    (string) The rwtaler address of the transaction. Not present for \n"
             "                                                move transactions (category = move).\n"
             "    \"category\":\"send|receive|move\", (string) The transaction category. 'move' is a local (off blockchain)\n"
             "                                                transaction between accounts, and not associated with an address,\n"
@@ -1796,7 +1796,7 @@ UniValue listsinceblock(const UniValue& params, bool fHelp)
             "{\n"
             "  \"transactions\": [\n"
             "    \"account\":\"accountname\",       (string) The account name associated with the transaction. Will be \"\" for the default account.\n"
-            "    \"address\":\"spdraddress\",    (string) The spdr address of the transaction. Not present for move transactions (category = move).\n"
+            "    \"address\":\"rwtaleraddress\",    (string) The rwtaler address of the transaction. Not present for move transactions (category = move).\n"
             "    \"category\":\"send|receive\",     (string) The transaction category. 'send' has negative amounts, 'receive' has positive amounts.\n"
             "    \"amount\": x.xxx,          (numeric) The amount in btc. This is negative for the 'send' category, and for the 'move' category for moves \n"
             "                                          outbound. It is positive for the 'receive' category, and for the 'move' category for inbound funds.\n"
@@ -1890,7 +1890,7 @@ UniValue gettransaction(const UniValue& params, bool fHelp)
             "  \"details\" : [\n"
             "    {\n"
             "      \"account\" : \"accountname\",  (string) The account name involved in the transaction, can be \"\" for the default account.\n"
-            "      \"address\" : \"spdraddress\",   (string) The spdr address involved in the transaction\n"
+            "      \"address\" : \"rwtaleraddress\",   (string) The rwtaler address involved in the transaction\n"
             "      \"category\" : \"send|receive\",    (string) The category, either 'send' or 'receive'\n"
             "      \"amount\" : x.xxx                  (numeric) The amount in btc\n"
             "      \"label\" : \"label\",              (string) A comment for the address/transaction, if any\n"
@@ -2220,7 +2220,7 @@ UniValue encryptwallet(const UniValue& params, bool fHelp)
             "\nEncrypt you wallet\n" +
             HelpExampleCli("encryptwallet", "\"my pass phrase\"") +
             "\nNow set the passphrase to use the wallet, such as for signing or sending SPDRs\n" + HelpExampleCli("walletpassphrase", "\"my pass phrase\"") +
-            "\nNow we can so something like sign\n" + HelpExampleCli("signmessage", "\"spdraddress\" \"test message\"") +
+            "\nNow we can so something like sign\n" + HelpExampleCli("signmessage", "\"rwtaleraddress\" \"test message\"") +
             "\nNow lock the wallet again by removing the passphrase\n" + HelpExampleCli("walletlock", "") +
             "\nAs a json rpc call\n" + HelpExampleRpc("encryptwallet", "\"my pass phrase\""));
 
@@ -2249,7 +2249,7 @@ UniValue encryptwallet(const UniValue& params, bool fHelp)
     // slack space in .dat files; that is bad if the old data is
     // unencrypted private keys. So:
     StartShutdown();
-    return "wallet encrypted; spdr server stopping, restart to run with encrypted wallet. The keypool has been flushed, you need to make a new backup.";
+    return "wallet encrypted; rwtaler server stopping, restart to run with encrypted wallet. The keypool has been flushed, you need to make a new backup.";
 }
 
 UniValue lockunspent(const UniValue& params, bool fHelp)
@@ -2812,7 +2812,7 @@ UniValue multisend(const UniValue& params, bool fHelp)
     return printMultiSend();
 }
 
-////////////////////////////////////////////////////////////////////// // spdr
+////////////////////////////////////////////////////////////////////// // rwtaler
 UniValue callcontract(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() < 2)
@@ -2846,9 +2846,9 @@ UniValue callcontract(const UniValue& params, bool fHelp)
 
     dev::Address senderAddress;
     if(params.size() == 3){
-        CTxDestination spdrSenderAddress = DecodeDestination(params[2].get_str());
-        if(IsValidDestination(spdrSenderAddress)) {
-            CKeyID *keyid = boost::get<CKeyID>(&spdrSenderAddress);
+        CTxDestination rwtalerSenderAddress = DecodeDestination(params[2].get_str());
+        if(IsValidDestination(rwtalerSenderAddress)) {
+            CKeyID *keyid = boost::get<CKeyID>(&rwtalerSenderAddress);
 
             senderAddress = dev::Address(HexStr(valtype(keyid->begin(),keyid->end())));
         }else{
@@ -2882,9 +2882,9 @@ UniValue createcontract(const UniValue& params, bool fHelp){
         return NullUniValue;
 
     LOCK2(cs_main, pwalletMain->cs_wallet);
-    SpiderDGP spdrDGP(globalState.get(), fGettingValuesDGP);
-    uint64_t blockGasLimit = spdrDGP.getBlockGasLimit(chainActive.Height());
-    uint64_t minGasPrice = CAmount(spdrDGP.getMinGasPrice(chainActive.Height()));
+    RWTalerDGP rwtalerDGP(globalState.get(), fGettingValuesDGP);
+    uint64_t blockGasLimit = rwtalerDGP.getBlockGasLimit(chainActive.Height());
+    uint64_t minGasPrice = CAmount(rwtalerDGP.getMinGasPrice(chainActive.Height()));
     CAmount nGasPrice = (minGasPrice>DEFAULT_GAS_PRICE)?minGasPrice:DEFAULT_GAS_PRICE;
 
     if (fHelp || params.size() < 1 || params.size() > 6)
@@ -2954,7 +2954,7 @@ UniValue createcontract(const UniValue& params, bool fHelp){
     if (params.size() > 3){
         senderAddress = DecodeDestination(params[3].get_str());
         if (!IsValidDestination(senderAddress))
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Spider address to send from");
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid RWTaler address to send from");
         else
             fHasSender=true;
     }
@@ -3090,9 +3090,9 @@ UniValue sendtocontract(const UniValue& params, bool fHelp){
         return NullUniValue;
 
     LOCK2(cs_main, pwalletMain->cs_wallet);
-    SpiderDGP spdrDGP(globalState.get(), fGettingValuesDGP);
-    uint64_t blockGasLimit = spdrDGP.getBlockGasLimit(chainActive.Height());
-    uint64_t minGasPrice = CAmount(spdrDGP.getMinGasPrice(chainActive.Height()));
+    RWTalerDGP rwtalerDGP(globalState.get(), fGettingValuesDGP);
+    uint64_t blockGasLimit = rwtalerDGP.getBlockGasLimit(chainActive.Height());
+    uint64_t minGasPrice = CAmount(rwtalerDGP.getMinGasPrice(chainActive.Height()));
     CAmount nGasPrice = (minGasPrice>DEFAULT_GAS_PRICE)?minGasPrice:DEFAULT_GAS_PRICE;
 
     if (fHelp || params.size() < 2 || params.size() > 8)
@@ -3105,7 +3105,7 @@ UniValue sendtocontract(const UniValue& params, bool fHelp){
                 "2. \"datahex\"  (string, required) data to send.\n"
                 "3. \"amount\"      (numeric or string, optional) The amount in " + CURRENCY_UNIT + " to send. eg 0.1, default: 0\n"
                 "4. gasLimit  (numeric or string, optional) gasLimit, default: "+i64tostr(DEFAULT_GAS_LIMIT_OP_SEND)+", max: "+i64tostr(blockGasLimit)+"\n"
-                "5. gasPrice  (numeric or string, optional) gasPrice Spider price per gas unit, default: "+FormatMoney(nGasPrice)+", min:"+FormatMoney(minGasPrice)+"\n"
+                "5. gasPrice  (numeric or string, optional) gasPrice RWTaler price per gas unit, default: "+FormatMoney(nGasPrice)+", min:"+FormatMoney(minGasPrice)+"\n"
                 "6. \"senderaddress\" (string, optional) The quantum address that will be used as sender.\n"
                 "7. \"broadcast\" (bool, optional, default=true) Whether to broadcast the transaction or not.\n"
                 "8. \"changeToSender\" (bool, optional, default=true) Return the change to the sender.\n"
@@ -3177,7 +3177,7 @@ UniValue sendtocontract(const UniValue& params, bool fHelp){
     if (params.size() > 5){
         senderAddress = DecodeDestination(params[5].get_str());
         if (!IsValidDestination(senderAddress))
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Spider address to send from");
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid RWTaler address to send from");
         else
             fHasSender=true;
     }

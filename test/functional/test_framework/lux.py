@@ -2,7 +2,7 @@ from .address import *
 from .script import *
 from .mininode import *
 from .util import *
-from .spdrconfig import *
+from .rwtalerconfig import *
 from .blocktools import *
 from .key import *
 import io
@@ -51,7 +51,7 @@ def make_op_call_output(value, version, gas_limit, gas_price, data, contract):
     scriptPubKey += OP_CALL
     return CTxOut(value, scriptPubKey)
 
-def convert_btc_address_to_spdr(addr, main=False):
+def convert_btc_address_to_rwtaler(addr, main=False):
     version, hsh, checksum = base58_to_byte(addr, 25)
     if version == 111:
         return keyhash_to_p2pkh(binascii.unhexlify(hsh), main)

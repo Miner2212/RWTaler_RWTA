@@ -33,8 +33,8 @@ public:
     uint32_t nTime;
     uint32_t nBits;
     uint32_t nNonce;
-    uint256 hashStateRoot; // spdr
-    uint256 hashUTXORoot; // spdr
+    uint256 hashStateRoot; // rwtaler
+    uint256 hashUTXORoot; // rwtaler
 
     CBlockHeader()
     {
@@ -56,8 +56,8 @@ public:
         //When it is fixed, this check should look like this
         //if(this->nVersion & VersionBitsMask(Params().GetConsensus(), Consensus::SMART_CONTRACTS_HARDFORK))
         if ((this->nVersion & (1 << 30)) != 0) {
-            READWRITE(hashStateRoot);       // spdr
-            READWRITE(hashUTXORoot);        // spdr
+            READWRITE(hashStateRoot);       // rwtaler
+            READWRITE(hashUTXORoot);        // rwtaler
         }
     }
 
@@ -69,8 +69,8 @@ public:
         nTime = 0;
         nBits = 0;
         nNonce = 0;
-        hashStateRoot = 0; // spdr
-        hashUTXORoot = 0; // spdr
+        hashStateRoot = 0; // rwtaler
+        hashUTXORoot = 0; // rwtaler
     }
 
     bool IsNull() const
@@ -140,8 +140,8 @@ public:
         block.nTime          = nTime;
         block.nBits          = nBits;
         block.nNonce         = nNonce;
-        block.hashStateRoot  = hashStateRoot; // spdr
-        block.hashUTXORoot   = hashUTXORoot; // spdr
+        block.hashStateRoot  = hashStateRoot; // rwtaler
+        block.hashUTXORoot   = hashUTXORoot; // rwtaler
         return block;
     }
 

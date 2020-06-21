@@ -4,7 +4,7 @@
 #include <QDialog>
 
 namespace Ui {
-    class SpiderNodeConfigDialog;
+    class RWTalerNodeConfigDialog;
 }
 
 QT_BEGIN_NAMESPACE
@@ -12,16 +12,16 @@ class QModelIndex;
 QT_END_NAMESPACE
 
 /** Dialog showing transaction details. */
-class SpiderNodeConfigDialog : public QDialog
+class RWTalerNodeConfigDialog : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit SpiderNodeConfigDialog(QWidget *parent = 0, QString nodeAddress = "123.456.789.123:28666", QString privkey="MASTERNODEPRIVKEY");
-    ~SpiderNodeConfigDialog();
+    explicit RWTalerNodeConfigDialog(QWidget *parent = 0, QString nodeAddress = "123.456.789.123:28666", QString privkey="MASTERNODEPRIVKEY");
+    ~RWTalerNodeConfigDialog();
 
 private:
-    Ui::SpiderNodeConfigDialog *ui;
+    Ui::RWTalerNodeConfigDialog *ui;
 };
 
 #endif // SPDRNODECONFIGDIALOG_H

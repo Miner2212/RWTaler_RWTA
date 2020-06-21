@@ -153,7 +153,7 @@ ExternalProject_Add(cryptopp
         -DCMAKE_BUILD_TYPE=Release
         # Build static lib but suitable to be included in a shared lib.
         -DCMAKE_POSITION_INDEPENDENT_CODE=${BUILD_SHARED_LIBS}
-        -DCMAKE_POSITION_INDEPENDENT_CODE=ON### spdr
+        -DCMAKE_POSITION_INDEPENDENT_CODE=ON### rwtaler
         -DBUILD_SHARED=Off
         -DBUILD_TESTING=Off
         -DCMAKE_SYSTEM_NAME=${CMAKE_SYSTEM_NAME}

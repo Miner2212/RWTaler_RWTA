@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2019 The RWTalercore developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -74,18 +74,18 @@ bool CWalletDB::EraseTx(uint256 hash)
     return Erase(std::make_pair(std::string("tx"), hash));
 }
 
-bool CWalletDB::WriteSpiderNodeConfig(std::string sAlias, const CSpiderNodeConfig& nodeConfig)
+bool CWalletDB::WriteRWTalerNodeConfig(std::string sAlias, const CRWTalerNodeConfig& nodeConfig)
 {
     nWalletDBUpdateCounter++;
     return Write(std::make_pair(std::string("adrenaline"), sAlias), nodeConfig, true);
 }
 
-bool CWalletDB::ReadSpiderNodeConfig(std::string sAlias, CSpiderNodeConfig& nodeConfig)
+bool CWalletDB::ReadRWTalerNodeConfig(std::string sAlias, CRWTalerNodeConfig& nodeConfig)
 {
     return Read(std::make_pair(std::string("adrenaline"), sAlias), nodeConfig);
 }
 
-bool CWalletDB::EraseSpiderNodeConfig(std::string sAlias)
+bool CWalletDB::EraseRWTalerNodeConfig(std::string sAlias)
 {
     nWalletDBUpdateCounter++;
     return Erase(std::make_pair(std::string("adrenaline"), sAlias));
@@ -977,7 +977,7 @@ DBErrors CWalletDB::ZapWalletTx(CWallet* pwallet, vector<CWalletTx>& vWtx)
 void ThreadFlushWalletDB(const string& strFile)
 {
     // Make this thread recognisable as the wallet flushing thread
-    RenameThread("spdr-wallet");
+    RenameThread("rwtaler-wallet");
 
     static bool fOneThread;
     if (fOneThread)

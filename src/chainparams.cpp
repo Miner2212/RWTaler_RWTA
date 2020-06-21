@@ -1,7 +1,7 @@
 // Copyright (c) 2012-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2019 The RWTalercore developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -17,7 +17,7 @@
 
 #include <boost/assign/list_of.hpp>
 
-///////////////////////////////////////////// // spdr
+///////////////////////////////////////////// // rwtaler
 #include <libdevcore/SHA3.h>
 #include <libdevcore/RLP.h>
 //#include "arith_uint256.h"
@@ -176,7 +176,7 @@ public:
         nMinerThreads = 0;
         nMaturity = 59;
 
-        const char* pszTimestamp = "SpiderVPS - is the future of vps hosting";
+        const char* pszTimestamp = "RWTalerVPS - is the future of vps hosting";
         CMutableTransaction txNew;
         txNew.nVersion = 1;
         txNew.nTime = 1551557208;
@@ -193,8 +193,8 @@ public:
         genesis.nTime = 1551557208; 
         genesis.nBits = 0x1e0fffff;
         genesis.nNonce = 4794063;
-        genesis.hashStateRoot = uint256(h256Touint(dev::h256("e965ffd002cd6ad0e2dc402b8044de833e06b23127ea8c3d80aec91410771495"))); // spdr
-        genesis.hashUTXORoot = uint256(h256Touint(dev::sha3(dev::rlp("")))); // spdr
+        genesis.hashStateRoot = uint256(h256Touint(dev::h256("e965ffd002cd6ad0e2dc402b8044de833e06b23127ea8c3d80aec91410771495"))); // rwtaler
+        genesis.hashUTXORoot = uint256(h256Touint(dev::sha3(dev::rlp("")))); // rwtaler
 
         consensus.hashGenesisBlock = genesis.GetHash();
 
@@ -283,7 +283,7 @@ public:
         nModifierUpdateBlock = 51197; //approx Mon, 17 Apr 2017 04:00:00 GMT
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
-        const char* pszTimestamp = "Spider- Testnet 1"; // Input Activation code to activate blockchain
+        const char* pszTimestamp = "RWTaler- Testnet 1"; // Input Activation code to activate blockchain
         CMutableTransaction txNew;
         txNew.nVersion = 1;
         txNew.nTime = 1528954643;
@@ -301,8 +301,8 @@ public:
         genesis.nTime = 1528954643; // 14 June 2018 @ 5:37am (UTC)
         genesis.nBits = 0x1e0fffff;
         genesis.nNonce = 321859;
-        genesis.hashStateRoot = uint256(h256Touint(dev::h256("e965ffd002cd6ad0e2dc402b8044de833e06b23127ea8c3d80aec91410771495"))); // spdr
-        genesis.hashUTXORoot = uint256(h256Touint(dev::sha3(dev::rlp("")))); // spdr
+        genesis.hashStateRoot = uint256(h256Touint(dev::h256("e965ffd002cd6ad0e2dc402b8044de833e06b23127ea8c3d80aec91410771495"))); // rwtaler
+        genesis.hashUTXORoot = uint256(h256Touint(dev::sha3(dev::rlp("")))); // rwtaler
 
 
         nSwitchPhi2Block = 1000;
@@ -318,14 +318,14 @@ public:
         //vFixedSeeds.clear();
         //vSeeds.clear();
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 48); // Testnet spdr addresses start with 'l'
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 63);  // Testnet spdr script addresses start with 'S'
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 48); // Testnet rwtaler addresses start with 'l'
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 63);  // Testnet rwtaler script addresses start with 'S'
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 155);     // Testnet private keys start with '9' or 'c' (Bitcoin defaults)
-        // Testnet spdr BIP32 pubkeys start with 'DRKV'
+        // Testnet rwtaler BIP32 pubkeys start with 'DRKV'
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x3a)(0x80)(0x61)(0xa0).convert_to_container<std::vector<unsigned char> >();
-        // Testnet spdr BIP32 prvkeys start with 'DRKP'
+        // Testnet rwtaler BIP32 prvkeys start with 'DRKP'
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x3a)(0x80)(0x58)(0x37).convert_to_container<std::vector<unsigned char> >();
-        // Testnet spdr BIP44 coin type is '1' (All coin's testnet default)
+        // Testnet rwtaler BIP44 coin type is '1' (All coin's testnet default)
         // SPDR BIP44 coin type is '1'
         nExtCoinType = 1;
         bech32_hrp = "tb";
@@ -373,8 +373,8 @@ public:
         //consensus.BIP34Height = -1; // BIP34 has not necessarily activated on regtest
         //consensus.BIP34Hash = uint256();
         consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
-        consensus.nPowTargetTimespan = 24 * 60 * 60; // Spider: 1 day
-        consensus.nPowTargetSpacing = 1 * 60; // Spider: 1 minutes
+        consensus.nPowTargetTimespan = 24 * 60 * 60; // RWTaler: 1 day
+        consensus.nPowTargetSpacing = 1 * 60; // RWTaler: 1 minutes
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = true;
         consensus.nRuleChangeActivationThreshold = 108; // 75% for testchains
@@ -505,7 +505,7 @@ public:
         nModifierUpdateBlock = 615800;
         bech32_hrp = "bcst";
 
-        const char* pszTimestamp = "Spider - segwit test"; // Input Activation code to activate blockchain
+        const char* pszTimestamp = "RWTaler - segwit test"; // Input Activation code to activate blockchain
         CMutableTransaction txNew;
         txNew.nVersion = 1;
         txNew.nTime = 1524645689;

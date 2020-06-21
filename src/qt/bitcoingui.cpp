@@ -1,7 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2019 The RWTalercore developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -151,10 +151,10 @@ BitcoinGUI::BitcoinGUI(const PlatformStyle *platformStyle, const NetworkStyle* n
     /* Open CSS when configured */
     this->setStyleSheet(GUIUtil::loadStyleSheet());
     resize(1200, 700);
-    QString windowTitle = tr("Spidercore") + " - ";
+    QString windowTitle = tr("RWTalercore") + " - ";
 
 #ifdef ENABLE_UPDATER
-    controller = new QtSpiderUpdater::UpdateController(QStringLiteral("v1.1.0"), this);
+    controller = new QtRWTalerUpdater::UpdateController(QStringLiteral("v1.1.0"), this);
     controller->setDetailedUpdateInfo(true);
 #endif
 
@@ -406,9 +406,9 @@ BitcoinGUI::BitcoinGUI(const PlatformStyle *platformStyle, const NetworkStyle* n
 
     if(fCheckUpdates && updateDialog->newUpdateAvailable())
     {
-        QString url = "https://github.com/SPDR-Core/spdr/releases";
+        QString url = "https://github.com/SPDR-Core/rwtaler/releases";
         QString link = QString("<a href=\\\"\"+ url +\"\\\">\"+ url +\"</a>").arg(NEW_RELEASES, NEW_RELEASES);
-        QString message(tr("New spdr-qt version available: <br /> %1. <br />").arg(link));
+        QString message(tr("New rwtaler-qt version available: <br /> %1. <br />").arg(link));
         QMessageBox::information(this, tr("Check for updates"), message);
     }
 
@@ -460,7 +460,7 @@ void BitcoinGUI::createActions() {
     tabGroup->addAction(sendCoinsAction);
 
     receiveCoinsAction = new QAction(QIcon(":/icons/receiving_addresses"), tr("&Receive"), this);
-    receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and spdr: URIs)"));
+    receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and rwtaler: URIs)"));
     receiveCoinsAction->setToolTip(receiveCoinsAction->statusTip());
     receiveCoinsAction->setCheckable(true);
 #ifdef Q_OS_MAC
@@ -541,14 +541,14 @@ void BitcoinGUI::createActions() {
     quitAction->setStatusTip(tr("Quit application"));
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
-    aboutAction = new QAction(QIcon(":/icons/spdrcoin_black"), tr("&About Spidercore"), this);
-    aboutAction->setStatusTip(tr("Show information about Spidercore"));
+    aboutAction = new QAction(QIcon(":/icons/rwtalercoin_black"), tr("&About RWTalercore"), this);
+    aboutAction->setStatusTip(tr("Show information about RWTalercore"));
     aboutAction->setMenuRole(QAction::AboutRole);
 
 #ifdef ENABLE_UPDATER
     // Check for update menu item
     checkForUpdateAction = new QAction(QIcon(":/icons/update_black"), tr("Check for &Update"), this);
-    checkForUpdateAction->setStatusTip(tr("Check whether there is an updated wallet from Spidercore"));
+    checkForUpdateAction->setStatusTip(tr("Check whether there is an updated wallet from RWTalercore"));
     checkForUpdateAction->setMenuRole(QAction::NoRole);
 #endif
 
@@ -562,7 +562,7 @@ void BitcoinGUI::createActions() {
     optionsAction = new QAction(QIcon(":/icons/options"), tr("&Options..."), this);
     optionsAction->setStatusTip(tr("Modify configuration options for SPDR"));
     optionsAction->setMenuRole(QAction::PreferencesRole);
-    toggleHideAction = new QAction(QIcon(":/icons/spdrcoin_black"), tr("&Show / Hide"), this);
+    toggleHideAction = new QAction(QIcon(":/icons/rwtalercoin_black"), tr("&Show / Hide"), this);
     toggleHideAction->setStatusTip(tr("Show or hide the main Window"));
 
     encryptWalletAction = new QAction(QIcon(":/icons/lock_closed_black"), tr("&Encrypt Wallet..."), this);
@@ -622,7 +622,7 @@ void BitcoinGUI::createActions() {
 
     showHelpMessageAction = new QAction(QApplication::style()->standardIcon(QStyle::SP_MessageBoxInformation), tr("&Command-line options"), this);
     showHelpMessageAction->setMenuRole(QAction::NoRole);
-    showHelpMessageAction->setStatusTip(tr("Show the Spidercore help message to get a list with possible SPDR command-line options"));
+    showHelpMessageAction->setStatusTip(tr("Show the RWTalercore help message to get a list with possible SPDR command-line options"));
 
     connect(qApp, SIGNAL(aboutToQuit()), qApp, SLOT(quit()));
 
@@ -886,7 +886,7 @@ void BitcoinGUI::setWalletActionsEnabled(bool enabled) {
 void BitcoinGUI::createTrayIcon(const NetworkStyle* networkStyle) {
 #ifndef Q_OS_MAC
     trayIcon = new QSystemTrayIcon(this);
-    QString toolTip = tr("Spidercore client") + " " + networkStyle->getTitleAddText();
+    QString toolTip = tr("RWTalercore client") + " " + networkStyle->getTitleAddText();
     trayIcon->setToolTip(toolTip);
     trayIcon->setIcon(networkStyle->getAppIcon());
     trayIcon->show();
@@ -972,7 +972,7 @@ void BitcoinGUI::updaterClicked() {
     if (!clientModel)
         return;
 #ifdef ENABLE_UPDATER
-    controller->start(QtSpiderUpdater::UpdateController::ProgressLevel);
+    controller->start(QtRWTalerUpdater::UpdateController::ProgressLevel);
 #else
     uiInterface.ThreadSafeMessageBox("This feature is only available on official builds!",
              "Warning", CClientUIInterface::MSG_WARNING);
@@ -1091,7 +1091,7 @@ void BitcoinGUI::updateNetworkState() {
     QIcon connectionItem = QIcon(icon).pixmap(STATUSBAR_ICONSIZE, STATUSBAR_ICONSIZE);
     labelConnectionsIcon->setIcon(connectionItem);
     if (clientModel->getNetworkActive())
-        labelConnectionsIcon->setToolTip(tr("%n active connection(s) to Spidercore network", "", count));
+        labelConnectionsIcon->setToolTip(tr("%n active connection(s) to RWTalercore network", "", count));
     else
         labelConnectionsIcon->setToolTip(tr("Network activity disabled"));
 }
@@ -1242,7 +1242,7 @@ void BitcoinGUI::setNumBlocks(int count, const QDateTime& blockDate, double nVer
 }
 
 void BitcoinGUI::message(const QString& title, const QString& message, unsigned int style, bool* ret) {
-    QString strTitle = tr("Spidercore"); // default title
+    QString strTitle = tr("RWTalercore"); // default title
     // Default to information icon
     int nMBoxIcon = QMessageBox::Information;
     int nNotifyIcon = Notificator::Information;

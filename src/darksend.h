@@ -1,7 +1,7 @@
 // Copyright (c) 2012-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2019 The RWTalercore developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -420,7 +420,7 @@ public:
     // get the denominations for a list of outputs (returns a bitshifted integer)
     int GetDenominations(const std::vector<CTxOut>& vout);
     void GetDenominationsToString(int nDenom, std::string& strDenom);
-    // get the denominations for a specific amount of Spider.
+    // get the denominations for a specific amount of RWTaler.
     int GetDenominationsByAmount(int64_t nAmount, int nDenomTarget=0);
 
     int GetDenominationsByAmounts(std::vector<int64_t>& vecAmount);

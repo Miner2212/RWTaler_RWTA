@@ -3,7 +3,7 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $DIR/..
 
-DOCKER_IMAGE=${DOCKER_IMAGE:-spdrcore/spdr}
+DOCKER_IMAGE=${DOCKER_IMAGE:-rwtalercore/rwtaler}
 DOCKER_TAG=${DOCKER_TAG:-latest}
 
 if [ -n "$DOCKER_REPO" ]; then

@@ -1,6 +1,6 @@
 #!/bin/sh
 #-###############################################-#
-# C++ Cross-Compiler - The SpiderVPS Developer-2018 #
+# C++ Cross-Compiler - The RWTalerVPS Developer-2018 #
 #-###############################################-#
 
 # Set platform variables

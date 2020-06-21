@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2019 The RWTalercore developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -134,7 +134,7 @@ UniValue getgenerate(const UniValue& params, bool fHelp)
         throw runtime_error(
             "getgenerate\n"
             "\nReturn if the server is set to generate coins or not. The default is false.\n"
-            "It is set with the command line argument -gen (or spdr.conf setting gen)\n"
+            "It is set with the command line argument -gen (or rwtaler.conf setting gen)\n"
             "It can also be set with the setgenerate call.\n"
             "\nResult\n"
             "true|false      (boolean) If the server is set to generate coins or not\n"
@@ -191,9 +191,9 @@ UniValue setgenerate(const UniValue& params, bool fHelp)
     }
     UniValue obj(UniValue::VOBJ);
     if(fGenerate)
-        obj.push_back(Pair("Start Spider miner! Threads: ", (int)nGenProcLimit));
+        obj.push_back(Pair("Start RWTaler miner! Threads: ", (int)nGenProcLimit));
     else
-         obj.push_back(Pair("Stop Spider miner! Threads: ", (int)nGenProcLimit));
+         obj.push_back(Pair("Stop RWTaler miner! Threads: ", (int)nGenProcLimit));
 
     return obj;
 }
@@ -807,10 +807,10 @@ UniValue getwork(const UniValue& params, bool fHelp) {
     // because it is tested locally, without any nodes connected, and with significant amount of time between blocks
     if (Params().NetworkID() != CBaseChainParams::SEGWITTEST) {
          if (vNodes.empty())
-             throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "Spider is not connected!");
+             throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "RWTaler is not connected!");
 
          if (IsInitialBlockDownload())
-             throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Spider is downloading blocks...");
+             throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "RWTaler is downloading blocks...");
     }
 
     if (chainActive.Height() >= Params().LAST_POW_BLOCK())

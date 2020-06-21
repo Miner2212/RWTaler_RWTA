@@ -1,11 +1,11 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=Spider
-Comment=Spider P2P Cryptocurrency
-Exec=spdr-qt %u
+Name=RWTaler
+Comment=RWTaler P2P Cryptocurrency
+Exec=rwtaler-qt %u
 Terminal=false
 Type=Application
-Icon=spdr128
-MimeType=x-scheme-handler/spdr;
+Icon=rwtaler128
+MimeType=x-scheme-handler/rwtaler;
 Categories=Office;Finance;
-Name[en_AU]=Spider
+Name[en_AU]=RWTaler

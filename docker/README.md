@@ -1,4 +1,4 @@
-Quick Docker image for spdrd
+Quick Docker image for rwtalerd
 ---------------------------
 
 Build docker image:
@@ -9,41 +9,41 @@ Push docker image:
 
     docker/push.sh
 
-Pull spdrcore/spdr:latest from docker hub  at [spdr-dockerhub](https://hub.docker.com/r/spdrcore/spdr/)
+Pull rwtalercore/rwtaler:latest from docker hub  at [rwtaler-dockerhub](https://hub.docker.com/r/rwtalercore/rwtaler/)
 
-    sudo docker pull spdrcore/spdr
+    sudo docker pull rwtalercore/rwtaler
     
 Run docker image
 
-    sudo docker run spdrcore/spdr
+    sudo docker run rwtalercore/rwtaler
 
-Build docker for spdrd
+Build docker for rwtalerd
 ----------
-A Docker configuration with spdrd node by default.
+A Docker configuration with rwtalerd node by default.
 
     sudo apt install apt-transport-https ca-certificates curl software-properties-common; curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -; sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"; sudo apt-get update; sudo apt install docker-ce   
 ---------------------------------------------------        
     
-    mkdir spdr-mounted-data
-    docker run --name spdr -d \
+    mkdir rwtaler-mounted-data
+    docker run --name rwtaler -d \
      --env 'SPDR_RPCUSER=rpciser' \
      --env 'SPDR_RPCPASSWORD=rpcpassword' \
      --env 'SPDR_TXINDEX=1' \
-     --volume ~/spdr-mounted-data:~/.spdr \
+     --volume ~/rwtaler-mounted-data:~/.rwtaler \
      -p 53616:53616 \
      --publish 53616:53616 \
-     spdrcore/spdr
+     rwtalercore/rwtaler
 ----------------------------------------------------
 Logs
 
-    docker logs -f spdr
+    docker logs -f rwtaler
 
 ----------------------------------------------------
 
 ## Configuration
 
-Set your `spdr.conf` file can be placed in the `spdr-mounted data` dir.
-Otherwise, a default `spdr.conf` file will be automatically generated based
+Set your `rwtaler.conf` file can be placed in the `rwtaler-mounted data` dir.
+Otherwise, a default `rwtaler.conf` file will be automatically generated based
 on environment variables passed to the container:
 
 | name | default |
@@ -70,23 +70,23 @@ If you're daemonizing is to use Docker's
 but if you're insistent on using systemd, you could do something like
 
 ```
-$ cat /etc/systemd/system/spdrd.service
+$ cat /etc/systemd/system/rwtalerd.service
 
-# spdrd.service #######################################################################
+# rwtalerd.service #######################################################################
 [Unit]
-Description=Spider
+Description=RWTaler
 After=docker.service
 Requires=docker.service
 
 [Service]
-ExecStartPre=-/usr/bin/docker kill spdr
-ExecStartPre=-/usr/bin/docker rm spdr
-ExecStartPre=/usr/bin/docker pull spdrcore/spdr
+ExecStartPre=-/usr/bin/docker kill rwtaler
+ExecStartPre=-/usr/bin/docker rm rwtaler
+ExecStartPre=/usr/bin/docker pull rwtalercore/rwtaler
 ExecStart=/usr/bin/docker run \
-    --name spdr \
+    --name rwtaler \
     -p 53616:53616 \
     -p 53616:53616 \
-    -v /data/spdrd:/root/.spdr \
-    spdrcore/spdr
-ExecStop=/usr/bin/docker stop spdr
+    -v /data/rwtalerd:/root/.rwtaler \
+    rwtalercore/rwtaler
+ExecStop=/usr/bin/docker stop rwtaler
 ```

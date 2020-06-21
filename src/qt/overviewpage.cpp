@@ -1,7 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2019 The RWTalercore developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -212,7 +212,7 @@ OverviewPage::OverviewPage(const PlatformStyle *platformStyle, QWidget* parent) 
     nDisplayUnit = 0; // just make sure it's not unitialized
     ui->setupUi(this);
     //set Logo
-    ui->labelLogo->setPixmap(QPixmap(":/images/spdr_logo_horizontal")
+    ui->labelLogo->setPixmap(QPixmap(":/images/rwtaler_logo_horizontal")
                              .scaled(410,80,Qt::KeepAspectRatio,
                                      Qt::SmoothTransformation));
 
@@ -251,10 +251,10 @@ OverviewPage::OverviewPage(const PlatformStyle *platformStyle, QWidget* parent) 
         } else {
             if (!fEnableDarksend) {
                 ui->darksendEnabled->setText(tr("Disabled"));
-                ui->toggleDarksend->setText(tr("Start Spidersend"));
+                ui->toggleDarksend->setText(tr("Start RWTalersend"));
             } else {
                 ui->darksendEnabled->setText(tr("Enabled"));
-                ui->toggleDarksend->setText(tr("Stop Spidersend"));
+                ui->toggleDarksend->setText(tr("Stop RWTalersend"));
             }
             timer = new QTimer(this);
             connect(timer, SIGNAL(timeout()), this, SLOT(darkSendStatus()));
@@ -461,15 +461,15 @@ void OverviewPage::updateDarkSendProgress()
     }
 
     QString strAmountAndRounds;
-    QString strAnonymizeSpiderAmount = BitcoinUnits::formatHtmlWithUnit(nDisplayUnit, nAnonymizeSpiderAmount * COIN, false, BitcoinUnits::separatorAlways);
+    QString strAnonymizeRWTalerAmount = BitcoinUnits::formatHtmlWithUnit(nDisplayUnit, nAnonymizeRWTalerAmount * COIN, false, BitcoinUnits::separatorAlways);
 
     if (!fEnableDarksend) {
         ui->darksendProgress->setValue(0);
         ui->darksendProgress->setToolTip(tr("Darksend disabled"));
 
         // when balance is zero just show info from settings
-        strAnonymizeSpiderAmount = strAnonymizeSpiderAmount.remove(strAnonymizeSpiderAmount.indexOf("."), BitcoinUnits::decimals(nDisplayUnit) + 1);
-        strAmountAndRounds = strAnonymizeSpiderAmount + " / " + tr("%n Rounds", "", nDarksendRounds);
+        strAnonymizeRWTalerAmount = strAnonymizeRWTalerAmount.remove(strAnonymizeRWTalerAmount.indexOf("."), BitcoinUnits::decimals(nDisplayUnit) + 1);
+        strAmountAndRounds = strAnonymizeRWTalerAmount + " / " + tr("%n Rounds", "", nDarksendRounds);
 
         ui->labelAmountRounds->setToolTip(tr("Darksend disabled"));
         ui->labelAmountRounds->setText(tr("Disabled"));
@@ -481,8 +481,8 @@ void OverviewPage::updateDarkSendProgress()
         ui->darksendProgress->setToolTip(tr("No inputs detected"));
 
         // when balance is zero just show info from settings
-        strAnonymizeSpiderAmount = strAnonymizeSpiderAmount.remove(strAnonymizeSpiderAmount.indexOf("."), BitcoinUnits::decimals(nDisplayUnit) + 1);
-        strAmountAndRounds = strAnonymizeSpiderAmount + " / " + tr("%n Rounds", "", nDarksendRounds);
+        strAnonymizeRWTalerAmount = strAnonymizeRWTalerAmount.remove(strAnonymizeRWTalerAmount.indexOf("."), BitcoinUnits::decimals(nDisplayUnit) + 1);
+        strAmountAndRounds = strAnonymizeRWTalerAmount + " / " + tr("%n Rounds", "", nDarksendRounds);
 
         ui->labelAmountRounds->setToolTip(tr("No inputs detected"));
         ui->labelAmountRounds->setText(strAmountAndRounds);
@@ -509,20 +509,20 @@ void OverviewPage::updateDarkSendProgress()
     CAmount nMaxToAnonymize = nAnonymizableBalance + currentAnonymizedBalance + nDenominatedUnconfirmedBalance;
 
     // If it's more than the anon threshold, limit to that.
-    if (nMaxToAnonymize > nAnonymizeSpiderAmount * COIN) nMaxToAnonymize = nAnonymizeSpiderAmount * COIN;
+    if (nMaxToAnonymize > nAnonymizeRWTalerAmount * COIN) nMaxToAnonymize = nAnonymizeRWTalerAmount * COIN;
 
     if (nMaxToAnonymize == 0) return;
 
-    if (nMaxToAnonymize >= nAnonymizeSpiderAmount * COIN) {
+    if (nMaxToAnonymize >= nAnonymizeRWTalerAmount * COIN) {
         ui->labelAmountRounds->setToolTip(tr("Found enough compatible inputs to anonymize %1")
-                                              .arg(strAnonymizeSpiderAmount));
-        strAnonymizeSpiderAmount = strAnonymizeSpiderAmount.remove(strAnonymizeSpiderAmount.indexOf("."), BitcoinUnits::decimals(nDisplayUnit) + 1);
-        strAmountAndRounds = strAnonymizeSpiderAmount + " / " + tr("%n Rounds", "", nDarksendRounds);
+                                              .arg(strAnonymizeRWTalerAmount));
+        strAnonymizeRWTalerAmount = strAnonymizeRWTalerAmount.remove(strAnonymizeRWTalerAmount.indexOf("."), BitcoinUnits::decimals(nDisplayUnit) + 1);
+        strAmountAndRounds = strAnonymizeRWTalerAmount + " / " + tr("%n Rounds", "", nDarksendRounds);
     } else {
         QString strMaxToAnonymize = BitcoinUnits::formatHtmlWithUnit(nDisplayUnit, nMaxToAnonymize, false, BitcoinUnits::separatorAlways);
         ui->labelAmountRounds->setToolTip(tr("Not enough compatible inputs to anonymize <span style='color:red;'>%1</span>,<br>"
                                              "will anonymize <span style='color:red;'>%2</span> instead")
-                                              .arg(strAnonymizeSpiderAmount)
+                                              .arg(strAnonymizeRWTalerAmount)
                                               .arg(strMaxToAnonymize));
         strMaxToAnonymize = strMaxToAnonymize.remove(strMaxToAnonymize.indexOf("."), BitcoinUnits::decimals(nDisplayUnit) + 1);
         strAmountAndRounds = "<span style='color:red;'>" +
@@ -611,7 +611,7 @@ void OverviewPage::darkSendStatus()
 
             ui->darksendEnabled->setText(tr("Disabled"));
             ui->darkSendStatus->setText("");
-            ui->toggleDarksend->setText(tr("Start Spidersend"));
+            ui->toggleDarksend->setText(tr("Start RWTalersend"));
         }
 
         return;
@@ -668,7 +668,7 @@ void OverviewPage::darkSendStatus()
     }
 
     if (strStatus != ui->darkSendStatus->text() && !strStatus.isEmpty()) {
-        LogPrintf("Last Spidersend message: %s\n", strStatus.toStdString().c_str());
+        LogPrintf("Last RWTalersend message: %s\n", strStatus.toStdString().c_str());
         ui->darkSendStatus->setText(strStatus);
     } else {
         ui->darkSendStatus->setText("");
@@ -737,14 +737,14 @@ void OverviewPage::toggleDarksend()
     updateAdvancedUI(this->walletModel->getOptionsModel()->getShowAdvancedUI());
 
     if (!fEnableDarksend) {
-        ui->toggleDarksend->setText(tr("Start Spidersend"));
+        ui->toggleDarksend->setText(tr("Start RWTalersend"));
         darkSendPool.UnlockCoins();
     } else {
-        ui->toggleDarksend->setText(tr("Stop Spidersend"));
+        ui->toggleDarksend->setText(tr("Stop RWTalersend"));
 
         /* show darksend configuration if client has defaults set */
 
-        if (nAnonymizeSpiderAmount == 0) {
+        if (nAnonymizeRWTalerAmount == 0) {
             DarksendConfig dlg(this);
             dlg.setModel(walletModel);
             dlg.exec();

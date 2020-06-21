@@ -1,7 +1,7 @@
 #include "masternodemanager.h"
 #include "ui_masternodemanager.h"
-#include "addeditspdrnode.h"
-#include "spdrnodeconfigdialog.h"
+#include "addeditrwtalernode.h"
+#include "rwtalernodeconfigdialog.h"
 
 #include "sync.h"
 #include "clientmodel.h"
@@ -67,7 +67,7 @@ MasternodeManager::~MasternodeManager()
     delete ui;
 }
 
-static void NotifySpiderNodeUpdated(MasternodeManager *page, CSpiderNodeConfig nodeConfig)
+static void NotifyRWTalerNodeUpdated(MasternodeManager *page, CRWTalerNodeConfig nodeConfig)
 {
     // alias, address, privkey, collateral address
     QString alias = QString::fromStdString(nodeConfig.sAlias);
@@ -75,7 +75,7 @@ static void NotifySpiderNodeUpdated(MasternodeManager *page, CSpiderNodeConfig n
     QString privkey = QString::fromStdString(nodeConfig.sMasternodePrivKey);
     QString collateral = QString::fromStdString(nodeConfig.sCollateralAddress);
     
-    QMetaObject::invokeMethod(page, "updateSpiderNode", Qt::QueuedConnection,
+    QMetaObject::invokeMethod(page, "updateRWTalerNode", Qt::QueuedConnection,
                               Q_ARG(QString, alias),
                               Q_ARG(QString, addr),
                               Q_ARG(QString, privkey),
@@ -86,13 +86,13 @@ static void NotifySpiderNodeUpdated(MasternodeManager *page, CSpiderNodeConfig n
 void MasternodeManager::subscribeToCoreSignals()
 {
     // Connect signals to core
-    uiInterface.NotifySpiderNodeChanged.connect(boost::bind(&NotifySpiderNodeUpdated, this, _1));
+    uiInterface.NotifyRWTalerNodeChanged.connect(boost::bind(&NotifyRWTalerNodeUpdated, this, _1));
 }
 
 void MasternodeManager::unsubscribeFromCoreSignals()
 {
     // Disconnect signals from core
-    uiInterface.NotifySpiderNodeChanged.disconnect(boost::bind(&NotifySpiderNodeUpdated, this, _1));
+    uiInterface.NotifyRWTalerNodeChanged.disconnect(boost::bind(&NotifyRWTalerNodeUpdated, this, _1));
 }
 
 void MasternodeManager::on_tableWidget_2_itemSelectionChanged()
@@ -107,7 +107,7 @@ void MasternodeManager::on_tableWidget_2_itemSelectionChanged()
     }
 }
 
-void MasternodeManager::updateSpiderNode(QString alias, QString addr, QString privkey, QString collateral)
+void MasternodeManager::updateRWTalerNode(QString alias, QString addr, QString privkey, QString collateral)
 {
     LOCK(cs_adrenaline);
     bool bFound = false;
@@ -196,9 +196,9 @@ void MasternodeManager::updateNodeList()
     if(pwalletMain)
     {
         LOCK(cs_adrenaline);
-        for (PAIRTYPE(std::string, CSpiderNodeConfig) adrenaline : pwalletMain->mapMySpiderNodes)
+        for (PAIRTYPE(std::string, CRWTalerNodeConfig) adrenaline : pwalletMain->mapMyRWTalerNodes)
         {
-            updateSpiderNode(QString::fromStdString(adrenaline.second.sAlias), QString::fromStdString(adrenaline.second.sAddress), QString::fromStdString(adrenaline.second.sMasternodePrivKey), QString::fromStdString(adrenaline.second.sCollateralAddress));
+            updateRWTalerNode(QString::fromStdString(adrenaline.second.sAlias), QString::fromStdString(adrenaline.second.sAddress), QString::fromStdString(adrenaline.second.sMasternodePrivKey), QString::fromStdString(adrenaline.second.sCollateralAddress));
         }
     }
 }
@@ -291,7 +291,7 @@ void MasternodeManager::setPMNsVisible(bool visible)
 
 void MasternodeManager::on_createButton_clicked()
 {
-    AddEditSpiderNode* aenode = new AddEditSpiderNode();
+    AddEditRWTalerNode* aenode = new AddEditRWTalerNode();
     aenode->exec();
 }
 #if 0
@@ -334,9 +334,9 @@ void MasternodeManager::on_getConfigButton_clicked()
     QModelIndex index = selected.at(0);
     int r = index.row();
     std::string sAddress = ui->tableWidget_2->item(r, 1)->text().toStdString();
-    CSpiderNodeConfig c = pwalletMain->mapMySpiderNodes[sAddress];
+    CRWTalerNodeConfig c = pwalletMain->mapMyRWTalerNodes[sAddress];
     std::string sPrivKey = c.sMasternodePrivKey;
-    SpiderNodeConfigDialog* d = new SpiderNodeConfigDialog(this, QString::fromStdString(sAddress), QString::fromStdString(sPrivKey));
+    RWTalerNodeConfigDialog* d = new RWTalerNodeConfigDialog(this, QString::fromStdString(sAddress), QString::fromStdString(sPrivKey));
     d->exec();
 }
 
@@ -355,15 +355,15 @@ void MasternodeManager::on_removeButton_clicked()
         QModelIndex index = selected.at(0);
         int r = index.row();
         std::string sAddress = ui->tableWidget_2->item(r, 1)->text().toStdString();
-        CSpiderNodeConfig c = pwalletMain->mapMySpiderNodes[sAddress];
+        CRWTalerNodeConfig c = pwalletMain->mapMyRWTalerNodes[sAddress];
         CWalletDB walletdb(pwalletMain->strWalletFile);
-        pwalletMain->mapMySpiderNodes.erase(sAddress);
-        walletdb.EraseSpiderNodeConfig(c.sAddress);
+        pwalletMain->mapMyRWTalerNodes.erase(sAddress);
+        walletdb.EraseRWTalerNodeConfig(c.sAddress);
         ui->tableWidget_2->clearContents();
         ui->tableWidget_2->setRowCount(0);
-        for (PAIRTYPE(std::string, CSpiderNodeConfig) adrenaline : pwalletMain->mapMySpiderNodes)
+        for (PAIRTYPE(std::string, CRWTalerNodeConfig) adrenaline : pwalletMain->mapMyRWTalerNodes)
         {
-            updateSpiderNode(QString::fromStdString(adrenaline.second.sAlias), QString::fromStdString(adrenaline.second.sAddress), QString::fromStdString(adrenaline.second.sMasternodePrivKey), QString::fromStdString(adrenaline.second.sCollateralAddress));
+            updateRWTalerNode(QString::fromStdString(adrenaline.second.sAlias), QString::fromStdString(adrenaline.second.sAddress), QString::fromStdString(adrenaline.second.sMasternodePrivKey), QString::fromStdString(adrenaline.second.sCollateralAddress));
         }
     }
 }
@@ -379,7 +379,7 @@ void MasternodeManager::on_startButton_clicked()
     QModelIndex index = selected.at(0);
     int r = index.row();
     std::string sAddress = ui->tableWidget_2->item(r, 1)->text().toStdString();
-    CSpiderNodeConfig c = pwalletMain->mapMySpiderNodes[sAddress];
+    CRWTalerNodeConfig c = pwalletMain->mapMyRWTalerNodes[sAddress];
 
     std::string errorMessage;
     bool result = activeMasternode.RegisterByPubKey(c.sAddress, c.sMasternodePrivKey, c.sCollateralAddress, errorMessage);
@@ -404,7 +404,7 @@ void MasternodeManager::on_stopButton_clicked()
     QModelIndex index = selected.at(0);
     int r = index.row();
     std::string sAddress = ui->tableWidget_2->item(r, 1)->text().toStdString();
-    CSpiderNodeConfig c = pwalletMain->mapMySpiderNodes[sAddress];
+    CRWTalerNodeConfig c = pwalletMain->mapMyRWTalerNodes[sAddress];
 
     std::string errorMessage;
     bool result = activeMasternode.StopMasterNode(c.sAddress, c.sMasternodePrivKey, errorMessage);
@@ -423,9 +423,9 @@ void MasternodeManager::on_stopButton_clicked()
 void MasternodeManager::on_startAllButton_clicked()
 {
     std::string results;
-    for (PAIRTYPE(std::string, CSpiderNodeConfig) adrenaline : pwalletMain->mapMySpiderNodes)
+    for (PAIRTYPE(std::string, CRWTalerNodeConfig) adrenaline : pwalletMain->mapMyRWTalerNodes)
     {
-        CSpiderNodeConfig c = adrenaline.second;
+        CRWTalerNodeConfig c = adrenaline.second;
 	std::string errorMessage;
         bool result = activeMasternode.RegisterByPubKey(c.sAddress, c.sMasternodePrivKey, c.sCollateralAddress, errorMessage);
 	if(result)
@@ -446,9 +446,9 @@ void MasternodeManager::on_startAllButton_clicked()
 void MasternodeManager::on_stopAllButton_clicked()
 {
     std::string results;
-    for (PAIRTYPE(std::string, CSpiderNodeConfig) adrenaline : pwalletMain->mapMySpiderNodes)
+    for (PAIRTYPE(std::string, CRWTalerNodeConfig) adrenaline : pwalletMain->mapMyRWTalerNodes)
     {
-        CSpiderNodeConfig c = adrenaline.second;
+        CRWTalerNodeConfig c = adrenaline.second;
 	std::string errorMessage;
         bool result = activeMasternode.StopMasterNode(c.sAddress, c.sMasternodePrivKey, errorMessage);
 	if(result)

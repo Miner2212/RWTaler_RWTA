@@ -1,7 +1,7 @@
 #ifndef QTSPDRUPDATER_UPDATEINFODIALOG_H
 #define QTSPDRUPDATER_UPDATEINFODIALOG_H
 
-#include "spdrupdater/spdrupdater.h"
+#include "rwtalerupdater/rwtalerupdater.h"
 
 #include <QDialog>
 
@@ -9,7 +9,7 @@ namespace Ui {
 class UpdateInfoDialog;
 }
 
-namespace QtSpiderUpdater
+namespace QtRWTalerUpdater
 {
 
 class UpdateInfoDialog : public QDialog
@@ -24,7 +24,7 @@ public:
 	};
 	Q_ENUM(DialogResult)
 
-	static DialogResult showUpdateInfo(QList<SpiderUpdater::SpiderUpdateInfo> updates,
+	static DialogResult showUpdateInfo(QList<RWTalerUpdater::RWTalerUpdateInfo> updates,
 									   bool &runAsAdmin,
 									   bool editable,
 									   bool detailed,

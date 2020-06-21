@@ -18,40 +18,40 @@
     </message>
 </context>
 <context>
-    <name>AddEditSpiderNode</name>
+    <name>AddEditRWTalerNode</name>
     <message>
-        <location filename="../forms/addeditspdrnode.ui" line="+14"/>
-        <location filename="../forms/ui_addeditspdrnode.h" line="+153"/>
-        <source>Add/Edit SpiderNodes Node</source>
+        <location filename="../forms/addeditrwtalernode.ui" line="+14"/>
+        <location filename="../forms/ui_addeditrwtalernode.h" line="+153"/>
+        <source>Add/Edit RWTalerNodes Node</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
-        <location filename="../forms/ui_addeditspdrnode.h" line="+1"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter an Alias (friendly name) for your SpiderNodes Node and its address (either clearnet IP and port or Tor onion address and port).  The address should be in the format 123.456.789.123:9999 or akjdsafxjkhasdf.onion:9999.  A masternode private key and a collateral address will both be automatically generated for you.  You must send exactly 7000 SPDR to the collateral address.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <location filename="../forms/ui_addeditrwtalernode.h" line="+1"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter an Alias (friendly name) for your RWTalerNodes Node and its address (either clearnet IP and port or Tor onion address and port).  The address should be in the format 123.456.789.123:9999 or akjdsafxjkhasdf.onion:9999.  A masternode private key and a collateral address will both be automatically generated for you.  You must send exactly 7000 SPDR to the collateral address.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+15"/>
-        <location filename="../forms/ui_addeditspdrnode.h" line="+1"/>
+        <location filename="../forms/ui_addeditrwtalernode.h" line="+1"/>
         <source>Alias</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+17"/>
-        <location filename="../forms/ui_addeditspdrnode.h" line="+1"/>
+        <location filename="../forms/ui_addeditrwtalernode.h" line="+1"/>
         <source>Address</source>
         <translation type="unfinished">Address</translation>
     </message>
     <message>
         <location line="+68"/>
-        <location filename="../forms/ui_addeditspdrnode.h" line="+2"/>
+        <location filename="../forms/ui_addeditrwtalernode.h" line="+2"/>
         <source>&amp;OK</source>
         <translation type="unfinished">&amp;OK</translation>
     </message>
     <message>
         <location line="+7"/>
-        <location filename="../forms/ui_addeditspdrnode.h" line="+1"/>
+        <location filename="../forms/ui_addeditrwtalernode.h" line="+1"/>
         <source>&amp;Cancel</source>
         <translation type="unfinished">&amp;Cancel</translation>
     </message>
@@ -292,7 +292,7 @@
 <context>
     <name>AdminAuthorization</name>
     <message>
-        <location filename="../../spdr-installer/src/adminauthorization_x11.cpp" line="+197"/>
+        <location filename="../../rwtaler-installer/src/adminauthorization_x11.cpp" line="+197"/>
         <source>Enter Password</source>
         <translation type="unfinished"></translation>
     </message>
@@ -500,7 +500,7 @@
     <message>
         <location line="+22"/>
         <location filename="../forms/ui_bip38tooldialog.h" line="-34"/>
-        <source>Enter a Spider Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <source>Enter a RWTaler Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -734,7 +734,7 @@
     </message>
     <message>
         <location line="+202"/>
-        <source>New spdr-qt version available: &lt;br /&gt; %1. &lt;br /&gt;</source>
+        <source>New rwtaler-qt version available: &lt;br /&gt; %1. &lt;br /&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -809,7 +809,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Check whether there is an updated wallet from Spidercore</source>
+        <source>Check whether there is an updated wallet from RWTalercore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1005,7 +1005,7 @@
     </message>
     <message numerus="yes">
         <location line="+469"/>
-        <source>%n active connection(s) to Spidercore network</source>
+        <source>%n active connection(s) to RWTalercore network</source>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -1072,7 +1072,7 @@
     <message>
         <location line="-543"/>
         <location line="+1056"/>
-        <source>Spidercore</source>
+        <source>RWTalercore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1082,7 +1082,7 @@
     </message>
     <message>
         <location line="+11"/>
-        <source>Request payments (generates QR codes and spdr: URIs)</source>
+        <source>Request payments (generates QR codes and rwtaler: URIs)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1097,12 +1097,12 @@
     </message>
     <message>
         <location line="+46"/>
-        <source>&amp;About Spidercore</source>
+        <source>&amp;About RWTalercore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Show information about Spidercore</source>
+        <source>Show information about RWTalercore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1187,12 +1187,12 @@
     </message>
     <message>
         <location line="+4"/>
-        <source>Show the Spidercore help message to get a list with possible SPDR command-line options</source>
+        <source>Show the RWTalercore help message to get a list with possible SPDR command-line options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+256"/>
-        <source>Spidercore client</source>
+        <source>RWTalercore client</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1383,7 +1383,7 @@
         <translation>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../spdr.cpp" line="+546"/>
+        <location filename="../rwtaler.cpp" line="+546"/>
         <source>A fatal error occurred. SPDR can no longer continue safely and will quit.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1623,12 +1623,12 @@
     </message>
     <message>
         <location line="+603"/>
-        <source>Not all transactions will be shown and block explorer is not available while running in pruned mode. To view all transactions you need to set txindex=1 in the configuration file (spdr.conf).</source>
+        <source>Not all transactions will be shown and block explorer is not available while running in pruned mode. To view all transactions you need to set txindex=1 in the configuration file (rwtaler.conf).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Spidercore Blockchain Explorer</source>
+        <source>RWTalercore Blockchain Explorer</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1836,7 +1836,7 @@
     <message>
         <location line="+23"/>
         <location filename="../forms/ui_coincontroldialog.h" line="-4"/>
-        <source>Spidersend Rounds</source>
+        <source>RWTalersend Rounds</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1936,7 +1936,7 @@
     </message>
     <message>
         <location line="+187"/>
-        <source>Non-anonymized input selected. &lt;b&gt;Spidersend will be disabled.&lt;/b&gt;&lt;br&gt;&lt;br&gt;If you still want to use Spidersend, please deselect all non-nonymized inputs first and then check Spidersend checkbox again.</source>
+        <source>Non-anonymized input selected. &lt;b&gt;RWTalersend will be disabled.&lt;/b&gt;&lt;br&gt;&lt;br&gt;If you still want to use RWTalersend, please deselect all non-nonymized inputs first and then check RWTalersend checkbox again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2448,84 +2448,84 @@
     <name>DarksendConfig</name>
     <message>
         <location filename="../forms/darksendconfig.ui" line="+14"/>
-        <location filename="../forms/spdrsendconfig.ui" line="+14"/>
+        <location filename="../forms/rwtalersendconfig.ui" line="+14"/>
         <location filename="../forms/ui_darksendconfig.h" line="+97"/>
         <source>Configure Darksend</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+12"/>
-        <location filename="../forms/spdrsendconfig.ui" line="+12"/>
+        <location filename="../forms/rwtalersendconfig.ui" line="+12"/>
         <location filename="../forms/ui_darksendconfig.h" line="+1"/>
         <source>Basic Privacy</source>
         <translation type="unfinished">Basic Privacy</translation>
     </message>
     <message>
         <location line="+13"/>
-        <location filename="../forms/spdrsendconfig.ui" line="+13"/>
+        <location filename="../forms/rwtalersendconfig.ui" line="+13"/>
         <location filename="../forms/ui_darksendconfig.h" line="+1"/>
         <source>High Privacy</source>
         <translation type="unfinished">High Privacy</translation>
     </message>
     <message>
         <location line="+13"/>
-        <location filename="../forms/spdrsendconfig.ui" line="+13"/>
+        <location filename="../forms/rwtalersendconfig.ui" line="+13"/>
         <location filename="../forms/ui_darksendconfig.h" line="+1"/>
         <source>Maximum Privacy</source>
         <translation type="unfinished">Maximum Privacy</translation>
     </message>
     <message>
         <location line="+13"/>
-        <location filename="../forms/spdrsendconfig.ui" line="+13"/>
+        <location filename="../forms/rwtalersendconfig.ui" line="+13"/>
         <location filename="../forms/ui_darksendconfig.h" line="+1"/>
         <source>Please select a privacy level.</source>
         <translation type="unfinished">Please select a privacy level.</translation>
     </message>
     <message>
         <location line="+13"/>
-        <location filename="../forms/spdrsendconfig.ui" line="+13"/>
+        <location filename="../forms/rwtalersendconfig.ui" line="+13"/>
         <location filename="../forms/ui_darksendconfig.h" line="+1"/>
         <source>Use 2 separate masternodes to mix funds up to 10000 SPDR</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
-        <location filename="../forms/spdrsendconfig.ui" line="+13"/>
+        <location filename="../forms/rwtalersendconfig.ui" line="+13"/>
         <location filename="../forms/ui_darksendconfig.h" line="+1"/>
         <source>Use 8 separate masternodes to mix funds up to 10000 SPDR</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
-        <location filename="../forms/spdrsendconfig.ui" line="+13"/>
+        <location filename="../forms/rwtalersendconfig.ui" line="+13"/>
         <location filename="../forms/ui_darksendconfig.h" line="+1"/>
         <source>Use 16 separate masternodes</source>
         <translation type="unfinished">Use 16 separate masternodes</translation>
     </message>
     <message>
         <location line="+13"/>
-        <location filename="../forms/spdrsendconfig.ui" line="+13"/>
+        <location filename="../forms/rwtalersendconfig.ui" line="+13"/>
         <location filename="../forms/ui_darksendconfig.h" line="+1"/>
         <source>This option is the quickest and will cost about ~0.025 SPDR to anonymize 10000 SPDR</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
-        <location filename="../forms/spdrsendconfig.ui" line="+13"/>
+        <location filename="../forms/rwtalersendconfig.ui" line="+13"/>
         <location filename="../forms/ui_darksendconfig.h" line="+1"/>
         <source>This option is moderately fast and will cost about 0.05 SPDR to anonymize 10000 SPDR</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
-        <location filename="../forms/spdrsendconfig.ui" line="+13"/>
+        <location filename="../forms/rwtalersendconfig.ui" line="+13"/>
         <location filename="../forms/ui_darksendconfig.h" line="+1"/>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation type="unfinished">This is the slowest and most secure option. Using maximum anonymity will cost</translation>
     </message>
     <message>
         <location line="+13"/>
-        <location filename="../forms/spdrsendconfig.ui" line="+13"/>
+        <location filename="../forms/rwtalersendconfig.ui" line="+13"/>
         <location filename="../forms/ui_darksendconfig.h" line="+1"/>
         <source>0.1 SPDR per 10000 SPDR you anonymize.</source>
         <translation type="unfinished"></translation>
@@ -2534,7 +2534,7 @@
         <location filename="../darksendconfig.cpp" line="+42"/>
         <location line="+14"/>
         <location line="+14"/>
-        <location filename="../spdrsendconfig.cpp" line="+42"/>
+        <location filename="../rwtalersendconfig.cpp" line="+42"/>
         <location line="+14"/>
         <location line="+14"/>
         <source>Darksend Configuration</source>
@@ -2542,19 +2542,19 @@
     </message>
     <message>
         <location line="-27"/>
-        <location filename="../spdrsendconfig.cpp" line="-27"/>
+        <location filename="../rwtalersendconfig.cpp" line="-27"/>
         <source>Darksend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening SPDR&apos;s configuration screen.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
-        <location filename="../spdrsendconfig.cpp" line="+14"/>
+        <location filename="../rwtalersendconfig.cpp" line="+14"/>
         <source>Darksend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening SPDR&apos;s configuration screen.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
-        <location filename="../spdrsendconfig.cpp" line="+14"/>
+        <location filename="../rwtalersendconfig.cpp" line="+14"/>
         <source>Darksend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening SPDR&apos;s configuration screen.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2562,7 +2562,7 @@
 <context>
     <name>DialogMaster</name>
     <message>
-        <location filename="../../spdr-installer/src/dialogmaster.cpp" line="+140"/>
+        <location filename="../../rwtaler-installer/src/dialogmaster.cpp" line="+140"/>
         <source>Information</source>
         <translation type="unfinished">Information</translation>
     </message>
@@ -2866,12 +2866,12 @@
     </message>
     <message>
         <location line="+5"/>
-        <source>&lt;p style=&quot;line-height:130&quot;&gt;&lt;b&gt;&quot;Licensor&quot;&lt;/b&gt; means Spidercore, with its main address                    located at Suite 3 Level 27, Governor Macquarie Tower, 1 Farrer Place, Sydney, NSW, 2000.&lt;/p&gt;</source>
+        <source>&lt;p style=&quot;line-height:130&quot;&gt;&lt;b&gt;&quot;Licensor&quot;&lt;/b&gt; means RWTalercore, with its main address                    located at Suite 3 Level 27, Governor Macquarie Tower, 1 Farrer Place, Sydney, NSW, 2000.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&lt;p style=&quot;line-height:130&quot;&gt;&lt;b&gt;&quot;Software&quot;&lt;/b&gt; means (a) all of the contents of the files,                    disk(s), CD-ROM(s) or other media with which this Agreement is provided, including but not                    limited to (i) Spidercore or third party computer information or software; (ii) digital images,                    stock photographs, clip art, sounds or other artistic works (&quot;Stock Files&quot;); (iii) related                    explanatory written materials or files (&quot;Documentation&quot;); and (iv) fonts; and (b) upgrades,                    modified versions, updates, additions, and copies of the Software, if any, licensed to you by                    Spidercore (collectively, &quot;Updates&quot;). &lt;/p&gt;</source>
+        <source>&lt;p style=&quot;line-height:130&quot;&gt;&lt;b&gt;&quot;Software&quot;&lt;/b&gt; means (a) all of the contents of the files,                    disk(s), CD-ROM(s) or other media with which this Agreement is provided, including but not                    limited to (i) RWTalercore or third party computer information or software; (ii) digital images,                    stock photographs, clip art, sounds or other artistic works (&quot;Stock Files&quot;); (iii) related                    explanatory written materials or files (&quot;Documentation&quot;); and (iv) fonts; and (b) upgrades,                    modified versions, updates, additions, and copies of the Software, if any, licensed to you by                    RWTalercore (collectively, &quot;Updates&quot;). &lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2886,7 +2886,7 @@
     </message>
     <message>
         <location line="+2"/>
-        <source>&lt;p style=&quot;line-height:130&quot;&gt;&lt;b&gt;&quot;Permitted Number&quot;&lt;/b&gt; means one (1) unless otherwise indicated under                    a valid license (e.g. volume license) granted by Spidercore.&lt;/p&gt;</source>
+        <source>&lt;p style=&quot;line-height:130&quot;&gt;&lt;b&gt;&quot;Permitted Number&quot;&lt;/b&gt; means one (1) unless otherwise indicated under                    a valid license (e.g. volume license) granted by RWTalercore.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2901,7 +2901,7 @@
     </message>
     <message>
         <location line="+2"/>
-        <source>&lt;p style=&quot;line-height:130&quot;&gt;As long as you comply with the terms of this End User License Agreement (the                    &quot;Agreement&quot;), Spidercore grants to you a non-exclusive license to Use the Software for the purposes described                     in the Documentation. Some third party materials included in the Software may be subject to other terms and                     conditions, which are typically found in a &quot;Read Me&quot; file located near such materials.&lt;/p&gt;</source>
+        <source>&lt;p style=&quot;line-height:130&quot;&gt;As long as you comply with the terms of this End User License Agreement (the                    &quot;Agreement&quot;), RWTalercore grants to you a non-exclusive license to Use the Software for the purposes described                     in the Documentation. Some third party materials included in the Software may be subject to other terms and                     conditions, which are typically found in a &quot;Read Me&quot; file located near such materials.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2921,7 +2921,7 @@
     </message>
     <message>
         <location line="+2"/>
-        <source>&lt;p style=&quot;line-height:130&quot;&gt;You may install one copy of the Software on your computer file server for the                    purpose of downloading and installing the Software onto other computers within your internal network up to                    the Permitted Number or you may install one copy of the Software on a computer file server within your internal                    network for the sole and exclusive purpose of using the Software through commands, data or instructions (e.g.                    scripts) from an unlimited number of computers on your internal network. No other network use is permitted,                    including but not limited to, using the Software either directly or through commands, data or instructions from                    or to a computer not part of your internal network, for internet or web hosting services or by any user not licensed                    to use this copy of the Software through a valid license from Spidercore; and&lt;/p&gt;</source>
+        <source>&lt;p style=&quot;line-height:130&quot;&gt;You may install one copy of the Software on your computer file server for the                    purpose of downloading and installing the Software onto other computers within your internal network up to                    the Permitted Number or you may install one copy of the Software on a computer file server within your internal                    network for the sole and exclusive purpose of using the Software through commands, data or instructions (e.g.                    scripts) from an unlimited number of computers on your internal network. No other network use is permitted,                    including but not limited to, using the Software either directly or through commands, data or instructions from                    or to a computer not part of your internal network, for internet or web hosting services or by any user not licensed                    to use this copy of the Software through a valid license from RWTalercore; and&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2961,7 +2961,7 @@
     </message>
     <message>
         <location line="+2"/>
-        <source>&lt;p style=&quot;line-height:130&quot;&gt;To the extent that the Software includes Spidercore Spidergate software, (i) you may customize the                    installer for such software in accordance with the restrictions found at &lt;a href=&quot;https://spidervps.net&quot;&gt;https://spidervps.net&lt;/a&gt;                    (e.g., installation of additional plug-in and help files); however, you may not otherwise alter or modify the installer program                    or create a new installer for any of such software, (ii) such software is licensed and distributed by Spidercore, and (iii) you are                    not authorized to use any plug-in or enhancement that permits you to save modifications to a any format file with such software;                    however, such use is authorized with Spidercore, Spidercore Spidergate, and other current and future Spidercore products. For information on                    how to distribute Spidergate please refer to the sections entitled &quot;How to Distribute Spidergate&quot; at                    &lt;a href=&quot;https://spidervps.net&quot;&gt;https://spidervps.net&lt;/a&gt;.&lt;/p&gt;</source>
+        <source>&lt;p style=&quot;line-height:130&quot;&gt;To the extent that the Software includes RWTalercore RWTalergate software, (i) you may customize the                    installer for such software in accordance with the restrictions found at &lt;a href=&quot;https://spidervps.net&quot;&gt;https://spidervps.net&lt;/a&gt;                    (e.g., installation of additional plug-in and help files); however, you may not otherwise alter or modify the installer program                    or create a new installer for any of such software, (ii) such software is licensed and distributed by RWTalercore, and (iii) you are                    not authorized to use any plug-in or enhancement that permits you to save modifications to a any format file with such software;                    however, such use is authorized with RWTalercore, RWTalercore RWTalergate, and other current and future RWTalercore products. For information on                    how to distribute RWTalergate please refer to the sections entitled &quot;How to Distribute RWTalergate&quot; at                    &lt;a href=&quot;https://spidervps.net&quot;&gt;https://spidervps.net&lt;/a&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2971,17 +2971,17 @@
     </message>
     <message>
         <location line="+2"/>
-        <source>&lt;p style=&quot;line-height:130&quot;&gt;The Software and any copies that you are authorized by Spidercore to make are the intellectual property                     of and are owned by Spidercore and its suppliers. The structure, organization and code of the Software are the valuable trade secrets                     and confidential information of Spidercore and its suppliers. The Software is protected by copyright, including without limitation by                     Australia Copyright Law, international treaty provisions and applicable laws in the country in which it is being used. You may not                     copy the Software, except as set forth in Section 2 (&quot;Software License&quot;).&lt;/p&gt;</source>
+        <source>&lt;p style=&quot;line-height:130&quot;&gt;The Software and any copies that you are authorized by RWTalercore to make are the intellectual property                     of and are owned by RWTalercore and its suppliers. The structure, organization and code of the Software are the valuable trade secrets                     and confidential information of RWTalercore and its suppliers. The Software is protected by copyright, including without limitation by                     Australia Copyright Law, international treaty provisions and applicable laws in the country in which it is being used. You may not                     copy the Software, except as set forth in Section 2 (&quot;Software License&quot;).&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>&lt;p style=&quot;line-height:130&quot;&gt;Any copies that you are permitted to make pursuant to this Agreement must contain the same copyright                    and other proprietary notices that appear on or in the Software. You also agree not to reverse engineer, decompile, disassemble or                    otherwise attempt to discover the source code of the Software except to the extent you may be expressly permitted to decompile under                    applicable law, it is essential to do so in order to achieve operability of the Software with another software program, and you have                    first requested Spidercore to provide the information necessary to achieve such operability and Spidercore has not made such information                    available.&lt;/p&gt;</source>
+        <source>&lt;p style=&quot;line-height:130&quot;&gt;Any copies that you are permitted to make pursuant to this Agreement must contain the same copyright                    and other proprietary notices that appear on or in the Software. You also agree not to reverse engineer, decompile, disassemble or                    otherwise attempt to discover the source code of the Software except to the extent you may be expressly permitted to decompile under                    applicable law, it is essential to do so in order to achieve operability of the Software with another software program, and you have                    first requested RWTalercore to provide the information necessary to achieve such operability and RWTalercore has not made such information                    available.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>&lt;p style=&quot;line-height:130&quot;&gt;Spidercore has the right to impose reasonable conditions and to request a reasonable fee before providing                     such information. Any information supplied by Spidercore or obtained by you, as permitted hereunder, may only be used by you for the                     purpose described herein and may not be disclosed to any third party or used to create any software which is substantially similar                     to the expression of the Software. Requests for information should be directed to the Spidercore Customer Support Department. Trademarks                     shall be used in accordance with accepted trademark practice, including identification of trademarks owners&apos; names. Trademarks can only                     be used to identify printed output produced by the Software and such use of any trademark does not give you any rights of ownership in                     that trademark. Except as expressly stated above, this Agreement does not grant you any intellectual property rights in the Software.&lt;/p&gt;</source>
+        <source>&lt;p style=&quot;line-height:130&quot;&gt;RWTalercore has the right to impose reasonable conditions and to request a reasonable fee before providing                     such information. Any information supplied by RWTalercore or obtained by you, as permitted hereunder, may only be used by you for the                     purpose described herein and may not be disclosed to any third party or used to create any software which is substantially similar                     to the expression of the Software. Requests for information should be directed to the RWTalercore Customer Support Department. Trademarks                     shall be used in accordance with accepted trademark practice, including identification of trademarks owners&apos; names. Trademarks can only                     be used to identify printed output produced by the Software and such use of any trademark does not give you any rights of ownership in                     that trademark. Except as expressly stated above, this Agreement does not grant you any intellectual property rights in the Software.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3001,7 +3001,7 @@
     </message>
     <message>
         <location line="+3"/>
-        <source>&lt;p style=&quot;line-height:130&quot;&gt;If the Software supports multiple platforms or languages, if you receive the Software on multiple media, if                     you otherwise receive multiple copies of the Software, or if you received the Software bundled with other software, the total number of                     your computers on which all versions of the Software are installed may not exceed the Permitted Number. You may not, rent, lease, sublicense,                     lend or transfer any versions or copies of such Software you do not Use. If the Software is an Update to a previous version of the Software,                     you must possess a valid license to such previous version in order to Use the Update. You may continue to Use the previous version of the Software                     on your computer after you receive the Update to assist you in the transition to the Update, provided that: the Update and the previous version                     are installed on the same computer; the previous version or copies thereof are not transferred to another party or computer unless all copies of                     the Update are also transferred to such party or computer; and you acknowledge that any obligation Spidercore may have to support the previous version                     of the Software may be ended upon availability of the Update.&lt;/p&gt;</source>
+        <source>&lt;p style=&quot;line-height:130&quot;&gt;If the Software supports multiple platforms or languages, if you receive the Software on multiple media, if                     you otherwise receive multiple copies of the Software, or if you received the Software bundled with other software, the total number of                     your computers on which all versions of the Software are installed may not exceed the Permitted Number. You may not, rent, lease, sublicense,                     lend or transfer any versions or copies of such Software you do not Use. If the Software is an Update to a previous version of the Software,                     you must possess a valid license to such previous version in order to Use the Update. You may continue to Use the previous version of the Software                     on your computer after you receive the Update to assist you in the transition to the Update, provided that: the Update and the previous version                     are installed on the same computer; the previous version or copies thereof are not transferred to another party or computer unless all copies of                     the Update are also transferred to such party or computer; and you acknowledge that any obligation RWTalercore may have to support the previous version                     of the Software may be ended upon availability of the Update.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3011,7 +3011,7 @@
     </message>
     <message>
         <location line="+2"/>
-        <source>&lt;p style=&quot;line-height:130&quot;&gt;The Software is being delivered to you &quot;AS IS&quot; and Spidercore makes no warranty as to its use or performance. Spidercore AND                     ITS SUPPLIERS DO NOT AND CANNOT WARRANT THE PERFORMANCE OR RESULTS YOU MAY OBTAIN BY USING THE SOFTWARE. EXCEPT FOR ANY WARRANTY, CONDITION,                     REPRESENTATION OR TERM TO THE EXTENT TO WHICH THE SAME CANNOT OR MAY NOT BE EXCLUDED OR LIMITED BY LAW APPLICABLE TO YOU IN YOUR JURISDICTION, Spidercore                     AND ITS SUPPLIERS MAKE NO WARRANTIES CONDITIONS, REPRESENTATIONS, OR TERMS (EXPRESS OR IMPLIED WHETHER BY STATUTE, COMMON LAW, CUSTOM, USAGE OR OTHERWISE)                     AS TO ANY MATTER INCLUDING WITHOUT LIMITATION NONINFRINGEMENT OF THIRD PARTY RIGHTS, MERCHANTABILITY, INTEGRATION, SATISFACTORY QUALITY, OR FITNESS FOR ANY                     PARTICULAR PURPOSE.&lt;/p&gt;</source>
+        <source>&lt;p style=&quot;line-height:130&quot;&gt;The Software is being delivered to you &quot;AS IS&quot; and RWTalercore makes no warranty as to its use or performance. RWTalercore AND                     ITS SUPPLIERS DO NOT AND CANNOT WARRANT THE PERFORMANCE OR RESULTS YOU MAY OBTAIN BY USING THE SOFTWARE. EXCEPT FOR ANY WARRANTY, CONDITION,                     REPRESENTATION OR TERM TO THE EXTENT TO WHICH THE SAME CANNOT OR MAY NOT BE EXCLUDED OR LIMITED BY LAW APPLICABLE TO YOU IN YOUR JURISDICTION, RWTalercore                     AND ITS SUPPLIERS MAKE NO WARRANTIES CONDITIONS, REPRESENTATIONS, OR TERMS (EXPRESS OR IMPLIED WHETHER BY STATUTE, COMMON LAW, CUSTOM, USAGE OR OTHERWISE)                     AS TO ANY MATTER INCLUDING WITHOUT LIMITATION NONINFRINGEMENT OF THIRD PARTY RIGHTS, MERCHANTABILITY, INTEGRATION, SATISFACTORY QUALITY, OR FITNESS FOR ANY                     PARTICULAR PURPOSE.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3021,7 +3021,7 @@
     </message>
     <message>
         <location line="+2"/>
-        <source>&lt;p style=&quot;line-height:130&quot;&gt;If the product you have received with this license is pre-commercial release or beta Software (&quot;Pre-release Software&quot;), then                     the following Section applies. To the extent that any provision in this Section is in conflict with any other term or condition in this Agreement, this                     Section shall supercede such other term(s) and condition(s) with respect to the Pre-release Software, but only to the extent necessary to resolve the conflict.                     You acknowledge that the Software is a pre-release version, does not represent final product from Spidercore, and may contain bugs, errors and other problems that                     could cause system or other failures and data loss. Consequently, the Pre-release Software is provided to you &quot;AS-IS&quot;, and Spidercore disclaims any warranty or                     liability obligations to you of any kind. WHERE LEGALLY LIABILITY CANNOT BE EXCLUDED FOR PRE-RELEASE SOFTWARE, BUT IT MAY BE LIMITED, SPDRCORE&apos;S LIABILITY AND                     THAT OF ITS SUPPLIERS SHALL BE LIMITED TO THE SUM OF FIFTY DOLLARS (U.S. $50) IN TOTAL. You acknowledge that Spidercore has not promised or guaranteed to you that                     Pre-release Software will be announced or made available to anyone in the future, that Spidercore has no express or implied obligation to you to announce or                     introduce the Pre-release Software and that Spidercore may not introduce a product similar to or compatible with the Pre-release Software. Accordingly, you                     acknowledge that any research or development that you perform regarding the Pre-release Software or any product associated with the Pre-release Software is                     done entirely at your own risk. During the term of this Agreement, if requested by Spidercore, you will provide feedback to Spidercore regarding testing and use of                     the Pre-release Software, including error or bug reports. If you have been provided the Pre-release Software pursuant to a separate written agreement, such as                     the Spidercore Serial Agreement for Unreleased Products, your use of the Software is also governed by such agreement. You agree that you may not and certify that                     you will not sublicense, lease, loan, rent, or transfer the Pre-release Software. Upon receipt of a later unreleased version of the Pre-release Software or                     release by Spidercore of a publicly released commercial version of the Software, whether as a stand-alone product or as part of a larger product, you agree to                     return or destroy all earlier Pre-release Software received from Spidercore and to abide by the terms of the End User License Agreement for any such later versions                     of the Pre-release Software. Notwithstanding anything in this Section to the contrary, if you are located outside the United States of America or Canada, you agree                     that you will return or destroy all unreleased versions of the Pre-release Software within thirty (30) days of the completion of your testing of the Software                     when such date is earlier than the date for Spidercore&apos;s first commercial shipment of the publicly released (commercial) Software.&lt;/p&gt;</source>
+        <source>&lt;p style=&quot;line-height:130&quot;&gt;If the product you have received with this license is pre-commercial release or beta Software (&quot;Pre-release Software&quot;), then                     the following Section applies. To the extent that any provision in this Section is in conflict with any other term or condition in this Agreement, this                     Section shall supercede such other term(s) and condition(s) with respect to the Pre-release Software, but only to the extent necessary to resolve the conflict.                     You acknowledge that the Software is a pre-release version, does not represent final product from RWTalercore, and may contain bugs, errors and other problems that                     could cause system or other failures and data loss. Consequently, the Pre-release Software is provided to you &quot;AS-IS&quot;, and RWTalercore disclaims any warranty or                     liability obligations to you of any kind. WHERE LEGALLY LIABILITY CANNOT BE EXCLUDED FOR PRE-RELEASE SOFTWARE, BUT IT MAY BE LIMITED, SPDRCORE&apos;S LIABILITY AND                     THAT OF ITS SUPPLIERS SHALL BE LIMITED TO THE SUM OF FIFTY DOLLARS (U.S. $50) IN TOTAL. You acknowledge that RWTalercore has not promised or guaranteed to you that                     Pre-release Software will be announced or made available to anyone in the future, that RWTalercore has no express or implied obligation to you to announce or                     introduce the Pre-release Software and that RWTalercore may not introduce a product similar to or compatible with the Pre-release Software. Accordingly, you                     acknowledge that any research or development that you perform regarding the Pre-release Software or any product associated with the Pre-release Software is                     done entirely at your own risk. During the term of this Agreement, if requested by RWTalercore, you will provide feedback to RWTalercore regarding testing and use of                     the Pre-release Software, including error or bug reports. If you have been provided the Pre-release Software pursuant to a separate written agreement, such as                     the RWTalercore Serial Agreement for Unreleased Products, your use of the Software is also governed by such agreement. You agree that you may not and certify that                     you will not sublicense, lease, loan, rent, or transfer the Pre-release Software. Upon receipt of a later unreleased version of the Pre-release Software or                     release by RWTalercore of a publicly released commercial version of the Software, whether as a stand-alone product or as part of a larger product, you agree to                     return or destroy all earlier Pre-release Software received from RWTalercore and to abide by the terms of the End User License Agreement for any such later versions                     of the Pre-release Software. Notwithstanding anything in this Section to the contrary, if you are located outside the United States of America or Canada, you agree                     that you will return or destroy all unreleased versions of the Pre-release Software within thirty (30) days of the completion of your testing of the Software                     when such date is earlier than the date for RWTalercore&apos;s first commercial shipment of the publicly released (commercial) Software.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3031,7 +3031,7 @@
     </message>
     <message>
         <location line="+2"/>
-        <source>&lt;p style=&quot;line-height:130&quot;&gt;IN NO EVENT WILL SPDRCORE OR ITS SUPPLIERS BE LIABLE TO YOU FOR ANY DAMAGES, CLAIMS OR COSTS WHATSOEVER OR ANY CONSEQUENTIAL, INDIRECT,                    INCIDENTAL DAMAGES, OR ANY LOST PROFITS OR LOST SAVINGS, EVEN IF AN SPDRCORE REPRESENTATIVE HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH LOSS, DAMAGES, CLAIMS OR                    COSTS OR FOR ANY CLAIM BY ANY THIRD PARTY. THE FOREGOING LIMITATIONS AND EXCLUSIONS APPLY TO THE EXTENT PERMITTED BY APPLICABLE LAW IN YOUR JURISDICTION. SPDRCORE&apos;S                    AGGREGATE LIABILITY AND THAT OF ITS SUPPLIERS UNDER OR IN CONNECTION WITH THIS AGREEMENT SHALL BE LIMITED TO THE AMOUNT PAID FOR THE SOFTWARE, IF ANY. Nothing                    contained in this Agreement limits Spidercore&apos;s liability to you in the event of death or personal injury resulting from Spidercore&apos;s negligence or for the tort of                    deceit (fraud). Spidercore is acting on behalf of its suppliers for the purpose of disclaiming, excluding and/or limiting obligations, warranties and liability as                    provided in this Agreement, but in no other respects and for no other purpose. For further information, please see the jurisdiction specific information at the                    end of this Agreement, if any, or contact Spidercore&apos;s Customer Support Department.&lt;/p&gt;</source>
+        <source>&lt;p style=&quot;line-height:130&quot;&gt;IN NO EVENT WILL SPDRCORE OR ITS SUPPLIERS BE LIABLE TO YOU FOR ANY DAMAGES, CLAIMS OR COSTS WHATSOEVER OR ANY CONSEQUENTIAL, INDIRECT,                    INCIDENTAL DAMAGES, OR ANY LOST PROFITS OR LOST SAVINGS, EVEN IF AN SPDRCORE REPRESENTATIVE HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH LOSS, DAMAGES, CLAIMS OR                    COSTS OR FOR ANY CLAIM BY ANY THIRD PARTY. THE FOREGOING LIMITATIONS AND EXCLUSIONS APPLY TO THE EXTENT PERMITTED BY APPLICABLE LAW IN YOUR JURISDICTION. SPDRCORE&apos;S                    AGGREGATE LIABILITY AND THAT OF ITS SUPPLIERS UNDER OR IN CONNECTION WITH THIS AGREEMENT SHALL BE LIMITED TO THE AMOUNT PAID FOR THE SOFTWARE, IF ANY. Nothing                    contained in this Agreement limits RWTalercore&apos;s liability to you in the event of death or personal injury resulting from RWTalercore&apos;s negligence or for the tort of                    deceit (fraud). RWTalercore is acting on behalf of its suppliers for the purpose of disclaiming, excluding and/or limiting obligations, warranties and liability as                    provided in this Agreement, but in no other respects and for no other purpose. For further information, please see the jurisdiction specific information at the                    end of this Agreement, if any, or contact RWTalercore&apos;s Customer Support Department.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3061,7 +3061,7 @@
     </message>
     <message>
         <location line="+2"/>
-        <source>&lt;p style=&quot;line-height:130&quot;&gt;If any part of this Agreement is found void and unenforceable, it will not affect the validity of the balance of the Agreement,                    which shall remain valid and enforceable according to its terms. This Agreement shall not prejudice the statutory rights of any party dealing as a consumer.                    This Agreement may only be modified by a writing signed by an authorized officer of Spidercore. Updates may be licensed to you by Spidercore with additional or                    different terms. This is the entire agreement between Spidercore and you relating to the Software and it supersedes any prior representations, discussions,                    undertakings, communications or advertising relating to the Software.&lt;/p&gt;</source>
+        <source>&lt;p style=&quot;line-height:130&quot;&gt;If any part of this Agreement is found void and unenforceable, it will not affect the validity of the balance of the Agreement,                    which shall remain valid and enforceable according to its terms. This Agreement shall not prejudice the statutory rights of any party dealing as a consumer.                    This Agreement may only be modified by a writing signed by an authorized officer of RWTalercore. Updates may be licensed to you by RWTalercore with additional or                    different terms. This is the entire agreement between RWTalercore and you relating to the Software and it supersedes any prior representations, discussions,                    undertakings, communications or advertising relating to the Software.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3092,7 +3092,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>227.7202-1 through 227.7202-4, as applicable, the                 Commercial Computer Software and Commercial Computer Software Documentation are being licensed to U.S. Government end users (a) only as Commercial Items and                 (b) with only those rights as are granted to all other end users pursuant to the terms and conditions herein. Unpublished-rights reserved under the copyright                 laws of the United States. For U.S. Government End Users, Spidercore agrees to comply with all applicable equal opportunity laws including, if appropriate, the                 provisions of Executive Order 11246, as amended, Section 402 of the Vietnam Era Veterans Readjustment Assistance Act of 1974 (38 USC 4212), and Section 503                 of the Rehabilitation Act of 1973, as amended, and the regulations at 41 CFR Parts 60-1 through 60-60, 60-250, and 60-741. The affirmative action clause and                 regulations contained in the preceding sentence shall be incorporated by reference in this Agreement.&lt;/p&gt;</source>
+        <source>227.7202-1 through 227.7202-4, as applicable, the                 Commercial Computer Software and Commercial Computer Software Documentation are being licensed to U.S. Government end users (a) only as Commercial Items and                 (b) with only those rights as are granted to all other end users pursuant to the terms and conditions herein. Unpublished-rights reserved under the copyright                 laws of the United States. For U.S. Government End Users, RWTalercore agrees to comply with all applicable equal opportunity laws including, if appropriate, the                 provisions of Executive Order 11246, as amended, Section 402 of the Vietnam Era Veterans Readjustment Assistance Act of 1974 (38 USC 4212), and Section 503                 of the Rehabilitation Act of 1973, as amended, and the regulations at 41 CFR Parts 60-1 through 60-60, 60-250, and 60-741. The affirmative action clause and                 regulations contained in the preceding sentence shall be incorporated by reference in this Agreement.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3102,22 +3102,22 @@
     </message>
     <message>
         <location line="+2"/>
-        <source>&lt;p style=&quot;line-height:130&quot;&gt;If you are a business or organization, you agree that upon request from Spidercore or Spidercore &apos;s authorized representative, you will                    within thirty (30) days fully document and certify that use of any and all Spidercore Software at the time of the request is in conformity with your valid licenses                    from Spidercore.&lt;/p&gt;</source>
+        <source>&lt;p style=&quot;line-height:130&quot;&gt;If you are a business or organization, you agree that upon request from RWTalercore or RWTalercore &apos;s authorized representative, you will                    within thirty (30) days fully document and certify that use of any and all RWTalercore Software at the time of the request is in conformity with your valid licenses                    from RWTalercore.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>&lt;p style=&quot;line-height:130&quot;&gt;If you have any questions regarding this Agreement or if you wish to request any information from Spidercore please use the address                     and contact information included with this product to contact the Spidercore office serving your jurisdiction.&lt;/p&gt;</source>
+        <source>&lt;p style=&quot;line-height:130&quot;&gt;If you have any questions regarding this Agreement or if you wish to request any information from RWTalercore please use the address                     and contact information included with this product to contact the RWTalercore office serving your jurisdiction.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&lt;p style=&quot;line-height:130&quot;&gt;Spidercore, Spidergate, and all other Spidercore&apos;s products are either registered trademarks or trademarks of Spidercore in the United States,                     Europe and/or other countries.&lt;/p&gt;&lt;br&gt;&lt;br&gt;</source>
+        <source>&lt;p style=&quot;line-height:130&quot;&gt;RWTalercore, RWTalergate, and all other RWTalercore&apos;s products are either registered trademarks or trademarks of RWTalercore in the United States,                     Europe and/or other countries.&lt;/p&gt;&lt;br&gt;&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+33"/>
-        <source>spdr_</source>
+        <source>rwtaler_</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3125,7 +3125,7 @@
         <location line="+2"/>
         <location line="+8"/>
         <location line="+5"/>
-        <source>spdrVersion</source>
+        <source>rwtalerVersion</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3186,7 +3186,7 @@
     </message>
     <message>
         <location line="+0"/>
-        <source>Spidercore</source>
+        <source>RWTalercore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3197,7 +3197,7 @@
     </message>
     <message>
         <location line="+4"/>
-        <source>About Spidercore</source>
+        <source>About RWTalercore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3283,19 +3283,19 @@
     <message>
         <location line="+9"/>
         <location filename="../forms/ui_intro.h" line="+1"/>
-        <source>Welcome to Spidercore.</source>
+        <source>Welcome to RWTalercore.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+26"/>
         <location filename="../forms/ui_intro.h" line="+1"/>
-        <source>As this is the first time the program is launched, you can choose where Spidercore will store its data.</source>
+        <source>As this is the first time the program is launched, you can choose where RWTalercore will store its data.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
         <location filename="../forms/ui_intro.h" line="+1"/>
-        <source>Spidercore will download and store a copy of the SPDR block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <source>RWTalercore will download and store a copy of the SPDR block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3312,7 +3312,7 @@
     </message>
     <message>
         <location filename="../intro.cpp" line="+77"/>
-        <source>Spidercore</source>
+        <source>RWTalercore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3402,17 +3402,17 @@
     </message>
 </context>
 <context>
-    <name>SpiderNodeConfigDialog</name>
+    <name>RWTalerNodeConfigDialog</name>
     <message>
-        <location filename="../forms/spdrnodeconfigdialog.ui" line="+14"/>
-        <location filename="../forms/ui_spdrnodeconfigdialog.h" line="+61"/>
-        <source>SpiderNodes Node Configuration Template</source>
+        <location filename="../forms/rwtalernodeconfigdialog.ui" line="+14"/>
+        <location filename="../forms/ui_rwtalernodeconfigdialog.h" line="+61"/>
+        <source>RWTalerNodes Node Configuration Template</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
-        <location filename="../forms/ui_spdrnodeconfigdialog.h" line="+2"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This pane shows an example spdr.conf template with the necessary masternode settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <location filename="../forms/ui_rwtalernodeconfigdialog.h" line="+2"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This pane shows an example rwtaler.conf template with the necessary masternode settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3586,7 +3586,7 @@
     <message>
         <location line="+116"/>
         <location filename="../forms/ui_modaloverlay.h" line="+2"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Spidercore network after a connection is established. Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the Spidercore network, as detailed below.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the RWTalercore network after a connection is established. Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the RWTalercore network, as detailed below.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4106,13 +4106,13 @@ Please check the address and try again.</source>
     <message>
         <location line="+7"/>
         <location filename="../forms/ui_optionsdialog.h" line="+2"/>
-        <source>Show additional information and buttons for Spidersend on overview screen.</source>
+        <source>Show additional information and buttons for RWTalersend on overview screen.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
         <location filename="../forms/ui_optionsdialog.h" line="+2"/>
-        <source>Enable advanced Spidersend interface</source>
+        <source>Enable advanced RWTalersend interface</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4263,7 +4263,7 @@ Please check the address and try again.</source>
         <location line="+34"/>
         <location filename="../forms/ui_optionsdialog.h" line="+4"/>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/spdrcore/spdrcore</source>
+https://www.transifex.com/rwtalercore/rwtalercore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4532,7 +4532,7 @@ https://www.transifex.com/spdrcore/spdrcore</source>
     <message>
         <location line="+23"/>
         <location filename="../forms/ui_overviewpage.h" line="+1"/>
-        <source>Spidersend Balance:</source>
+        <source>RWTalersend Balance:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4556,19 +4556,19 @@ https://www.transifex.com/spdrcore/spdrcore</source>
     <message>
         <location line="+516"/>
         <location filename="../forms/ui_overviewpage.h" line="+5"/>
-        <source>Try to manually submit a Spidersend request.</source>
+        <source>Try to manually submit a RWTalersend request.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+22"/>
         <location filename="../forms/ui_overviewpage.h" line="+4"/>
-        <source>Reset the current status of Spidersend (can interrupt Spidersend if it&apos;s in the process of Mixing, which can cost you money!)</source>
+        <source>Reset the current status of RWTalersend (can interrupt RWTalersend if it&apos;s in the process of Mixing, which can cost you money!)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+28"/>
         <location filename="../forms/ui_overviewpage.h" line="+3"/>
-        <source>Spidersend</source>
+        <source>RWTalersend</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4696,13 +4696,13 @@ https://www.transifex.com/spdrcore/spdrcore</source>
         <location line="-241"/>
         <location line="+337"/>
         <location line="+126"/>
-        <source>Start Spidersend</source>
+        <source>Start RWTalersend</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-460"/>
         <location line="+463"/>
-        <source>Stop Spidersend</source>
+        <source>Stop RWTalersend</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4788,7 +4788,7 @@ https://www.transifex.com/spdrcore/spdrcore</source>
     </message>
     <message>
         <location line="+17"/>
-        <source>URI cannot be parsed! This can be caused by an invalid spdr address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid rwtaler address or malformed URI parameters.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4803,7 +4803,7 @@ https://www.transifex.com/spdrcore/spdrcore</source>
     </message>
     <message>
         <location line="-104"/>
-        <source>Cannot start spdr: click-to-pay handler</source>
+        <source>Cannot start rwtaler: click-to-pay handler</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4905,14 +4905,14 @@ https://www.transifex.com/spdrcore/spdrcore</source>
 <context>
     <name>ProgressDialog</name>
     <message>
-        <location filename="../../spdr-installer/src/forms/progressdialog.ui" line="+17"/>
-        <location filename="../../spdr-installer/src/forms/ui_progressdialog.h" line="+71"/>
+        <location filename="../../rwtaler-installer/src/forms/progressdialog.ui" line="+17"/>
+        <location filename="../../rwtaler-installer/src/forms/ui_progressdialog.h" line="+71"/>
         <source>Check for Updates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9"/>
-        <location filename="../../spdr-installer/src/forms/ui_progressdialog.h" line="+1"/>
+        <location filename="../../rwtaler-installer/src/forms/ui_progressdialog.h" line="+1"/>
         <source>Checking for updates…</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4926,7 +4926,7 @@ https://www.transifex.com/spdrcore/spdrcore</source>
     </message>
     <message>
         <location filename="../guiutil.cpp" line="+151"/>
-        <source>Enter a Spider address (e.g. %1)</source>
+        <source>Enter a RWTaler address (e.g. %1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5060,11 +5060,11 @@ https://www.transifex.com/spdrcore/spdrcore</source>
         <translation type="unfinished">unknown</translation>
     </message>
     <message>
-        <location filename="../spdr.cpp" line="+114"/>
+        <location filename="../rwtaler.cpp" line="+114"/>
         <location line="+7"/>
         <location line="+13"/>
         <location line="+19"/>
-        <source>Spidercore</source>
+        <source>RWTalercore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5089,14 +5089,14 @@ https://www.transifex.com/spdrcore/spdrcore</source>
     </message>
     <message>
         <location line="+47"/>
-        <source>Spidercore didn&apos;t yet exit safely...</source>
+        <source>RWTalercore didn&apos;t yet exit safely...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>QPlatformTheme</name>
     <message>
-        <location filename="../spdrstrings.cpp" line="+12"/>
+        <location filename="../rwtalerstrings.cpp" line="+12"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5155,9 +5155,9 @@ https://www.transifex.com/spdrcore/spdrcore</source>
     </message>
 </context>
 <context>
-    <name>QtSpiderUpdater::AtomFeeder</name>
+    <name>QtRWTalerUpdater::AtomFeeder</name>
     <message>
-        <location filename="../../spdr-installer/src/spdrupdater/atomfeeder.cpp" line="+57"/>
+        <location filename="../../rwtaler-installer/src/rwtalerupdater/atomfeeder.cpp" line="+57"/>
         <source>Check for Updates</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5168,17 +5168,17 @@ https://www.transifex.com/spdrcore/spdrcore</source>
     </message>
 </context>
 <context>
-    <name>QtSpiderUpdater::ProgressDialog</name>
+    <name>QtRWTalerUpdater::ProgressDialog</name>
     <message>
-        <location filename="../../spdr-installer/src/progressdialog.cpp" line="+39"/>
+        <location filename="../../rwtaler-installer/src/progressdialog.cpp" line="+39"/>
         <source>Canceling update check…</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
-    <name>QtSpiderUpdater::UpdateController</name>
+    <name>QtRWTalerUpdater::UpdateController</name>
     <message>
-        <location filename="../../spdr-installer/src/updatecontroller.cpp" line="+46"/>
+        <location filename="../../rwtaler-installer/src/updatecontroller.cpp" line="+46"/>
         <location line="+93"/>
         <location line="+12"/>
         <location line="+12"/>
@@ -5231,9 +5231,9 @@ https://www.transifex.com/spdrcore/spdrcore</source>
     </message>
 </context>
 <context>
-    <name>QtSpiderUpdater::UpdateInfoDialog</name>
+    <name>QtRWTalerUpdater::UpdateInfoDialog</name>
     <message>
-        <location filename="../../spdr-installer/src/updateinfodialog.cpp" line="+33"/>
+        <location filename="../../rwtaler-installer/src/updateinfodialog.cpp" line="+33"/>
         <location line="+21"/>
         <source>Updates for %1 are available!</source>
         <translation type="unfinished"></translation>
@@ -6876,7 +6876,7 @@ https://www.transifex.com/spdrcore/spdrcore</source>
     <message>
         <location line="-1053"/>
         <location filename="../forms/ui_sendcoinsentry.h" line="-26"/>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less spdrcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less rwtalercoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7033,7 +7033,7 @@ https://www.transifex.com/spdrcore/spdrcore</source>
     </message>
     <message>
         <location line="+1"/>
-        <source>The amount in Spider to send. Default = 0.</source>
+        <source>The amount in RWTaler to send. Default = 0.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7197,7 +7197,7 @@ https://www.transifex.com/spdrcore/spdrcore</source>
     <name>ShutdownWindow</name>
     <message>
         <location filename="../utilitydialog.cpp" line="+79"/>
-        <source>Spidercore is shutting down...</source>
+        <source>RWTalercore is shutting down...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7440,12 +7440,12 @@ https://www.transifex.com/spdrcore/spdrcore</source>
     </message>
     <message>
         <location line="-287"/>
-        <source>Start Spidersend</source>
+        <source>Start RWTalersend</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Stop Spidersend</source>
+        <source>Stop RWTalersend</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7659,7 +7659,7 @@ https://www.transifex.com/spdrcore/spdrcore</source>
     </message>
     <message>
         <location line="+20"/>
-        <source>Spidersend Balance:</source>
+        <source>RWTalersend Balance:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7704,7 +7704,7 @@ https://www.transifex.com/spdrcore/spdrcore</source>
     </message>
     <message>
         <location line="+25"/>
-        <source>Try to manually submit a Spidersend request.</source>
+        <source>Try to manually submit a RWTalersend request.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7714,7 +7714,7 @@ https://www.transifex.com/spdrcore/spdrcore</source>
     </message>
     <message>
         <location line="+19"/>
-        <source>Reset the current status of Spidersend (can interrupt Spidersend if it&apos;s in the process of Mixing, which can cost you money!)</source>
+        <source>Reset the current status of RWTalersend (can interrupt RWTalersend if it&apos;s in the process of Mixing, which can cost you money!)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7724,7 +7724,7 @@ https://www.transifex.com/spdrcore/spdrcore</source>
     </message>
     <message>
         <location line="+22"/>
-        <source>Spidersend</source>
+        <source>RWTalersend</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7737,7 +7737,7 @@ https://www.transifex.com/spdrcore/spdrcore</source>
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+36"/>
-        <source>Spidercore</source>
+        <source>RWTalercore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7757,7 +7757,7 @@ https://www.transifex.com/spdrcore/spdrcore</source>
     </message>
     <message>
         <location line="+1"/>
-        <source>The Spidercore developers</source>
+        <source>The RWTalercore developers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8780,86 +8780,86 @@ https://www.transifex.com/spdrcore/spdrcore</source>
 <context>
     <name>UpdateInfoDialog</name>
     <message>
-        <location filename="../../spdr-installer/src/forms/updateinfodialog.ui" line="+17"/>
-        <location filename="../../spdr-installer/src/forms/ui_updateinfodialog.h" line="+176"/>
+        <location filename="../../rwtaler-installer/src/forms/updateinfodialog.ui" line="+17"/>
+        <location filename="../../rwtaler-installer/src/forms/ui_updateinfodialog.h" line="+176"/>
         <source>Check for Updates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+35"/>
-        <location filename="../../spdr-installer/src/forms/ui_updateinfodialog.h" line="+1"/>
+        <location filename="../../rwtaler-installer/src/forms/ui_updateinfodialog.h" line="+1"/>
         <source>There are new updates available! You can install them now or automatically, when you exit the application. If you don&apos;t want to install updates right know, you can install them later.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+16"/>
-        <location filename="../../spdr-installer/src/forms/ui_updateinfodialog.h" line="+1"/>
+        <location filename="../../rwtaler-installer/src/forms/ui_updateinfodialog.h" line="+1"/>
         <source>Updates:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+34"/>
-        <location filename="../../spdr-installer/src/forms/ui_updateinfodialog.h" line="+4"/>
+        <location filename="../../rwtaler-installer/src/forms/ui_updateinfodialog.h" line="+4"/>
         <source>Component Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
-        <location filename="../../spdr-installer/src/forms/ui_updateinfodialog.h" line="-1"/>
+        <location filename="../../rwtaler-installer/src/forms/ui_updateinfodialog.h" line="-1"/>
         <source>Version</source>
         <translation type="unfinished">Version</translation>
     </message>
     <message>
         <location line="+5"/>
-        <location filename="../../spdr-installer/src/forms/ui_updateinfodialog.h" line="-1"/>
+        <location filename="../../rwtaler-installer/src/forms/ui_updateinfodialog.h" line="-1"/>
         <source>Update Size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+15"/>
-        <location filename="../../spdr-installer/src/forms/ui_updateinfodialog.h" line="+3"/>
-        <source>https://github.com/SPDR-Core/spdr/releases</source>
+        <location filename="../../rwtaler-installer/src/forms/ui_updateinfodialog.h" line="+3"/>
+        <source>https://github.com/SPDR-Core/rwtaler/releases</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
-        <location filename="../../spdr-installer/src/forms/ui_updateinfodialog.h" line="+1"/>
+        <location filename="../../rwtaler-installer/src/forms/ui_updateinfodialog.h" line="+1"/>
         <source>Run with &amp;elevated rights</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+11"/>
-        <location filename="../../spdr-installer/src/forms/ui_updateinfodialog.h" line="+2"/>
+        <location filename="../../rwtaler-installer/src/forms/ui_updateinfodialog.h" line="+2"/>
         <source>Close and do nothing. You can install updates later.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <location filename="../../spdr-installer/src/forms/ui_updateinfodialog.h" line="+2"/>
+        <location filename="../../rwtaler-installer/src/forms/ui_updateinfodialog.h" line="+2"/>
         <source>Install later</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
-        <location filename="../../spdr-installer/src/forms/ui_updateinfodialog.h" line="+2"/>
+        <location filename="../../rwtaler-installer/src/forms/ui_updateinfodialog.h" line="+2"/>
         <source>You proceed using the application, and as soon as you close it, the updater will start automatically to install the updates.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <location filename="../../spdr-installer/src/forms/ui_updateinfodialog.h" line="+2"/>
+        <location filename="../../rwtaler-installer/src/forms/ui_updateinfodialog.h" line="+2"/>
         <source>Install On Exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
-        <location filename="../../spdr-installer/src/forms/ui_updateinfodialog.h" line="+2"/>
+        <location filename="../../rwtaler-installer/src/forms/ui_updateinfodialog.h" line="+2"/>
         <source>Closes the application and opens the installer to update the app.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <location filename="../../spdr-installer/src/forms/ui_updateinfodialog.h" line="+2"/>
+        <location filename="../../rwtaler-installer/src/forms/ui_updateinfodialog.h" line="+2"/>
         <source>Install Now</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8942,9 +8942,9 @@ https://www.transifex.com/spdrcore/spdrcore</source>
     </message>
 </context>
 <context>
-    <name>spdr-core</name>
+    <name>rwtaler-core</name>
     <message>
-        <location filename="../spdrstrings.cpp" line="+8"/>
+        <location filename="../rwtalerstrings.cpp" line="+8"/>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation type="unfinished">(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</translation>
     </message>
@@ -8970,7 +8970,7 @@ https://www.transifex.com/spdrcore/spdrcore</source>
     </message>
     <message>
         <location line="+6"/>
-        <source>Cannot obtain a lock on data directory %s. Spidercore is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. RWTalercore is probably already running.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -9145,7 +9145,7 @@ https://www.transifex.com/spdrcore/spdrcore</source>
     </message>
     <message>
         <location line="+2"/>
-        <source>Rescan aborted by user. Please restart your Spidercore wallet with &apos;-rescan&apos; option. Otherwise, transaction data</source>
+        <source>Rescan aborted by user. Please restart your RWTalercore wallet with &apos;-rescan&apos; option. Otherwise, transaction data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -9185,7 +9185,7 @@ https://www.transifex.com/spdrcore/spdrcore</source>
     </message>
     <message>
         <location line="+4"/>
-        <source>Unable to bind to %s on this computer. Spidercore is probably already running.</source>
+        <source>Unable to bind to %s on this computer. RWTalercore is probably already running.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -9225,7 +9225,7 @@ https://www.transifex.com/spdrcore/spdrcore</source>
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Spidercore will not work properly.</source>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong RWTalercore will not work properly.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -9420,7 +9420,7 @@ https://www.transifex.com/spdrcore/spdrcore</source>
     </message>
     <message>
         <location line="+1"/>
-        <source>Copyright (C) %i The Spidercore Developers</source>
+        <source>Copyright (C) %i The RWTalercore Developers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -9520,7 +9520,7 @@ https://www.transifex.com/spdrcore/spdrcore</source>
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Spidercore</source>
+        <source>Error loading wallet.dat: Wallet requires newer version of RWTalercore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -9865,7 +9865,7 @@ https://www.transifex.com/spdrcore/spdrcore</source>
     </message>
     <message>
         <location line="+5"/>
-        <source>Wallet needed to be rewritten: restart Spidercore to complete</source>
+        <source>Wallet needed to be rewritten: restart RWTalercore to complete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -9900,12 +9900,12 @@ https://www.transifex.com/spdrcore/spdrcore</source>
     </message>
     <message>
         <location line="+1"/>
-        <source>&apos;importprivkey&apos; finished successfully. Please restart Spidercore wallet with &apos;-rescan&apos; option. Otherwise, transaction data</source>
+        <source>&apos;importprivkey&apos; finished successfully. Please restart RWTalercore wallet with &apos;-rescan&apos; option. Otherwise, transaction data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&apos;importprivkey&apos; with &apos;Rescan&apos; option finished successfully. Please restart your Spidercore wallet. Otherwise, transaction data</source>
+        <source>&apos;importprivkey&apos; with &apos;Rescan&apos; option finished successfully. Please restart your RWTalercore wallet. Otherwise, transaction data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -9935,7 +9935,7 @@ https://www.transifex.com/spdrcore/spdrcore</source>
     </message>
     <message>
         <location line="+6"/>
-        <source>Initialization sanity check failed. Spidercore is shutting down.</source>
+        <source>Initialization sanity check failed. RWTalercore is shutting down.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

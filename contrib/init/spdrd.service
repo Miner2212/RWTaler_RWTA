@@ -3,17 +3,17 @@ Description=SPDR's distributed currency daemon
 After=network.target
 
 [Service]
-User=spdr
-Group=spdr
+User=rwtaler
+Group=rwtaler
 
 Type=forking
-PIDFile=/var/lib/spdrd/spdrd.pid
+PIDFile=/var/lib/rwtalerd/rwtalerd.pid
 
-ExecStart=/usr/bin/spdrd -daemon -pid=/var/lib/spdrd/spdrd.pid \
-          -conf=/etc/spdr/spdr.conf -datadir=/var/lib/spdrd
+ExecStart=/usr/bin/rwtalerd -daemon -pid=/var/lib/rwtalerd/rwtalerd.pid \
+          -conf=/etc/rwtaler/rwtaler.conf -datadir=/var/lib/rwtalerd
 
-ExecStop=-/usr/bin/spdr-cli -conf=/etc/spdr/spdr.conf \
-         -datadir=/var/lib/spdrd stop
+ExecStop=-/usr/bin/rwtaler-cli -conf=/etc/rwtaler/rwtaler.conf \
+         -datadir=/var/lib/rwtalerd stop
 
 Restart=always
 PrivateTmp=true
