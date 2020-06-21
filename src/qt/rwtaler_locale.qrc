@@ -1,0 +1,18 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="ca">locale/rwtaler_ca.qm</file>
+        <file alias="da">locale/rwtaler_da.qm</file>
+        <file alias="de">locale/rwtaler_de.qm</file>
+        <file alias="en">locale/rwtaler_en.qm</file>
+        <file alias="en_US">locale/rwtaler_en_US.qm</file>
+        <file alias="es">locale/rwtaler_es.qm</file>
+        <file alias="fr">locale/rwtaler_fr.qm</file>
+        <file alias="it">locale/rwtaler_it.qm</file>
+        <file alias="ja">locale/rwtaler_ja.qm</file>
+        <file alias="pt">locale/rwtaler_pt.qm</file>
+        <file alias="ro_RO">locale/rwtaler_ro_RO.qm</file>
+        <file alias="ru">locale/rwtaler_ru.qm</file>
+        <file alias="vn">locale/rwtaler_vn.qm</file>
+        <file alias="zh_TW">locale/rwtaler_zh_TW.qm</file>
+    </qresource>
+</RCC>
