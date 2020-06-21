@@ -3,7 +3,7 @@ cp src/rwtalerd .
 cp src/qt/rwtaler-qt .
 strip rwtalerd
 strip rwtaler-qt
-zip release_${SPDR_PLATFORM}.zip rwtalerd rwtaler-qt
+zip release_${RWTA_PLATFORM}.zip rwtalerd rwtaler-qt
 
 sudo easy_install appscript
 

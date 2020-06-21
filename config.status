@@ -1123,7 +1123,7 @@ S["OBJEXT"]="o"
 S["EXEEXT"]=""
 S["ac_ct_CXX"]="g++"
 S["CPPFLAGS"]="-Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D"\
-"__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2"
+"__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2"
 S["LDFLAGS"]="  -Wl,-z,relro -Wl,-z,now"
 S["CXXFLAGS"]="-Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector "\
 "-fstack-protector-all -fPIC "

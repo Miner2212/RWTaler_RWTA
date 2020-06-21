@@ -1061,11 +1061,11 @@ bool ProcessBlockFound(CBlock* pblock, CWallet& wallet)
     {
         LOCK(cs_main);
         if (pblock->hashPrevBlock != chainActive.Tip()->GetBlockHash())
-            return error("SPDRMiner : generated block is stale");
+            return error("RWTAMiner : generated block is stale");
 
         for(const CTxIn& vin : pblock->vtx[1].vin) {
             if (wallet.IsSpent(vin.prevout.hash, vin.prevout.n)) {
-                return error("SPDRMiner : Gen block stake is invalid - UTXO spent");
+                return error("RWTAMiner : Gen block stake is invalid - UTXO spent");
             }
         }
     }
@@ -1078,7 +1078,7 @@ bool ProcessBlockFound(CBlock* pblock, CWallet& wallet)
     const CChainParams& chainparams = Params();
     CValidationState state;
     if (!ProcessNewBlock(state, chainparams, NULL, pblock)) {
-        return error("SPDRMiner : ProcessNewBlock, block not accepted");
+        return error("RWTAMiner : ProcessNewBlock, block not accepted");
     }
 
     {

@@ -2381,7 +2381,7 @@ COPYRIGHT_HOLDERS_SUBSTITUTION = RWTalercore
 COPYRIGHT_YEAR = 2019
 CPP = gcc -E
 CPPFILT = /usr/bin/c++filt
-CPPFLAGS = -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2
+CPPFLAGS = -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2
 CRYPTOPP_CPPFLAGS =  -I$(srcdir)/cryptopp/include
 CRYPTO_CFLAGS = 
 CRYPTO_LIBS = -lcrypto
@@ -2606,7 +2606,7 @@ top_srcdir = ..
 DIST_SUBDIRS = secp256k1
 AM_LDFLAGS = $(PTHREAD_CFLAGS) $(LIBTOOL_LDFLAGS)
 AM_CXXFLAGS = $(HARDENED_CXXFLAGS) $(ERROR_CXXFLAGS) -DETH_FATDB=1
-AM_CPPFLAGS = $(HARDENED_CPPFLAGS) -DSPDR_BUILD
+AM_CPPFLAGS = $(HARDENED_CPPFLAGS) -DRWTA_BUILD
 
 # Make is not made aware of per-object dependencies to avoid limiting building parallelization
 # But to build the less dependent modules first, we manually select their order here:
@@ -2830,7 +2830,7 @@ libbitcoin_wallet_a_SOURCES = \
 
 # crypto primitives library
 crypto_libbitcoin_crypto_a_CFLAGS = $(PIE_FLAGS)
-crypto_libbitcoin_crypto_a_CPPFLAGS = $(BITCOIN_CONFIG_INCLUDES) $(BITCOIN_INCLUDES) -DSPDR_BUILD
+crypto_libbitcoin_crypto_a_CPPFLAGS = $(BITCOIN_CONFIG_INCLUDES) $(BITCOIN_INCLUDES) -DRWTA_BUILD
 crypto_libbitcoin_crypto_a_SOURCES = crypto/sha1.cpp crypto/sha256.cpp \
 	crypto/sha512.cpp crypto/hmac_sha256.cpp \
 	crypto/rfc6979_hmac_sha256.cpp crypto/hmac_sha512.cpp \
@@ -2919,7 +2919,7 @@ libbitcoin_consensus_a_SOURCES = \
 
 
 # common: shared between rwtalerd, and rwtaler-qt and non-server tools
-libbitcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) -DSPDR_BUILD
+libbitcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) -DRWTA_BUILD
 libbitcoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_common_a_CFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) -std=c99
 libbitcoin_common_a_SOURCES = allocators.cpp amount.cpp base58.cpp \

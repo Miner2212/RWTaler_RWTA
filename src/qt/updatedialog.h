@@ -3,7 +3,7 @@
 
 #include <QObject>
 
-#define NEW_RELEASES "https://github.com/SPDR-Core/rwtaler/releases"
+#define NEW_RELEASES "https://github.com/RWTA-Core/rwtaler/releases"
 
 class Version {
 

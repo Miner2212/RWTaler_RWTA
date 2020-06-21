@@ -26,9 +26,9 @@ A Docker configuration with rwtalerd node by default.
     
     mkdir rwtaler-mounted-data
     docker run --name rwtaler -d \
-     --env 'SPDR_RPCUSER=rpciser' \
-     --env 'SPDR_RPCPASSWORD=rpcpassword' \
-     --env 'SPDR_TXINDEX=1' \
+     --env 'RWTA_RPCUSER=rpciser' \
+     --env 'RWTA_RPCPASSWORD=rpcpassword' \
+     --env 'RWTA_TXINDEX=1' \
      --volume ~/rwtaler-mounted-data:~/.rwtaler \
      -p 53616:53616 \
      --publish 53616:53616 \

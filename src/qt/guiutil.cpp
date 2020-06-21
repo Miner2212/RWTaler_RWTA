@@ -166,7 +166,7 @@ void setupAmountWidget(QLineEdit* widget, QWidget* parent)
 
 bool parseBitcoinURI(const QUrl& uri, SendCoinsRecipient* out)
 {
-    // return if URI is not valid or is no SPDR: URI
+    // return if URI is not valid or is no RWTA: URI
     if (!uri.isValid() || uri.scheme() != QString(URI_SCHEME))
         return false;
 
@@ -200,7 +200,7 @@ bool parseBitcoinURI(const QUrl& uri, SendCoinsRecipient* out)
             fShouldReturnFalse = false;
         } else if (i->first == "amount") {
             if (!i->second.isEmpty()) {
-                if (!BitcoinUnits::parse(BitcoinUnits::SPDR, i->second, &rv.amount)) {
+                if (!BitcoinUnits::parse(BitcoinUnits::RWTA, i->second, &rv.amount)) {
                     return false;
                 }
             }
@@ -235,7 +235,7 @@ QString formatBitcoinURI(const SendCoinsRecipient& info)
     int paramCount = 0;
 
     if (info.amount) {
-        ret += QString("?amount=%1").arg(BitcoinUnits::format(BitcoinUnits::SPDR, info.amount, false, BitcoinUnits::separatorNever));
+        ret += QString("?amount=%1").arg(BitcoinUnits::format(BitcoinUnits::RWTA, info.amount, false, BitcoinUnits::separatorNever));
         paramCount++;
     }
 
@@ -653,12 +653,12 @@ bool DHMSTableWidgetItem::operator<(QTableWidgetItem const& item) const
 #ifdef WIN32
 boost::filesystem::path static StartupShortcutPath()
 {
-    return GetSpecialFolderPath(CSIDL_STARTUP) / "SPDR.lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / "RWTA.lnk";
 }
 
 bool GetStartOnSystemStartup()
 {
-    // check for SPDR.lnk
+    // check for RWTA.lnk
     return boost::filesystem::exists(StartupShortcutPath());
 }
 
@@ -771,7 +771,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         // Write a rwtaler.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
-        optionFile << "Name=SPDR\n";
+        optionFile << "Name=RWTA\n";
         optionFile << "Exec=" << pszExePath << " -min\n";
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";

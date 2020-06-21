@@ -1,2 +1,2 @@
-#define BUILD_SUFFIX 3898d59-RWTalercore
-#define BUILD_DATE "2019-08-14 14:21:03 +0300"
+#define BUILD_SUFFIX 06ddd6b-RWTalercore
+#define BUILD_DATE "2020-06-21 15:08:05 +0200"

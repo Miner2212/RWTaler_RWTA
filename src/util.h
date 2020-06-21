@@ -36,14 +36,14 @@ extern std::regex hexData;
 
 // Debugging macros
 
-//#define ENABLE_SPDR_DEBUG
-#ifdef ENABLE_SPDR_DEBUG
+//#define ENABLE_RWTA_DEBUG
+#ifdef ENABLE_RWTA_DEBUG
 #define DEBUG_SECTION( x ) x
 #else
 #define DEBUG_SECTION( x )
 #endif
 
-//SPDR only features
+//RWTA only features
 extern std::atomic<bool> hideLogMessage;
 
 extern int nLogFile;

@@ -45,7 +45,7 @@ enum class Network
 	EIP158Test = 74,		///< Homestead + EIP150 + EIP158 Rules active from block 0
 	MetropolisTest = 75,    ///< All fork rules + Metropolis active from block 0
 	Special = 0xff,			///< Something else.
-	rwtalerMainNetwork = 9,    ///< SPDR Homestead + EIP150 + EIP158 Rules active from block 0 to enum class Network
+	rwtalerMainNetwork = 9,    ///< RWTA Homestead + EIP150 + EIP158 Rules active from block 0 to enum class Network
 	rwtalerTestNetwork = 10
 };
 

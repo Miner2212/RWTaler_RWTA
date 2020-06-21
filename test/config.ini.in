@@ -14,6 +14,6 @@ EXEEXT=@EXEEXT@
 [components]
 # Which components are enabled. These are commented out by `configure` if they were disabled when running config.
 @ENABLE_WALLET_TRUE@ENABLE_WALLET=true
-@BUILD_SPDR_UTILS_TRUE@ENABLE_UTILS=true
-@BUILD_SPDRD_TRUE@ENABLE_SPDRD=true
+@BUILD_RWTA_UTILS_TRUE@ENABLE_UTILS=true
+@BUILD_RWTAD_TRUE@ENABLE_RWTAD=true
 @ENABLE_ZMQ_TRUE@ENABLE_ZMQ=true

@@ -203,7 +203,7 @@ Eula::Eula(QWidget* parent) : QDialog(parent),
                     Section shall supercede such other term(s) and condition(s) with respect to the Pre-release Software, but only to the extent necessary to resolve the conflict. \
                     You acknowledge that the Software is a pre-release version, does not represent final product from RWTalercore, and may contain bugs, errors and other problems that \
                     could cause system or other failures and data loss. Consequently, the Pre-release Software is provided to you \"AS-IS\", and RWTalercore disclaims any warranty or \
-                    liability obligations to you of any kind. WHERE LEGALLY LIABILITY CANNOT BE EXCLUDED FOR PRE-RELEASE SOFTWARE, BUT IT MAY BE LIMITED, SPDRCORE'S LIABILITY AND \
+                    liability obligations to you of any kind. WHERE LEGALLY LIABILITY CANNOT BE EXCLUDED FOR PRE-RELEASE SOFTWARE, BUT IT MAY BE LIMITED, RWTACORE'S LIABILITY AND \
                     THAT OF ITS SUPPLIERS SHALL BE LIMITED TO THE SUM OF FIFTY DOLLARS (U.S. $50) IN TOTAL. You acknowledge that RWTalercore has not promised or guaranteed to you that \
                     Pre-release Software will be announced or made available to anyone in the future, that RWTalercore has no express or implied obligation to you to announce or \
                     introduce the Pre-release Software and that RWTalercore may not introduce a product similar to or compatible with the Pre-release Software. Accordingly, you \
@@ -222,9 +222,9 @@ Eula::Eula(QWidget* parent) : QDialog(parent),
     eulaInfo += tr("<p style=\"line-height:30\"></p>");
     eulaInfo += tr("<p style=\"line-height:130\"><br><b>8.	LIMITATION OF LIABILITY</b></p>");
     eulaInfo += tr("<p style=\"line-height:30\"></p>");
-    eulaInfo += tr("<p style=\"line-height:130\">IN NO EVENT WILL SPDRCORE OR ITS SUPPLIERS BE LIABLE TO YOU FOR ANY DAMAGES, CLAIMS OR COSTS WHATSOEVER OR ANY CONSEQUENTIAL, INDIRECT, \
-                   INCIDENTAL DAMAGES, OR ANY LOST PROFITS OR LOST SAVINGS, EVEN IF AN SPDRCORE REPRESENTATIVE HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH LOSS, DAMAGES, CLAIMS OR \
-                   COSTS OR FOR ANY CLAIM BY ANY THIRD PARTY. THE FOREGOING LIMITATIONS AND EXCLUSIONS APPLY TO THE EXTENT PERMITTED BY APPLICABLE LAW IN YOUR JURISDICTION. SPDRCORE'S \
+    eulaInfo += tr("<p style=\"line-height:130\">IN NO EVENT WILL RWTACORE OR ITS SUPPLIERS BE LIABLE TO YOU FOR ANY DAMAGES, CLAIMS OR COSTS WHATSOEVER OR ANY CONSEQUENTIAL, INDIRECT, \
+                   INCIDENTAL DAMAGES, OR ANY LOST PROFITS OR LOST SAVINGS, EVEN IF AN RWTACORE REPRESENTATIVE HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH LOSS, DAMAGES, CLAIMS OR \
+                   COSTS OR FOR ANY CLAIM BY ANY THIRD PARTY. THE FOREGOING LIMITATIONS AND EXCLUSIONS APPLY TO THE EXTENT PERMITTED BY APPLICABLE LAW IN YOUR JURISDICTION. RWTACORE'S \
                    AGGREGATE LIABILITY AND THAT OF ITS SUPPLIERS UNDER OR IN CONNECTION WITH THIS AGREEMENT SHALL BE LIMITED TO THE AMOUNT PAID FOR THE SOFTWARE, IF ANY. Nothing \
                    contained in this Agreement limits RWTalercore's liability to you in the event of death or personal injury resulting from RWTalercore's negligence or for the tort of \
                    deceit (fraud). RWTalercore is acting on behalf of its suppliers for the purpose of disclaiming, excluding and/or limiting obligations, warranties and liability as \

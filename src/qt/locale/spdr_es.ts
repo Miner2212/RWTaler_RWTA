@@ -22,7 +22,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter an Alias (friendly name) for your RWTalerNodes Node and its address (either clearnet IP and port or Tor onion address and port).  The address should be in the format 123.456.789.123:9999 or akjdsafxjkhasdf.onion:9999.  A masternode private key and a collateral address will both be automatically generated for you.  You must send exactly 7000 SPDR to the collateral address.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter an Alias (friendly name) for your RWTalerNodes Node and its address (either clearnet IP and port or Tor onion address and port).  The address should be in the format 123.456.789.123:9999 or akjdsafxjkhasdf.onion:9999.  A masternode private key and a collateral address will both be automatically generated for you.  You must send exactly 7000 RWTA to the collateral address.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -165,12 +165,12 @@
         <translation>Recibiendo direcciones</translation>
     </message>
     <message>
-        <source>These are your SPDR addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Estas son sus direcciones SPDR para mandar pagos. Siempre checkear la cantidad y la dirección de recepción antes de mandar monedas.</translation>
+        <source>These are your RWTA addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Estas son sus direcciones RWTA para mandar pagos. Siempre checkear la cantidad y la dirección de recepción antes de mandar monedas.</translation>
     </message>
     <message>
-        <source>These are your SPDR addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Estas son sus direcciones SPDR para recibir pagos. Es recomendable usar una nueva dirección de recepción para cada transacción.</translation>
+        <source>These are your RWTA addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Estas son sus direcciones RWTA para recibir pagos. Es recomendable usar una nueva dirección de recepción para cada transacción.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -290,16 +290,16 @@
         <translation>Confirmar la encriptación de la wallet</translation>
     </message>
     <message>
-        <source>SPDR will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your SPDRs from being stolen by malware infecting your computer.</source>
-        <translation type="vanished">SPDR se cerrará ahora para finalizar el proceso de encriptación. Recordad que encriptar vuestra wallet no puede proteger completamente que tus SPDRs sean robados mediante malware infectando tu ordenador.</translation>
+        <source>RWTA will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your RWTAs from being stolen by malware infecting your computer.</source>
+        <translation type="vanished">RWTA se cerrará ahora para finalizar el proceso de encriptación. Recordad que encriptar vuestra wallet no puede proteger completamente que tus RWTAs sean robados mediante malware infectando tu ordenador.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Estás seguro de que quieres encriptar tu wallet?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SPDR&lt;/b&gt;!</source>
-        <translation>Atención: Si encriptas tu wallet y pierdes tu contraseña, perderás &lt;b&gt; TODOS TUS SPDR&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR RWTA&lt;/b&gt;!</source>
+        <translation>Atención: Si encriptas tu wallet y pierdes tu contraseña, perderás &lt;b&gt; TODOS TUS RWTA&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -342,7 +342,7 @@
         <translation>Atención: La tecla Mayúsculas está encendida!</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process.Remember that encrypting your wallet cannot fully protect your SPDRs from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process.Remember that encrypting your wallet cannot fully protect your RWTAs from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -377,15 +377,15 @@
     </message>
     <message>
         <source>Enter a RWTaler Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Introduzca la dirección SPDR que querría encriptar usando BIP 38. Introduzca una contraseña en la caja central. Clickee en encriptar para computar la clave privada encriptada.</translation>
+        <translation>Introduzca la dirección RWTA que querría encriptar usando BIP 38. Introduzca una contraseña en la caja central. Clickee en encriptar para computar la clave privada encriptada.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Dirección:</translation>
     </message>
     <message>
-        <source>The SPDR address to sign the message with</source>
-        <translation>La dirección SPDR con la que firmar el mensaje</translation>
+        <source>The RWTA address to sign the message with</source>
+        <translation>La dirección RWTA con la que firmar el mensaje</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -416,8 +416,8 @@
         <translation>Copiar la firma actual al clipboard del sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this SPDR address</source>
-        <translation>Firmar el mensaje para demostrar que eres el propietario de esta dirección SPDR</translation>
+        <source>Sign the message to prove you own this RWTA address</source>
+        <translation>Firmar el mensaje para demostrar que eres el propietario de esta dirección RWTA</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -440,12 +440,12 @@
         <translation>Introducir la clave encriptada privada BIP 38. Introducir la contraseña en la caja central. Pulsar en Desencriptar Clave para computar la clave privada. Después de que la clave sea desencriptada, pulsando en &apos;Importar Dirección&apos; añadirá esta clave privada a la wallet.</translation>
     </message>
     <message>
-        <source>The SPDR address the message was signed with</source>
-        <translation>La dirección SPDR con la que el mensaje fue firmado</translation>
+        <source>The RWTA address the message was signed with</source>
+        <translation>La dirección RWTA con la que el mensaje fue firmado</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified SPDR address</source>
-        <translation>Verificar el mensaje para asegurarse que fue firmado con la dirección SPDR especificada</translation>
+        <source>Verify the message to ensure it was signed with the specified RWTA address</source>
+        <translation>Verificar el mensaje para asegurarse que fue firmado con la dirección RWTA especificada</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -743,11 +743,11 @@
     </message>
     <message>
         <source>RWTalercore</source>
-        <translation>Núcleo SPDR</translation>
+        <translation>Núcleo RWTA</translation>
     </message>
     <message>
-        <source>Send coins to a SPDR address</source>
-        <translation>Mandar coins a una dirección SPDR</translation>
+        <source>Send coins to a RWTA address</source>
+        <translation>Mandar coins a una dirección RWTA</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and rwtaler: URIs)</source>
@@ -763,23 +763,23 @@
     </message>
     <message>
         <source>&amp;About RWTalercore</source>
-        <translation>&amp;Sobre el núcleo de SPDR</translation>
+        <translation>&amp;Sobre el núcleo de RWTA</translation>
     </message>
     <message>
         <source>Show information about RWTalercore</source>
-        <translation>Mostrar información sobre el núcleo de SPDR</translation>
+        <translation>Mostrar información sobre el núcleo de RWTA</translation>
     </message>
     <message>
-        <source>Modify configuration options for SPDR</source>
-        <translation>Modificar las opciones de configuración de SPDR</translation>
+        <source>Modify configuration options for RWTA</source>
+        <translation>Modificar las opciones de configuración de RWTA</translation>
     </message>
     <message>
-        <source>Sign messages with your SPDR addresses to prove you own them</source>
-        <translation>Firmar mensajes con sus direcciones SPDR para demostrar que le pertenecen</translation>
+        <source>Sign messages with your RWTA addresses to prove you own them</source>
+        <translation>Firmar mensajes con sus direcciones RWTA para demostrar que le pertenecen</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified SPDR addresses</source>
-        <translation>Verificar mensajes para asegurar que están firmados con la dirección SPDR especificada</translation>
+        <source>Verify messages to ensure they were signed with specified RWTA addresses</source>
+        <translation>Verificar mensajes para asegurar que están firmados con la dirección RWTA especificada</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -810,8 +810,8 @@
         <translation>Abrir Fichero de Configuración de Nodos Maestros</translation>
     </message>
     <message>
-        <source>Open a SPDR: URI or payment request</source>
-        <translation>Abrir un SPDR: URI o solicitud de pago</translation>
+        <source>Open a RWTA: URI or payment request</source>
+        <translation>Abrir un RWTA: URI o solicitud de pago</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -822,7 +822,7 @@
         <translation>Ventana del explorador de bloques</translation>
     </message>
     <message>
-        <source>Show the RWTalercore help message to get a list with possible SPDR command-line options</source>
+        <source>Show the RWTalercore help message to get a list with possible RWTA command-line options</source>
         <translation>Mostrar la ayuda de RWTalercore para obtener una lista de posibles opciones en línea de comandos</translation>
     </message>
     <message>
@@ -830,10 +830,10 @@
         <translation>Cliente RWTalercore</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to SPDR network</source>
+        <source>%n active connection(s) to RWTA network</source>
         <translation type="vanished">
-            <numerusform>%n conexión(es) activas a la red SPDR</numerusform>
-            <numerusform>%n conexión(es) activas a la red SPDR</numerusform>
+            <numerusform>%n conexión(es) activas a la red RWTA</numerusform>
+            <numerusform>%n conexión(es) activas a la red RWTA</numerusform>
         </translation>
     </message>
     <message>
@@ -1029,7 +1029,7 @@ MultiEnvío: %1</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Converter for SPDR Smart Contract addresses</source>
+        <source>Converter for RWTA Smart Contract addresses</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
@@ -1089,7 +1089,7 @@ MultiEnvío: %1</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>A fatal error occurred. SPDR can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. RWTA can no longer continue safely and will quit.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1885,7 +1885,7 @@ MultiEnvío: %1</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Gas price: SPDR price per gas unit. Default = %1, Min = %2</source>
+        <source>Gas price: RWTA price per gas unit. Default = %1, Min = %2</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1912,48 +1912,48 @@ MultiEnvío: %1</translation>
         <translation>Por favor selecciones un nivel de privacidad.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 SPDR</source>
-        <translation>Use 2 nodos maestros diferentes para mezclar los fondos hasta los 10000 SPDR</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 RWTA</source>
+        <translation>Use 2 nodos maestros diferentes para mezclar los fondos hasta los 10000 RWTA</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 SPDR</source>
-        <translation>Use 8 nodos maestros diferentes para mezclar fondos hasta los 10000 SPDR</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 RWTA</source>
+        <translation>Use 8 nodos maestros diferentes para mezclar fondos hasta los 10000 RWTA</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Use 16 nodos maestros diferentes</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 SPDR to anonymize 10000 SPDR</source>
-        <translation>Esta opción es la más rápida y costará alrededor de ~0.025 SPDR para anonimizar 10000 SPDR</translation>
+        <source>This option is the quickest and will cost about ~0.025 RWTA to anonymize 10000 RWTA</source>
+        <translation>Esta opción es la más rápida y costará alrededor de ~0.025 RWTA para anonimizar 10000 RWTA</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 SPDR to anonymize 10000 SPDR</source>
-        <translation>Esta opción es moderadamente rápida y costará cerca de 0.05 SPDR para anonimizar 10000 SPDR.</translation>
+        <source>This option is moderately fast and will cost about 0.05 RWTA to anonymize 10000 RWTA</source>
+        <translation>Esta opción es moderadamente rápida y costará cerca de 0.05 RWTA para anonimizar 10000 RWTA.</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Esta es la opción más lenta pero más segura. Usar el máximo anonimato costará</translation>
     </message>
     <message>
-        <source>0.1 SPDR per 10000 SPDR you anonymize.</source>
-        <translation>0.1 SPDR por 10000 SPDR que anonimizas.</translation>
+        <source>0.1 RWTA per 10000 RWTA you anonymize.</source>
+        <translation>0.1 RWTA por 10000 RWTA que anonimizas.</translation>
     </message>
     <message>
         <source>Darksend Configuration</source>
         <translation>Configuración de Ofuscación</translation>
     </message>
     <message>
-        <source>Darksend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening SPDR&apos;s configuration screen.</source>
-        <translation>La Ofuscación se configuró correctamente en modo básico (%1 y 2 rondas). Puedes cambiar esto en cualquier momento accediendo a la ventana de configuración de SPDR.</translation>
+        <source>Darksend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening RWTA&apos;s configuration screen.</source>
+        <translation>La Ofuscación se configuró correctamente en modo básico (%1 y 2 rondas). Puedes cambiar esto en cualquier momento accediendo a la ventana de configuración de RWTA.</translation>
     </message>
     <message>
-        <source>Darksend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening SPDR&apos;s configuration screen.</source>
-        <translation>La Ofuscación se activó correctamente en modo alto (%1 y 8 rondas). Usted puede cambiar esto en cualquier momento abriendo la ventana de configuración de SPDR.</translation>
+        <source>Darksend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening RWTA&apos;s configuration screen.</source>
+        <translation>La Ofuscación se activó correctamente en modo alto (%1 y 8 rondas). Usted puede cambiar esto en cualquier momento abriendo la ventana de configuración de RWTA.</translation>
     </message>
     <message>
-        <source>Darksend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening SPDR&apos;s configuration screen.</source>
-        <translation>La Ofuscación se activó correctamente en su grado máximo (%1 y 16 rondas). Usted puede cambiar ésto en cualquier momento en la ventana de configuración de SPDR.</translation>
+        <source>Darksend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening RWTA&apos;s configuration screen.</source>
+        <translation>La Ofuscación se activó correctamente en su grado máximo (%1 y 16 rondas). Usted puede cambiar ésto en cualquier momento en la ventana de configuración de RWTA.</translation>
     </message>
 </context>
 <context>
@@ -2046,8 +2046,8 @@ MultiEnvío: %1</translation>
         <translation>Editar dirección de envío</translation>
     </message>
     <message>
-        <source>The entered address &quot;%1&quot; is not a valid SPDR address.</source>
-        <translation>La dirección introducida &quot;%1&quot; no es una dirección SPDR válida.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid RWTA address.</source>
+        <translation>La dirección introducida &quot;%1&quot; no es una dirección RWTA válida.</translation>
     </message>
     <message>
         <source>The entered address &quot;%1&quot; is already in the address book.</source>
@@ -2280,7 +2280,7 @@ MultiEnvío: %1</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&lt;p style=&quot;line-height:130&quot;&gt;If the product you have received with this license is pre-commercial release or beta Software (&quot;Pre-release Software&quot;), then                     the following Section applies. To the extent that any provision in this Section is in conflict with any other term or condition in this Agreement, this                     Section shall supercede such other term(s) and condition(s) with respect to the Pre-release Software, but only to the extent necessary to resolve the conflict.                     You acknowledge that the Software is a pre-release version, does not represent final product from RWTalercore, and may contain bugs, errors and other problems that                     could cause system or other failures and data loss. Consequently, the Pre-release Software is provided to you &quot;AS-IS&quot;, and RWTalercore disclaims any warranty or                     liability obligations to you of any kind. WHERE LEGALLY LIABILITY CANNOT BE EXCLUDED FOR PRE-RELEASE SOFTWARE, BUT IT MAY BE LIMITED, SPDRCORE&apos;S LIABILITY AND                     THAT OF ITS SUPPLIERS SHALL BE LIMITED TO THE SUM OF FIFTY DOLLARS (U.S. $50) IN TOTAL. You acknowledge that RWTalercore has not promised or guaranteed to you that                     Pre-release Software will be announced or made available to anyone in the future, that RWTalercore has no express or implied obligation to you to announce or                     introduce the Pre-release Software and that RWTalercore may not introduce a product similar to or compatible with the Pre-release Software. Accordingly, you                     acknowledge that any research or development that you perform regarding the Pre-release Software or any product associated with the Pre-release Software is                     done entirely at your own risk. During the term of this Agreement, if requested by RWTalercore, you will provide feedback to RWTalercore regarding testing and use of                     the Pre-release Software, including error or bug reports. If you have been provided the Pre-release Software pursuant to a separate written agreement, such as                     the RWTalercore Serial Agreement for Unreleased Products, your use of the Software is also governed by such agreement. You agree that you may not and certify that                     you will not sublicense, lease, loan, rent, or transfer the Pre-release Software. Upon receipt of a later unreleased version of the Pre-release Software or                     release by RWTalercore of a publicly released commercial version of the Software, whether as a stand-alone product or as part of a larger product, you agree to                     return or destroy all earlier Pre-release Software received from RWTalercore and to abide by the terms of the End User License Agreement for any such later versions                     of the Pre-release Software. Notwithstanding anything in this Section to the contrary, if you are located outside the United States of America or Canada, you agree                     that you will return or destroy all unreleased versions of the Pre-release Software within thirty (30) days of the completion of your testing of the Software                     when such date is earlier than the date for RWTalercore&apos;s first commercial shipment of the publicly released (commercial) Software.&lt;/p&gt;</source>
+        <source>&lt;p style=&quot;line-height:130&quot;&gt;If the product you have received with this license is pre-commercial release or beta Software (&quot;Pre-release Software&quot;), then                     the following Section applies. To the extent that any provision in this Section is in conflict with any other term or condition in this Agreement, this                     Section shall supercede such other term(s) and condition(s) with respect to the Pre-release Software, but only to the extent necessary to resolve the conflict.                     You acknowledge that the Software is a pre-release version, does not represent final product from RWTalercore, and may contain bugs, errors and other problems that                     could cause system or other failures and data loss. Consequently, the Pre-release Software is provided to you &quot;AS-IS&quot;, and RWTalercore disclaims any warranty or                     liability obligations to you of any kind. WHERE LEGALLY LIABILITY CANNOT BE EXCLUDED FOR PRE-RELEASE SOFTWARE, BUT IT MAY BE LIMITED, RWTACORE&apos;S LIABILITY AND                     THAT OF ITS SUPPLIERS SHALL BE LIMITED TO THE SUM OF FIFTY DOLLARS (U.S. $50) IN TOTAL. You acknowledge that RWTalercore has not promised or guaranteed to you that                     Pre-release Software will be announced or made available to anyone in the future, that RWTalercore has no express or implied obligation to you to announce or                     introduce the Pre-release Software and that RWTalercore may not introduce a product similar to or compatible with the Pre-release Software. Accordingly, you                     acknowledge that any research or development that you perform regarding the Pre-release Software or any product associated with the Pre-release Software is                     done entirely at your own risk. During the term of this Agreement, if requested by RWTalercore, you will provide feedback to RWTalercore regarding testing and use of                     the Pre-release Software, including error or bug reports. If you have been provided the Pre-release Software pursuant to a separate written agreement, such as                     the RWTalercore Serial Agreement for Unreleased Products, your use of the Software is also governed by such agreement. You agree that you may not and certify that                     you will not sublicense, lease, loan, rent, or transfer the Pre-release Software. Upon receipt of a later unreleased version of the Pre-release Software or                     release by RWTalercore of a publicly released commercial version of the Software, whether as a stand-alone product or as part of a larger product, you agree to                     return or destroy all earlier Pre-release Software received from RWTalercore and to abide by the terms of the End User License Agreement for any such later versions                     of the Pre-release Software. Notwithstanding anything in this Section to the contrary, if you are located outside the United States of America or Canada, you agree                     that you will return or destroy all unreleased versions of the Pre-release Software within thirty (30) days of the completion of your testing of the Software                     when such date is earlier than the date for RWTalercore&apos;s first commercial shipment of the publicly released (commercial) Software.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2288,7 +2288,7 @@ MultiEnvío: %1</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&lt;p style=&quot;line-height:130&quot;&gt;IN NO EVENT WILL SPDRCORE OR ITS SUPPLIERS BE LIABLE TO YOU FOR ANY DAMAGES, CLAIMS OR COSTS WHATSOEVER OR ANY CONSEQUENTIAL, INDIRECT,                    INCIDENTAL DAMAGES, OR ANY LOST PROFITS OR LOST SAVINGS, EVEN IF AN SPDRCORE REPRESENTATIVE HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH LOSS, DAMAGES, CLAIMS OR                    COSTS OR FOR ANY CLAIM BY ANY THIRD PARTY. THE FOREGOING LIMITATIONS AND EXCLUSIONS APPLY TO THE EXTENT PERMITTED BY APPLICABLE LAW IN YOUR JURISDICTION. SPDRCORE&apos;S                    AGGREGATE LIABILITY AND THAT OF ITS SUPPLIERS UNDER OR IN CONNECTION WITH THIS AGREEMENT SHALL BE LIMITED TO THE AMOUNT PAID FOR THE SOFTWARE, IF ANY. Nothing                    contained in this Agreement limits RWTalercore&apos;s liability to you in the event of death or personal injury resulting from RWTalercore&apos;s negligence or for the tort of                    deceit (fraud). RWTalercore is acting on behalf of its suppliers for the purpose of disclaiming, excluding and/or limiting obligations, warranties and liability as                    provided in this Agreement, but in no other respects and for no other purpose. For further information, please see the jurisdiction specific information at the                    end of this Agreement, if any, or contact RWTalercore&apos;s Customer Support Department.&lt;/p&gt;</source>
+        <source>&lt;p style=&quot;line-height:130&quot;&gt;IN NO EVENT WILL RWTACORE OR ITS SUPPLIERS BE LIABLE TO YOU FOR ANY DAMAGES, CLAIMS OR COSTS WHATSOEVER OR ANY CONSEQUENTIAL, INDIRECT,                    INCIDENTAL DAMAGES, OR ANY LOST PROFITS OR LOST SAVINGS, EVEN IF AN RWTACORE REPRESENTATIVE HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH LOSS, DAMAGES, CLAIMS OR                    COSTS OR FOR ANY CLAIM BY ANY THIRD PARTY. THE FOREGOING LIMITATIONS AND EXCLUSIONS APPLY TO THE EXTENT PERMITTED BY APPLICABLE LAW IN YOUR JURISDICTION. RWTACORE&apos;S                    AGGREGATE LIABILITY AND THAT OF ITS SUPPLIERS UNDER OR IN CONNECTION WITH THIS AGREEMENT SHALL BE LIMITED TO THE AMOUNT PAID FOR THE SOFTWARE, IF ANY. Nothing                    contained in this Agreement limits RWTalercore&apos;s liability to you in the event of death or personal injury resulting from RWTalercore&apos;s negligence or for the tort of                    deceit (fraud). RWTalercore is acting on behalf of its suppliers for the purpose of disclaiming, excluding and/or limiting obligations, warranties and liability as                    provided in this Agreement, but in no other respects and for no other purpose. For further information, please see the jurisdiction specific information at the                    end of this Agreement, if any, or contact RWTalercore&apos;s Customer Support Department.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2412,7 +2412,7 @@ MultiEnvío: %1</translation>
     </message>
     <message>
         <source>RWTalercore</source>
-        <translation>Núcleo SPDR</translation>
+        <translation>Núcleo RWTA</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
@@ -2505,8 +2505,8 @@ MultiEnvío: %1</translation>
         <translation>Al ser la primera vez que se inicia el programa, usted puede elegir dónde guardará RWTalercore sus datos.</translation>
     </message>
     <message>
-        <source>RWTalercore will download and store a copy of the SPDR block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>RWTalercore descargará y guardará una copia de la cadena de bloques SPDR. Por lo menos %1GB de datos serán guardados en esta carpeta, y crecerá con el tiempo. El monedero también se guardará en esta carpeta.</translation>
+        <source>RWTalercore will download and store a copy of the RWTA block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>RWTalercore descargará y guardará una copia de la cadena de bloques RWTA. Por lo menos %1GB de datos serán guardados en esta carpeta, y crecerá con el tiempo. El monedero también se guardará en esta carpeta.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -2518,7 +2518,7 @@ MultiEnvío: %1</translation>
     </message>
     <message>
         <source>RWTalercore</source>
-        <translation>Núcleo SPDR</translation>
+        <translation>Núcleo RWTA</translation>
     </message>
     <message>
         <source>Error: Specified data directory &quot;%1&quot; cannot be created.</source>
@@ -2824,7 +2824,7 @@ MultiEnvío: %1</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This means that recent transactions will not be visible, and the balance will not be up-to-date until this process has completed. Attempting to spend SPDR during this time will not be accepted by the network!!!</source>
+        <source>This means that recent transactions will not be visible, and the balance will not be up-to-date until this process has completed. Attempting to spend RWTA during this time will not be accepted by the network!!!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2891,12 +2891,12 @@ MultiEnvío: %1</translation>
         <translation>Introduzca Dirección a la cual Enviar</translation>
     </message>
     <message>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other SPDR addresses after it matures.
-To Add: enter percentage to give and SPDR address to add to the MultiSend vector.
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other RWTA addresses after it matures.
+To Add: enter percentage to give and RWTA address to add to the MultiSend vector.
 To Delete: Enter address to delete and press delete.
 MultiSend will not be activated unless you have clicked Activate</source>
-        <translation type="vanished">MultiEnvío le permite enviar automáticamente hasta el 100% de recomensa de participación o de nodo maestro a una lista de otras direcciones SPDR después de su maduración.
-Para Añadir: introduzca porcentaje a mandar y las direcciones SPDR a añadir al vector MultiEnvío.
+        <translation type="vanished">MultiEnvío le permite enviar automáticamente hasta el 100% de recomensa de participación o de nodo maestro a una lista de otras direcciones RWTA después de su maduración.
+Para Añadir: introduzca porcentaje a mandar y las direcciones RWTA a añadir al vector MultiEnvío.
 Para Eliminar: Introduzca la dirección a eliminar y pulse la tecla delete.
 MultiEnvío no se activará a menos que haga usted click en Activar</translation>
     </message>
@@ -3011,7 +3011,7 @@ Por favor compruebe la dirección e inténtelo de nuevo.</translation>
 </translation>
     </message>
     <message>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other SPDR addresses after it matures.</source>
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other RWTA addresses after it matures.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3129,8 +3129,8 @@ Por favor compruebe la dirección e inténtelo de nuevo.</translation>
         <translation>Si deselecciona el gasto de cambio no confirmado, las entradas de una transacción&lt;br/&gt;no podrán ser usadas hasta que esa transacción tenga al menos una confirmación.&lt;br/&gt;Esto también afecta a cómo se calcula su balance actual.</translation>
     </message>
     <message>
-        <source>Automatically open the SPDR client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abrir automáticamente el puerto del cliente SPDR en el enrutador. Ésto sólo funciona si su enrutador soporta UPnP y esta función está activada.</translation>
+        <source>Automatically open the RWTA client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abrir automáticamente el puerto del cliente RWTA en el enrutador. Ésto sólo funciona si su enrutador soporta UPnP y esta función está activada.</translation>
     </message>
     <message>
         <source>Accept connections from outside</source>
@@ -3149,12 +3149,12 @@ Por favor compruebe la dirección e inténtelo de nuevo.</translation>
         <translation>Experto</translation>
     </message>
     <message>
-        <source>Automatically start SPDR after logging in to the system.</source>
-        <translation>Arrancar SPDR automáticamente después de identificarse en Windows.</translation>
+        <source>Automatically start RWTA after logging in to the system.</source>
+        <translation>Arrancar RWTA automáticamente después de identificarse en Windows.</translation>
     </message>
     <message>
-        <source>&amp;Start SPDR on system login</source>
-        <translation>&amp;Arrancar SPDR al inicio del sistema</translation>
+        <source>&amp;Start RWTA on system login</source>
+        <translation>&amp;Arrancar RWTA al inicio del sistema</translation>
     </message>
     <message>
         <source>This setting determines the amount of individual masternodes that an input will be anonymized through.&lt;br/&gt;More rounds of anonymization gives a higher degree of privacy, but also costs more in fees.</source>
@@ -3169,8 +3169,8 @@ Por favor compruebe la dirección e inténtelo de nuevo.</translation>
         <translation>Esta cantidad actúa como un techo para desactivar la Ofuscación una vez alcanzado.</translation>
     </message>
     <message>
-        <source>Amount of SPDR to keep anonymized</source>
-        <translation>Cantidad de SPDR a mantener anonimizados</translation>
+        <source>Amount of RWTA to keep anonymized</source>
+        <translation>Cantidad de RWTA a mantener anonimizados</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -3197,8 +3197,8 @@ Por favor compruebe la dirección e inténtelo de nuevo.</translation>
         <translation>&amp;Red</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting SPDR.</source>
-        <translation>El idioma de interface de usuario puede seleccionarse aquí. Este ajuste tomará efecto después de reiniciar SPDR.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting RWTA.</source>
+        <translation>El idioma de interface de usuario puede seleccionarse aquí. Este ajuste tomará efecto después de reiniciar RWTA.</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
@@ -3211,8 +3211,8 @@ https://www.transifex.com/rwtaler-project/rwtaler-project-translations</translat
         <translation>Mapear un puerto utilizando &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the SPDR network through a SOCKS5 proxy.</source>
-        <translation>Conectar a la red SPDR mediante un proxy SOCKS5.</translation>
+        <source>Connect to the RWTA network through a SOCKS5 proxy.</source>
+        <translation>Conectar a la red RWTA mediante un proxy SOCKS5.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -3419,8 +3419,8 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
         <translation>Balances</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the SPDR network after a connection is established, but this process has not completed yet.</source>
-        <translation>La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red SPDR después de establecer una conexión, pero este proceso aún no se ha completado.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the RWTA network after a connection is established, but this process has not completed yet.</source>
+        <translation>La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red RWTA después de establecer una conexión, pero este proceso aún no se ha completado.</translation>
     </message>
     <message>
         <source>Unconfirmed transactions to watch-only addresses</source>
@@ -3463,8 +3463,8 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
         <translation type="vanished">Balance de Ofuscación:</translation>
     </message>
     <message>
-        <source>0 SPDR / 0 Rounds</source>
-        <translation>0 SPDR / 0 Rondas</translation>
+        <source>0 RWTA / 0 Rounds</source>
+        <translation>0 RWTA / 0 Rondas</translation>
     </message>
     <message>
         <source>Enabled/Disabled</source>
@@ -3699,8 +3699,8 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
         <translation>No se puede iniciar rwtaler: módulo click-to-pay</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid SPDR address or malformed URI parameters.</source>
-        <translation type="vanished">¡El identificador de la dirección no puede ser analizado! Esto puede ser causado por una dirección SPDR inválida o parámetros del identificador malformados.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid RWTA address or malformed URI parameters.</source>
+        <translation type="vanished">¡El identificador de la dirección no puede ser analizado! Esto puede ser causado por una dirección RWTA inválida o parámetros del identificador malformados.</translation>
     </message>
     <message>
         <source>Payment request file cannot be read! This can be caused by an invalid payment request file.</source>
@@ -3800,8 +3800,8 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
         <translation>Cantidad</translation>
     </message>
     <message>
-        <source>Enter a SPDR address (e.g. %1)</source>
-        <translation type="vanished">Introduzca una dirección SPDR (p.e. %1)</translation>
+        <source>Enter a RWTA address (e.g. %1)</source>
+        <translation type="vanished">Introduzca una dirección RWTA (p.e. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -3911,7 +3911,7 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
     </message>
     <message>
         <source>RWTalercore</source>
-        <translation type="unfinished">Núcleo SPDR</translation>
+        <translation type="unfinished">Núcleo RWTA</translation>
     </message>
     <message>
         <source>Error: Specified data directory &quot;%1&quot; does not exist.</source>
@@ -4183,8 +4183,8 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
         <translation>Cadena de bloques</translation>
     </message>
     <message>
-        <source>Open the SPDR debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Abrir el fichero de depuración SPDR en el directorio actual de datos. Esto puede llevar unos segundos para ficheros de depuración grandes.</translation>
+        <source>Open the RWTA debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Abrir el fichero de depuración RWTA en el directorio actual de datos. Esto puede llevar unos segundos para ficheros de depuración grandes.</translation>
     </message>
     <message>
         <source>Number of Masternodes</source>
@@ -4351,8 +4351,8 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
         <translation>Fuera:</translation>
     </message>
     <message>
-        <source>Welcome to the SPDR RPC console.</source>
-        <translation>Bienvenido a la consola RPC de SPDR.</translation>
+        <source>Welcome to the RWTA RPC console.</source>
+        <translation>Bienvenido a la consola RPC de RWTA.</translation>
     </message>
     <message>
         <source>Wallet in use: </source>
@@ -4530,12 +4530,12 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
         <translation>Una etiqueta opcional a asociar con la nueva dirección de recepción.</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the SPDR network.</source>
-        <translation type="vanished">Un mensaje opcional a adjuntar a la solicitud de pago, que será mostrado cuando se abra la solicitud. Nota: El mensaje no se envía junto al pago por la red SPDR.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the RWTA network.</source>
+        <translation type="vanished">Un mensaje opcional a adjuntar a la solicitud de pago, que será mostrado cuando se abra la solicitud. Nota: El mensaje no se envía junto al pago por la red RWTA.</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the SPDR network.</source>
-        <translation type="vanished">Un mensaje opcional a adjuntar a la solicitud de pago, que será mostrado cuando se abra la solicitud. &lt;br&gt;Nota: El mensaje no se envía junto al pago por la red SPDR.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the RWTA network.</source>
+        <translation type="vanished">Un mensaje opcional a adjuntar a la solicitud de pago, que será mostrado cuando se abra la solicitud. &lt;br&gt;Nota: El mensaje no se envía junto al pago por la red RWTA.</translation>
     </message>
     <message>
         <source>Use this form to request payments. All fields are &lt;b&gt;optional&lt;/b&gt;.</source>
@@ -4853,8 +4853,8 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
         <translation>Tamaño de UTXO:</translation>
     </message>
     <message>
-        <source>0 SPDR</source>
-        <translation>0 SPDR</translation>
+        <source>0 RWTA</source>
+        <translation>0 RWTA</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -4901,16 +4901,16 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
         <translation type="vanished">Tiempo de confirmación:</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uSPDRs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uSPDRs in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 uSPDRs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Si la comisión personalizada se fija en 1000 uSPDRs y la transacción necesita sólo 250 bytes, entonces la opción &quot;por kilobyte&quot; sólo pagará 250 uSPDRs de comisión,&lt;br/&gt;mientras &quot;por lo menos&quot; pagará 1000 uSPDRs. Para transacciones que midan más de un kilobyte ambas pagan por kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uRWTAs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uRWTAs in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 uRWTAs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Si la comisión personalizada se fija en 1000 uRWTAs y la transacción necesita sólo 250 bytes, entonces la opción &quot;por kilobyte&quot; sólo pagará 250 uRWTAs de comisión,&lt;br/&gt;mientras &quot;por lo menos&quot; pagará 1000 uRWTAs. Para transacciones que midan más de un kilobyte ambas pagan por kilobyte.</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uSPDRs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uSPDRs in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 uSPDRs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Si la comisión personalizada se fija en 1000 uSPDRs y la transacción necesita sólo 250 bytes, entonces la opción &quot;por kilobyte&quot; sólo pagará 250 uSPDRs de comisión,&lt;br/&gt;mientras &quot;por lo menos&quot; pagará 1000 uSPDRs. Para transacciones que midan más de un kilobyte ambas pagan por kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uRWTAs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uRWTAs in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 uRWTAs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Si la comisión personalizada se fija en 1000 uRWTAs y la transacción necesita sólo 250 bytes, entonces la opción &quot;por kilobyte&quot; sólo pagará 250 uRWTAs de comisión,&lt;br/&gt;mientras &quot;por lo menos&quot; pagará 1000 uRWTAs. Para transacciones que midan más de un kilobyte ambas pagan por kilobyte.</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for SPDR transactions than the network can process.</source>
-        <translation>Pagar sólo la comisión mínima está bien mientras haya menos volumen de transacciones que espacio en los bloques.&lt;br/&gt;Pero tenga en cuenta que esto podría acabar en una transacción que nunca se confirme si hay más demanda de transacciones SPDR de las que la red puede procesar.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for RWTA transactions than the network can process.</source>
+        <translation>Pagar sólo la comisión mínima está bien mientras haya menos volumen de transacciones que espacio en los bloques.&lt;br/&gt;Pero tenga en cuenta que esto podría acabar en una transacción que nunca se confirme si hay más demanda de transacciones RWTA de las que la red puede procesar.</translation>
     </message>
     <message>
         <source>normal</source>
@@ -5009,8 +5009,8 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
         <translation>fondos anónimos</translation>
     </message>
     <message>
-        <source>Warning: Invalid SPDR address</source>
-        <translation>Advertencia: Direcciones SPDR inválidas</translation>
+        <source>Warning: Invalid RWTA address</source>
+        <translation>Advertencia: Direcciones RWTA inválidas</translation>
     </message>
     <message>
         <source>any available funds (not recommended)</source>
@@ -5178,7 +5178,7 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The SPDR address to send the payment to</source>
+        <source>The RWTA address to send the payment to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5206,7 +5206,7 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>A message that was attached to the SPDR: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the SPDR network.</source>
+        <source>A message that was attached to the RWTA: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the RWTA network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5336,7 +5336,7 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Gas price: SPDR price per gas unit. Default = %1, Min = %2.</source>
+        <source>Gas price: RWTA price per gas unit. Default = %1, Min = %2.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5395,7 +5395,7 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Gas price: SPDR/gas unit. Default = %1, Min = %2.</source>
+        <source>Gas price: RWTA/gas unit. Default = %1, Min = %2.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5415,7 +5415,7 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>To send %1 you need SPDR in address &lt;br /&gt; %2.</source>
+        <source>To send %1 you need RWTA in address &lt;br /&gt; %2.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5437,8 +5437,8 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The SPDR address to sign the message with</source>
-        <translation>La dirección SPDR con la que firmar el mensaje</translation>
+        <source>The RWTA address to sign the message with</source>
+        <translation>La dirección RWTA con la que firmar el mensaje</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -5461,16 +5461,16 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
         <translation>Copiar la firma actual al clipboard del sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this SPDR address</source>
-        <translation>Firmar el mensaje para demostrar que eres el propietario de esta dirección SPDR</translation>
+        <source>Sign the message to prove you own this RWTA address</source>
+        <translation>Firmar el mensaje para demostrar que eres el propietario de esta dirección RWTA</translation>
     </message>
     <message>
-        <source>The SPDR address the message was signed with</source>
-        <translation>La dirección SPDR con la que el mensaje fue firmado</translation>
+        <source>The RWTA address the message was signed with</source>
+        <translation>La dirección RWTA con la que el mensaje fue firmado</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified SPDR address</source>
-        <translation>Verificar el mensaje para asegurarse que fue firmado con la dirección SPDR especificada</translation>
+        <source>Verify the message to ensure it was signed with the specified RWTA address</source>
+        <translation>Verificar el mensaje para asegurarse que fue firmado con la dirección RWTA especificada</translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -5695,8 +5695,8 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
         <translation type="unfinished">Balances</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the SPDR network after a connection is established, but this process has not completed yet.</source>
-        <translation type="unfinished">La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red SPDR después de establecer una conexión, pero este proceso aún no se ha completado.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the RWTA network after a connection is established, but this process has not completed yet.</source>
+        <translation type="unfinished">La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red RWTA después de establecer una conexión, pero este proceso aún no se ha completado.</translation>
     </message>
     <message>
         <source>Unconfirmed transactions to watch-only addresses</source>
@@ -5771,8 +5771,8 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
         <translation type="unfinished">Cantidad y Rondas:</translation>
     </message>
     <message>
-        <source>0 SPDR / 0 Rounds</source>
-        <translation type="unfinished">0 SPDR / 0 Rondas</translation>
+        <source>0 RWTA / 0 Rounds</source>
+        <translation type="unfinished">0 RWTA / 0 Rondas</translation>
     </message>
     <message>
         <source>Submitted Denom:</source>
@@ -5827,7 +5827,7 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
     <name>SplashScreen</name>
     <message>
         <source>RWTalercore</source>
-        <translation>Núcleo SPDR</translation>
+        <translation>Núcleo RWTA</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -6675,7 +6675,7 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>https://github.com/SPDR-Core/rwtaler/releases</source>
+        <source>https://github.com/RWTA-Core/rwtaler/releases</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6721,7 +6721,7 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
         <translation>Enviar Monedas</translation>
     </message>
     <message>
-        <source>InstanTX doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 SPDR.</source>
+        <source>InstanTX doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 RWTA.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7495,11 +7495,11 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Fees (in SPDR/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <source>Fees (in RWTA/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Fees (in SPDR/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <source>Fees (in RWTA/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7567,11 +7567,11 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Unable to locate enough DarkSend non-denominated funds for this transaction that are not equal 10000 SPDR.</source>
+        <source>Unable to locate enough DarkSend non-denominated funds for this transaction that are not equal 10000 RWTA.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 SPDR.</source>
+        <source>Unable to locate enough funds for this transaction that are not equal 10000 RWTA.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7743,7 +7743,7 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Fee (in SPDR/kB) to add to transactions you send (default: %s)</source>
+        <source>Fee (in RWTA/kB) to add to transactions you send (default: %s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7795,7 +7795,7 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Keep N SPDR anonymized (default: %u)</source>
+        <source>Keep N RWTA anonymized (default: %u)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

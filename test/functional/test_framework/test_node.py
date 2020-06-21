@@ -21,7 +21,7 @@ from .util import (
 )
 from .authproxy import JSONRPCException
 
-SPDRD_PROC_WAIT_TIMEOUT = 60
+RWTAD_PROC_WAIT_TIMEOUT = 60
 
 class TestNode():
     """A class for representing a rwtalerd node under test.
@@ -45,7 +45,7 @@ class TestNode():
             # Wait for up to 60 seconds for the RPC server to respond
             self.rpc_timeout = 60
         if binary is None:
-            self.binary = os.getenv("SPDRD", "rwtalerd")
+            self.binary = os.getenv("RWTAD", "rwtalerd")
         else:
             self.binary = binary
         self.stderr = stderr
@@ -54,7 +54,7 @@ class TestNode():
         self.extra_args = extra_args
         self.args = [self.binary, "-datadir=" + self.datadir, "-server", "-keypool=1", "-discover=0", "-rest", "-logtimemicros", "-debug", "-debugexclude=libevent", "-debugexclude=leveldb", "-mocktime=" + str(mocktime), "-uacomment=testnode%d" % i]
 
-        self.cli = TestNodeCLI(os.getenv("SPDRCLI", "rwtaler-cli"), self.datadir)
+        self.cli = TestNodeCLI(os.getenv("RWTACLI", "rwtaler-cli"), self.datadir)
 
         self.running = False
         self.process = None
@@ -144,7 +144,7 @@ class TestNode():
         self.log.debug("Node stopped")
         return True
 
-    def wait_until_stopped(self, timeout=SPDRD_PROC_WAIT_TIMEOUT):
+    def wait_until_stopped(self, timeout=RWTAD_PROC_WAIT_TIMEOUT):
         wait_until(self.is_node_stopped, timeout=timeout)
 
     def node_encrypt_wallet(self, passphrase):

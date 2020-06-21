@@ -1,5 +1,5 @@
-#ifndef SPDRDGP_H
-#define SPDRDGP_H
+#ifndef RWTADGP_H
+#define RWTADGP_H
 
 #include "rwtalerstate.h"
 #include "primitives/block.h"

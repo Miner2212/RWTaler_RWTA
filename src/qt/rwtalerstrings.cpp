@@ -90,10 +90,10 @@ QT_TRANSLATE_NOOP("rwtaler-core", ""
 "Execute command when the best block changes (%s in cmd is replaced by block "
 "hash)"),
 QT_TRANSLATE_NOOP("rwtaler-core", ""
-"Fees (in SPDR/Kb) smaller than this are considered zero fee for relaying "
+"Fees (in RWTA/Kb) smaller than this are considered zero fee for relaying "
 "(default: %s)"),
 QT_TRANSLATE_NOOP("rwtaler-core", ""
-"Fees (in SPDR/Kb) smaller than this are considered zero fee for transaction "
+"Fees (in RWTA/Kb) smaller than this are considered zero fee for transaction "
 "creation (default: %s)"),
 QT_TRANSLATE_NOOP("rwtaler-core", ""
 "Flush database activity from memory pool to disk log every <n> megabytes "
@@ -193,10 +193,10 @@ QT_TRANSLATE_NOOP("rwtaler-core", ""
 "Unable to locate enough DarkSend denominated funds for this transaction."),
 QT_TRANSLATE_NOOP("rwtaler-core", ""
 "Unable to locate enough DarkSend non-denominated funds for this transaction "
-"that are not equal 10000 SPDR."),
+"that are not equal 10000 RWTA."),
 QT_TRANSLATE_NOOP("rwtaler-core", ""
 "Unable to locate enough funds for this transaction that are not equal 10000 "
-"SPDR."),
+"RWTA."),
 QT_TRANSLATE_NOOP("rwtaler-core", ""
 "Use hierarchical deterministic key generation (HD) after bip32. Only has "
 "effect during wallet creation/first start"),
@@ -322,7 +322,7 @@ QT_TRANSLATE_NOOP("rwtaler-core", "Error: Wallet locked, unable to create transa
 QT_TRANSLATE_NOOP("rwtaler-core", "Error: You already have pending entries in the Darksend pool"),
 QT_TRANSLATE_NOOP("rwtaler-core", "Error: can't select current denominated inputs"),
 QT_TRANSLATE_NOOP("rwtaler-core", "Failed to listen on any port. Use -listen=0 if you want this."),
-QT_TRANSLATE_NOOP("rwtaler-core", "Fee (in SPDR/kB) to add to transactions you send (default: %s)"),
+QT_TRANSLATE_NOOP("rwtaler-core", "Fee (in RWTA/kB) to add to transactions you send (default: %s)"),
 QT_TRANSLATE_NOOP("rwtaler-core", "Force safe mode (default: %u)"),
 QT_TRANSLATE_NOOP("rwtaler-core", "Generate coins (default: %u)"),
 QT_TRANSLATE_NOOP("rwtaler-core", "How many blocks to check at startup (default: %u, 0 = all)"),
@@ -350,7 +350,7 @@ QT_TRANSLATE_NOOP("rwtaler-core", "Invalid masternodeprivkey. Please see documen
 QT_TRANSLATE_NOOP("rwtaler-core", "Invalid netmask specified in -whitelist: '%s'"),
 QT_TRANSLATE_NOOP("rwtaler-core", "Invalid private key."),
 QT_TRANSLATE_NOOP("rwtaler-core", "Invalid script detected."),
-QT_TRANSLATE_NOOP("rwtaler-core", "Keep N SPDR anonymized (default: %u)"),
+QT_TRANSLATE_NOOP("rwtaler-core", "Keep N RWTA anonymized (default: %u)"),
 QT_TRANSLATE_NOOP("rwtaler-core", "Keep at most <n> unconnectable transactions in memory (default: %u)"),
 QT_TRANSLATE_NOOP("rwtaler-core", "Keypool ran out, please call keypoolrefill first"),
 QT_TRANSLATE_NOOP("rwtaler-core", "Last Darksend was too recent."),

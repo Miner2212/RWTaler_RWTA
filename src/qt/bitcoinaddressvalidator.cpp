@@ -85,7 +85,7 @@ BitcoinAddressCheckValidator::BitcoinAddressCheckValidator(QObject *parent, bool
 QValidator::State BitcoinAddressCheckValidator::validate(QString& input, int& pos) const
 {
     Q_UNUSED(pos);
-    // Validate the passed SPDR address
+    // Validate the passed RWTA address
     CTxDestination addr = DecodeDestination(input.toStdString());
     if (IsValidDestination(addr)) {
         if (bAllowScript) {

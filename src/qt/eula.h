@@ -3,8 +3,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SPDR_QT_EULA_H
-#define SPDR_QT_EULA_H
+#ifndef RWTA_QT_EULA_H
+#define RWTA_QT_EULA_H
 
 #include <QDialog>
 
@@ -35,4 +35,4 @@ private:
     bool isRemembered;
 };
 
-#endif // SPDR_QT_EULA_H
+#endif // RWTA_QT_EULA_H

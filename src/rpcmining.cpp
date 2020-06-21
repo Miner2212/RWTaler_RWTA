@@ -492,10 +492,10 @@ UniValue getblocktemplate(const UniValue& params, bool fHelp)
     // because it is tested locally, without any nodes connected, and with significant amount of time between blocks
     if (Params().NetworkID() != CBaseChainParams::SEGWITTEST) {
         if (vNodes.empty())
-            throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "SPDR is not connected!");
+            throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "RWTA is not connected!");
 
         if (IsInitialBlockDownload())
-            throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "SPDR is downloading blocks...");
+            throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "RWTA is downloading blocks...");
     }
 
     static unsigned int nTransactionsUpdatedLast;

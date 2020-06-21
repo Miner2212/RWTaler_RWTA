@@ -805,7 +805,7 @@ void BlockExplorer::updateNavButtons()
     ui->forward->setEnabled(m_HistoryIndex + 1 < m_History.size());
 }
 
-/** Status Bar SPDR or tSPDR icon */
+/** Status Bar RWTA or tRWTA icon */
 NetworkDisplayStatusBarControl::NetworkDisplayStatusBarControl(const PlatformStyle *platformStyle) : optionsModel(0)
 {
     setToolTip(tr("Current network"));

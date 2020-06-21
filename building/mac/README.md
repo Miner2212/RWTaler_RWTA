@@ -8,7 +8,7 @@
 2. Clone rwtaler repository
     
     ```shell
-    git clone https://github.com/SPDR-Core/rwtaler
+    git clone https://github.com/RWTA-Core/rwtaler
     ```
 
 3. Ensure mysql and boost installed.
@@ -26,7 +26,7 @@
 5. Export the required environment variables
 
     ```shell
-    export SPDR_PLATFORM='mac'
+    export RWTA_PLATFORM='mac'
     export CXX=clang++
     export CC=clang
     ```

@@ -71,7 +71,7 @@ SendCoinsDialog::SendCoinsDialog(const PlatformStyle *platformStyle, QWidget* pa
     connect(ui->splitBlockCheckBox, SIGNAL(stateChanged(int)), this, SLOT(splitBlockChecked(int)));
     connect(ui->splitBlockLineEdit, SIGNAL(textChanged(const QString&)), this, SLOT(splitBlockLineEditChanged(const QString&)));
 
-    // SPDR specific
+    // RWTA specific
     QSettings settings;
     if (!settings.contains("bUseDarksend"))
         settings.setValue("bUseDarksend", false);
@@ -965,7 +965,7 @@ void SendCoinsDialog::coinControlChangeEdited(const QString& text)
             ui->labelCoinControlChangeLabel->setText("");
         } else if (!IsValidDestination(addr)) // Invalid address
         {
-            ui->labelCoinControlChangeLabel->setText(tr("Warning: Invalid SPDR address"));
+            ui->labelCoinControlChangeLabel->setText(tr("Warning: Invalid RWTA address"));
         } else // Valid address
         {
             if (!model->IsSpendable(addr)) // Unknown change address

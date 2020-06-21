@@ -32,15 +32,15 @@
 #include <event2/thread.h>
 
 /** Default control port */
-const std::string DEFAULT_SPDR_CONTROL = "127.0.0.1:9051";
+const std::string DEFAULT_RWTA_CONTROL = "127.0.0.1:9051";
 /** RWTaler cookie size (from control-spec.txt) */
-static const int SPDR_COOKIE_SIZE = 32;
+static const int RWTA_COOKIE_SIZE = 32;
 /** Size of client/server nonce for SAFECOOKIE */
-static const int SPDR_NONCE_SIZE = 32;
+static const int RWTA_NONCE_SIZE = 32;
 /** For computing serverHash in SAFECOOKIE */
-static const std::string SPDR_SAFE_SERVERKEY = "RWTaler safe cookie authentication server-to-controller hash";
+static const std::string RWTA_SAFE_SERVERKEY = "RWTaler safe cookie authentication server-to-controller hash";
 /** For computing clientHash in SAFECOOKIE */
-static const std::string SPDR_SAFE_CLIENTKEY = "RWTaler safe cookie authentication controller-to-server hash";
+static const std::string RWTA_SAFE_CLIENTKEY = "RWTaler safe cookie authentication controller-to-server hash";
 /** Exponential backoff configuration - initial timeout in seconds */
 static const float RECONNECT_TIMEOUT_START = 1.0;
 /** Exponential backoff configuration - growth factor */
@@ -573,13 +573,13 @@ void RWTalerController::authchallenge_cb(RWTalerControlConnection& _conn, const 
                 return;
             }
 
-            std::vector<uint8_t> computedServerHash = ComputeResponse(SPDR_SAFE_SERVERKEY, cookie, clientNonce, serverNonce);
+            std::vector<uint8_t> computedServerHash = ComputeResponse(RWTA_SAFE_SERVERKEY, cookie, clientNonce, serverNonce);
             if (computedServerHash != serverHash) {
                 LogPrintf("rwtaler: ServerHash %s does not match expected ServerHash %s\n", HexStr(serverHash), HexStr(computedServerHash));
                 return;
             }
 
-            std::vector<uint8_t> computedClientHash = ComputeResponse(SPDR_SAFE_CLIENTKEY, cookie, clientNonce, serverNonce);
+            std::vector<uint8_t> computedClientHash = ComputeResponse(RWTA_SAFE_CLIENTKEY, cookie, clientNonce, serverNonce);
             _conn.Command("AUTHENTICATE " + HexStr(computedClientHash), boost::bind(&RWTalerController::auth_cb, this, _1, _2));
         } else {
             LogPrintf("rwtaler: Invalid reply to AUTHCHALLENGE\n");
@@ -639,16 +639,16 @@ void RWTalerController::protocolinfo_cb(RWTalerControlConnection& _conn, const R
         } else if (methods.count("SAFECOOKIE")) {
             // Cookie: hexdump -e '32/1 "%02x""\n"'  ~/.rwtaler/control_auth_cookie
             LogPrint("rwtaler", "rwtaler: Using SAFECOOKIE authentication, reading cookie authentication from %s\n", cookiefile);
-            std::pair<bool,std::string> status_cookie = ReadBinaryFile(cookiefile, SPDR_COOKIE_SIZE);
-            if (status_cookie.first && status_cookie.second.size() == SPDR_COOKIE_SIZE) {
+            std::pair<bool,std::string> status_cookie = ReadBinaryFile(cookiefile, RWTA_COOKIE_SIZE);
+            if (status_cookie.first && status_cookie.second.size() == RWTA_COOKIE_SIZE) {
                 // _conn.Command("AUTHENTICATE " + HexStr(status_cookie.second), boost::bind(&RWTalerController::auth_cb, this, _1, _2));
                 cookie = std::vector<uint8_t>(status_cookie.second.begin(), status_cookie.second.end());
-                clientNonce = std::vector<uint8_t>(SPDR_NONCE_SIZE, 0);
-                GetRandBytes(&clientNonce[0], SPDR_NONCE_SIZE);
+                clientNonce = std::vector<uint8_t>(RWTA_NONCE_SIZE, 0);
+                GetRandBytes(&clientNonce[0], RWTA_NONCE_SIZE);
                 _conn.Command("AUTHCHALLENGE SAFECOOKIE " + HexStr(clientNonce), boost::bind(&RWTalerController::authchallenge_cb, this, _1, _2));
             } else {
                 if (status_cookie.first) {
-                    LogPrintf("rwtaler: Authentication cookie %s is not exactly %i bytes, as is required by the spec\n", cookiefile, SPDR_COOKIE_SIZE);
+                    LogPrintf("rwtaler: Authentication cookie %s is not exactly %i bytes, as is required by the spec\n", cookiefile, RWTA_COOKIE_SIZE);
                 } else {
                     LogPrintf("rwtaler: Authentication cookie %s could not be opened (check permissions)\n", cookiefile);
                 }
@@ -717,7 +717,7 @@ static boost::thread rwtalerControlThread;
 
 static void RWTalerControlThread()
 {
-    RWTalerController ctrl(gBase, GetArg("-rwtalercontrol", DEFAULT_SPDR_CONTROL));
+    RWTalerController ctrl(gBase, GetArg("-rwtalercontrol", DEFAULT_RWTA_CONTROL));
 
     event_base_dispatch(gBase);
 }

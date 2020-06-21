@@ -28,7 +28,7 @@
     <message>
         <location line="+23"/>
         <location filename="../forms/ui_addeditrwtalernode.h" line="+1"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter an Alias (friendly name) for your RWTalerNodes Node and its address (either clearnet IP and port or Tor onion address and port).  The address should be in the format 123.456.789.123:9999 or akjdsafxjkhasdf.onion:9999.  A masternode private key and a collateral address will both be automatically generated for you.  You must send exactly 7000 SPDR to the collateral address.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter an Alias (friendly name) for your RWTalerNodes Node and its address (either clearnet IP and port or Tor onion address and port).  The address should be in the format 123.456.789.123:9999 or akjdsafxjkhasdf.onion:9999.  A masternode private key and a collateral address will both be automatically generated for you.  You must send exactly 7000 RWTA to the collateral address.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -227,12 +227,12 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your SPDR addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your RWTA addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>These are your SPDR addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your RWTA addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -392,7 +392,7 @@
     </message>
     <message>
         <location line="+0"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SPDR&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR RWTA&lt;/b&gt;!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -404,7 +404,7 @@
     </message>
     <message>
         <location line="-56"/>
-        <source>%1 will close now to finish the encryption process.Remember that encrypting your wallet cannot fully protect your SPDRs from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process.Remember that encrypting your wallet cannot fully protect your RWTAs from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -514,7 +514,7 @@
     <message>
         <location line="-425"/>
         <location filename="../forms/ui_bip38tooldialog.h" line="-48"/>
-        <source>The SPDR address to sign the message with</source>
+        <source>The RWTA address to sign the message with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -566,7 +566,7 @@
     <message>
         <location line="+80"/>
         <location filename="../forms/ui_bip38tooldialog.h" line="+9"/>
-        <source>Sign the message to prove you own this SPDR address</source>
+        <source>Sign the message to prove you own this RWTA address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -604,13 +604,13 @@
     <message>
         <location line="+47"/>
         <location filename="../forms/ui_bip38tooldialog.h" line="+3"/>
-        <source>The SPDR address the message was signed with</source>
+        <source>The RWTA address the message was signed with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+100"/>
         <location filename="../forms/ui_bip38tooldialog.h" line="+9"/>
-        <source>Verify the message to ensure it was signed with the specified SPDR address</source>
+        <source>Verify the message to ensure it was signed with the specified RWTA address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1077,7 +1077,7 @@
     </message>
     <message>
         <location line="-800"/>
-        <source>Send coins to a SPDR address</source>
+        <source>Send coins to a RWTA address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1107,17 +1107,17 @@
     </message>
     <message>
         <location line="+16"/>
-        <source>Modify configuration options for SPDR</source>
+        <source>Modify configuration options for RWTA</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+18"/>
-        <source>Sign messages with your SPDR addresses to prove you own them</source>
+        <source>Sign messages with your RWTA addresses to prove you own them</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified SPDR addresses</source>
+        <source>Verify messages to ensure they were signed with specified RWTA addresses</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1162,7 +1162,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Open a SPDR: URI or payment request</source>
+        <source>Open a RWTA: URI or payment request</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1182,12 +1182,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Converter for SPDR Smart Contract addresses</source>
+        <source>Converter for RWTA Smart Contract addresses</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>Show the RWTalercore help message to get a list with possible SPDR command-line options</source>
+        <source>Show the RWTalercore help message to get a list with possible RWTA command-line options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1384,7 +1384,7 @@
     </message>
     <message>
         <location filename="../rwtaler.cpp" line="+546"/>
-        <source>A fatal error occurred. SPDR can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. RWTA can no longer continue safely and will quit.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2440,7 +2440,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Gas price: SPDR price per gas unit. Default = %1, Min = %2</source>
+        <source>Gas price: RWTA price per gas unit. Default = %1, Min = %2</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2485,14 +2485,14 @@
         <location line="+13"/>
         <location filename="../forms/rwtalersendconfig.ui" line="+13"/>
         <location filename="../forms/ui_darksendconfig.h" line="+1"/>
-        <source>Use 2 separate masternodes to mix funds up to 10000 SPDR</source>
+        <source>Use 2 separate masternodes to mix funds up to 10000 RWTA</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
         <location filename="../forms/rwtalersendconfig.ui" line="+13"/>
         <location filename="../forms/ui_darksendconfig.h" line="+1"/>
-        <source>Use 8 separate masternodes to mix funds up to 10000 SPDR</source>
+        <source>Use 8 separate masternodes to mix funds up to 10000 RWTA</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2506,14 +2506,14 @@
         <location line="+13"/>
         <location filename="../forms/rwtalersendconfig.ui" line="+13"/>
         <location filename="../forms/ui_darksendconfig.h" line="+1"/>
-        <source>This option is the quickest and will cost about ~0.025 SPDR to anonymize 10000 SPDR</source>
+        <source>This option is the quickest and will cost about ~0.025 RWTA to anonymize 10000 RWTA</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
         <location filename="../forms/rwtalersendconfig.ui" line="+13"/>
         <location filename="../forms/ui_darksendconfig.h" line="+1"/>
-        <source>This option is moderately fast and will cost about 0.05 SPDR to anonymize 10000 SPDR</source>
+        <source>This option is moderately fast and will cost about 0.05 RWTA to anonymize 10000 RWTA</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2527,7 +2527,7 @@
         <location line="+13"/>
         <location filename="../forms/rwtalersendconfig.ui" line="+13"/>
         <location filename="../forms/ui_darksendconfig.h" line="+1"/>
-        <source>0.1 SPDR per 10000 SPDR you anonymize.</source>
+        <source>0.1 RWTA per 10000 RWTA you anonymize.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2543,19 +2543,19 @@
     <message>
         <location line="-27"/>
         <location filename="../rwtalersendconfig.cpp" line="-27"/>
-        <source>Darksend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening SPDR&apos;s configuration screen.</source>
+        <source>Darksend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening RWTA&apos;s configuration screen.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
         <location filename="../rwtalersendconfig.cpp" line="+14"/>
-        <source>Darksend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening SPDR&apos;s configuration screen.</source>
+        <source>Darksend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening RWTA&apos;s configuration screen.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
         <location filename="../rwtalersendconfig.cpp" line="+14"/>
-        <source>Darksend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening SPDR&apos;s configuration screen.</source>
+        <source>Darksend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening RWTA&apos;s configuration screen.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2676,7 +2676,7 @@
     </message>
     <message>
         <location line="+68"/>
-        <source>The entered address &quot;%1&quot; is not a valid SPDR address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid RWTA address.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3021,7 +3021,7 @@
     </message>
     <message>
         <location line="+2"/>
-        <source>&lt;p style=&quot;line-height:130&quot;&gt;If the product you have received with this license is pre-commercial release or beta Software (&quot;Pre-release Software&quot;), then                     the following Section applies. To the extent that any provision in this Section is in conflict with any other term or condition in this Agreement, this                     Section shall supercede such other term(s) and condition(s) with respect to the Pre-release Software, but only to the extent necessary to resolve the conflict.                     You acknowledge that the Software is a pre-release version, does not represent final product from RWTalercore, and may contain bugs, errors and other problems that                     could cause system or other failures and data loss. Consequently, the Pre-release Software is provided to you &quot;AS-IS&quot;, and RWTalercore disclaims any warranty or                     liability obligations to you of any kind. WHERE LEGALLY LIABILITY CANNOT BE EXCLUDED FOR PRE-RELEASE SOFTWARE, BUT IT MAY BE LIMITED, SPDRCORE&apos;S LIABILITY AND                     THAT OF ITS SUPPLIERS SHALL BE LIMITED TO THE SUM OF FIFTY DOLLARS (U.S. $50) IN TOTAL. You acknowledge that RWTalercore has not promised or guaranteed to you that                     Pre-release Software will be announced or made available to anyone in the future, that RWTalercore has no express or implied obligation to you to announce or                     introduce the Pre-release Software and that RWTalercore may not introduce a product similar to or compatible with the Pre-release Software. Accordingly, you                     acknowledge that any research or development that you perform regarding the Pre-release Software or any product associated with the Pre-release Software is                     done entirely at your own risk. During the term of this Agreement, if requested by RWTalercore, you will provide feedback to RWTalercore regarding testing and use of                     the Pre-release Software, including error or bug reports. If you have been provided the Pre-release Software pursuant to a separate written agreement, such as                     the RWTalercore Serial Agreement for Unreleased Products, your use of the Software is also governed by such agreement. You agree that you may not and certify that                     you will not sublicense, lease, loan, rent, or transfer the Pre-release Software. Upon receipt of a later unreleased version of the Pre-release Software or                     release by RWTalercore of a publicly released commercial version of the Software, whether as a stand-alone product or as part of a larger product, you agree to                     return or destroy all earlier Pre-release Software received from RWTalercore and to abide by the terms of the End User License Agreement for any such later versions                     of the Pre-release Software. Notwithstanding anything in this Section to the contrary, if you are located outside the United States of America or Canada, you agree                     that you will return or destroy all unreleased versions of the Pre-release Software within thirty (30) days of the completion of your testing of the Software                     when such date is earlier than the date for RWTalercore&apos;s first commercial shipment of the publicly released (commercial) Software.&lt;/p&gt;</source>
+        <source>&lt;p style=&quot;line-height:130&quot;&gt;If the product you have received with this license is pre-commercial release or beta Software (&quot;Pre-release Software&quot;), then                     the following Section applies. To the extent that any provision in this Section is in conflict with any other term or condition in this Agreement, this                     Section shall supercede such other term(s) and condition(s) with respect to the Pre-release Software, but only to the extent necessary to resolve the conflict.                     You acknowledge that the Software is a pre-release version, does not represent final product from RWTalercore, and may contain bugs, errors and other problems that                     could cause system or other failures and data loss. Consequently, the Pre-release Software is provided to you &quot;AS-IS&quot;, and RWTalercore disclaims any warranty or                     liability obligations to you of any kind. WHERE LEGALLY LIABILITY CANNOT BE EXCLUDED FOR PRE-RELEASE SOFTWARE, BUT IT MAY BE LIMITED, RWTACORE&apos;S LIABILITY AND                     THAT OF ITS SUPPLIERS SHALL BE LIMITED TO THE SUM OF FIFTY DOLLARS (U.S. $50) IN TOTAL. You acknowledge that RWTalercore has not promised or guaranteed to you that                     Pre-release Software will be announced or made available to anyone in the future, that RWTalercore has no express or implied obligation to you to announce or                     introduce the Pre-release Software and that RWTalercore may not introduce a product similar to or compatible with the Pre-release Software. Accordingly, you                     acknowledge that any research or development that you perform regarding the Pre-release Software or any product associated with the Pre-release Software is                     done entirely at your own risk. During the term of this Agreement, if requested by RWTalercore, you will provide feedback to RWTalercore regarding testing and use of                     the Pre-release Software, including error or bug reports. If you have been provided the Pre-release Software pursuant to a separate written agreement, such as                     the RWTalercore Serial Agreement for Unreleased Products, your use of the Software is also governed by such agreement. You agree that you may not and certify that                     you will not sublicense, lease, loan, rent, or transfer the Pre-release Software. Upon receipt of a later unreleased version of the Pre-release Software or                     release by RWTalercore of a publicly released commercial version of the Software, whether as a stand-alone product or as part of a larger product, you agree to                     return or destroy all earlier Pre-release Software received from RWTalercore and to abide by the terms of the End User License Agreement for any such later versions                     of the Pre-release Software. Notwithstanding anything in this Section to the contrary, if you are located outside the United States of America or Canada, you agree                     that you will return or destroy all unreleased versions of the Pre-release Software within thirty (30) days of the completion of your testing of the Software                     when such date is earlier than the date for RWTalercore&apos;s first commercial shipment of the publicly released (commercial) Software.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3031,7 +3031,7 @@
     </message>
     <message>
         <location line="+2"/>
-        <source>&lt;p style=&quot;line-height:130&quot;&gt;IN NO EVENT WILL SPDRCORE OR ITS SUPPLIERS BE LIABLE TO YOU FOR ANY DAMAGES, CLAIMS OR COSTS WHATSOEVER OR ANY CONSEQUENTIAL, INDIRECT,                    INCIDENTAL DAMAGES, OR ANY LOST PROFITS OR LOST SAVINGS, EVEN IF AN SPDRCORE REPRESENTATIVE HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH LOSS, DAMAGES, CLAIMS OR                    COSTS OR FOR ANY CLAIM BY ANY THIRD PARTY. THE FOREGOING LIMITATIONS AND EXCLUSIONS APPLY TO THE EXTENT PERMITTED BY APPLICABLE LAW IN YOUR JURISDICTION. SPDRCORE&apos;S                    AGGREGATE LIABILITY AND THAT OF ITS SUPPLIERS UNDER OR IN CONNECTION WITH THIS AGREEMENT SHALL BE LIMITED TO THE AMOUNT PAID FOR THE SOFTWARE, IF ANY. Nothing                    contained in this Agreement limits RWTalercore&apos;s liability to you in the event of death or personal injury resulting from RWTalercore&apos;s negligence or for the tort of                    deceit (fraud). RWTalercore is acting on behalf of its suppliers for the purpose of disclaiming, excluding and/or limiting obligations, warranties and liability as                    provided in this Agreement, but in no other respects and for no other purpose. For further information, please see the jurisdiction specific information at the                    end of this Agreement, if any, or contact RWTalercore&apos;s Customer Support Department.&lt;/p&gt;</source>
+        <source>&lt;p style=&quot;line-height:130&quot;&gt;IN NO EVENT WILL RWTACORE OR ITS SUPPLIERS BE LIABLE TO YOU FOR ANY DAMAGES, CLAIMS OR COSTS WHATSOEVER OR ANY CONSEQUENTIAL, INDIRECT,                    INCIDENTAL DAMAGES, OR ANY LOST PROFITS OR LOST SAVINGS, EVEN IF AN RWTACORE REPRESENTATIVE HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH LOSS, DAMAGES, CLAIMS OR                    COSTS OR FOR ANY CLAIM BY ANY THIRD PARTY. THE FOREGOING LIMITATIONS AND EXCLUSIONS APPLY TO THE EXTENT PERMITTED BY APPLICABLE LAW IN YOUR JURISDICTION. RWTACORE&apos;S                    AGGREGATE LIABILITY AND THAT OF ITS SUPPLIERS UNDER OR IN CONNECTION WITH THIS AGREEMENT SHALL BE LIMITED TO THE AMOUNT PAID FOR THE SOFTWARE, IF ANY. Nothing                    contained in this Agreement limits RWTalercore&apos;s liability to you in the event of death or personal injury resulting from RWTalercore&apos;s negligence or for the tort of                    deceit (fraud). RWTalercore is acting on behalf of its suppliers for the purpose of disclaiming, excluding and/or limiting obligations, warranties and liability as                    provided in this Agreement, but in no other respects and for no other purpose. For further information, please see the jurisdiction specific information at the                    end of this Agreement, if any, or contact RWTalercore&apos;s Customer Support Department.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3295,7 +3295,7 @@
     <message>
         <location line="+10"/>
         <location filename="../forms/ui_intro.h" line="+1"/>
-        <source>RWTalercore will download and store a copy of the SPDR block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <source>RWTalercore will download and store a copy of the RWTA block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3592,7 +3592,7 @@
     <message>
         <location line="+19"/>
         <location filename="../forms/ui_modaloverlay.h" line="+1"/>
-        <source>This means that recent transactions will not be visible, and the balance will not be up-to-date until this process has completed. Attempting to spend SPDR during this time will not be accepted by the network!!!</source>
+        <source>This means that recent transactions will not be visible, and the balance will not be up-to-date until this process has completed. Attempting to spend RWTA during this time will not be accepted by the network!!!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3735,7 +3735,7 @@
     <message>
         <location line="-74"/>
         <location filename="../forms/ui_multisenddialog.h" line="-4"/>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other SPDR addresses after it matures.</source>
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other RWTA addresses after it matures.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4004,7 +4004,7 @@ Please check the address and try again.</source>
     <message>
         <location line="+90"/>
         <location filename="../forms/ui_optionsdialog.h" line="+13"/>
-        <source>Automatically open the SPDR client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the RWTA client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4034,13 +4034,13 @@ Please check the address and try again.</source>
     <message>
         <location line="-230"/>
         <location filename="../forms/ui_optionsdialog.h" line="-20"/>
-        <source>Automatically start SPDR after logging in to the system.</source>
+        <source>Automatically start RWTA after logging in to the system.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
         <location filename="../forms/ui_optionsdialog.h" line="+2"/>
-        <source>&amp;Start SPDR on system login</source>
+        <source>&amp;Start RWTA on system login</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4076,7 +4076,7 @@ Please check the address and try again.</source>
     <message>
         <location line="+15"/>
         <location filename="../forms/ui_optionsdialog.h" line="+2"/>
-        <source>Amount of SPDR to keep anonymized</source>
+        <source>Amount of RWTA to keep anonymized</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4178,7 +4178,7 @@ Please check the address and try again.</source>
     <message>
         <location line="+62"/>
         <location filename="../forms/ui_optionsdialog.h" line="+12"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting SPDR.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting RWTA.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4190,7 +4190,7 @@ Please check the address and try again.</source>
     <message>
         <location line="+17"/>
         <location filename="../forms/ui_optionsdialog.h" line="+6"/>
-        <source>Connect to the SPDR network through a SOCKS5 proxy.</source>
+        <source>Connect to the RWTA network through a SOCKS5 proxy.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4428,7 +4428,7 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
         <location filename="../forms/ui_overviewpage.h" line="+2"/>
         <location line="+56"/>
         <location line="+5"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the SPDR network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the RWTA network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4506,7 +4506,7 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
     <message>
         <location line="-894"/>
         <location filename="../forms/ui_overviewpage.h" line="-30"/>
-        <source>0 SPDR / 0 Rounds</source>
+        <source>0 RWTA / 0 Rounds</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5472,7 +5472,7 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
     <message>
         <location line="+253"/>
         <location filename="../forms/ui_rpcconsole.h" line="+21"/>
-        <source>Open the SPDR debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the RWTA debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5798,7 +5798,7 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
     </message>
     <message>
         <location line="-47"/>
-        <source>Welcome to the SPDR RPC console.</source>
+        <source>Welcome to the RWTA RPC console.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6401,7 +6401,7 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
     <message>
         <location line="+7"/>
         <location filename="../forms/ui_sendcoinsdialog.h" line="+1"/>
-        <source>0 SPDR</source>
+        <source>0 RWTA</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6479,13 +6479,13 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
     <message>
         <location line="-340"/>
         <location filename="../forms/ui_sendcoinsdialog.h" line="-25"/>
-        <source>If the custom fee is set to 1000 uSPDRs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uSPDRs in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 uSPDRs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <source>If the custom fee is set to 1000 uRWTAs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uRWTAs in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 uRWTAs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+16"/>
         <location filename="../forms/ui_sendcoinsdialog.h" line="+4"/>
-        <source>If the custom fee is set to 1000 uSPDRs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uSPDRs in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 uSPDRs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <source>If the custom fee is set to 1000 uRWTAs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uRWTAs in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 uRWTAs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6493,7 +6493,7 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
         <location line="+13"/>
         <location filename="../forms/ui_sendcoinsdialog.h" line="+4"/>
         <location line="+4"/>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for SPDR transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for RWTA transactions than the network can process.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6672,7 +6672,7 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
     </message>
     <message>
         <location line="+192"/>
-        <source>Warning: Invalid SPDR address</source>
+        <source>Warning: Invalid RWTA address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6814,7 +6814,7 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
     <message>
         <location line="+18"/>
         <location filename="../forms/ui_sendcoinsentry.h" line="+2"/>
-        <source>The SPDR address to send the payment to</source>
+        <source>The RWTA address to send the payment to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6894,7 +6894,7 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
     <message>
         <location line="+10"/>
         <location filename="../forms/ui_sendcoinsentry.h" line="+2"/>
-        <source>A message that was attached to the SPDR: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the SPDR network.</source>
+        <source>A message that was attached to the RWTA: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the RWTA network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7078,7 +7078,7 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
     </message>
     <message>
         <location line="+1"/>
-        <source>Gas price: SPDR price per gas unit. Default = %1, Min = %2.</source>
+        <source>Gas price: RWTA price per gas unit. Default = %1, Min = %2.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7159,7 +7159,7 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
     </message>
     <message>
         <location line="+1"/>
-        <source>Gas price: SPDR/gas unit. Default = %1, Min = %2.</source>
+        <source>Gas price: RWTA/gas unit. Default = %1, Min = %2.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7184,7 +7184,7 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
     </message>
     <message>
         <location line="+22"/>
-        <source>To send %1 you need SPDR in address &lt;br /&gt; %2.</source>
+        <source>To send %1 you need RWTA in address &lt;br /&gt; %2.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7229,7 +7229,7 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
     <message>
         <location line="+18"/>
         <location filename="../forms/ui_signverifymessagedialog.h" line="+2"/>
-        <source>The SPDR address to sign the message with</source>
+        <source>The RWTA address to sign the message with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7281,19 +7281,19 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
     <message>
         <location line="+21"/>
         <location filename="../forms/ui_signverifymessagedialog.h" line="+4"/>
-        <source>Sign the message to prove you own this SPDR address</source>
+        <source>Sign the message to prove you own this RWTA address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+106"/>
         <location filename="../forms/ui_signverifymessagedialog.h" line="+11"/>
-        <source>The SPDR address the message was signed with</source>
+        <source>The RWTA address the message was signed with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+37"/>
         <location filename="../forms/ui_signverifymessagedialog.h" line="+10"/>
-        <source>Verify the message to ensure it was signed with the specified SPDR address</source>
+        <source>Verify the message to ensure it was signed with the specified RWTA address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7574,7 +7574,7 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
         <location line="+10"/>
         <location line="+1015"/>
         <location line="+93"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the SPDR network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the RWTA network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7669,7 +7669,7 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
     </message>
     <message>
         <location line="+7"/>
-        <source>0 SPDR / 0 Rounds</source>
+        <source>0 RWTA / 0 Rounds</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8818,7 +8818,7 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
     <message>
         <location line="+15"/>
         <location filename="../../rwtaler-installer/src/forms/ui_updateinfodialog.h" line="+3"/>
-        <source>https://github.com/SPDR-Core/rwtaler/releases</source>
+        <source>https://github.com/RWTA-Core/rwtaler/releases</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8884,7 +8884,7 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
     <message>
         <location line="-19"/>
         <location line="+10"/>
-        <source>InstanTX doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 SPDR.</source>
+        <source>InstanTX doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 RWTA.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -9045,12 +9045,12 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
     </message>
     <message>
         <location line="+3"/>
-        <source>Fees (in SPDR/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <source>Fees (in RWTA/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Fees (in SPDR/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <source>Fees (in RWTA/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -9190,12 +9190,12 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
     </message>
     <message>
         <location line="+4"/>
-        <source>Unable to locate enough DarkSend non-denominated funds for this transaction that are not equal 10000 SPDR.</source>
+        <source>Unable to locate enough DarkSend non-denominated funds for this transaction that are not equal 10000 RWTA.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 SPDR.</source>
+        <source>Unable to locate enough funds for this transaction that are not equal 10000 RWTA.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -9910,7 +9910,7 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
     </message>
     <message>
         <location line="+301"/>
-        <source>Fee (in SPDR/kB) to add to transactions you send (default: %s)</source>
+        <source>Fee (in RWTA/kB) to add to transactions you send (default: %s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -9975,7 +9975,7 @@ https://www.transifex.com/rwtalercore/rwtalercore</source>
     </message>
     <message>
         <location line="+2"/>
-        <source>Keep N SPDR anonymized (default: %u)</source>
+        <source>Keep N RWTA anonymized (default: %u)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

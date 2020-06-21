@@ -236,7 +236,7 @@ public:
     bool reqWallet;
 };
 /**
- * SPDR RPC command dispatcher.
+ * RWTA RPC command dispatcher.
  */
 class CRPCTable
 {

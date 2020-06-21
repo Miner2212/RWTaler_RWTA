@@ -28,8 +28,8 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#ifndef SPDR_BIP39_H
-#define SPDR_BIP39_H
+#ifndef RWTA_BIP39_H
+#define RWTA_BIP39_H
 
 #include "allocators.h"
 

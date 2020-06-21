@@ -1,9 +1,9 @@
 /* src/config/rwtaler-config.h.  Generated from rwtaler-config.h.in by configure.  */
 /* src/config/rwtaler-config.h.in.  Generated from configure.ac by autoheader.  */
 
-#ifndef SPDR_CONFIG_H
+#ifndef RWTA_CONFIG_H
 
-#define SPDR_CONFIG_H
+#define RWTA_CONFIG_H
 
 /* Define if building universal (internal helper macro) */
 /* #undef AC_APPLE_UNIVERSAL_BUILD */
@@ -399,4 +399,4 @@
 /* Define for large files, on AIX-style hosts. */
 /* #undef _LARGE_FILES */
 
-#endif //SPDR_CONFIG_H
+#endif //RWTA_CONFIG_H

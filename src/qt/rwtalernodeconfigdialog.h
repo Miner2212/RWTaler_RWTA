@@ -1,5 +1,5 @@
-#ifndef SPDRNODECONFIGDIALOG_H
-#define SPDRNODECONFIGDIALOG_H
+#ifndef RWTANODECONFIGDIALOG_H
+#define RWTANODECONFIGDIALOG_H
 
 #include <QDialog>
 
@@ -24,4 +24,4 @@ private:
     Ui::RWTalerNodeConfigDialog *ui;
 };
 
-#endif // SPDRNODECONFIGDIALOG_H
+#endif // RWTANODECONFIGDIALOG_H

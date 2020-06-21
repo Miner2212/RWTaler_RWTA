@@ -1,5 +1,5 @@
-#ifndef ADDEDITSPDRNODE_H
-#define ADDEDITSPDRNODE_H
+#ifndef ADDEDITRWTANODE_H
+#define ADDEDITRWTANODE_H
 
 #include <QDialog>
 
@@ -28,4 +28,4 @@ private:
     Ui::AddEditRWTalerNode *ui;
 };
 
-#endif // ADDEDITSPDRNODE_H
+#endif // ADDEDITRWTANODE_H

@@ -135,7 +135,7 @@ public:
         consensus.nMajorityRejectBlockOutdated = 950;
         consensus.nMajorityWindow = 1000;
         consensus.powLimit = ~uint256(0) >> 16; // RWTA starting difficulty is 1 / 2^12
-        consensus.nPowTargetTimespan = 30 * 60; //36 * 60 * 60; // SPDR: 1 36hrs
+        consensus.nPowTargetTimespan = 30 * 60; //36 * 60 * 60; // RWTA: 1 36hrs
         consensus.nPowTargetSpacing = 2 * 60;  // RWTA: 2 minute
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
@@ -204,12 +204,12 @@ public:
 
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,62); // RWTA address start with 'S'
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,30); // SPDR script addresses start with 'D'
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,30); // RWTA script addresses start with 'D'
         base58Prefixes[SECRET_KEY]     = std::vector<unsigned char>(1,155);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x07)(0x28)(0xA2)(0x4E).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x03)(0xD8)(0xA1)(0xE5).convert_to_container<std::vector<unsigned char> >();
 
-        // SPDR BIP44 coin type is '1'
+        // RWTA BIP44 coin type is '1'
         nExtCoinType = 1;
 
         bech32_hrp = "bc";
@@ -256,7 +256,7 @@ public:
         //consensus.BIP34Height = 227931;
         //consensus.BIP34Hash = uint256S("0x000000000000024b89b42a942fe0d9fea3bb44ab7bd1b19115dd6a759c0808b8");
         consensus.powLimit = ~uint256(0) >> 10; // RWTA starting difficulty is 1 / 2^12
-        consensus.nPowTargetTimespan = 30 * 60; //36 * 60 * 60; // SPDR: 1 36hrs
+        consensus.nPowTargetTimespan = 30 * 60; //36 * 60 * 60; // RWTA: 1 36hrs
         consensus.nPowTargetSpacing = 2 * 60;  // RWTA: 2 minute
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
@@ -540,7 +540,7 @@ public:
         assert(genesis.hashMerkleRoot == uint256("d44221eb66b57f1c672d26e6e6d3ffa3e91c6bd986004c9109b3a68ed8aaa2ec"));
 
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,48); // SPDR Start letter L
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,48); // RWTA Start letter L
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,64);
         base58Prefixes[SECRET_KEY]     = std::vector<unsigned char>(1,155);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x07)(0x28)(0xA2)(0x4E).convert_to_container<std::vector<unsigned char> >();

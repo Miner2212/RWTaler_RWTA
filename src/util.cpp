@@ -101,7 +101,7 @@ using namespace std;
 
 regex hexData("^([0-9a-fA-f]{2,}$)");
 
-//SPDR only features
+//RWTA only features
 int nLogFile = 1;
 bool fMasterNode = false;
 std::atomic<bool> hideLogMessage(false);
@@ -241,7 +241,7 @@ bool LogAcceptCategory(const char* category)
             const vector<string>& categories = mapMultiArgs["-debug"];
             ptrCategory.reset(new set<string>(categories.begin(), categories.end()));
             // thread_specific_ptr automatically deletes the set when the thread ends.
-            // "rwtaler" is a composite category enabling all SPDR-related debug output
+            // "rwtaler" is a composite category enabling all RWTA-related debug output
             if (ptrCategory->count(string("rwtaler"))) {
                 ptrCategory->insert(string("darksend"));
                 ptrCategory->insert(string("instantx"));
@@ -514,13 +514,13 @@ void PrintExceptionContinue(std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-// Windows < Vista: C:\Documents and Settings\Username\Application Data\SPDR
-// Windows >= Vista: C:\Users\Username\AppData\Roaming\SPDR
-// Mac: ~/Library/Application Support/SPDR
+// Windows < Vista: C:\Documents and Settings\Username\Application Data\RWTA
+// Windows >= Vista: C:\Users\Username\AppData\Roaming\RWTA
+// Mac: ~/Library/Application Support/RWTA
 // Unix: ~/.rwtaler
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "SPDR";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "RWTA";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -532,7 +532,7 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     TryCreateDirectory(pathRet);
-    return pathRet / "SPDR";
+    return pathRet / "RWTA";
 #else
     // Unix
     return pathRet / ".rwtaler";

@@ -97,7 +97,7 @@ struct CNodeStateStats;
 #define WORKING_VERSION "/RWTalercore:1.2.0/"
 #endif
 
-static const int64_t DARKSEND_COLLATERAL = (7000*COIN); //7000 SPDR
+static const int64_t DARKSEND_COLLATERAL = (7000*COIN); //7000 RWTA
 static const int64_t DARKSEND_FEE = (0.002*COIN); // reward masternode
 static const int64_t DARKSEND_POOL_MAX = (1999999.99*COIN);
 

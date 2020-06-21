@@ -206,7 +206,7 @@ def main():
 
     enable_wallet = config["components"].getboolean("ENABLE_WALLET")
     enable_utils = config["components"].getboolean("ENABLE_UTILS")
-    enable_rwtalerd = config["components"].getboolean("ENABLE_SPDRD")
+    enable_rwtalerd = config["components"].getboolean("ENABLE_RWTAD")
 
     if config["environment"]["EXEEXT"] == ".exe" and not args.force:
         # https://github.com/rwtaler/rwtaler/commit/d52802551752140cf41f0d9a225a43e84404d3e9
@@ -280,9 +280,9 @@ def run_tests(test_list, src_dir, build_dir, exeext, tmpdir, jobs=1, enable_cove
         print("%sWARNING!%s There is a cache directory here: %s. If tests fail unexpectedly, try deleting the cache directory." % (BOLD[1], BOLD[0], cache_dir))
 
     #Set env vars
-    if "SPDRD" not in os.environ:
-        os.environ["SPDRD"] = build_dir + '/src/rwtalerd' + exeext
-        os.environ["SPDRCLI"] = build_dir + '/src/rwtaler-cli' + exeext
+    if "RWTAD" not in os.environ:
+        os.environ["RWTAD"] = build_dir + '/src/rwtalerd' + exeext
+        os.environ["RWTACLI"] = build_dir + '/src/rwtaler-cli' + exeext
 
     tests_dir = src_dir + '/test/functional/'
 

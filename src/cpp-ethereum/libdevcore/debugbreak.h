@@ -100,7 +100,7 @@ enum { HAVE_TRAP_INSTRUCTION = 0, };
 __attribute__((gnu_inline, always_inline))
 static void __inline__ debug_break(void)
 {
-#ifdef SPDR_BUILD
+#ifdef RWTA_BUILD
     __builtin_trap();
 #else
 	if (HAVE_TRAP_INSTRUCTION) {

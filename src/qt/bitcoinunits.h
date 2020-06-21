@@ -46,7 +46,7 @@ using namespace boost::multiprecision;
 #define THIN_SP_UTF8 REAL_THIN_SP_UTF8
 #define THIN_SP_HTML HTML_HACK_SP
 
-/** SPDR unit definitions. Encapsulates parsing and formatting
+/** RWTA unit definitions. Encapsulates parsing and formatting
    and serves as list model for drop-down selection boxes.
 */
 class BitcoinUnits : public QAbstractListModel
@@ -56,13 +56,13 @@ class BitcoinUnits : public QAbstractListModel
 public:
     explicit BitcoinUnits(QObject *parent);
 
-    /** SPDR units.
+    /** RWTA units.
       @note Source: https://en.bitcoin.it/wiki/Units . Please add only sensible ones
      */
     enum Unit {
-        SPDR,
-        mSPDR,
-        uSPDR
+        RWTA,
+        mRWTA,
+        uRWTA
     };
 
     enum SeparatorStyle {

@@ -8,8 +8,8 @@
 /**
  * Functionality for communicating with RWTalerGate.
  */
-#ifndef BITCOIN_SPDRCONTROL_H
-#define BITCOIN_SPDRCONTROL_H
+#ifndef BITCOIN_RWTACONTROL_H
+#define BITCOIN_RWTACONTROL_H
 
 #include <string>
 
@@ -17,13 +17,13 @@
 #include <boost/chrono/chrono.hpp>
 #include <boost/thread.hpp>
 
-extern const std::string DEFAULT_SPDR_CONTROL;
+extern const std::string DEFAULT_RWTA_CONTROL;
 static const bool DEFAULT_LISTEN_ONION = true;
 
 void StartRWTalerControl(boost::thread_group& threadGroup);
 void InterruptRWTalerControl();
 void StopRWTalerControl();
 
-#endif /* BITCOIN_SPDRCONTROL_H */
+#endif /* BITCOIN_RWTACONTROL_H */
 
 

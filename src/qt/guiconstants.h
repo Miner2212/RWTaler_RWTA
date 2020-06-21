@@ -49,9 +49,9 @@ static const int MAX_URI_LENGTH = 255;
 /* Number of frames in spinner animation */
 #define SPINNER_FRAMES 35
 
-#define QAPP_ORG_NAME "SPDR"
+#define QAPP_ORG_NAME "RWTA"
 #define QAPP_ORG_DOMAIN "spidervps.net"
-#define QAPP_APP_NAME_DEFAULT "SPDR-Qt"
-#define QAPP_APP_NAME_TESTNET "SPDR-Qt-testnet"
+#define QAPP_APP_NAME_DEFAULT "RWTA-Qt"
+#define QAPP_APP_NAME_TESTNET "RWTA-Qt-testnet"
 
 #endif // BITCOIN_QT_GUICONSTANTS_H

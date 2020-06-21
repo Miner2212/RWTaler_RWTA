@@ -667,7 +667,7 @@ configure:20617: result: /usr/bin/pkg-config
 configure:20642: checking pkg-config is at least version 0.9.0
 configure:20645: result: yes
 configure:20769: checking whether byte ordering is bigendian
-configure:20784: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD conftest.cpp >&5
+configure:20784: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD conftest.cpp >&5
 conftest.cpp:24:9: error: expected unqualified-id before 'not' token
          not a universal capable compiler
          ^
@@ -701,9 +701,9 @@ configure: failed program was:
 | 	     #endif
 | 	     typedef int dummy;
 | 
-configure:20829: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD conftest.cpp >&5
+configure:20829: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD conftest.cpp >&5
 configure:20829: $? = 0
-configure:20847: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD conftest.cpp >&5
+configure:20847: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD conftest.cpp >&5
 conftest.cpp: In function 'int main()':
 conftest.cpp:30:8: error: 'big' was not declared in this scope
     not big endian
@@ -751,39 +751,39 @@ configure:20975: result: no
 configure:21176: checking whether gcc is Clang
 configure:21201: result: no
 configure:21324: checking whether pthreads work with -pthread
-configure:21418: gcc -o conftest -g -O2 -pthread -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  conftest.c   >&5
+configure:21418: gcc -o conftest -g -O2 -pthread -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  conftest.c   >&5
 configure:21418: $? = 0
 configure:21427: result: yes
 configure:21446: checking for joinable pthread attribute
-configure:21464: gcc -o conftest -g -O2 -pthread -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  conftest.c   >&5
+configure:21464: gcc -o conftest -g -O2 -pthread -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  conftest.c   >&5
 configure:21464: $? = 0
 configure:21472: result: PTHREAD_CREATE_JOINABLE
 configure:21486: checking whether more special flags are required for pthreads
 configure:21499: result: no
 configure:21507: checking for PTHREAD_PRIO_INHERIT
-configure:21523: gcc -o conftest -g -O2 -pthread -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  conftest.c   >&5
+configure:21523: gcc -o conftest -g -O2 -pthread -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  conftest.c   >&5
 configure:21523: $? = 0
 configure:21532: result: yes
 configure:21646: checking for special C compiler options needed for large files
 configure:21691: result: no
 configure:21697: checking for _FILE_OFFSET_BITS value needed for large files
-configure:21722: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD conftest.cpp >&5
+configure:21722: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD conftest.cpp >&5
 configure:21722: $? = 0
 configure:21754: result: no
 configure:21840: checking whether strerror_r is declared
-configure:21840: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD conftest.cpp >&5
+configure:21840: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD conftest.cpp >&5
 configure:21840: $? = 0
 configure:21840: result: yes
 configure:21853: checking for strerror_r
-configure:21853: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  conftest.cpp  >&5
+configure:21853: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  conftest.cpp  >&5
 configure:21853: $? = 0
 configure:21853: result: yes
 configure:21862: checking whether strerror_r returns char *
-configure:21886: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD conftest.cpp >&5
+configure:21886: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD conftest.cpp >&5
 configure:21886: $? = 0
 configure:21924: result: yes
 configure:21945: checking whether the linker accepts -Wl,--large-address-aware
-configure:21964: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD   -Wl,--large-address-aware conftest.cpp  >&5
+configure:21964: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD   -Wl,--large-address-aware conftest.cpp  >&5
 /usr/bin/ld: unrecognized option '--large-address-aware'
 /usr/bin/ld: use the --help option for usage information
 collect2: error: ld returned 1 exit status
@@ -826,11 +826,11 @@ configure: failed program was:
 | }
 configure:21973: result: no
 configure:21985: checking for __attribute__((visibility))
-configure:22009: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  conftest.cpp  >&5
+configure:22009: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  conftest.cpp  >&5
 configure:22009: $? = 0
 configure:22022: result: yes
 configure:22038: checking for __attribute__((dllexport))
-configure:22059: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  conftest.cpp  >&5
+configure:22059: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  conftest.cpp  >&5
 conftest.cpp:31:62: warning: 'dllexport' attribute directive ignored [-Wattributes]
                      __attribute__((dllexport)) int foo( void ) { return 0; }
                                                               ^
@@ -838,7 +838,7 @@ cc1plus: warning: unrecognized command line option '-Wno-implicit-fallthrough'
 configure:22059: $? = 0
 configure:22072: result: no
 configure:22088: checking for __attribute__((dllimport))
-configure:22109: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  conftest.cpp  >&5
+configure:22109: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  conftest.cpp  >&5
 conftest.cpp:31:62: warning: 'dllimport' attribute directive ignored [-Wattributes]
                      int foo( void ) __attribute__((dllimport));
                                                               ^
@@ -846,31 +846,31 @@ cc1plus: warning: unrecognized command line option '-Wno-implicit-fallthrough'
 configure:22109: $? = 0
 configure:22122: result: no
 configure:22222: checking for library containing clock_gettime
-configure:22253: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  conftest.cpp  >&5
+configure:22253: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  conftest.cpp  >&5
 configure:22253: $? = 0
 configure:22270: result: none required
 configure:22282: checking whether C++ compiler accepts -fPIC
-configure:22301: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD conftest.cpp >&5
+configure:22301: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD conftest.cpp >&5
 configure:22301: $? = 0
 configure:22309: result: yes
 configure:22320: checking whether C++ compiler accepts -Wstack-protector
-configure:22339: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD conftest.cpp >&5
+configure:22339: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD conftest.cpp >&5
 configure:22339: $? = 0
 configure:22347: result: yes
 configure:22355: checking whether C++ compiler accepts -fstack-protector-all
-configure:22374: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -fstack-protector-all -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD conftest.cpp >&5
+configure:22374: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -fstack-protector-all -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD conftest.cpp >&5
 configure:22374: $? = 0
 configure:22382: result: yes
 configure:22392: checking whether C++ preprocessor accepts -D_FORTIFY_SOURCE=2
-configure:22411: g++ -std=c++11 -E -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -D_FORTIFY_SOURCE=2 conftest.cpp
+configure:22411: g++ -std=c++11 -E -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -D_FORTIFY_SOURCE=2 conftest.cpp
 configure:22411: $? = 0
 configure:22419: result: yes
 configure:22423: checking whether C++ preprocessor accepts -U_FORTIFY_SOURCE
-configure:22442: g++ -std=c++11 -E -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE conftest.cpp
+configure:22442: g++ -std=c++11 -E -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE conftest.cpp
 configure:22442: $? = 0
 configure:22450: result: yes
 configure:22467: checking whether the linker accepts -Wl,--dynamicbase
-configure:22486: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD   -Wl,--dynamicbase conftest.cpp  >&5
+configure:22486: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD   -Wl,--dynamicbase conftest.cpp  >&5
 /usr/bin/ld: unrecognized option '--dynamicbase'
 /usr/bin/ld: use the --help option for usage information
 collect2: error: ld returned 1 exit status
@@ -914,7 +914,7 @@ configure: failed program was:
 | }
 configure:22495: result: no
 configure:22503: checking whether the linker accepts -Wl,--nxcompat
-configure:22522: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD   -Wl,--nxcompat conftest.cpp  >&5
+configure:22522: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD   -Wl,--nxcompat conftest.cpp  >&5
 /usr/bin/ld: unrecognized option '--nxcompat'
 /usr/bin/ld: use the --help option for usage information
 collect2: error: ld returned 1 exit status
@@ -958,7 +958,7 @@ configure: failed program was:
 | }
 configure:22531: result: no
 configure:22539: checking whether the linker accepts -Wl,--high-entropy-va
-configure:22558: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD   -Wl,--high-entropy-va conftest.cpp  >&5
+configure:22558: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD   -Wl,--high-entropy-va conftest.cpp  >&5
 /usr/bin/ld: unrecognized option '--high-entropy-va'
 /usr/bin/ld: use the --help option for usage information
 collect2: error: ld returned 1 exit status
@@ -1002,17 +1002,17 @@ configure: failed program was:
 | }
 configure:22567: result: no
 configure:22575: checking whether the linker accepts -Wl,-z,relro
-configure:22594: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD   -Wl,-z,relro conftest.cpp  >&5
+configure:22594: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD   -Wl,-z,relro conftest.cpp  >&5
 configure:22594: $? = 0
 configure:22603: result: yes
 configure:22611: checking whether the linker accepts -Wl,-z,now
-configure:22630: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD   -Wl,-z,now conftest.cpp  >&5
+configure:22630: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD   -Wl,-z,now conftest.cpp  >&5
 configure:22630: $? = 0
 configure:22639: result: yes
 configure:22650: checking whether C++ compiler accepts -fPIC
 configure:22677: result: yes
 configure:22685: checking whether the linker accepts -pic
-configure:22704: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD   -pic conftest.cpp  >&5
+configure:22704: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD   -pic conftest.cpp  >&5
 g++: error: unrecognized command line option '-pic'
 configure:22704: $? = 1
 configure: failed program was:
@@ -1054,17 +1054,17 @@ configure: failed program was:
 | }
 configure:22713: result: no
 configure:22817: checking endian.h usability
-configure:22817: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:22817: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 configure:22817: $? = 0
 configure:22817: result: yes
 configure:22817: checking endian.h presence
-configure:22817: g++ -std=c++11 -E -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp
+configure:22817: g++ -std=c++11 -E -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp
 configure:22817: $? = 0
 configure:22817: result: yes
 configure:22817: checking for endian.h
 configure:22817: result: yes
 configure:22817: checking sys/endian.h usability
-configure:22817: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:22817: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 conftest.cpp:63:24: fatal error: sys/endian.h: No such file or directory
 compilation terminated.
 configure:22817: $? = 1
@@ -1134,7 +1134,7 @@ configure: failed program was:
 | #include <sys/endian.h>
 configure:22817: result: no
 configure:22817: checking sys/endian.h presence
-configure:22817: g++ -std=c++11 -E -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp
+configure:22817: g++ -std=c++11 -E -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp
 conftest.cpp:30:24: fatal error: sys/endian.h: No such file or directory
 compilation terminated.
 configure:22817: $? = 1
@@ -1173,21 +1173,21 @@ configure:22817: result: no
 configure:22817: checking for sys/endian.h
 configure:22817: result: no
 configure:22817: checking byteswap.h usability
-configure:22817: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:22817: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 configure:22817: $? = 0
 configure:22817: result: yes
 configure:22817: checking byteswap.h presence
-configure:22817: g++ -std=c++11 -E -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp
+configure:22817: g++ -std=c++11 -E -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp
 configure:22817: $? = 0
 configure:22817: result: yes
 configure:22817: checking for byteswap.h
 configure:22817: result: yes
 configure:22817: checking stdio.h usability
-configure:22817: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:22817: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 configure:22817: $? = 0
 configure:22817: result: yes
 configure:22817: checking stdio.h presence
-configure:22817: g++ -std=c++11 -E -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp
+configure:22817: g++ -std=c++11 -E -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp
 configure:22817: $? = 0
 configure:22817: result: yes
 configure:22817: checking for stdio.h
@@ -1203,95 +1203,95 @@ configure:22817: result: yes
 configure:22817: checking for sys/stat.h
 configure:22817: result: yes
 configure:22817: checking sys/select.h usability
-configure:22817: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:22817: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 configure:22817: $? = 0
 configure:22817: result: yes
 configure:22817: checking sys/select.h presence
-configure:22817: g++ -std=c++11 -E -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp
+configure:22817: g++ -std=c++11 -E -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp
 configure:22817: $? = 0
 configure:22817: result: yes
 configure:22817: checking for sys/select.h
 configure:22817: result: yes
 configure:22817: checking sys/prctl.h usability
-configure:22817: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:22817: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 configure:22817: $? = 0
 configure:22817: result: yes
 configure:22817: checking sys/prctl.h presence
-configure:22817: g++ -std=c++11 -E -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp
+configure:22817: g++ -std=c++11 -E -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp
 configure:22817: $? = 0
 configure:22817: result: yes
 configure:22817: checking for sys/prctl.h
 configure:22817: result: yes
 configure:22828: checking whether strnlen is declared
-configure:22828: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:22828: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 configure:22828: $? = 0
 configure:22828: result: yes
 configure:22841: checking whether daemon is declared
-configure:22841: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:22841: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 configure:22841: $? = 0
 configure:22841: result: yes
 configure:22853: checking whether le16toh is declared
-configure:22853: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:22853: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 configure:22853: $? = 0
 configure:22853: result: yes
 configure:22868: checking whether le32toh is declared
-configure:22868: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:22868: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 configure:22868: $? = 0
 configure:22868: result: yes
 configure:22883: checking whether le64toh is declared
-configure:22883: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:22883: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 configure:22883: $? = 0
 configure:22883: result: yes
 configure:22898: checking whether htole16 is declared
-configure:22898: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:22898: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 configure:22898: $? = 0
 configure:22898: result: yes
 configure:22913: checking whether htole32 is declared
-configure:22913: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:22913: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 configure:22913: $? = 0
 configure:22913: result: yes
 configure:22928: checking whether htole64 is declared
-configure:22928: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:22928: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 configure:22928: $? = 0
 configure:22928: result: yes
 configure:22943: checking whether be16toh is declared
-configure:22943: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:22943: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 configure:22943: $? = 0
 configure:22943: result: yes
 configure:22958: checking whether be32toh is declared
-configure:22958: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:22958: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 configure:22958: $? = 0
 configure:22958: result: yes
 configure:22973: checking whether be64toh is declared
-configure:22973: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:22973: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 configure:22973: $? = 0
 configure:22973: result: yes
 configure:22988: checking whether htobe16 is declared
-configure:22988: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:22988: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 configure:22988: $? = 0
 configure:22988: result: yes
 configure:23003: checking whether htobe32 is declared
-configure:23003: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:23003: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 configure:23003: $? = 0
 configure:23003: result: yes
 configure:23018: checking whether htobe64 is declared
-configure:23018: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:23018: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 configure:23018: $? = 0
 configure:23018: result: yes
 configure:23035: checking whether bswap_16 is declared
-configure:23035: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:23035: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 configure:23035: $? = 0
 configure:23035: result: yes
 configure:23048: checking whether bswap_32 is declared
-configure:23048: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:23048: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 configure:23048: $? = 0
 configure:23048: result: yes
 configure:23061: checking whether bswap_64 is declared
-configure:23061: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:23061: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 configure:23061: $? = 0
 configure:23061: result: yes
 configure:23076: checking for MSG_NOSIGNAL
-configure:23089: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:23089: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 conftest.cpp: In function 'int main()':
 conftest.cpp:60:6: warning: unused variable 'f' [-Wunused-variable]
   int f = MSG_NOSIGNAL;
@@ -1303,19 +1303,19 @@ configure:23090: result: yes
 configure:23101: checking for library containing clock_gettime
 configure:23149: result: none required
 configure:23158: checking for visibility attribute
-configure:23167: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2   -Wl,-z,relro -Wl,-z,now conftest.cpp  >&5
+configure:23167: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2   -Wl,-z,relro -Wl,-z,now conftest.cpp  >&5
 configure:23167: $? = 0
 configure:23172: result: yes
 configure:23193: checking for thread_local support
-configure:23207: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2   -Wl,-z,relro -Wl,-z,now -pthread conftest.cpp  >&5
+configure:23207: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2   -Wl,-z,relro -Wl,-z,now -pthread conftest.cpp  >&5
 configure:23207: $? = 0
 configure:23212: result: yes
 configure:23267: checking for c++11 atomics
-configure:23282: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -std=c++0x -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:23282: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -std=c++0x -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 configure:23282: $? = 0
 configure:23283: result: yes
 configure:23329: checking for Berkeley DB C++ headers
-configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 conftest.cpp:60:35: fatal error: bdb4.8/db_cxx.h: No such file or directory
 compilation terminated.
 configure:23359: $? = 1
@@ -1392,7 +1392,7 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 conftest.cpp:60:37: fatal error: libdb4.8/db_cxx.h: No such file or directory
 compilation terminated.
 configure:23359: $? = 1
@@ -1469,7 +1469,7 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 conftest.cpp:60:34: fatal error: db4.8/db_cxx.h: No such file or directory
 compilation terminated.
 configure:23359: $? = 1
@@ -1546,7 +1546,7 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 conftest.cpp:60:34: fatal error: bdb48/db_cxx.h: No such file or directory
 compilation terminated.
 configure:23359: $? = 1
@@ -1623,7 +1623,7 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 conftest.cpp:60:36: fatal error: libdb48/db_cxx.h: No such file or directory
 compilation terminated.
 configure:23359: $? = 1
@@ -1700,7 +1700,7 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 conftest.cpp:60:33: fatal error: db48/db_cxx.h: No such file or directory
 compilation terminated.
 configure:23359: $? = 1
@@ -1777,7 +1777,7 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 conftest.cpp:60:33: fatal error: bdb4/db_cxx.h: No such file or directory
 compilation terminated.
 configure:23359: $? = 1
@@ -1854,7 +1854,7 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 conftest.cpp:60:35: fatal error: libdb4/db_cxx.h: No such file or directory
 compilation terminated.
 configure:23359: $? = 1
@@ -1931,7 +1931,7 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 conftest.cpp:60:32: fatal error: db4/db_cxx.h: No such file or directory
 compilation terminated.
 configure:23359: $? = 1
@@ -2008,7 +2008,7 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 conftest.cpp:60:33: fatal error: bdb5/db_cxx.h: No such file or directory
 compilation terminated.
 configure:23359: $? = 1
@@ -2085,7 +2085,7 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 conftest.cpp:60:35: fatal error: libdb5/db_cxx.h: No such file or directory
 compilation terminated.
 configure:23359: $? = 1
@@ -2162,7 +2162,7 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 conftest.cpp:60:32: fatal error: db5/db_cxx.h: No such file or directory
 compilation terminated.
 configure:23359: $? = 1
@@ -2239,7 +2239,7 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 conftest.cpp:60:35: fatal error: bdb5.3/db_cxx.h: No such file or directory
 compilation terminated.
 configure:23359: $? = 1
@@ -2316,7 +2316,7 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 conftest.cpp:60:37: fatal error: libdb5.3/db_cxx.h: No such file or directory
 compilation terminated.
 configure:23359: $? = 1
@@ -2393,7 +2393,7 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 conftest.cpp:60:34: fatal error: db5.3/db_cxx.h: No such file or directory
 compilation terminated.
 configure:23359: $? = 1
@@ -2470,7 +2470,7 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 conftest.cpp:60:32: fatal error: bdb/db_cxx.h: No such file or directory
 compilation terminated.
 configure:23359: $? = 1
@@ -2547,7 +2547,7 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 conftest.cpp:60:34: fatal error: libdb/db_cxx.h: No such file or directory
 compilation terminated.
 configure:23359: $? = 1
@@ -2624,7 +2624,7 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 conftest.cpp:60:31: fatal error: db/db_cxx.h: No such file or directory
 compilation terminated.
 configure:23359: $? = 1
@@ -2701,35 +2701,35 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:23359: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 configure:23359: $? = 0
-configure:23388: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:23388: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 configure:23388: $? = 0
 configure:23431: result: default
 configure:23454: checking for main in -ldb_cxx-4.8
-configure:23473: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2   -Wl,-z,relro -Wl,-z,now conftest.cpp -ldb_cxx-4.8   >&5
+configure:23473: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2   -Wl,-z,relro -Wl,-z,now conftest.cpp -ldb_cxx-4.8   >&5
 configure:23473: $? = 0
 configure:23483: result: yes
 configure:23505: checking miniupnpc/miniwget.h usability
-configure:23505: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:23505: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 configure:23505: $? = 0
 configure:23505: result: yes
 configure:23505: checking miniupnpc/miniwget.h presence
-configure:23505: g++ -std=c++11 -E -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp
+configure:23505: g++ -std=c++11 -E -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp
 configure:23505: $? = 0
 configure:23505: result: yes
 configure:23505: checking for miniupnpc/miniwget.h
 configure:23505: result: yes
 configure:23510: checking for main in -lminiupnpc
-configure:23529: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2   -Wl,-z,relro -Wl,-z,now conftest.cpp -lminiupnpc   >&5
+configure:23529: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2   -Wl,-z,relro -Wl,-z,now conftest.cpp -lminiupnpc   >&5
 configure:23529: $? = 0
 configure:23538: result: yes
 configure:23505: checking miniupnpc/miniupnpc.h usability
-configure:23505: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:23505: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 configure:23505: $? = 0
 configure:23505: result: yes
 configure:23505: checking miniupnpc/miniupnpc.h presence
-configure:23505: g++ -std=c++11 -E -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp
+configure:23505: g++ -std=c++11 -E -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp
 configure:23505: $? = 0
 configure:23505: result: yes
 configure:23505: checking for miniupnpc/miniupnpc.h
@@ -2737,11 +2737,11 @@ configure:23505: result: yes
 configure:23510: checking for main in -lminiupnpc
 configure:23538: result: yes
 configure:23505: checking miniupnpc/upnpcommands.h usability
-configure:23505: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:23505: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 configure:23505: $? = 0
 configure:23505: result: yes
 configure:23505: checking miniupnpc/upnpcommands.h presence
-configure:23505: g++ -std=c++11 -E -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp
+configure:23505: g++ -std=c++11 -E -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp
 configure:23505: $? = 0
 configure:23505: result: yes
 configure:23505: checking for miniupnpc/upnpcommands.h
@@ -2749,11 +2749,11 @@ configure:23505: result: yes
 configure:23510: checking for main in -lminiupnpc
 configure:23538: result: yes
 configure:23505: checking miniupnpc/upnperrors.h usability
-configure:23505: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:23505: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 configure:23505: $? = 0
 configure:23505: result: yes
 configure:23505: checking miniupnpc/upnperrors.h presence
-configure:23505: g++ -std=c++11 -E -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp
+configure:23505: g++ -std=c++11 -E -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp
 configure:23505: $? = 0
 configure:23505: result: yes
 configure:23505: checking for miniupnpc/upnperrors.h
@@ -2848,66 +2848,66 @@ configure:23943: WARNING: Qt dependencies not found; bitcoin-qt frontend will no
 configure:27982: checking whether to build RWTalercore GUI
 configure:28012: result: no (Qt5)
 configure:28104: checking for boostlib >= 1.58.0
-configure:28189: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -I/usr/include conftest.cpp >&5
+configure:28189: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -I/usr/include conftest.cpp >&5
 configure:28189: $? = 0
 configure:28191: result: yes
 configure:28378: checking whether the Boost::System library is available
-configure:28403: g++ -std=c++11 -c  -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -I/usr/include conftest.cpp >&5
+configure:28403: g++ -std=c++11 -c  -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -I/usr/include conftest.cpp >&5
 configure:28403: $? = 0
 configure:28418: result: yes
 configure:28434: checking for exit in -lboost_system
-configure:28459: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -I/usr/include   -Wl,-z,relro -Wl,-z,now -L/usr/lib/x86_64-linux-gnu conftest.cpp -lboost_system   >&5
+configure:28459: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -I/usr/include   -Wl,-z,relro -Wl,-z,now -L/usr/lib/x86_64-linux-gnu conftest.cpp -lboost_system   >&5
 configure:28459: $? = 0
 configure:28469: result: yes
 configure:28624: checking whether the Boost::Filesystem library is available
-configure:28648: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -I/usr/include conftest.cpp >&5
+configure:28648: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -I/usr/include conftest.cpp >&5
 configure:28648: $? = 0
 configure:28662: result: yes
 configure:28674: checking for exit in -lboost_filesystem
-configure:28699: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -I/usr/include   -Wl,-z,relro -Wl,-z,now -L/usr/lib/x86_64-linux-gnu conftest.cpp -lboost_filesystem   -lboost_system >&5
+configure:28699: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -I/usr/include   -Wl,-z,relro -Wl,-z,now -L/usr/lib/x86_64-linux-gnu conftest.cpp -lboost_filesystem   -lboost_system >&5
 configure:28699: $? = 0
 configure:28709: result: yes
 configure:28859: checking whether the Boost::Program_Options library is available
-configure:28883: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -I/usr/include conftest.cpp >&5
+configure:28883: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -I/usr/include conftest.cpp >&5
 configure:28883: $? = 0
 configure:28897: result: yes
 configure:28908: checking for exit in -lboost_program_options
-configure:28933: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -I/usr/include   -Wl,-z,relro -Wl,-z,now -L/usr/lib/x86_64-linux-gnu conftest.cpp -lboost_program_options   >&5
+configure:28933: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -I/usr/include   -Wl,-z,relro -Wl,-z,now -L/usr/lib/x86_64-linux-gnu conftest.cpp -lboost_program_options   >&5
 configure:28933: $? = 0
 configure:28943: result: yes
 configure:29086: checking whether the Boost::Thread library is available
-configure:29118: g++ -std=c++11 -c -pthread -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -I/usr/include conftest.cpp >&5
+configure:29118: g++ -std=c++11 -c -pthread -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -I/usr/include conftest.cpp >&5
 configure:29118: $? = 0
 configure:29133: result: yes
 configure:29163: checking for exit in -lboost_thread
-configure:29188: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -I/usr/include   -Wl,-z,relro -Wl,-z,now -L/usr/lib/x86_64-linux-gnu conftest.cpp -lboost_thread   >&5
+configure:29188: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -I/usr/include   -Wl,-z,relro -Wl,-z,now -L/usr/lib/x86_64-linux-gnu conftest.cpp -lboost_thread   >&5
 configure:29188: $? = 0
 configure:29198: result: yes
 configure:29359: checking whether the Boost::Random library is available
-configure:29383: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -pthread -I/usr/include conftest.cpp >&5
+configure:29383: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -pthread -I/usr/include conftest.cpp >&5
 configure:29383: $? = 0
 configure:29398: result: yes
 configure:29413: checking for exit in -lboost_random
-configure:29438: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -pthread -I/usr/include   -Wl,-z,relro -Wl,-z,now -L/usr/lib/x86_64-linux-gnu conftest.cpp -lboost_random   >&5
+configure:29438: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -pthread -I/usr/include   -Wl,-z,relro -Wl,-z,now -L/usr/lib/x86_64-linux-gnu conftest.cpp -lboost_random   >&5
 configure:29438: $? = 0
 configure:29448: result: yes
 configure:29602: checking whether the Boost::Chrono library is available
-configure:29626: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -pthread -I/usr/include conftest.cpp >&5
+configure:29626: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -pthread -I/usr/include conftest.cpp >&5
 configure:29626: $? = 0
 configure:29641: result: yes
 configure:29657: checking for exit in -lboost_chrono
-configure:29682: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -pthread -I/usr/include   -Wl,-z,relro -Wl,-z,now -L/usr/lib/x86_64-linux-gnu conftest.cpp -lboost_chrono   >&5
+configure:29682: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -pthread -I/usr/include   -Wl,-z,relro -Wl,-z,now -L/usr/lib/x86_64-linux-gnu conftest.cpp -lboost_chrono   >&5
 configure:29682: $? = 0
 configure:29692: result: yes
 configure:29816: checking for working boost reduced exports
-configure:29839: g++ -std=c++11 -E -DBOOST_SP_USE_STD_ATOMIC -DBOOST_AC_USE_STD_ATOMIC -pthread -I/usr/include -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp
+configure:29839: g++ -std=c++11 -E -DBOOST_SP_USE_STD_ATOMIC -DBOOST_AC_USE_STD_ATOMIC -pthread -I/usr/include -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp
 configure:29839: $? = 0
 configure:29841: result: yes
 configure:29869: checking whether the linker accepts -Wl,--exclude-libs,ALL
-configure:29888: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC  -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2   -Wl,-z,relro -Wl,-z,now  -Wl,--exclude-libs,ALL conftest.cpp  >&5
+configure:29888: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC  -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2   -Wl,-z,relro -Wl,-z,now  -Wl,--exclude-libs,ALL conftest.cpp  >&5
 configure:29888: $? = 0
 configure:29897: result: yes
-configure:30156: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC  -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -DBOOST_SP_USE_STD_ATOMIC -DBOOST_AC_USE_STD_ATOMIC -pthread -I/usr/include   -Wl,-z,relro -Wl,-z,now conftest.cpp -L/usr/lib/x86_64-linux-gnu -lboost_system -lboost_filesystem -lboost_program_options -lboost_thread -lboost_chrono -lboost_random -lboost_chrono  >&5
+configure:30156: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC  -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -DBOOST_SP_USE_STD_ATOMIC -DBOOST_AC_USE_STD_ATOMIC -pthread -I/usr/include   -Wl,-z,relro -Wl,-z,now conftest.cpp -L/usr/lib/x86_64-linux-gnu -lboost_system -lboost_filesystem -lboost_program_options -lboost_thread -lboost_chrono -lboost_random -lboost_chrono  >&5
 configure:30156: $? = 0
 configure:30219: checking for SSL
 configure:30226: $PKG_CONFIG --exists --print-errors "libssl"
@@ -2950,15 +2950,15 @@ configure:30732: result: no
 No package 'libzmq' found
 configure:30751: WARNING: libzmq version 4.x or greater not found, disabling
 configure:31158: checking for EVP_DecryptFinal_ex in -lcrypto
-configure:31183: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC  -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2   -Wl,-z,relro -Wl,-z,now conftest.cpp -lcrypto   >&5
+configure:31183: g++ -std=c++11 -o conftest -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC  -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2   -Wl,-z,relro -Wl,-z,now conftest.cpp -lcrypto   >&5
 configure:31183: $? = 0
 configure:31192: result: yes
 configure:31221: checking openssl/ec.h usability
-configure:31221: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC  -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
+configure:31221: g++ -std=c++11 -c -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-cpp -g -O2 -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter  -Wstack-protector -fstack-protector-all -fPIC  -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp >&5
 configure:31221: $? = 0
 configure:31221: result: yes
 configure:31221: checking openssl/ec.h presence
-configure:31221: g++ -std=c++11 -E -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp
+configure:31221: g++ -std=c++11 -E -Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 conftest.cpp
 configure:31221: $? = 0
 configure:31221: result: yes
 configure:31221: checking for openssl/ec.h
@@ -3382,7 +3382,7 @@ COPYRIGHT_HOLDERS_SUBSTITUTION='RWTalercore'
 COPYRIGHT_YEAR='2019'
 CPP='gcc -E'
 CPPFILT='/usr/bin/c++filt'
-CPPFLAGS='-Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DSPDR_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2'
+CPPFLAGS='-Wno-unknown-pragmas -Wno-deprecated -Wno-deprecated-declarations -Wno-cpp -Wno-implicit-fallthrough  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DRWTA_BUILD  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2'
 CRYPTOPP_CPPFLAGS=''
 CRYPTO_CFLAGS=''
 CRYPTO_LIBS='-lcrypto'

@@ -442,7 +442,7 @@ UniValue validateaddress(const UniValue& params, bool fHelp)
     for (unsigned int i = 0; i < keys.size(); i++) {
         const std::string& ks = keys[i].get_str();
 #ifdef ENABLE_WALLET
-        // Case 1: SPDR address and we have full public key:
+        // Case 1: RWTA address and we have full public key:
         CBitcoinAddress address(ks);
         if (pwalletMain && address.IsValid()) {
             CKeyID keyID;
@@ -932,7 +932,7 @@ UniValue getaddressbalance(const UniValue& params, bool fHelp)
             "  ]\n"
             "}\n"
             "\nResult: {\n"
-            "  \"balance\",  (number) The current balance (in SPDR satoshis)\n"
+            "  \"balance\",  (number) The current balance (in RWTA satoshis)\n"
             "  \"received\", (number) The total amount received (all outputs, including stake)\n"
             "  \"spent\",    (number) The total amount spent (excluding stakes)\n"
             "  \"sent\",     (number) The total amount sent (excl. stakes and amounts sent to same addr.)\n"

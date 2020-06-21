@@ -473,7 +473,7 @@ vector<COutput> CActiveMasternode::SelectCoinsMasternode() {
 
     // Filter
     for (const COutput& out : vCoins) {
-        if (out.tx->vout[out.i].nValue == GetMNCollateral(chainActive.Height()) * COIN) {  //exactly DARKSEND_COLLATERAL SPDR
+        if (out.tx->vout[out.i].nValue == GetMNCollateral(chainActive.Height()) * COIN) {  //exactly DARKSEND_COLLATERAL RWTA
             filteredCoins.push_back(out);
         }
     }
@@ -492,7 +492,7 @@ vector <COutput> CActiveMasternode::SelectCoinsMasternodeForPubKey(std::string c
 
     // Filter
     for (const COutput& out : vCoins) {
-        if (out.tx->vout[out.i].scriptPubKey == scriptPubKey && out.tx->vout[out.i].nValue == DARKSEND_COLLATERAL) { //exactly 161.200 SPDR
+        if (out.tx->vout[out.i].scriptPubKey == scriptPubKey && out.tx->vout[out.i].nValue == DARKSEND_COLLATERAL) { //exactly 161.200 RWTA
             filteredCoins.push_back(out);
         }
     }

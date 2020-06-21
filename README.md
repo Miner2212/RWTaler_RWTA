@@ -1,11 +1,11 @@
-![SPDR Logo](src/qt/res/images/rwtaler_logo_horizontal.png)
+![RWTA Logo](src/qt/res/images/rwtaler_logo_horizontal.png)
 
 "RWTalerVPS - is the future of vps hosting"
 
 [![HitCount](http://hits.dwyl.io/216k155/rwtaler.svg)](http://hits.dwyl.io/216k155/rwtaler)
-<a href="https://discord.gg/vqzqWJg"><img src="https://discordapp.com/api/guilds/518071066678263815/widget.png" alt="Discord server" /></a> <a href="https://twitter.com/intent/follow?screen_name=SPDRVPS"><img src="https://img.shields.io/twitter/follow/SPDRVPS.svg?style=social&logo=twitter" alt="follow on Twitter"></a>
+<a href="https://discord.gg/vqzqWJg"><img src="https://discordapp.com/api/guilds/518071066678263815/widget.png" alt="Discord server" /></a> <a href="https://twitter.com/intent/follow?screen_name=RWTAVPS"><img src="https://img.shields.io/twitter/follow/RWTAVPS.svg?style=social&logo=twitter" alt="follow on Twitter"></a>
                                                                                                                                                      
-[Website](https://spidervps.net) — [Block Explorer](http://explorer.spidervps.net/) — [Forum](https://bitcointalk.org/index.php?topic=5116197) — [Twitter](https://twitter.com/SPDRVPS)
+[Website](https://spidervps.net) — [Block Explorer](http://explorer.spidervps.net/) — [Forum](https://bitcointalk.org/index.php?topic=5116197) — [Twitter](https://twitter.com/RWTAVPS)
 
 
 =============
@@ -26,10 +26,10 @@ RWTaler VPS is the first social vps hosting platform based on blockchain technol
 | Block Size | `4MB` |
 | Block Time | `60s` |
 | PoW Block Time | `120s`   |
-| PoW Reward | `0.1-35 SPDR` |
-| PoS Reward | `0.1-7 SPDR` |
+| PoW Reward | `0.1-35 RWTA` |
+| PoS Reward | `0.1-7 RWTA` |
 | Stake Time | `1 hour` | 
-| Masternode Requirement | `15000 SPDR` |
+| Masternode Requirement | `15000 RWTA` |
 | Masternode Reward | `Dynamic` |
 | Port | `53617` |
 | RPC Port | `53616` |
@@ -51,7 +51,7 @@ The next three steps are an example of how to acquire the source and build in an
         
 Acquire the source and install dependencies.
 
-    git clone https://github.com/SPDR-Core/rwtaler
+    git clone https://github.com/RWTA-Core/rwtaler
     sudo chmod -R a+rw rwtaler
     cd rwtaler/depends
     ./install-dependencies.sh
@@ -70,7 +70,7 @@ The next three steps are an example of how to acquire the source and build in an
         
 Acquire the source and install dependencies.
 
-    git clone https://github.com/SPDR-Core/rwtaler
+    git clone https://github.com/RWTA-Core/rwtaler
     sudo chmod -R a+rw rwtaler
     cd rwtaler/depends
     ./install-dependencies.sh
@@ -87,7 +87,7 @@ Build in the usual way.
 
 Use
 
-    sudo add-apt-repository ppa:bitcoin/bitcoin; git clone https://github.com/SPDR-Core/rwtaler; cd rwtaler; depends/install-dependencies.sh; ./autogen.sh; ./configure --disable-tests --with-boost-libdir=/usr/local/lib; make clean; make -j$(nproc)
+    sudo add-apt-repository ppa:bitcoin/bitcoin; git clone https://github.com/RWTA-Core/rwtaler; cd rwtaler; depends/install-dependencies.sh; ./autogen.sh; ./configure --disable-tests --with-boost-libdir=/usr/local/lib; make clean; make -j$(nproc)
 
 
 
@@ -132,7 +132,7 @@ Link boost 1.64
 
 Clone the RWTaler source code and cd into rwtaler
 
-        git clone https://github.com/SPDR-Core/rwtaler
+        git clone https://github.com/RWTA-Core/rwtaler
         cd rwtaler
         ./building/mac/requirements.sh
         ./building/mac/build.sh
@@ -142,7 +142,7 @@ Setup and Build: Arch Linux
 This example lists the steps necessary to setup and build a command line only, non-wallet distribution of the latest changes on Arch Linux:
 
     pacman -S git base-devel boost libevent python
-    git clone https://github.com/SPDR-Core/rwtaler
+    git clone https://github.com/RWTA-Core/rwtaler
     cd rwtaler/
     ./autogen.sh
     ./configure --without-miniupnpc --disable-tests

@@ -812,7 +812,7 @@ void RPCConsole::clear(bool clearHistory)
         );
 
 
-    message(CMD_REPLY, (tr("Welcome to the SPDR RPC console.") + "<br>" +
+    message(CMD_REPLY, (tr("Welcome to the RWTA RPC console.") + "<br>" +
                            tr("Use up and down arrows to navigate history, and <b>Ctrl-L</b> to clear screen.") + "<br>" +
                            tr("Type <b>help</b> for an overview of available commands.") + "<br>" + "<br>" +
                            tr("<b>WARNING: Scammers have been active, telling users to type commands here, stealing their ") +

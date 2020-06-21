@@ -207,7 +207,7 @@ private:
     void handleRunawayException(std::exception* e);
 };
 
-/** Main SPDR application object */
+/** Main RWTA application object */
 class BitcoinApplication : public QApplication
 {
     Q_OBJECT
@@ -531,7 +531,7 @@ void BitcoinApplication::initializeResult(int retval)
 
 #ifdef ENABLE_WALLET
         // Now that initialization/startup is done, process any command-line
-        // SPDR: URIs or payment requests:
+        // RWTA: URIs or payment requests:
         connect(paymentServer, SIGNAL(receivedPaymentRequest(SendCoinsRecipient)),
             window, SLOT(handlePaymentRequest(SendCoinsRecipient)));
         connect(window, SIGNAL(receivedURI(QString)),
@@ -555,7 +555,7 @@ void BitcoinApplication::shutdownResult(int retval)
 
 void BitcoinApplication::handleRunawayException(const QString& message)
 {
-    QMessageBox::critical(0, "Runaway exception", BitcoinGUI::tr("A fatal error occurred. SPDR can no longer continue safely and will quit.") + QString("\n\n") + message);
+    QMessageBox::critical(0, "Runaway exception", BitcoinGUI::tr("A fatal error occurred. RWTA can no longer continue safely and will quit.") + QString("\n\n") + message);
     ::exit(1);
 }
 

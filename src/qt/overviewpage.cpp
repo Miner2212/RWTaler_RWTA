@@ -47,7 +47,7 @@ class TxViewDelegate : public QAbstractItemDelegate
     Q_OBJECT
 public:
     TxViewDelegate(const PlatformStyle *platformStyle):
-            QAbstractItemDelegate(), unit(BitcoinUnits::SPDR),
+            QAbstractItemDelegate(), unit(BitcoinUnits::RWTA),
             platformStyle(platformStyle)    {
     }
 
@@ -412,7 +412,7 @@ void OverviewPage::setWalletModel(WalletModel* model)
         ui->buttonAddToken->setVisible(tokenProxyModel->rowCount() == 0);*/
     }
 
-    // update the display unit, to not use the default ("SPDR")
+    // update the display unit, to not use the default ("RWTA")
     updateDisplayUnit();
 }
 

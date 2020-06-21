@@ -5,8 +5,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SPDR_HDCHAIN_H
-#define SPDR_HDCHAIN_H
+#ifndef RWTA_HDCHAIN_H
+#define RWTA_HDCHAIN_H
 
 #include "key.h"
 #include "sync.h"
@@ -154,4 +154,4 @@ public:
     std::string GetKeyPath() const;
 };
 
-#endif // SPDR_HDCHAIN_H
+#endif // RWTA_HDCHAIN_H

@@ -19,8 +19,8 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "SPDR"
-            VALUE "FileDescription",    "RWTalercore (OSS GUI client for SPDR)"
+            VALUE "CompanyName",        "RWTA"
+            VALUE "FileDescription",    "RWTalercore (OSS GUI client for RWTA)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "rwtaler-qt"
             VALUE "LegalCopyright",     COPYRIGHT_STR

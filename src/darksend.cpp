@@ -769,9 +769,9 @@ void CDarkSendPool::ChargeRandomFees() {
                 Collateral Fee Charges:
                 Being that DarkSend has "no fees" we need to have some kind of cost associated
                 with using it to stop abuse. Otherwise it could serve as an attack vector and
-                allow endless transaction that would bloat SPDR and make it unusable. To
+                allow endless transaction that would bloat RWTA and make it unusable. To
                 stop these kinds of attacks 1 in 50 successful transactions are charged. This
-                adds up to a cost of 0.002 SPDR per transaction on average.
+                adds up to a cost of 0.002 RWTA per transaction on average.
             */
             if (r <= 20) {
                 LogPrintf("CDarkSendPool::ChargeRandomFees -- charging random fees. %u\n", i);
@@ -1475,8 +1475,8 @@ bool CDarkSendPool::DoAutomaticDenominating(bool fDryRun, bool ready) {
         //randomize the amounts we mix
         if (sessionTotalValue > nBalanceNeedsAnonymized) sessionTotalValue = nBalanceNeedsAnonymized;
 
-        double fSPDRSubmitted = (sessionTotalValue / CENT);
-        LogPrintf("Submitting Darksend for %f SPDR CENT - sessionTotalValue %d\n", fSPDRSubmitted, sessionTotalValue);
+        double fRWTASubmitted = (sessionTotalValue / CENT);
+        LogPrintf("Submitting Darksend for %f RWTA CENT - sessionTotalValue %d\n", fRWTASubmitted, sessionTotalValue);
 
         if (pwalletMain->GetDenominatedBalance(true, true) > 0) { //get denominated unconfirmed inputs
             LogPrintf("DoAutomaticDenominating -- Found unconfirmed denominated outputs, will wait till they confirm to continue.\n");
@@ -1853,10 +1853,10 @@ bool CDarkSendPool::IsCompatibleWithSession(int64_t nDenom, CTransaction txColla
 void CDarkSendPool::GetDenominationsToString(int nDenom, std::string& strDenom) {
     // Function returns as follows:
     //
-    // bit 0 - 100SPDR+1 ( bit on if present )
-    // bit 1 - 10SPDR+1
-    // bit 2 - 1SPDR+1
-    // bit 3 - .1SPDR+1
+    // bit 0 - 100RWTA+1 ( bit on if present )
+    // bit 1 - 10RWTA+1
+    // bit 2 - 1RWTA+1
+    // bit 3 - .1RWTA+1
     // bit 3 - non-denom
 
 
@@ -1912,10 +1912,10 @@ int CDarkSendPool::GetDenominations(const std::vector<CTxOut>& vout) {
 
     // Function returns as follows:
     //
-    // bit 0 - 100SPDR+1 ( bit on if present )
-    // bit 1 - 10SPDR+1
-    // bit 2 - 1SPDR+1
-    // bit 3 - .1SPDR+1
+    // bit 0 - 100RWTA+1 ( bit on if present )
+    // bit 1 - 10RWTA+1
+    // bit 2 - 1RWTA+1
+    // bit 3 - .1RWTA+1
 
     return denom;
 }
@@ -2102,7 +2102,7 @@ bool CDarksendQueue::CheckSignature() {
 //TODO: Rename/move to core
 void ThreadCheckDarkSendPool() {
     // Make this thread recognisable as the wallet flushing thread
-    RenameThread("SPDR-darksend");
+    RenameThread("RWTA-darksend");
 
     unsigned int c = 0;
     std::string errorMessage;

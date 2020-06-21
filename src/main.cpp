@@ -60,7 +60,7 @@ using namespace boost;
 using namespace std;
 
 #if defined(NDEBUG)
-#error "SPDR cannot be compiled without assertions."
+#error "RWTA cannot be compiled without assertions."
 #endif
 
 #ifndef DEBUG_DUMP_STAKING_INFO_AddToBlockIndex
@@ -1367,7 +1367,7 @@ bool AcceptToMemoryPool(CTxMemPool& pool, CValidationState& state, const CTransa
         }
 
         for (const CTxMemPool::txiter it : allConflicting) {
-            LogPrint("mempool", "replacing tx %s with %s for %s SPDR additional fees, %d delta bytes\n",it->GetTx().GetHash().ToString(), hash.ToString(), FormatMoney(nFees - nConflictingFees),(int) nSize - (int) nConflictingSize);
+            LogPrint("mempool", "replacing tx %s with %s for %s RWTA additional fees, %d delta bytes\n",it->GetTx().GetHash().ToString(), hash.ToString(), FormatMoney(nFees - nConflictingFees),(int) nSize - (int) nConflictingSize);
 
             if (plTxnReplaced)
                 plTxnReplaced->push_back(it->GetSharedTx());
@@ -2908,7 +2908,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
                     addressType = dest.which();
                     hashDest = GetHashForDestination(dest);
                 } else {
-                    // outputs like OP_RETURN custom data, some SPDR v3 vouts had 1 satoshi in nValue
+                    // outputs like OP_RETURN custom data, some RWTA v3 vouts had 1 satoshi in nValue
                     //LogPrintf("%s(ndx:out %d) error %s tx %s\n", __func__, k, out.ToString(), txhash.GetHex());
                     continue;
                 }
@@ -4351,7 +4351,7 @@ bool CheckForMasternodePayment(const CTransaction& tx, const CBlockHeader& heade
         }
     }
 
-    // Divide to keep a check precision of 0.01 SPDR
+    // Divide to keep a check precision of 0.01 RWTA
     const int nPrecision = 1000000;
 
     totalReward /= nPrecision;

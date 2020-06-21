@@ -20,18 +20,18 @@ BitcoinUnits::BitcoinUnits(QObject* parent) : QAbstractListModel(parent),
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(SPDR);
-    unitlist.append(mSPDR);
-    unitlist.append(uSPDR);
+    unitlist.append(RWTA);
+    unitlist.append(mRWTA);
+    unitlist.append(uRWTA);
     return unitlist;
 }
 
 bool BitcoinUnits::valid(int unit)
 {
     switch (unit) {
-    case SPDR:
-    case mSPDR:
-    case uSPDR:
+    case RWTA:
+    case mRWTA:
+    case uRWTA:
         return true;
     default:
         return false;
@@ -41,11 +41,11 @@ bool BitcoinUnits::valid(int unit)
 QString BitcoinUnits::id(int unit)
 {
     switch (unit) {
-    case SPDR:
+    case RWTA:
         return QString("rwtaler");
-    case mSPDR:
+    case mRWTA:
         return QString("mrwtaler");
-    case uSPDR:
+    case uRWTA:
         return QString::fromUtf8("urwtaler");
     default:
         return QString("???");
@@ -56,23 +56,23 @@ QString BitcoinUnits::name(int unit)
 {
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case SPDR:
-            return QString("SPDR");
-        case mSPDR:
-            return QString("mSPDR");
-        case uSPDR:
-            return QString::fromUtf8("μSPDR");
+        case RWTA:
+            return QString("RWTA");
+        case mRWTA:
+            return QString("mRWTA");
+        case uRWTA:
+            return QString::fromUtf8("μRWTA");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case SPDR:
-            return QString("tSPDR");
-        case mSPDR:
-            return QString("mtSPDR");
-        case uSPDR:
-            return QString::fromUtf8("μtSPDR");
+        case RWTA:
+            return QString("tRWTA");
+        case mRWTA:
+            return QString("mtRWTA");
+        case uRWTA:
+            return QString::fromUtf8("μtRWTA");
         default:
             return QString("???");
         }
@@ -83,23 +83,23 @@ QString BitcoinUnits::description(int unit)
 {
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case SPDR:
-            return QString("SPDR");
-        case mSPDR:
-            return QString("Milli-SPDR (1 / 1" THIN_SP_UTF8 "000)");
-        case uSPDR:
-            return QString("Micro-SPDR (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+        case RWTA:
+            return QString("RWTA");
+        case mRWTA:
+            return QString("Milli-RWTA (1 / 1" THIN_SP_UTF8 "000)");
+        case uRWTA:
+            return QString("Micro-RWTA (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case SPDR:
-            return QString("TestSPDRs");
-        case mSPDR:
-            return QString("Milli-TestSPDR (1 / 1" THIN_SP_UTF8 "000)");
-        case uSPDR:
-            return QString("Micro-TestSPDR (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+        case RWTA:
+            return QString("TestRWTAs");
+        case mRWTA:
+            return QString("Milli-TestRWTA (1 / 1" THIN_SP_UTF8 "000)");
+        case uRWTA:
+            return QString("Micro-TestRWTA (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
@@ -109,11 +109,11 @@ QString BitcoinUnits::description(int unit)
 qint64 BitcoinUnits::factor(int unit)
 {
     switch (unit) {
-    case SPDR:
+    case RWTA:
         return 100000000;
-    case mSPDR:
+    case mRWTA:
         return 100000;
-    case uSPDR:
+    case uRWTA:
         return 100;
     default:
         return 100000000;
@@ -134,9 +134,9 @@ int BitcoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case SPDR: return 8;
-    case mSPDR: return 5;
-    case uSPDR: return 2;
+    case RWTA: return 8;
+    case mRWTA: return 5;
+    case uRWTA: return 2;
     default: return 0;
     }
 }

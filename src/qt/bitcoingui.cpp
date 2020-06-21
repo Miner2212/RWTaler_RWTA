@@ -313,13 +313,13 @@ BitcoinGUI::BitcoinGUI(const PlatformStyle *platformStyle, const NetworkStyle* n
         pushButtonTwitter = new QPushButton(frameSocMedia);
         pushButtonTwitter->setToolTip(tr("Go to")+" Twitter");
         connect(pushButtonTwitter, &QPushButton::clicked,
-                this, [](){QDesktopServices::openUrl(QUrl("https://twitter.com/SPDRVPS"));});
+                this, [](){QDesktopServices::openUrl(QUrl("https://twitter.com/RWTAVPS"));});
         pushButtonTwitter->setIcon(QIcon(":/icons/res/icons/twitter.png").pixmap(STATUSBAR_ICONSIZE, STATUSBAR_ICONSIZE));
 
         pushButtonGithub = new QPushButton(frameSocMedia);
         pushButtonGithub->setToolTip(tr("Go to")+" GitHub");
         connect(pushButtonGithub, &QPushButton::clicked,
-                this, [](){QDesktopServices::openUrl(QUrl("https://github.com/SPDR-Core/"));});
+                this, [](){QDesktopServices::openUrl(QUrl("https://github.com/RWTA-Core/"));});
         pushButtonGithub->setIcon(QIcon(":/icons/res/icons/github.png").pixmap(STATUSBAR_ICONSIZE, STATUSBAR_ICONSIZE));
 
         pushButtonHelp = new QPushButton(frameSocMedia);
@@ -406,7 +406,7 @@ BitcoinGUI::BitcoinGUI(const PlatformStyle *platformStyle, const NetworkStyle* n
 
     if(fCheckUpdates && updateDialog->newUpdateAvailable())
     {
-        QString url = "https://github.com/SPDR-Core/rwtaler/releases";
+        QString url = "https://github.com/RWTA-Core/rwtaler/releases";
         QString link = QString("<a href=\\\"\"+ url +\"\\\">\"+ url +\"</a>").arg(NEW_RELEASES, NEW_RELEASES);
         QString message(tr("New rwtaler-qt version available: <br /> %1. <br />").arg(link));
         QMessageBox::information(this, tr("Check for updates"), message);
@@ -449,7 +449,7 @@ void BitcoinGUI::createActions() {
     tabGroup->addAction(overviewAction);
 
     sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send"), this);
-    sendCoinsAction->setStatusTip(tr("Send coins to a SPDR address"));
+    sendCoinsAction->setStatusTip(tr("Send coins to a RWTA address"));
     sendCoinsAction->setToolTip(sendCoinsAction->statusTip());
     sendCoinsAction->setCheckable(true);
 #ifdef Q_OS_MAC
@@ -560,7 +560,7 @@ void BitcoinGUI::createActions() {
     aboutQtAction->setStatusTip(tr("Show information about Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
     optionsAction = new QAction(QIcon(":/icons/options"), tr("&Options..."), this);
-    optionsAction->setStatusTip(tr("Modify configuration options for SPDR"));
+    optionsAction->setStatusTip(tr("Modify configuration options for RWTA"));
     optionsAction->setMenuRole(QAction::PreferencesRole);
     toggleHideAction = new QAction(QIcon(":/icons/rwtalercoin_black"), tr("&Show / Hide"), this);
     toggleHideAction->setStatusTip(tr("Show or hide the main Window"));
@@ -578,9 +578,9 @@ void BitcoinGUI::createActions() {
     unlockWalletAction->setToolTip(tr("Unlock wallet"));
     lockWalletAction = new QAction(tr("&Lock Wallet"), this);
     signMessageAction = new QAction(QIcon(":/icons/sign"), tr("Sign &message..."), this);
-    signMessageAction->setStatusTip(tr("Sign messages with your SPDR addresses to prove you own them"));
+    signMessageAction->setStatusTip(tr("Sign messages with your RWTA addresses to prove you own them"));
     verifyMessageAction = new QAction(QIcon(":/icons/verified"), tr("&Verify message..."), this);
-    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified SPDR addresses"));
+    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified RWTA addresses"));
     bip38ToolAction = new QAction(QIcon(":/icons/key"), tr("&BIP38 tool"), this);
     bip38ToolAction->setToolTip(tr("Encrypt and decrypt private keys using a passphrase"));
     multiSendAction = new QAction(QIcon(":/icons/edit"), tr("&MultiSend"), this);
@@ -613,16 +613,16 @@ void BitcoinGUI::createActions() {
     usedReceivingAddressesAction->setStatusTip(tr("Show the list of used receiving addresses and labels"));
 
     openAction = new QAction(QApplication::style()->standardIcon(QStyle::SP_FileIcon), tr("Open payment request | &URI..."), this);
-    openAction->setStatusTip(tr("Open a SPDR: URI or payment request"));
+    openAction->setStatusTip(tr("Open a RWTA: URI or payment request"));
     openBlockExplorerAction = new QAction(QIcon(":/icons/explorer"), tr("&Blockchain explorer"), this);
     openBlockExplorerAction->setStatusTip(tr("Block explorer window"));
 
     openHexAddressAction = new QAction(QIcon(":/icons/editcopy"), tr("&Hex Address Converter"), this);
-    openHexAddressAction->setStatusTip(tr("Converter for SPDR Smart Contract addresses"));
+    openHexAddressAction->setStatusTip(tr("Converter for RWTA Smart Contract addresses"));
 
     showHelpMessageAction = new QAction(QApplication::style()->standardIcon(QStyle::SP_MessageBoxInformation), tr("&Command-line options"), this);
     showHelpMessageAction->setMenuRole(QAction::NoRole);
-    showHelpMessageAction->setStatusTip(tr("Show the RWTalercore help message to get a list with possible SPDR command-line options"));
+    showHelpMessageAction->setStatusTip(tr("Show the RWTalercore help message to get a list with possible RWTA command-line options"));
 
     connect(qApp, SIGNAL(aboutToQuit()), qApp, SLOT(quit()));
 
@@ -1267,7 +1267,7 @@ void BitcoinGUI::message(const QString& title, const QString& message, unsigned 
             break;
         }
     }
-    // Append title to "SPDR - "
+    // Append title to "RWTA - "
     if (!msgType.isEmpty())
         strTitle += " - " + msgType;
 

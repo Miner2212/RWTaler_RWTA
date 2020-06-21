@@ -1,5 +1,5 @@
-#ifndef SPDRTRANSACTION_H
-#define SPDRTRANSACTION_H
+#ifndef RWTATRANSACTION_H
+#define RWTATRANSACTION_H
 
 #include <libethcore/Transaction.h>
 
