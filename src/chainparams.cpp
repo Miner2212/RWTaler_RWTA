@@ -1,7 +1,8 @@
 // Copyright (c) 2012-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The Luxcore developers
-// Copyright (c) 2019 The RWTalercore developers
+// Copyright (c) 2019 The Spidercore developers
+// Copyright (c) 2020 The RWTalercore developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -133,9 +134,9 @@ public:
         consensus.nMajorityEnforceBlockUpgrade = 750;
         consensus.nMajorityRejectBlockOutdated = 950;
         consensus.nMajorityWindow = 1000;
-        consensus.powLimit = ~uint256(0) >> 16; // SPDR starting difficulty is 1 / 2^12
+        consensus.powLimit = ~uint256(0) >> 16; // RWTA starting difficulty is 1 / 2^12
         consensus.nPowTargetTimespan = 30 * 60; //36 * 60 * 60; // SPDR: 1 36hrs
-        consensus.nPowTargetSpacing = 2 * 60;  // SPDR: 2 minute
+        consensus.nPowTargetSpacing = 2 * 60;  // RWTA: 2 minute
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 1026; // 95% of 1080 is 1026
@@ -171,12 +172,12 @@ public:
         pchMessageStart[2] = 0xc8;
         pchMessageStart[3] = 0xa9;
         vAlertPubKey = ParseHex("04489cc644944c729a36097586f52c574375f36f6c045370fd414b79a2c8083c6c35a59f45138e9cce74521c5825fe2600fca41ed904e80083cdd7479bd641e2c9");
-        nDefaultPort = 53617;
+        nDefaultPort = 53618;
         nMaxReorganizationDepth = 100;
         nMinerThreads = 0;
         nMaturity = 59;
 
-        const char* pszTimestamp = "RWTalerVPS - is the future of vps hosting";
+        const char* pszTimestamp = "RWTaler Coins future of Cryptocurrencies";
         CMutableTransaction txNew;
         txNew.nVersion = 1;
         txNew.nTime = 1551557208;
@@ -202,7 +203,7 @@ public:
         assert(genesis.hashMerkleRoot == uint256("60623653a1ecc1d2f36b80255b846ffdcebbd955697a70f42363db3342b4163b"));
 
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,63); // SPDR address start with 'S'
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,62); // RWTA address start with 'S'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,30); // SPDR script addresses start with 'D'
         base58Prefixes[SECRET_KEY]     = std::vector<unsigned char>(1,155);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x07)(0x28)(0xA2)(0x4E).convert_to_container<std::vector<unsigned char> >();
@@ -226,7 +227,7 @@ public:
         nPoolMaxTransactions = 3;
         strSporkKey = "04FD3D54479E9A31CD7032A11F651FA2767EAEABFC954F4AA8D13EA54675530BDB91FEF17EF8AA241F5413860DE65341EED1F679617F2565A54839A28137944B1C";
 
-        strDarksendPoolDummyAddress = "SSW652Cce6wvxo8RhojVFYyCAMQPfzj6C7";
+        strDarksendPoolDummyAddress = "RSW652Cce6wvxo8RhojVFYyCAMQPfzj6C7";
         nStartMasternodePayments = 1551557208; // 10/10/2017
 
         nStakingRoundPeriod = 120; // 2 minutes a round
@@ -254,9 +255,9 @@ public:
         consensus.nMajorityWindow = 100;
         //consensus.BIP34Height = 227931;
         //consensus.BIP34Hash = uint256S("0x000000000000024b89b42a942fe0d9fea3bb44ab7bd1b19115dd6a759c0808b8");
-        consensus.powLimit = ~uint256(0) >> 10; // SPDR starting difficulty is 1 / 2^12
+        consensus.powLimit = ~uint256(0) >> 10; // RWTA starting difficulty is 1 / 2^12
         consensus.nPowTargetTimespan = 30 * 60; //36 * 60 * 60; // SPDR: 1 36hrs
-        consensus.nPowTargetSpacing = 2 * 60;  // SPDR: 2 minute
+        consensus.nPowTargetSpacing = 2 * 60;  // RWTA: 2 minute
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 1368; // 95% of 1440 is
@@ -277,7 +278,7 @@ public:
         pchMessageStart[2] = 0x51;
         pchMessageStart[3] = 0xab;
         vAlertPubKey = ParseHex("000010e83b2703ccf322f7dbd62dd5855ac7c10bd055814ce121ba32607d573b8810c02c0582aed05b4deb9c4b77b26d92428c61256cd42774babea0a073b2ed0c9");
-        nDefaultPort = 28333;
+        nDefaultPort = 9778;
         nMinerThreads = 0;
         nMaturity = 10;
         nModifierUpdateBlock = 51197; //approx Mon, 17 Apr 2017 04:00:00 GMT
@@ -326,7 +327,7 @@ public:
         // Testnet rwtaler BIP32 prvkeys start with 'DRKP'
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x3a)(0x80)(0x58)(0x37).convert_to_container<std::vector<unsigned char> >();
         // Testnet rwtaler BIP44 coin type is '1' (All coin's testnet default)
-        // SPDR BIP44 coin type is '1'
+        // RWTA BIP44 coin type is '1'
         nExtCoinType = 1;
         bech32_hrp = "tb";
 
@@ -466,9 +467,9 @@ public:
         consensus.nMajorityEnforceBlockUpgrade = 750;
         consensus.nMajorityRejectBlockOutdated = 950;
         consensus.nMajorityWindow = 1000;
-        consensus.powLimit = ~uint256(0) >> 20; // SPDR starting difficulty is 1 / 2^12
+        consensus.powLimit = ~uint256(0) >> 20; // RWTA starting difficulty is 1 / 2^12
         consensus.nPowTargetTimespan = 10 * 60; //10 minute
-        consensus.nPowTargetSpacing = 60;  // SPDR: 1 minute
+        consensus.nPowTargetSpacing = 60;  // RWTA: 1 minute
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 9; // 95% of 10
@@ -544,7 +545,7 @@ public:
         base58Prefixes[SECRET_KEY]     = std::vector<unsigned char>(1,155);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x07)(0x28)(0xA2)(0x4E).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x03)(0xD8)(0xA1)(0xE5).convert_to_container<std::vector<unsigned char> >();
-        // SPDR BIP44 coin type is '1'
+        // RWTA BIP44 coin type is '1'
         nExtCoinType = 1;
         fMiningRequiresPeers = true;
         fDefaultConsistencyChecks = false;
