@@ -141,7 +141,7 @@ public:
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 1026; // 95% of 1080 is 1026
         consensus.nMinerConfirmationWindow = 1080; // nPowTargetTimespan / nPowTargetSpacing
-        consensus.nLastPOWBlock = 1000000;
+        consensus.nLastPOWBlock = 10000000;
         // Deployment of SegWit (BIP141 and BIP143)
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1530428034; // 01/07/2018
@@ -167,17 +167,17 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 4-byte int at any alignment.
          */
-        pchMessageStart[0] = 0x6a;
-        pchMessageStart[1] = 0xb3;
-        pchMessageStart[2] = 0xc8;
-        pchMessageStart[3] = 0xa9;
-        vAlertPubKey = ParseHex("04489cc644944c729a36097586f52c574375f36f6c045370fd414b79a2c8083c6c35a59f45138e9cce74521c5825fe2600fca41ed904e80083cdd7479bd641e2c9");
+        pchMessageStart[0] = 0x6b;
+        pchMessageStart[1] = 0xb1;
+        pchMessageStart[2] = 0xa8;
+        pchMessageStart[3] = 0xe9;
+        vAlertPubKey = ParseHex("04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f");
         nDefaultPort = 53618;
         nMaxReorganizationDepth = 100;
         nMinerThreads = 0;
         nMaturity = 59;
 
-        const char* pszTimestamp = "RWTaler Coins future of Cryptocurrencies";
+        const char* pszTimestamp = "Stuttgart 21/June/2020 Randale in Stuttgart Innenstadt";
         CMutableTransaction txNew;
         txNew.nVersion = 1;
         txNew.nTime = 1551557208;
@@ -191,23 +191,23 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = BlockMerkleRoot(genesis);
         genesis.nVersion = 1;
-        genesis.nTime = 1551557208; 
-        genesis.nBits = 0x1e0fffff;
-        genesis.nNonce = 4794063;
-        genesis.hashStateRoot = uint256(h256Touint(dev::h256("e965ffd002cd6ad0e2dc402b8044de833e06b23127ea8c3d80aec91410771495"))); // rwtaler
+        genesis.nTime = 1592764942;
+        genesis.nBits = 0x1d00ffff;
+        genesis.nNonce = 1938917004;
+        genesis.hashStateRoot = uint256(h256Touint(dev::h256("04ffff001d0104365374757474676172742032312f4a756e652f323032302052616e64616c6520696e2053747574746761727420496e6e656e7374616474"))); // rwtaler
         genesis.hashUTXORoot = uint256(h256Touint(dev::sha3(dev::rlp("")))); // rwtaler
 
         consensus.hashGenesisBlock = genesis.GetHash();
 
-        assert(consensus.hashGenesisBlock == uint256("00000d90d506a5da500e0101c910c0618d72d9afd283b0304f843ccb73b25da4"));
-        assert(genesis.hashMerkleRoot == uint256("60623653a1ecc1d2f36b80255b846ffdcebbd955697a70f42363db3342b4163b"));
+        assert(consensus.hashGenesisBlock == uint256("000000005dd2a0c1cbce59a5286497c9305a5d707f6d35cc1f9ebb131be4dd5d"));
+        assert(genesis.hashMerkleRoot == uint256("0e8aef24373f3b8c92e9d21d0d3776b6dd81ed57d35e6b04a096b9cddbe2b6f3"));
 
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,62); // RWTA address start with 'S'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,30); // RWTA script addresses start with 'D'
         base58Prefixes[SECRET_KEY]     = std::vector<unsigned char>(1,155);
-        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x07)(0x28)(0xA2)(0x4E).convert_to_container<std::vector<unsigned char> >();
-        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x03)(0xD8)(0xA1)(0xE5).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x17)(0x18)(0xA2)(0x4E).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x13)(0xE8)(0xA1)(0xE5).convert_to_container<std::vector<unsigned char> >();
 
         // RWTA BIP44 coin type is '1'
         nExtCoinType = 1;
