@@ -6,6 +6,7 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
+
 #include "chainparams.h"
 #include "consensus/merkle.h"
 #include "primitives/transaction.h"
@@ -18,7 +19,7 @@
 
 #include <boost/assign/list_of.hpp>
 
-///////////////////////////////////////////// // rwtaler
+///////////////////////////////////////////// // spdr
 #include <libdevcore/SHA3.h>
 #include <libdevcore/RLP.h>
 //#include "arith_uint256.h"
@@ -86,7 +87,7 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
                 ( 20000,   uint256("0000000000adac6f8c746dada3653a8dd55dca18ca5d6e55cbd7a2f77d7ca233") )
                 ( 36666,   uint256("0000000000ed2de4f507891e9311d5a34f46c1ea70682c313ccb15a75dabb7c2") )
                 ( 139134,   uint256("f05c9274fb28475ee535b7c97151d4c24e4dcf8710bca561b00e284d4a3b3ac2") )
-                ( 140000,   uint256("00000000019d1edb3c5f61a8053ef6dc727255152ffc3128c3944896d25e8d27") )                          
+                ( 140000,   uint256("00000000019d1edb3c5f61a8053ef6dc727255152ffc3128c3944896d25e8d27") )
 ;
 
 static const Checkpoints::CCheckpointData data = {
@@ -134,14 +135,14 @@ public:
         consensus.nMajorityEnforceBlockUpgrade = 750;
         consensus.nMajorityRejectBlockOutdated = 950;
         consensus.nMajorityWindow = 1000;
-        consensus.powLimit = ~uint256(0) >> 16; // RWTA starting difficulty is 1 / 2^12
-        consensus.nPowTargetTimespan = 30 * 60; //36 * 60 * 60; // RWTA: 1 36hrs
-        consensus.nPowTargetSpacing = 2 * 60;  // RWTA: 2 minute
+        consensus.powLimit = ~uint256(0) >> 16; // SPDR starting difficulty is 1 / 2^12
+        consensus.nPowTargetTimespan = 30 * 60; //36 * 60 * 60; // SPDR: 1 36hrs
+        consensus.nPowTargetSpacing = 2 * 60;  // SPDR: 2 minute
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 1026; // 95% of 1080 is 1026
         consensus.nMinerConfirmationWindow = 1080; // nPowTargetTimespan / nPowTargetSpacing
-        consensus.nLastPOWBlock = 10000000;
+        consensus.nLastPOWBlock = 1000000;
         // Deployment of SegWit (BIP141 and BIP143)
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1530428034; // 01/07/2018
@@ -167,17 +168,17 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 4-byte int at any alignment.
          */
-        pchMessageStart[0] = 0x6b;
-        pchMessageStart[1] = 0xb1;
-        pchMessageStart[2] = 0xa8;
-        pchMessageStart[3] = 0xe9;
-        vAlertPubKey = ParseHex("04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f");
-        nDefaultPort = 53618;
+        pchMessageStart[0] = 0x6a;
+        pchMessageStart[1] = 0xb3;
+        pchMessageStart[2] = 0xc8;
+        pchMessageStart[3] = 0xa9;
+        vAlertPubKey = ParseHex("04489cc644944c729a36097586f52c574375f36f6c045370fd414b79a2c8083c6c35a59f45138e9cce74521c5825fe2600fca41ed904e80083cdd7479bd641e2c9");
+        nDefaultPort = 53617;
         nMaxReorganizationDepth = 100;
         nMinerThreads = 0;
         nMaturity = 59;
 
-        const char* pszTimestamp = "Stuttgart 21/June/2020 Randale in Stuttgart Innenstadt";
+        const char* pszTimestamp = "SpiderVPS - is the future of vps hosting";
         CMutableTransaction txNew;
         txNew.nVersion = 1;
         txNew.nTime = 1551557208;
@@ -191,25 +192,25 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = BlockMerkleRoot(genesis);
         genesis.nVersion = 1;
-        genesis.nTime = 1592764942;
-        genesis.nBits = 0x1d00ffff;
-        genesis.nNonce = 1938917004;
-        genesis.hashStateRoot = uint256(h256Touint(dev::h256("04ffff001d0104365374757474676172742032312f4a756e652f323032302052616e64616c6520696e2053747574746761727420496e6e656e7374616474"))); // rwtaler
-        genesis.hashUTXORoot = uint256(h256Touint(dev::sha3(dev::rlp("")))); // rwtaler
+        genesis.nTime = 1551557208;
+        genesis.nBits = 0x1e0fffff;
+        genesis.nNonce = 4794063;
+        genesis.hashStateRoot = uint256(h256Touint(dev::h256("e965ffd002cd6ad0e2dc402b8044de833e06b23127ea8c3d80aec91410771495"))); // spdr
+        genesis.hashUTXORoot = uint256(h256Touint(dev::sha3(dev::rlp("")))); // spdr
 
         consensus.hashGenesisBlock = genesis.GetHash();
 
-        assert(consensus.hashGenesisBlock == uint256("000000005dd2a0c1cbce59a5286497c9305a5d707f6d35cc1f9ebb131be4dd5d"));
-        assert(genesis.hashMerkleRoot == uint256("0e8aef24373f3b8c92e9d21d0d3776b6dd81ed57d35e6b04a096b9cddbe2b6f3"));
+        assert(consensus.hashGenesisBlock == uint256("00000d90d506a5da500e0101c910c0618d72d9afd283b0304f843ccb73b25da4"));
+        assert(genesis.hashMerkleRoot == uint256("60623653a1ecc1d2f36b80255b846ffdcebbd955697a70f42363db3342b4163b"));
 
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,62); // RWTA address start with 'S'
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,30); // RWTA script addresses start with 'D'
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,63); // SPDR address start with 'S'
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,30); // SPDR script addresses start with 'D'
         base58Prefixes[SECRET_KEY]     = std::vector<unsigned char>(1,155);
-        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x17)(0x18)(0xA2)(0x4E).convert_to_container<std::vector<unsigned char> >();
-        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x13)(0xE8)(0xA1)(0xE5).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x07)(0x28)(0xA2)(0x4E).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x03)(0xD8)(0xA1)(0xE5).convert_to_container<std::vector<unsigned char> >();
 
-        // RWTA BIP44 coin type is '1'
+        // SPDR BIP44 coin type is '1'
         nExtCoinType = 1;
 
         bech32_hrp = "bc";
@@ -227,7 +228,7 @@ public:
         nPoolMaxTransactions = 3;
         strSporkKey = "04FD3D54479E9A31CD7032A11F651FA2767EAEABFC954F4AA8D13EA54675530BDB91FEF17EF8AA241F5413860DE65341EED1F679617F2565A54839A28137944B1C";
 
-        strDarksendPoolDummyAddress = "RSW652Cce6wvxo8RhojVFYyCAMQPfzj6C7";
+        strDarksendPoolDummyAddress = "SSW652Cce6wvxo8RhojVFYyCAMQPfzj6C7";
         nStartMasternodePayments = 1551557208; // 10/10/2017
 
         nStakingRoundPeriod = 120; // 2 minutes a round
@@ -255,9 +256,9 @@ public:
         consensus.nMajorityWindow = 100;
         //consensus.BIP34Height = 227931;
         //consensus.BIP34Hash = uint256S("0x000000000000024b89b42a942fe0d9fea3bb44ab7bd1b19115dd6a759c0808b8");
-        consensus.powLimit = ~uint256(0) >> 10; // RWTA starting difficulty is 1 / 2^12
-        consensus.nPowTargetTimespan = 30 * 60; //36 * 60 * 60; // RWTA: 1 36hrs
-        consensus.nPowTargetSpacing = 2 * 60;  // RWTA: 2 minute
+        consensus.powLimit = ~uint256(0) >> 10; // SPDR starting difficulty is 1 / 2^12
+        consensus.nPowTargetTimespan = 30 * 60; //36 * 60 * 60; // SPDR: 1 36hrs
+        consensus.nPowTargetSpacing = 2 * 60;  // SPDR: 2 minute
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 1368; // 95% of 1440 is
@@ -278,13 +279,13 @@ public:
         pchMessageStart[2] = 0x51;
         pchMessageStart[3] = 0xab;
         vAlertPubKey = ParseHex("000010e83b2703ccf322f7dbd62dd5855ac7c10bd055814ce121ba32607d573b8810c02c0582aed05b4deb9c4b77b26d92428c61256cd42774babea0a073b2ed0c9");
-        nDefaultPort = 9778;
+        nDefaultPort = 28333;
         nMinerThreads = 0;
         nMaturity = 10;
         nModifierUpdateBlock = 51197; //approx Mon, 17 Apr 2017 04:00:00 GMT
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
-        const char* pszTimestamp = "RWTaler- Testnet 1"; // Input Activation code to activate blockchain
+        const char* pszTimestamp = "Spider- Testnet 1"; // Input Activation code to activate blockchain
         CMutableTransaction txNew;
         txNew.nVersion = 1;
         txNew.nTime = 1528954643;
@@ -302,8 +303,8 @@ public:
         genesis.nTime = 1528954643; // 14 June 2018 @ 5:37am (UTC)
         genesis.nBits = 0x1e0fffff;
         genesis.nNonce = 321859;
-        genesis.hashStateRoot = uint256(h256Touint(dev::h256("e965ffd002cd6ad0e2dc402b8044de833e06b23127ea8c3d80aec91410771495"))); // rwtaler
-        genesis.hashUTXORoot = uint256(h256Touint(dev::sha3(dev::rlp("")))); // rwtaler
+        genesis.hashStateRoot = uint256(h256Touint(dev::h256("e965ffd002cd6ad0e2dc402b8044de833e06b23127ea8c3d80aec91410771495"))); // spdr
+        genesis.hashUTXORoot = uint256(h256Touint(dev::sha3(dev::rlp("")))); // spdr
 
 
         nSwitchPhi2Block = 1000;
@@ -319,15 +320,15 @@ public:
         //vFixedSeeds.clear();
         //vSeeds.clear();
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 48); // Testnet rwtaler addresses start with 'l'
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 63);  // Testnet rwtaler script addresses start with 'S'
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 48); // Testnet spdr addresses start with 'l'
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 63);  // Testnet spdr script addresses start with 'S'
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 155);     // Testnet private keys start with '9' or 'c' (Bitcoin defaults)
-        // Testnet rwtaler BIP32 pubkeys start with 'DRKV'
+        // Testnet spdr BIP32 pubkeys start with 'DRKV'
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x3a)(0x80)(0x61)(0xa0).convert_to_container<std::vector<unsigned char> >();
-        // Testnet rwtaler BIP32 prvkeys start with 'DRKP'
+        // Testnet spdr BIP32 prvkeys start with 'DRKP'
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x3a)(0x80)(0x58)(0x37).convert_to_container<std::vector<unsigned char> >();
-        // Testnet rwtaler BIP44 coin type is '1' (All coin's testnet default)
-        // RWTA BIP44 coin type is '1'
+        // Testnet spdr BIP44 coin type is '1' (All coin's testnet default)
+        // SPDR BIP44 coin type is '1'
         nExtCoinType = 1;
         bech32_hrp = "tb";
 
@@ -374,8 +375,8 @@ public:
         //consensus.BIP34Height = -1; // BIP34 has not necessarily activated on regtest
         //consensus.BIP34Hash = uint256();
         consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
-        consensus.nPowTargetTimespan = 24 * 60 * 60; // RWTaler: 1 day
-        consensus.nPowTargetSpacing = 1 * 60; // RWTaler: 1 minutes
+        consensus.nPowTargetTimespan = 24 * 60 * 60; // Spider: 1 day
+        consensus.nPowTargetSpacing = 1 * 60; // Spider: 1 minutes
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = true;
         consensus.nRuleChangeActivationThreshold = 108; // 75% for testchains
@@ -467,9 +468,9 @@ public:
         consensus.nMajorityEnforceBlockUpgrade = 750;
         consensus.nMajorityRejectBlockOutdated = 950;
         consensus.nMajorityWindow = 1000;
-        consensus.powLimit = ~uint256(0) >> 20; // RWTA starting difficulty is 1 / 2^12
+        consensus.powLimit = ~uint256(0) >> 20; // SPDR starting difficulty is 1 / 2^12
         consensus.nPowTargetTimespan = 10 * 60; //10 minute
-        consensus.nPowTargetSpacing = 60;  // RWTA: 1 minute
+        consensus.nPowTargetSpacing = 60;  // SPDR: 1 minute
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 9; // 95% of 10
@@ -506,7 +507,7 @@ public:
         nModifierUpdateBlock = 615800;
         bech32_hrp = "bcst";
 
-        const char* pszTimestamp = "RWTaler - segwit test"; // Input Activation code to activate blockchain
+        const char* pszTimestamp = "Spider - segwit test"; // Input Activation code to activate blockchain
         CMutableTransaction txNew;
         txNew.nVersion = 1;
         txNew.nTime = 1524645689;
@@ -540,12 +541,12 @@ public:
         assert(genesis.hashMerkleRoot == uint256("d44221eb66b57f1c672d26e6e6d3ffa3e91c6bd986004c9109b3a68ed8aaa2ec"));
 
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,48); // RWTA Start letter L
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,48); // SPDR Start letter L
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,64);
         base58Prefixes[SECRET_KEY]     = std::vector<unsigned char>(1,155);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x07)(0x28)(0xA2)(0x4E).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x03)(0xD8)(0xA1)(0xE5).convert_to_container<std::vector<unsigned char> >();
-        // RWTA BIP44 coin type is '1'
+        // SPDR BIP44 coin type is '1'
         nExtCoinType = 1;
         fMiningRequiresPeers = true;
         fDefaultConsistencyChecks = false;
